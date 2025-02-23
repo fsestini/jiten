@@ -1,14 +1,27 @@
 module Jiten.Yomichan where
 
+import qualified Codec.Archive.Zip as Zip
+import Conduit (ConduitT, (.|))
+import qualified Conduit as Conduit
 import Control.Applicative ((<|>))
+import Control.Monad (forM, forM_)
+import Control.Monad.Except (ExceptT, MonadError (throwError), runExceptT)
+import Control.Monad.Trans (lift)
 import Data.Aeson (FromJSON, Value, parseJSON, (.:), (.:?))
 import qualified Data.Aeson as A
 import qualified Data.Aeson.Key as Key
 import qualified Data.Aeson.KeyMap as KeyMap
 import Data.Aeson.Types (Parser, prependFailure)
 import Data.Bifunctor (first)
-import Data.Maybe (isJust)
-import Data.Text as Text
+import qualified Data.ByteString.Lazy as LBS
+import Data.Conduit.Aeson (conduitArrayEither)
+import qualified Data.Conduit.Combinators as Conduit.Combinators
+import Data.Either.Extra (maybeToEither)
+import Data.Function ((&))
+import qualified Data.List as List
+import Data.Maybe (fromMaybe, isJust)
+import Data.Text (Text)
+import qualified Data.Text as Text
 
 -- DICTIONARY INDEX ------------------------------------------------------------
 
@@ -250,3 +263,51 @@ instance FromJSON TermMeta where
     case l of
       [tm, ty, dt] -> TermMeta <$> parseJSON tm <*> parseJSON ty <*> pure dt
       _other -> fail "invalid TermMeta structure"
+
+-- ARCHIVES --------------------------------------------------------------------
+
+data Dictionary = Dictionary
+  { dictionaryIndex :: !Index,
+    dictionaryArchive :: !Zip.Archive
+  }
+
+openArchiveFile :: FilePath -> IO (Either Text Dictionary)
+openArchiveFile fp = fmap openArchive (LBS.readFile fp)
+
+openArchive :: LBS.ByteString -> Either Text Dictionary
+openArchive bs = do
+  archive <- Zip.toArchiveOrFail bs & first Text.pack
+  indexEntry <-
+    Zip.findEntryByPath "index.json" archive & maybeToEither "missing index.json"
+  index <- A.eitherDecode (Zip.fromEntry indexEntry) & first Text.pack
+  if indexFormat index == 3
+    then pure (Dictionary index archive)
+    else Left "format not supported"
+
+type C m a = ConduitT () a (ExceptT Text m) ()
+
+streamBanks :: (FromJSON a, Monad m) => String -> Dictionary -> C m a
+streamBanks prefix dict =
+  let archive = dictionaryArchive dict
+      files = Zip.filesInArchive archive
+      bankFiles = filter (List.isPrefixOf prefix) files
+      streams =
+        bankFiles
+          & map
+            ( \fp ->
+                case Zip.findEntryByPath fp archive of
+                  Nothing -> Conduit.yieldM (throwError ("failed to open " <> (Text.pack fp)))
+                  Just entry ->
+                    Conduit.yield (LBS.toStrict (Zip.fromEntry entry))
+                      .| conduitArrayEither
+                      .| Conduit.mapMC (either (throwError . Text.pack . show) pure)
+            )
+   in sequence_ streams
+
+streamTerms :: (Monad m) => Dictionary -> C m Term
+streamTerms = streamBanks "term_bank"
+
+runStream :: (Monad m) => C m a -> (a -> m ()) -> m (Either Text ())
+runStream stream f =
+  let result = Conduit.runConduit (stream .| Conduit.Combinators.mapM_ (lift . f))
+   in runExceptT result

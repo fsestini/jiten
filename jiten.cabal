@@ -30,6 +30,10 @@ library
                     , aeson
                     , containers
                     , mtl
+                    , extra
+                    , zip-archive
+                    , conduit
+                    , conduit-aeson
     hs-source-dirs:   src
     default-language: Haskell2010
 
