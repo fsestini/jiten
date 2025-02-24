@@ -4,3 +4,6 @@
 [submodule "vendor/quickjs"]
 	path = vendor/quickjs
 	url = git@github.com:bellard/quickjs.git
+[submodule "vendor/yomitan"]
+	path = vendor/yomitan
+	url = git@github.com:themoeway/yomitan.git
