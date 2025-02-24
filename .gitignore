@@ -1,2 +1,6 @@
 dist-newstyle/
 .DS_store
+js/yomitan/
+dist/
+.envrc
+.direnv/
