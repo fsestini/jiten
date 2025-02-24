@@ -4,7 +4,6 @@ import qualified Codec.Archive.Zip as Zip
 import Conduit (ConduitT, (.|))
 import qualified Conduit as Conduit
 import Control.Applicative ((<|>))
-import Control.Monad (forM, forM_)
 import Control.Monad.Except (ExceptT, MonadError (throwError), runExceptT)
 import Control.Monad.Trans (lift)
 import Data.Aeson (FromJSON, Value, parseJSON, (.:), (.:?))
@@ -19,7 +18,7 @@ import qualified Data.Conduit.Combinators as Conduit.Combinators
 import Data.Either.Extra (maybeToEither)
 import Data.Function ((&))
 import qualified Data.List as List
-import Data.Maybe (fromMaybe, isJust)
+import Data.Maybe (isJust)
 import Data.Text (Text)
 import qualified Data.Text as Text
 
