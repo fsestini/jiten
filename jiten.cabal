@@ -20,8 +20,8 @@ common warnings
 
 library
     import:           warnings
-    exposed-modules:  MyLib
-                    , Jiten.Yomichan
+    exposed-modules:  Jiten.Yomichan
+                    , Jiten.Server
     -- other-modules:
     -- other-extensions:
     build-depends:    base ^>=4.20.0.0
