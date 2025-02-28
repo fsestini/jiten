@@ -21,6 +21,7 @@ import qualified Data.List as List
 import Data.Maybe (isJust)
 import Data.Text (Text)
 import qualified Data.Text as Text
+import System.FilePath (takeExtension)
 
 -- DICTIONARY INDEX ------------------------------------------------------------
 
