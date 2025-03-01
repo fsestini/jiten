@@ -78,9 +78,11 @@ void register_functions(JSContext *ctx) {
     JS_FreeValue(ctx, global_obj);
 }
 
-void js_eval_str(JSContext *ctx, const char *js_code) {
+const char *js_eval_str(JSContext *ctx, const char *js_code) {
     JSValue val = JS_Eval(ctx, js_code, strlen(js_code), "<input>", JS_EVAL_TYPE_GLOBAL);
+    const char *result = JS_ToCString(ctx, val);
     JS_FreeValue(ctx, val);
+    return result;
 }
 
 void js_eval_yomi_bytecode(JSContext *ctx) {

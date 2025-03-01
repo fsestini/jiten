@@ -45,14 +45,21 @@ foreign import ccall "js_std_free_handlers"
 -- void js_eval_str(JSContext *ctx, const char *js_code) {
 
 foreign import ccall "js_eval_str"
-  jsEvalStr_ :: Ptr JSContext -> CString -> IO ()
+  jsEvalStr_ :: Ptr JSContext -> CString -> IO CString
 
 foreign import ccall "js_eval_yomi_bytecode"
   jsEvalYomiBytecode :: Ptr JSContext -> IO ()
 
-jsEvalStr :: Ptr JSContext -> String -> IO ()
-jsEvalStr ctx str = do
-  withCString str (\cstr -> jsEvalStr_ ctx cstr)
+foreign import ccall "JS_FreeCString"
+  js_free_cstring :: Ptr JSContext -> CString -> IO ()
+
+jsEvalStr :: Ptr JSContext -> String -> IO Text
+jsEvalStr ctx str =
+  withCString str $ \cstr -> do
+    result <- jsEvalStr_ ctx cstr
+    bs <- packCString result
+    js_free_cstring ctx result
+    pure (TE.decodeUtf8 bs)
 
 -- typedef char * (* StringToStringFunc) (const char *)
 -- void set_string_processor (StringToStringFunc processor_func)
