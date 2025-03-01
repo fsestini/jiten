@@ -18,6 +18,7 @@
             eslint_d
             nodePackages.typescript-language-server
             hlint
+            esbuild
           ];
         };
       });

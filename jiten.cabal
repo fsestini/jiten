@@ -57,6 +57,7 @@ library
         vendor/quickjs/quickjs.c
         vendor/quickjs/quickjs-libc.c
         yomi.c
+        dist/yomi_compiled.c
 
     hs-source-dirs:   src
     other-modules:    Paths_jiten
