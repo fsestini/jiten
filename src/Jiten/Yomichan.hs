@@ -4,6 +4,7 @@ import qualified Codec.Archive.Zip as Zip
 import Conduit (ConduitT, (.|))
 import qualified Conduit as Conduit
 import Control.Applicative ((<|>))
+import Control.Exception (Exception, throwIO)
 import Control.Monad.Except (ExceptT (..), MonadError (throwError))
 import Control.Monad.Trans (lift)
 import Data.Aeson (FromJSON, Value, parseJSON, (.:), (.:?))
@@ -13,7 +14,7 @@ import qualified Data.Aeson.KeyMap as KeyMap
 import Data.Aeson.Types (Parser, prependFailure)
 import Data.Bifunctor (first)
 import qualified Data.ByteString.Lazy as LBS
-import Data.Conduit.Aeson (conduitArrayEither)
+import Data.Conduit.Aeson (conduitArray, conduitArrayEither)
 import qualified Data.Conduit.Combinators as Conduit.Combinators
 import Data.Either.Extra (maybeToEither)
 import Data.Function ((&))
@@ -266,13 +267,24 @@ instance FromJSON TermMeta where
 
 -- ARCHIVES --------------------------------------------------------------------
 
+data DictionaryImportException = DictionaryImportException Text
+  deriving (Show)
+
+instance Exception DictionaryImportException
+
+throwImport :: Text -> IO a
+throwImport = throwIO . DictionaryImportException
+
 data Dictionary = Dictionary
   { dictionaryIndex :: !Index,
     dictionaryArchive :: !Zip.Archive
   }
 
-openArchiveFile :: FilePath -> ExceptT Text IO Dictionary
-openArchiveFile = ExceptT . fmap openArchive . LBS.readFile
+openArchiveFile :: FilePath -> IO Dictionary
+openArchiveFile fp =
+  fmap openArchive (LBS.readFile fp) >>= \case
+    Right dict -> pure dict
+    Left err -> throwImport err
 
 openArchive :: LBS.ByteString -> Either Text Dictionary
 openArchive bs = do
@@ -284,9 +296,9 @@ openArchive bs = do
     then pure (Dictionary index archive)
     else Left "format not supported"
 
-type C m a = ConduitT () a (ExceptT Text m) ()
+type C a = ConduitT () a IO ()
 
-streamBanks :: (FromJSON a, Monad m) => String -> Dictionary -> C m a
+streamBanks :: (FromJSON a) => String -> Dictionary -> C a
 streamBanks prefix dict =
   let archive = dictionaryArchive dict
       files = Zip.filesInArchive archive
@@ -296,33 +308,32 @@ streamBanks prefix dict =
           & map
             ( \fp ->
                 case Zip.findEntryByPath fp archive of
-                  Nothing -> Conduit.yieldM (throwError ("failed to open " <> (Text.pack fp)))
+                  Nothing -> Conduit.yieldM (throwImport ("failed to open " <> (Text.pack fp)))
                   Just entry ->
                     Conduit.yield (LBS.toStrict (Zip.fromEntry entry))
-                      .| conduitArrayEither
-                      .| Conduit.mapMC (either (throwError . Text.pack . show) pure)
+                      .| conduitArray
             )
    in sequence_ streams
 
-streamTerms :: (Monad m) => Dictionary -> C m Term
+streamTerms :: Dictionary -> C Term
 streamTerms = streamBanks "term_bank"
 
-streamTermMetas :: (Monad m) => Dictionary -> C m TermMeta
+streamTermMetas :: Dictionary -> C TermMeta
 streamTermMetas = streamBanks "term_meta_bank"
 
-streamTags :: (Monad m) => Dictionary -> C m Tag
+streamTags :: Dictionary -> C Tag
 streamTags = streamBanks "tag_bank"
 
-streamKanji :: (Monad m) => Dictionary -> C m Kanji
+streamKanji :: Dictionary -> C Kanji
 streamKanji = streamBanks "kanji_bank"
 
-streamKanjiMetas :: (Monad m) => Dictionary -> C m KanjiMeta
+streamKanjiMetas :: Dictionary -> C KanjiMeta
 streamKanjiMetas = streamBanks "kanji_meta_bank"
 
-runStream :: (Monad m) => C m a -> (a -> m ()) -> ExceptT Text m ()
-runStream stream f = Conduit.runConduit (stream .| Conduit.Combinators.mapM_ (lift . f))
+runStream :: C a -> (a -> IO ()) -> IO ()
+runStream stream f = Conduit.runConduit (stream .| Conduit.Combinators.mapM_ f)
 
-getMedia :: Dictionary -> [(FilePath, LBS.ByteString)]
+getMedia :: Dictionary -> Either Text [(FilePath, LBS.ByteString)]
 getMedia dict =
   let archive = dictionaryArchive dict
       files = Zip.filesInArchive archive
@@ -331,13 +342,10 @@ getMedia dict =
           . filter ((/= ".json") . takeExtension)
           $ files
    in mediaFiles
-        & map
+        & traverse
           ( \fp ->
-              let content =
-                    -- FIXME: use ExceptT
-                    maybe
-                      (error "failed to read media file")
-                      Zip.fromEntry
-                      (Zip.findEntryByPath fp archive)
-               in (fp, content)
+              let entryMay = Zip.findEntryByPath fp archive
+               in case entryMay of
+                    Nothing -> Left "failed to read media file"
+                    Just entry -> Right (fp, Zip.fromEntry entry)
           )

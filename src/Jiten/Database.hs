@@ -3,7 +3,6 @@
 module Jiten.Database where
 
 import Control.Monad (forM_, void)
-import Control.Monad.Except (ExceptT, MonadError (throwError))
 import Control.Monad.Trans (liftIO)
 import qualified Data.Aeson.Text as A
 import Data.ByteString (ByteString)
@@ -13,7 +12,8 @@ import Data.Text (Text)
 import qualified Data.Text as T
 import qualified Data.Text.Lazy as LT
 import Data.Time.Clock (getCurrentTime)
-import Database.SQLite.Simple (Connection, FromRow (..), Only (Only), ToRow (..), execute, execute_, field, lastInsertRowId, query)
+import Database.SQLite.Simple (Connection, FromRow (..), Only (Only), ToRow (..), execute, execute_, field, lastInsertRowId, query, withTransaction)
+import Jiten.Yomichan (throwImport)
 import qualified Jiten.Yomichan as Yomichan
 
 type DictionaryId = Int64
@@ -160,20 +160,25 @@ insertMedia conn dictId path content =
     "INSERT INTO media (path, content, dictionary_id) VALUES (?,?,?)"
     (path, content, dictId)
 
--- TODO: run this as an atomic transaction, with rollback on error
-insertDictionary :: Connection -> Yomichan.Dictionary -> ExceptT Text IO ()
+insertDictionary :: Connection -> Yomichan.Dictionary -> IO ()
 insertDictionary conn dict = do
   let index = Yomichan.dictionaryIndex dict
   dictIdMay <- liftIO $ findDictionaryId conn (Yomichan.indexTitle index)
   case dictIdMay of
-    Nothing -> do
-      dictId <- liftIO $ insertIndex conn index
-      let runStream s f = Yomichan.runStream (s dict) (liftIO . void . f conn dictId)
+    Nothing -> withTransaction conn $ do
+      dictId <- insertIndex conn index
+      let runStream s f = Yomichan.runStream (s dict) (void . f conn dictId)
       runStream Yomichan.streamTerms insertTerm
       runStream Yomichan.streamTermMetas insertTermMeta
       runStream Yomichan.streamTags insertTag
       runStream Yomichan.streamKanji insertKanji
       runStream Yomichan.streamKanjiMetas insertKanjiMeta
-      forM_ (Yomichan.getMedia dict) $ \(fp, content) ->
-        liftIO (insertMedia conn dictId fp (LBS.toStrict content))
-    Just _ -> throwError "dictionary is already imported"
+      case Yomichan.getMedia dict of
+        Left err -> throwImport err
+        Right media ->
+          forM_
+            media
+            ( \(fp, content) ->
+                (insertMedia conn dictId fp (LBS.toStrict content))
+            )
+    Just _ -> throwImport "dictionary is already imported"
