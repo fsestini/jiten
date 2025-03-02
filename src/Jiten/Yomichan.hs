@@ -2,11 +2,9 @@ module Jiten.Yomichan where
 
 import qualified Codec.Archive.Zip as Zip
 import Conduit (ConduitT, (.|))
-import qualified Conduit as Conduit
+import qualified Conduit
 import Control.Applicative ((<|>))
 import Control.Exception (Exception, throwIO)
-import Control.Monad.Except (ExceptT (..), MonadError (throwError))
-import Control.Monad.Trans (lift)
 import Data.Aeson (FromJSON, Value, parseJSON, (.:), (.:?))
 import qualified Data.Aeson as A
 import qualified Data.Aeson.Key as Key
@@ -14,7 +12,7 @@ import qualified Data.Aeson.KeyMap as KeyMap
 import Data.Aeson.Types (Parser, prependFailure)
 import Data.Bifunctor (first)
 import qualified Data.ByteString.Lazy as LBS
-import Data.Conduit.Aeson (conduitArray, conduitArrayEither)
+import Data.Conduit.Aeson (conduitArray)
 import qualified Data.Conduit.Combinators as Conduit.Combinators
 import Data.Either.Extra (maybeToEither)
 import Data.Function ((&))
@@ -267,7 +265,7 @@ instance FromJSON TermMeta where
 
 -- ARCHIVES --------------------------------------------------------------------
 
-data DictionaryImportException = DictionaryImportException Text
+newtype DictionaryImportException = DictionaryImportException Text
   deriving (Show)
 
 instance Exception DictionaryImportException
@@ -281,8 +279,9 @@ data Dictionary = Dictionary
   }
 
 openArchiveFile :: FilePath -> IO Dictionary
-openArchiveFile fp =
-  fmap openArchive (LBS.readFile fp) >>= \case
+openArchiveFile fp = do
+  archive <- LBS.readFile fp
+  case openArchive archive of
     Right dict -> pure dict
     Left err -> throwImport err
 
@@ -308,7 +307,7 @@ streamBanks prefix dict =
           & map
             ( \fp ->
                 case Zip.findEntryByPath fp archive of
-                  Nothing -> Conduit.yieldM (throwImport ("failed to open " <> (Text.pack fp)))
+                  Nothing -> Conduit.yieldM (throwImport ("failed to open " <> Text.pack fp))
                   Just entry ->
                     Conduit.yield (LBS.toStrict (Zip.fromEntry entry))
                       .| conduitArray

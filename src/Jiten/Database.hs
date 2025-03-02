@@ -37,10 +37,10 @@ instance ToRow KanjiRow where
   toRow (KanjiRow {..}) =
     toRow
       ( kanjiCharacter,
-        T.intercalate "," $ kanjiOnyomi,
-        T.intercalate "," $ kanjiKunyomi,
-        T.intercalate "," $ kanjiTags,
-        T.intercalate "," $ kanjiMeanings,
+        T.intercalate "," kanjiOnyomi,
+        T.intercalate "," kanjiKunyomi,
+        T.intercalate "," kanjiTags,
+        T.intercalate "," kanjiMeanings,
         LT.toStrict . A.encodeToLazyText $ kanjiStats,
         kanjiDictionaryId
       )
@@ -179,6 +179,6 @@ insertDictionary conn dict = do
           forM_
             media
             ( \(fp, content) ->
-                (insertMedia conn dictId fp (LBS.toStrict content))
+                insertMedia conn dictId fp (LBS.toStrict content)
             )
     Just _ -> throwImport "dictionary is already imported"
