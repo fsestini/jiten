@@ -1,7 +1,12 @@
 module Jiten.CLI where
 
 import Control.Monad (join)
+import Control.Monad.Except (runExceptT)
 import Data.Text (Text)
+import qualified Data.Text.IO as TIO
+import qualified Database.SQLite.Simple as Sql
+import qualified Jiten.Database as Db
+import qualified Jiten.Yomichan as Yomi
 import Options.Applicative (Parser)
 import qualified Options.Applicative as Cmd
 
@@ -18,7 +23,14 @@ main = join $ Cmd.execParser (Cmd.info opts Cmd.idm)
         )
 
 importDict :: FilePath -> IO ()
-importDict _ = putStrLn "NIY"
+importDict fp = Sql.withConnection "jiten.db" $ \conn -> do
+  Db.initDatabase conn
+  result <- runExceptT $ do
+    dict <- Yomi.openArchiveFile fp
+    Db.insertDictionary conn dict
+  case result of
+    Left err -> TIO.putStrLn err
+    Right () -> TIO.putStrLn "Done."
 
 listDicts :: IO ()
 listDicts = putStrLn "NIY"

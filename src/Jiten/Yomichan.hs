@@ -4,7 +4,7 @@ import qualified Codec.Archive.Zip as Zip
 import Conduit (ConduitT, (.|))
 import qualified Conduit as Conduit
 import Control.Applicative ((<|>))
-import Control.Monad.Except (ExceptT, MonadError (throwError))
+import Control.Monad.Except (ExceptT (..), MonadError (throwError))
 import Control.Monad.Trans (lift)
 import Data.Aeson (FromJSON, Value, parseJSON, (.:), (.:?))
 import qualified Data.Aeson as A
@@ -271,8 +271,8 @@ data Dictionary = Dictionary
     dictionaryArchive :: !Zip.Archive
   }
 
-openArchiveFile :: FilePath -> IO (Either Text Dictionary)
-openArchiveFile fp = fmap openArchive (LBS.readFile fp)
+openArchiveFile :: FilePath -> ExceptT Text IO Dictionary
+openArchiveFile = ExceptT . fmap openArchive . LBS.readFile
 
 openArchive :: LBS.ByteString -> Either Text Dictionary
 openArchive bs = do
