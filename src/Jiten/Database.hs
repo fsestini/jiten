@@ -2,7 +2,12 @@
 
 module Jiten.Database where
 
+import Control.Monad (forM_, void)
+import Control.Monad.Except (ExceptT, MonadError (throwError))
+import Control.Monad.Trans (liftIO)
 import qualified Data.Aeson.Text as A
+import Data.ByteString (ByteString)
+import qualified Data.ByteString.Lazy as LBS
 import Data.Int (Int64)
 import Data.Text (Text)
 import qualified Data.Text as T
@@ -63,6 +68,12 @@ insertIndex conn index = do
     name = Yomichan.indexTitle index
     revision = Yomichan.indexRevision index
     sequenced = Yomichan.indexSequenced index
+
+findDictionaryId :: Connection -> Text -> IO (Maybe DictionaryId)
+findDictionaryId conn dictName = do
+  query conn "SELECT id FROM dictionary WHERE name = ?" (Only dictName) >>= \case
+    (Only dictId : _) -> pure (Just dictId)
+    [] -> pure Nothing
 
 getOrInsertHeading :: Connection -> Text -> Maybe Text -> IO Int64
 getOrInsertHeading conn term reading = do
@@ -149,5 +160,19 @@ insertMedia conn dictId path content =
     "INSERT INTO media (path, content, dictionary_id) VALUES (?,?,?)"
     (path, content, dictId)
 
-insertDictionary :: Yomichan.Dictionary -> IO ()
-insertDictionary dict = pure ()
+insertDictionary :: Connection -> Yomichan.Dictionary -> ExceptT Text IO ()
+insertDictionary conn dict = do
+  let index = Yomichan.dictionaryIndex dict
+  dictIdMay <- liftIO $ findDictionaryId conn (Yomichan.indexTitle index)
+  case dictIdMay of
+    Nothing -> do
+      dictId <- liftIO $ insertIndex conn index
+      let runStream s f = Yomichan.runStream (s dict) (liftIO . void . f conn dictId)
+      runStream Yomichan.streamTerms insertTerm
+      runStream Yomichan.streamTermMetas insertTermMeta
+      runStream Yomichan.streamTags insertTag
+      runStream Yomichan.streamKanji insertKanji
+      runStream Yomichan.streamKanjiMetas insertKanjiMeta
+      forM_ (Yomichan.getMedia dict) $ \(fp, content) ->
+        liftIO (insertMedia conn dictId fp (LBS.toStrict content))
+    Just _ -> throwError "dictionary is already imported"
