@@ -132,7 +132,7 @@ insertKanji :: Connection -> DictionaryId -> Yomichan.Kanji -> IO ()
 insertKanji conn dictId kanji =
   execute
     conn
-    "INSERT INTO kanji (kanji, onyomi, kunyomi, tags, meanings, stats) VALUES (?,?,?,?,?,?)"
+    "INSERT INTO kanji (kanji, onyomi, kunyomi, tags, meanings, stats, dictionary_id) VALUES (?,?,?,?,?,?,?)"
     ( KanjiRow
         (Yomichan.kanjiCharacter kanji)
         (Yomichan.kanjiOnyomi kanji)
