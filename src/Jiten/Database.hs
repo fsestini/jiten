@@ -160,6 +160,7 @@ insertMedia conn dictId path content =
     "INSERT INTO media (path, content, dictionary_id) VALUES (?,?,?)"
     (path, content, dictId)
 
+-- TODO: run this as an atomic transaction, with rollback on error
 insertDictionary :: Connection -> Yomichan.Dictionary -> ExceptT Text IO ()
 insertDictionary conn dict = do
   let index = Yomichan.dictionaryIndex dict
