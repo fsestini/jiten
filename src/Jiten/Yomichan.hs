@@ -4,7 +4,7 @@ import qualified Codec.Archive.Zip as Zip
 import Conduit (ConduitT, (.|))
 import qualified Conduit as Conduit
 import Control.Applicative ((<|>))
-import Control.Monad.Except (ExceptT, MonadError (throwError), runExceptT)
+import Control.Monad.Except (ExceptT, MonadError (throwError))
 import Control.Monad.Trans (lift)
 import Data.Aeson (FromJSON, Value, parseJSON, (.:), (.:?))
 import qualified Data.Aeson as A
@@ -307,7 +307,37 @@ streamBanks prefix dict =
 streamTerms :: (Monad m) => Dictionary -> C m Term
 streamTerms = streamBanks "term_bank"
 
-runStream :: (Monad m) => C m a -> (a -> m ()) -> m (Either Text ())
-runStream stream f =
-  let result = Conduit.runConduit (stream .| Conduit.Combinators.mapM_ (lift . f))
-   in runExceptT result
+streamTermMetas :: (Monad m) => Dictionary -> C m TermMeta
+streamTermMetas = streamBanks "term_meta_bank"
+
+streamTags :: (Monad m) => Dictionary -> C m Tag
+streamTags = streamBanks "tag_bank"
+
+streamKanji :: (Monad m) => Dictionary -> C m Kanji
+streamKanji = streamBanks "kanji_bank"
+
+streamKanjiMetas :: (Monad m) => Dictionary -> C m KanjiMeta
+streamKanjiMetas = streamBanks "kanji_meta_bank"
+
+runStream :: (Monad m) => C m a -> (a -> m ()) -> ExceptT Text m ()
+runStream stream f = Conduit.runConduit (stream .| Conduit.Combinators.mapM_ (lift . f))
+
+getMedia :: Dictionary -> [(FilePath, LBS.ByteString)]
+getMedia dict =
+  let archive = dictionaryArchive dict
+      files = Zip.filesInArchive archive
+      mediaFiles =
+        filter (not . List.isSuffixOf "/")
+          . filter ((/= ".json") . takeExtension)
+          $ files
+   in mediaFiles
+        & map
+          ( \fp ->
+              let content =
+                    -- FIXME: use ExceptT
+                    maybe
+                      (error "failed to read media file")
+                      Zip.fromEntry
+                      (Zip.findEntryByPath fp archive)
+               in (fp, content)
+          )
