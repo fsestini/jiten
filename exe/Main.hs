@@ -1,6 +1,6 @@
 module Main where
 
-import Jiten.Server (runServer)
+import qualified Jiten.CLI
 
 main :: IO ()
-main = runServer
+main = Jiten.CLI.main
