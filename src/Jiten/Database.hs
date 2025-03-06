@@ -3,16 +3,17 @@
 module Jiten.Database where
 
 import Control.Monad (forM_, void)
+import qualified Control.Monad as Monad
 import Control.Monad.Trans (liftIO)
 import qualified Data.Aeson.Text as A
 import Data.ByteString (ByteString)
 import qualified Data.ByteString.Lazy as LBS
 import Data.Int (Int64)
-import Data.Text (Text)
+import Data.Text (Text, pack)
 import qualified Data.Text as T
 import qualified Data.Text.Lazy as LT
 import Data.Time.Clock (getCurrentTime)
-import Database.SQLite.Simple (Connection, FromRow (..), Only (Only), ToRow (..), execute, execute_, field, lastInsertRowId, query, withTransaction)
+import Database.SQLite.Simple (Connection, FromRow (..), Only (Only), Query (..), ToRow (..), execute, execute_, field, lastInsertRowId, query, query_, withTransaction)
 import Jiten.Yomichan (throwImport)
 import qualified Jiten.Yomichan as Yomichan
 
@@ -186,3 +187,45 @@ insertDictionary conn dict = do
                 insertMedia conn dictId fp (LBS.toStrict content)
             )
     Just _ -> throwImport "dictionary is already imported"
+
+-- SEARCH ----------------------------------------------------------------------
+
+data TermResult = TermResult
+  { termResultEntryId :: !Int64,
+    termResultExpression :: !Text,
+    termResultReading :: !Text,
+    termResultMatchSource :: !Text,
+    termResultGlossary :: !Text,
+    termResultDefinitionTags :: !Text,
+    termResultTermTags :: !Text,
+    termResultScore :: !Int,
+    termResultDictionary :: !Text,
+    termResultIndex :: !Int
+  }
+  deriving (Show, Eq)
+
+findTermsBulk :: Connection -> [Text] -> [DictionaryId] -> IO [TermResult]
+findTermsBulk _ _ [] = pure []
+findTermsBulk conn texts dictIds = do
+  rows <- concat <$> Monad.forM texts findTerm
+  pure $ zipWith (\i (text, row) -> mkResult i text row) [0 ..] rows
+  where
+    findTerm text =
+      let sqlQuery =
+            mconcat
+              [ "SELECT heading.term, heading.reading, entry.id,glossary,definition_tags,term_tags,popularity,dictionary.name",
+                " FROM heading INNER JOIN entry ON heading.id = entry.heading_id",
+                " INNER JOIN dictionary ON dictionary.id = entry.dictionary_id",
+                " WHERE ",
+                "dictionary.id IN (",
+                foldr1 (\x y -> x <> "," <> y) (fmap (pack . show) dictIds),
+                ")",
+                " AND (heading.term = ? OR heading.reading = ?)"
+              ]
+       in do
+            rows <- query conn (Query sqlQuery) (text, text)
+            pure (map (text,) rows)
+
+    mkResult i text (term, reading, entryId, glossary, defTags, termTags, score, dictionary) =
+      let src = if term == text then "term" else "reading"
+       in TermResult entryId term reading src glossary defTags termTags score dictionary i
