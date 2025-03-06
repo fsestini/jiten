@@ -17,6 +17,7 @@ common warnings
     ghc-options: -Wall
     default-extensions: OverloadedStrings
                       , LambdaCase
+                      , TupleSections
 
 library
     import:           warnings
