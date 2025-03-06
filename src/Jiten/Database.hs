@@ -76,6 +76,9 @@ findDictionaryId conn dictName = do
     (Only dictId : _) -> pure (Just dictId)
     [] -> pure Nothing
 
+getDictionaries :: Connection -> IO [(DictionaryId, Text)]
+getDictionaries conn = query_ conn "SELECT id, name FROM dictionary"
+
 getOrInsertHeading :: Connection -> Text -> Maybe Text -> IO Int64
 getOrInsertHeading conn term reading = do
   query conn "SELECT id FROM heading WHERE term = ? AND reading = ?" (term, reading) >>= \case
