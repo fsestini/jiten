@@ -45,6 +45,7 @@ instance ToRow KanjiRow where
         kanjiDictionaryId
       )
 
+-- TODO: should we include termRuleIdentifiers?
 initDatabase :: Connection -> IO ()
 initDatabase conn = do
   execute_ conn "CREATE TABLE IF NOT EXISTS heading(id INTEGER PRIMARY KEY,term VARCHAR NOT NULL,reading VARCHAR NULL,CONSTRAINT unique_heading UNIQUE (term,reading))"
