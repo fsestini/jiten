@@ -277,3 +277,15 @@ findTermMetaBulk conn texts dictIds = do
               ]
        in query conn (Query sqlQuery) (Only text)
     mkResult i (term, mode, data_, dictionary) = TermMetaResult i term mode data_ dictionary
+
+termMetaResultToJSON :: TermMetaResult -> Text
+termMetaResultToJSON (TermMetaResult {..}) =
+  mconcat
+    [ "{",
+      sformat ("\"index\": " % Formatting.int % ", ") termMetaResultIndex,
+      sformat ("\"term\": \"" % Formatting.stext % "\", ") termMetaResultTerm,
+      sformat ("\"mode\": \"" % Formatting.stext % "\", ") termMetaResultMode,
+      sformat ("\"data\": " % Formatting.stext % ", ") termMetaResultData,
+      sformat ("\"dictionary\": \"" % Formatting.stext % "\"") termMetaResultDictionary,
+      "}"
+    ]
