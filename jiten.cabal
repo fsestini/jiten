@@ -37,7 +37,6 @@ library
                     , zip-archive
                     , conduit
                     , conduit-aeson
-                    , network
                     , scotty
                     , sqlite-simple
                     , time
