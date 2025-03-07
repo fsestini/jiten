@@ -1,15 +1,21 @@
 {-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE RecordWildCards #-}
 
 module Jiten.Yomichan.Core where
 
+import Control.Exception (bracket)
+import qualified Control.Monad as Monad
+import qualified Data.Aeson as A
 import Data.ByteString (ByteString, packCString)
 import Data.ByteString.Unsafe (unsafeUseAsCStringLen)
 import Data.Text (Text)
 import qualified Data.Text.Encoding as TE
-import Foreign (Ptr)
+import Database.SQLite.Simple (Connection)
+import Foreign (Ptr, freeHaskellFunPtr)
 import Foreign.C (CString, newCString, peekCString, withCString)
 import Foreign.C.Types (CSize (..))
 import Foreign.Ptr (FunPtr, nullPtr)
+import qualified Jiten.Database as Db
 
 data JSRuntime
 
@@ -99,15 +105,15 @@ stringToStringFuncAdapter f cstr = do
   let result = f str
   newCString result
 
-byteStringToStringFuncAdapter :: (ByteString -> ByteString) -> StringToStringFunc
+byteStringToStringFuncAdapter :: (ByteString -> IO ByteString) -> StringToStringFunc
 byteStringToStringFuncAdapter f cstr = do
   bs <- packCString cstr
-  let result = f bs
+  result <- f bs
   copyByteString result
 
-textToStringFuncAdapter :: (Text -> Text) -> StringToStringFunc
+textToStringFuncAdapter :: (Text -> IO Text) -> StringToStringFunc
 textToStringFuncAdapter f =
-  byteStringToStringFuncAdapter (TE.encodeUtf8 . f . TE.decodeUtf8)
+  byteStringToStringFuncAdapter (\bs -> TE.encodeUtf8 <$> f (TE.decodeUtf8 bs))
 
 initJs :: IO (Ptr JSRuntime, Ptr JSContext)
 initJs = do
@@ -124,3 +130,36 @@ freeJs rt ctx = do
   jsStdFreeHandlers rt
   jsFreeContext ctx
   jsFreeRuntime rt
+
+withYomitan :: Connection -> IO [Db.DictionaryId] -> (Ptr JSContext -> IO a) -> IO a
+withYomitan conn getEnabledDicts h =
+  bracket initAll freeAll (\(_, ctx, _) -> h ctx)
+  where
+    mkFunPtr :: ([Text] -> [Db.DictionaryId] -> IO [a]) -> (a -> Text) -> IO (FunPtr StringToStringFunc)
+    mkFunPtr f g =
+      let callback txt =
+            case A.decodeStrictText txt of
+              Nothing -> fail "malformed JSON list"
+              Just lst -> do
+                enabledDicts <- getEnabledDicts
+                results <- map g <$> f lst enabledDicts
+                pure $ case results of
+                  [] -> "[]"
+                  rs -> "[" <> foldr1 (\x y -> x <> "," <> y) rs <> "]"
+       in mkStringToStringFunc (textToStringFuncAdapter callback)
+    initAll = do
+      (rt, ctx) <- initJs
+      findTermsPtr <- mkFunPtr (Db.findTermsBulk conn) Db.termResultToJSON
+      findTermMetasPtr <- mkFunPtr (Db.findTermMetaBulk conn) Db.termMetaResultToJSON
+      placeholderPtr <- mkFunPtr (\_ _ -> pure []) (const "")
+      setStringProcessors
+        findTermsPtr
+        findTermMetasPtr
+        placeholderPtr
+        placeholderPtr
+        placeholderPtr
+        placeholderPtr
+      pure (rt, ctx, [findTermsPtr, findTermMetasPtr])
+    freeAll (rt, ctx, ptrs) = do
+      freeJs rt ctx
+      Monad.forM_ ptrs freeHaskellFunPtr
