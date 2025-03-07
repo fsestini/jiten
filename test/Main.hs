@@ -24,6 +24,20 @@ main =
         it "returns an empty list when disabling the dictionary" $ \conn -> do
           results <- Db.findTermsBulk conn ["打つ"] []
           results `shouldBe` []
+      describe "termResultToJSON" $ do
+        it "renders JSON result correctly" $ \conn -> do
+          results <- Db.findTermsBulk conn ["土木工事"] [1]
+          map Db.termResultToJSON results
+            `shouldBe` [ "{\"entryId\": 19,\
+                         \ \"expression\": \"土木工事\",\
+                         \ \"reading\": \"どぼくこうじ\",\
+                         \ \"matchSource\": \"term\", \"glossary\": [\"dobokukouji definition\"],\
+                         \ \"definitionTags\": \"n\",\
+                         \ \"termTags\": \"\",\
+                         \ \"score\": 1,\
+                         \ \"dictionary\": \"Test Dictionary\",\
+                         \ \"index\": 0}"
+                       ]
   where
     dictPath = "./test/valid-dictionary1.zip" :: FilePath
     withValidDictionary1 f =
