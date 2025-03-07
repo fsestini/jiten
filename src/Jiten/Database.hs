@@ -248,3 +248,32 @@ termResultToJSON (TermResult {..}) =
       sformat ("\"index\": " % Formatting.int) termResultIndex,
       "}"
     ]
+
+data TermMetaResult = TermMetaResult
+  { termMetaResultIndex :: !Int,
+    termMetaResultTerm :: !Text,
+    termMetaResultMode :: !Text,
+    termMetaResultData :: !Text,
+    termMetaResultDictionary :: !Text
+  }
+  deriving (Show, Eq)
+
+findTermMetaBulk :: Connection -> [Text] -> [DictionaryId] -> IO [TermMetaResult]
+findTermMetaBulk _ _ [] = pure []
+findTermMetaBulk conn texts dictIds = do
+  rows <- concat <$> Monad.forM texts findTermMeta
+  pure $ zipWith mkResult [0 ..] rows
+  where
+    findTermMeta text =
+      let sqlQuery =
+            mconcat
+              [ "SELECT term, mode, data, dictionary.name",
+                " FROM term_meta INNER JOIN dictionary ON dictionary.id = term_meta.dictionary_id",
+                " WHERE ",
+                "dictionary.id IN (",
+                foldr1 (\x y -> x <> "," <> y) (fmap (pack . show) dictIds),
+                ")",
+                " AND (term_meta.term = ?)"
+              ]
+       in query conn (Query sqlQuery) (Only text)
+    mkResult i (term, mode, data_, dictionary) = TermMetaResult i term mode data_ dictionary
