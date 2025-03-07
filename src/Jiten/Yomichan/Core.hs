@@ -107,7 +107,7 @@ byteStringToStringFuncAdapter f cstr = do
 
 textToStringFuncAdapter :: (Text -> Text) -> StringToStringFunc
 textToStringFuncAdapter f =
-  byteStringToStringFuncAdapter (\bs -> TE.encodeUtf8 (f (TE.decodeUtf8 bs)))
+  byteStringToStringFuncAdapter (TE.encodeUtf8 . f . TE.decodeUtf8)
 
 initJs :: IO (Ptr JSRuntime, Ptr JSContext)
 initJs = do
