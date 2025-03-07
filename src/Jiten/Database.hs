@@ -14,6 +14,8 @@ import qualified Data.Text as T
 import qualified Data.Text.Lazy as LT
 import Data.Time.Clock (getCurrentTime)
 import Database.SQLite.Simple (Connection, FromRow (..), Only (Only), Query (..), ToRow (..), execute, execute_, field, lastInsertRowId, query, query_, withTransaction)
+import Formatting (sformat, (%))
+import qualified Formatting
 import Jiten.Yomichan (throwImport)
 import qualified Jiten.Yomichan as Yomichan
 
@@ -229,3 +231,20 @@ findTermsBulk conn texts dictIds = do
     mkResult i text (term, reading, entryId, glossary, defTags, termTags, score, dictionary) =
       let src = if term == text then "term" else "reading"
        in TermResult entryId term reading src glossary defTags termTags score dictionary i
+
+termResultToJSON :: TermResult -> Text
+termResultToJSON (TermResult {..}) =
+  mconcat
+    [ "{",
+      sformat ("\"entryId\": " % Formatting.int % ", ") termResultEntryId,
+      sformat ("\"expression\": \"" % Formatting.stext % "\", ") termResultExpression,
+      sformat ("\"reading\": \"" % Formatting.stext % "\", ") termResultReading,
+      sformat ("\"matchSource\": \"" % Formatting.stext % "\", ") termResultMatchSource,
+      sformat ("\"glossary\": " % Formatting.stext % ", ") termResultGlossary,
+      sformat ("\"definitionTags\": \"" % Formatting.stext % "\", ") termResultDefinitionTags,
+      sformat ("\"termTags\": \"" % Formatting.stext % "\", ") termResultTermTags,
+      sformat ("\"score\": " % Formatting.int % ", ") termResultScore,
+      sformat ("\"dictionary\": \"" % Formatting.stext % "\", ") termResultDictionary,
+      sformat ("\"index\": " % Formatting.int) termResultIndex,
+      "}"
+    ]
