@@ -4,7 +4,7 @@ import Control.Monad (join)
 import Data.Text (Text)
 import qualified Database.SQLite.Simple as Sql
 import qualified Jiten.Database as Db
-import qualified Jiten.Yomichan as Yomi
+import qualified Jiten.Yomichan.Dictionary as Yomi
 import Options.Applicative (Parser)
 import qualified Options.Applicative as Cmd
 

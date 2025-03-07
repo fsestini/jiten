@@ -1,4 +1,4 @@
-module Jiten.Yomichan where
+module Jiten.Yomichan.Dictionary where
 
 import qualified Codec.Archive.Zip as Zip
 import Conduit (ConduitT, (.|))

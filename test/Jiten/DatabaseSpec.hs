@@ -2,7 +2,7 @@ module Jiten.DatabaseSpec where
 
 import qualified Database.SQLite.Simple as Sql
 import qualified Jiten.Database as Db
-import qualified Jiten.Yomichan as Yomi
+import qualified Jiten.Yomichan.Dictionary as Yomi
 import Test.Hspec (Spec, around, describe, it, shouldBe)
 
 spec :: Spec

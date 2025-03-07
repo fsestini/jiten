@@ -16,8 +16,7 @@ import Data.Time.Clock (getCurrentTime)
 import Database.SQLite.Simple (Connection, FromRow (..), Only (Only), Query (..), ToRow (..), execute, execute_, field, lastInsertRowId, query, query_, withTransaction)
 import Formatting (sformat, (%))
 import qualified Formatting
-import Jiten.Yomichan (throwImport)
-import qualified Jiten.Yomichan as Yomichan
+import qualified Jiten.Yomichan.Dictionary as Yomichan
 
 type DictionaryId = Int64
 
@@ -181,14 +180,14 @@ insertDictionary conn dict = do
       runStream Yomichan.streamKanji insertKanji
       runStream Yomichan.streamKanjiMetas insertKanjiMeta
       case Yomichan.getMedia dict of
-        Left err -> throwImport err
+        Left err -> Yomichan.throwImport err
         Right media ->
           forM_
             media
             ( \(fp, content) ->
                 insertMedia conn dictId fp (LBS.toStrict content)
             )
-    Just _ -> throwImport "dictionary is already imported"
+    Just _ -> Yomichan.throwImport "dictionary is already imported"
 
 -- SEARCH ----------------------------------------------------------------------
 

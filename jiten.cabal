@@ -22,7 +22,7 @@ common warnings
 
 library
     import:           warnings
-    exposed-modules:  Jiten.Yomichan
+    exposed-modules:  Jiten.Yomichan.Dictionary
                     , Jiten.Yomichan.Core
                     , Jiten.Server
                     , Jiten.Database
