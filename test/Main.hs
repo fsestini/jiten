@@ -38,6 +38,14 @@ main =
                          \ \"dictionary\": \"Test Dictionary\",\
                          \ \"index\": 0}"
                        ]
+      describe "termMetaResultToJSON" $ do
+        it "renders JSON result correctly" $ \conn -> do
+          results <- Db.findTermMetaBulk conn ["土木工事"] [1]
+          map Db.termMetaResultToJSON results
+            `shouldBe` [ "{\"index\": 0, \"term\": \"土木工事\", \"mode\": \"pitch\",\
+                         \ \"data\": {\"pitches\":[{\"devoice\":3,\"position\":4}],\"reading\":\"どぼくこうじ\"},\
+                         \ \"dictionary\": \"Test Dictionary\"}"
+                       ]
   where
     dictPath = "./test/valid-dictionary1.zip" :: FilePath
     withValidDictionary1 f =
