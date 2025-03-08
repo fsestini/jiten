@@ -13,26 +13,26 @@ function Collator(locale, options) {
   };
 }
 
-var edm = new Map()
-
-var options = {
-  matchType: 'exact',
-  deinflect: true,
-  removeNonJapaneseCharacters: true,
-  textReplacements: [null],
-  searchResolution: 'letter',
-  language: 'ja',
-  enabledDictionaryMap: edm,
-  primaryReading: '',
-  excludeDictionaryDefinitions: null,
-}
-
-function setDictionary(dict) {
-  edm.set(dict, {
-    index: edm.size,
-    alias: '',
-    allowSecondarySearches: false,
-    partsOfSpeechFilter: false,
-    useDeinflections: false,
-  })
+function mkOptions(dictionaries) {
+  var edm = new Map()
+  for (let i = 0; i < dictionaries.length; i++) {
+    edm.set(dictionaries[i], {
+      index: i,
+      alias: '',
+      allowSecondarySearches: false,
+      partsOfSpeechFilter: false,
+      useDeinflections: false,
+    })
+  }
+  return {
+    matchType: 'exact',
+    deinflect: true,
+    removeNonJapaneseCharacters: true,
+    textReplacements: [null],
+    searchResolution: 'letter',
+    language: 'ja',
+    enabledDictionaryMap: edm,
+    primaryReading: '',
+    excludeDictionaryDefinitions: null,
+  }
 }
