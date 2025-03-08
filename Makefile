@@ -15,7 +15,7 @@ dist/yomi_bundled.js: js/yomi.js
 dist/yomi_stripped.js: dist/yomi_bundled.js
 	tail -n +2 dist/yomi_bundled.js | head -n -1 | sed 's/await //g' | sed 's/async //g' | sed 's/new Intl\.Collator(\([^)]*\))/Collator(\1)/g' > dist/yomi_stripped.js
 
-dist/yomi_patched.js: dist/yomi_stripped.js
+dist/yomi_patched.js: js/patch.js dist/yomi_stripped.js
 	cat dist/yomi_stripped.js js/patch.js > dist/yomi_patched.js
 
 dist/yomi_compiled.c: vendor/quickjs/qjsc dist/yomi_patched.js
