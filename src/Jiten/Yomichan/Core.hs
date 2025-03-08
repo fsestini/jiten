@@ -159,7 +159,7 @@ withYomitan conn getEnabledDicts h =
         placeholderPtr
         placeholderPtr
         placeholderPtr
-      pure (rt, ctx, [findTermsPtr, findTermMetasPtr])
+      pure (rt, ctx, [findTermsPtr, findTermMetasPtr, placeholderPtr])
     freeAll (rt, ctx, ptrs) = do
       freeJs rt ctx
       Monad.forM_ ptrs freeHaskellFunPtr
