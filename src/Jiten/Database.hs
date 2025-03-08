@@ -112,10 +112,11 @@ insertTerm conn dictId term = do
       (Yomichan.termReading term)
   execute
     conn
-    "INSERT INTO entry (glossary, definition_tags, term_tags, popularity, rules, heading_id, dictionary_id) VALUES (?,?,?,?,?,?,?)"
+    "INSERT INTO entry (glossary, definition_tags, term_tags, rules, popularity, rules, heading_id, dictionary_id) VALUES (?,?,?,?,?,?,?,?)"
     ( LT.toStrict . A.encodeToLazyText $ Yomichan.termDefinitions term,
       Yomichan.termDefinitionTags term,
       Yomichan.termTermTags term,
+      Yomichan.termRuleIdentifiers term,
       Yomichan.termPopularity term,
       Yomichan.termRuleIdentifiers term,
       hId,
