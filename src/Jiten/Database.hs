@@ -198,8 +198,9 @@ data TermResult = TermResult
     termResultReading :: !Text,
     termResultMatchSource :: !Text,
     termResultGlossary :: !Text,
-    termResultDefinitionTags :: !Text,
-    termResultTermTags :: !Text,
+    termResultDefinitionTags :: ![Text],
+    termResultTermTags :: ![Text],
+    termResultRules :: ![Text],
     termResultScore :: !Int,
     termResultDictionary :: !Text,
     termResultIndex :: !Int
@@ -209,13 +210,13 @@ data TermResult = TermResult
 findTermsBulk :: Connection -> [Text] -> [DictionaryId] -> IO [TermResult]
 findTermsBulk _ _ [] = pure []
 findTermsBulk conn texts dictIds = do
-  rows <- concat <$> Monad.forM texts findTerm
-  pure $ zipWith (\i (text, row) -> mkResult i text row) [0 ..] rows
+  rows <- concat <$> Monad.forM (zip [0 ..] texts) (uncurry findTerm)
+  pure $ map (\(i, text, row) -> mkResult i text row) rows
   where
-    findTerm text =
+    findTerm i text =
       let sqlQuery =
             mconcat
-              [ "SELECT heading.term, heading.reading, entry.id,glossary,definition_tags,term_tags,popularity,dictionary.name",
+              [ "SELECT heading.term, heading.reading, entry.id,glossary,definition_tags,term_tags,rules,popularity,dictionary.name",
                 " FROM heading INNER JOIN entry ON heading.id = entry.heading_id",
                 " INNER JOIN dictionary ON dictionary.id = entry.dictionary_id",
                 " WHERE ",
@@ -226,23 +227,28 @@ findTermsBulk conn texts dictIds = do
               ]
        in do
             rows <- query conn (Query sqlQuery) (text, text)
-            pure (map (text,) rows)
+            pure (map (i,text,) rows)
 
-    mkResult i text (term, reading, entryId, glossary, defTags, termTags, score, dictionary) =
+    mkResult i text (term, reading, entryId, glossary, defTags, termTags, rules, score, dictionary) =
       let src = if term == text then "term" else "reading"
-       in TermResult entryId term reading src glossary defTags termTags score dictionary i
+          defTagsList = filter (not . T.null) $ T.splitOn " " defTags
+          termTagsList = filter (not . T.null) $ T.splitOn " " termTags
+          rulesList = filter (not . T.null) $ T.splitOn " " rules
+       in TermResult entryId term reading src glossary defTagsList termTagsList rulesList score dictionary i
 
 termResultToJSON :: TermResult -> Text
 termResultToJSON (TermResult {..}) =
   mconcat
     [ "{",
       sformat ("\"entryId\": " % Formatting.int % ", ") termResultEntryId,
-      sformat ("\"expression\": \"" % Formatting.stext % "\", ") termResultExpression,
+      sformat ("\"term\": \"" % Formatting.stext % "\", ") termResultExpression,
       sformat ("\"reading\": \"" % Formatting.stext % "\", ") termResultReading,
       sformat ("\"matchSource\": \"" % Formatting.stext % "\", ") termResultMatchSource,
-      sformat ("\"glossary\": " % Formatting.stext % ", ") termResultGlossary,
-      sformat ("\"definitionTags\": \"" % Formatting.stext % "\", ") termResultDefinitionTags,
-      sformat ("\"termTags\": \"" % Formatting.stext % "\", ") termResultTermTags,
+      "\"matchType\": \"exact\", ",
+      sformat ("\"definitions\": " % Formatting.stext % ", ") termResultGlossary,
+      sformat ("\"definitionTags\": " % Formatting.text % ", ") (A.encodeToLazyText termResultDefinitionTags),
+      sformat ("\"termTags\": " % Formatting.text % ", ") (A.encodeToLazyText termResultTermTags),
+      sformat ("\"rules\": " % Formatting.text % ", ") (A.encodeToLazyText termResultRules),
       sformat ("\"score\": " % Formatting.int % ", ") termResultScore,
       sformat ("\"dictionary\": \"" % Formatting.stext % "\", ") termResultDictionary,
       sformat ("\"index\": " % Formatting.int) termResultIndex,
