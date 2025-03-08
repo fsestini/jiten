@@ -21,6 +21,8 @@ data JSRuntime
 
 data JSContext
 
+type YomiContext = Ptr JSContext
+
 foreign import ccall "JS_NewRuntime"
   jsNewRuntime :: IO (Ptr JSRuntime)
 
