@@ -267,10 +267,10 @@ data TermMetaResult = TermMetaResult
 findTermMetaBulk :: Connection -> [Text] -> [DictionaryId] -> IO [TermMetaResult]
 findTermMetaBulk _ _ [] = pure []
 findTermMetaBulk conn texts dictIds = do
-  rows <- concat <$> Monad.forM texts findTermMeta
-  pure $ zipWith mkResult [0 ..] rows
+  rows <- concat <$> Monad.forM (zip [0 ..] texts) (uncurry findTermMeta)
+  pure $ map (uncurry mkResult) rows
   where
-    findTermMeta text =
+    findTermMeta i text =
       let sqlQuery =
             mconcat
               [ "SELECT term, mode, data, dictionary.name",
@@ -281,7 +281,9 @@ findTermMetaBulk conn texts dictIds = do
                 ")",
                 " AND (term_meta.term = ?)"
               ]
-       in query conn (Query sqlQuery) (Only text)
+       in do
+            rs <- query conn (Query sqlQuery) (Only text)
+            pure $ map (i,) rs
     mkResult i (term, mode, data_, dictionary) = TermMetaResult i term mode data_ dictionary
 
 termMetaResultToJSON :: TermMetaResult -> Text
