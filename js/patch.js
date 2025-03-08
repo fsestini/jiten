@@ -13,6 +13,20 @@ function Collator(locale, options) {
   };
 }
 
+class Performance {
+  mark(markName, markOptions) {
+    console.log(markName, markOptions)
+  }
+
+  measure(measureName, startOrMeasureOptions, endMark) {
+    console.log(measureName, startOrMeasureOptions, endMark)
+  }
+
+  now() { }
+}
+
+var performance = new Performance()
+
 function mkOptions(dictionaries) {
   var edm = new Map()
   for (let i = 0; i < dictionaries.length; i++) {
