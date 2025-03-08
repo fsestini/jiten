@@ -8,7 +8,7 @@ import qualified Control.Monad as Monad
 import qualified Data.Aeson as A
 import Data.ByteString (ByteString, packCString)
 import Data.ByteString.Unsafe (unsafeUseAsCStringLen)
-import Data.Text (Text)
+import Data.Text (Text, unpack)
 import qualified Data.Text.Encoding as TE
 import Database.SQLite.Simple (Connection)
 import Foreign (Ptr, freeHaskellFunPtr)
@@ -139,7 +139,7 @@ withYomitan conn getEnabledDicts h =
     mkFunPtr f g =
       let callback txt =
             case A.decodeStrictText txt of
-              Nothing -> fail "malformed JSON list"
+              Nothing -> fail ("malformed JSON list: " <> unpack txt)
               Just lst -> do
                 enabledDicts <- getEnabledDicts
                 results <- map g <$> f lst enabledDicts
