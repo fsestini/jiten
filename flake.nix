@@ -13,7 +13,6 @@
       in {
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
-            bun
             nodejs
             eslint_d
             nodePackages.typescript-language-server
