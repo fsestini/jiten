@@ -4,3 +4,4 @@ js/yomitan/
 dist/
 .envrc
 .direnv/
+*.zip
