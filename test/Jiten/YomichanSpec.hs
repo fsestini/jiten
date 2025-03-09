@@ -8,7 +8,11 @@ import qualified Jiten.Yomichan.Search as Search
 import Test.Hspec (Spec, around, describe, it, shouldBe)
 
 spec :: Spec
-spec =
+spec = do
+  describe "formatFindTermsQuery" $ do
+    it "should format query string correctly" $ do
+      let fmtd = Search.formatFindTermsQuery Search.Simple "打"
+      fmtd `shouldBe` "translator.findTerms('simple', '打', options)"
   around withYomiCtx $ do
     describe "on test dictionary 'valid-dictionary1.zip'" $ do
       describe "findTerms" $ do
