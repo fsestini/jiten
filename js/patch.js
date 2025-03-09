@@ -14,12 +14,20 @@ function Collator(locale, options) {
 }
 
 class Performance {
+  constructor() {
+    this.enabled = false;
+  }
+
   mark(markName, markOptions) {
-    console.log(markName, markOptions)
+    if (this.enabled) {
+      console.log(markName, markOptions)
+    }
   }
 
   measure(measureName, startOrMeasureOptions, endMark) {
-    console.log(measureName, startOrMeasureOptions, endMark)
+    if (this.enabled) {
+      console.log(measureName, startOrMeasureOptions, endMark)
+    }
   }
 
   now() { }
