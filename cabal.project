@@ -1,2 +1,3 @@
 packages: .
 with-compiler: ghc-9.10.1
+allow-newer: text-format:base
