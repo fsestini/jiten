@@ -17,10 +17,9 @@ spec = do
     describe "on test dictionary 'valid-dictionary1.zip'" $ do
       describe "findTerms" $ do
         it "correctly returns results for '打ち込む' on simple mode" $ \ctx -> do
-          -- let text = "打ち込む"
-          -- result <- Search.findTerms ctx Search.Simple text
-          -- result `shouldBe` ""
-          "" `shouldBe` ""
+          let text = "打ち込む"
+          result <- Search.findTerms ctx Search.Simple text
+          result `shouldBe` ""
   where
     dictPath = "./test/valid-dictionary1.zip" :: FilePath
     withYomiCtx f =
@@ -29,4 +28,6 @@ spec = do
         dict <- Dict.openArchiveFile dictPath
         Db.insertDictionary conn dict
         let getDictIds = map fst <$> Db.getDictionaries conn
-        Core.withYomitan conn getDictIds f
+        Core.withYomitan conn getDictIds $ \ctx -> do
+          dicts <- map snd <$> Db.getDictionaries conn
+          Search.setOptions ctx dicts >> f ctx
