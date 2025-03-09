@@ -3,8 +3,6 @@ module Jiten.Yomichan.Search where
 import Control.Monad (void)
 import Data.Aeson.Text (encodeToLazyText)
 import Data.Text (Text)
-import Formatting ((%))
-import qualified Formatting
 import qualified Data.Text.Format as Format
 import qualified Data.Text.Lazy as LT
 import Jiten.Yomichan.Core (YomiContext)
@@ -28,16 +26,13 @@ setOptions ctx dictionaries = do
       stmt = LT.unpack stmtText
   void (Core.jsEvalStr ctx stmt)
 
+formatFindTermsQuery :: FindTermsMode -> Text -> LT.Text
+formatFindTermsQuery mode text =
+  Format.format
+    "translator.findTerms('{}', '{}', options)"
+    (textMode mode, text)
+
 findTerms :: YomiContext -> FindTermsMode -> Text -> IO Text
 findTerms ctx mode text =
-  let expr =
-        Formatting.formatToString
-          ( "translator.findTerms("
-              % Formatting.stext
-              % ", "
-              % Formatting.stext
-              % ", options)"
-          )
-          (textMode mode)
-          text
+  let expr = LT.unpack $ formatFindTermsQuery mode text
    in Core.jsEvalStr ctx expr
