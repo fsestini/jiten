@@ -5,6 +5,8 @@ import Data.Aeson.Text (encodeToLazyText)
 import Data.Text (Text)
 import Formatting ((%))
 import qualified Formatting
+import qualified Data.Text.Format as Format
+import qualified Data.Text.Lazy as LT
 import Jiten.Yomichan.Core (YomiContext)
 import qualified Jiten.Yomichan.Core as Core
 
@@ -19,10 +21,11 @@ textMode Simple = "simple"
 setOptions :: YomiContext -> [Text] -> IO ()
 setOptions ctx dictionaries = do
   let dictsList = encodeToLazyText dictionaries
-      stmt =
-        Formatting.formatToString
-          ("var options = mkOptions(" % Formatting.text % ")")
-          dictsList
+      stmtText =
+        Format.format
+          "var options = mkOptions({})"
+          (Format.Only dictsList)
+      stmt = LT.unpack stmtText
   void (Core.jsEvalStr ctx stmt)
 
 findTerms :: YomiContext -> FindTermsMode -> Text -> IO Text
