@@ -58,3 +58,17 @@ function mkOptions(dictionaries) {
     excludeDictionaryDefinitions: null,
   }
 }
+
+var Node = { ELEMENT_NODE: 1, TEXT_NODE: 3 }
+
+class DocumentShim {
+  constructor() { }
+  createElement(tag) { return new NodeBuilder(tag) }
+  createTextNode(text) {
+    var n = new NodeBuilder(null)
+    n.textContent = text
+    return n
+  }
+}
+
+var document = new DocumentShim()
