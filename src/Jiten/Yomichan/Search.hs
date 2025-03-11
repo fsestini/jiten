@@ -29,7 +29,7 @@ setOptions ctx dictionaries = do
 formatFindTermsQuery :: FindTermsMode -> Text -> LT.Text
 formatFindTermsQuery mode text =
   Format.format
-    "translator.findTerms('{}', '{}', options)"
+    "JSON.stringify(translator.findTerms('{}', '{}', options))"
     (textMode mode, text)
 
 findTerms :: YomiContext -> FindTermsMode -> Text -> IO Text
