@@ -28,6 +28,7 @@ library
                     , Jiten.Server
                     , Jiten.Database
                     , Jiten.CLI
+                    , Jiten.Util
     -- other-modules:
     -- other-extensions:
     build-depends:    base ^>=4.20.0.0
