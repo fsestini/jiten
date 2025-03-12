@@ -25,7 +25,8 @@ data NodeBuilder = NodeBuilder
     nodeBuilderTextContent :: !(Maybe Text),
     nodeBuilderChildren :: [NodeBuilder],
     nodeBuilderQueried :: [(Text, NodeBuilder)]
-  } deriving (Show)
+  }
+  deriving (Show)
 
 instance FromJSON NodeBuilder where
   parseJSON = A.withObject "" $ \obj -> do
@@ -107,9 +108,16 @@ instantiateNodeBuilder templates nb@(NodeBuilder {..}) =
   case nodeBuilderName of
     Just name
       | T.isPrefixOf "template:" name ->
-          case HashMap.lookup name templates of
-            Just templ -> NodeElement <$> applyNodeBuilder templates nb templ
-            Nothing -> Left (Util.sformat "template '{}' not found" (Only name))
+          let templateName = T.drop 9 name <> "-template"
+           in case HashMap.lookup templateName templates of
+                Just templ ->
+                  NodeElement <$> applyNodeBuilder templates nb templ
+                Nothing ->
+                  let msg =
+                        Util.sformat
+                          "template '{}' not found"
+                          (Only templateName)
+                   in Left msg
       | otherwise ->
           let el = Element name HashMap.empty []
            in NodeElement <$> applyNodeBuilder templates nb el
