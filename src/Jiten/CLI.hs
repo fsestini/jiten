@@ -1,12 +1,25 @@
 module Jiten.CLI where
 
-import Control.Monad (join)
+import Control.Monad (forM_, join)
 import Data.Text (Text)
+import qualified Data.Text as T
+import qualified Data.Text.IO as TIO
+import qualified Data.Text.Lazy as LT
+import qualified Data.Text.Lazy.IO as LTIO
 import qualified Database.SQLite.Simple as Sql
 import qualified Jiten.Database as Db
+import qualified Jiten.Yomichan.Core as Core
 import qualified Jiten.Yomichan.Dictionary as Yomi
+import qualified Jiten.Yomichan.Search as Search
 import Options.Applicative (Parser)
 import qualified Options.Applicative as Cmd
+import qualified Text.Blaze.Renderer.Text as Blaze
+
+data QueryFormat
+  = FormatJSON
+  | FormatHTML
+  | FormatDeinflections
+  deriving (Show)
 
 main :: IO ()
 main = join $ Cmd.execParser (Cmd.info opts Cmd.idm)
@@ -18,7 +31,26 @@ main = join $ Cmd.execParser (Cmd.info opts Cmd.idm)
             <> Cmd.command "list" (Cmd.info (pure listDicts) Cmd.idm)
             <> Cmd.command "drop" (Cmd.info (dropDict <$> Cmd.argument Cmd.str (Cmd.metavar "NAME")) Cmd.idm)
             <> Cmd.command "serve" (Cmd.info (pure serve) Cmd.idm)
+            <> Cmd.command "query" (Cmd.info (query <$> queryFormatOption <*> Cmd.argument Cmd.str (Cmd.metavar "QUERY")) Cmd.idm)
         )
+
+queryFormatOption :: Parser QueryFormat
+queryFormatOption =
+  Cmd.option
+    readFormat
+    ( Cmd.long "format"
+        <> Cmd.short 'f'
+        <> Cmd.help "Output format: json, html, or deinflections"
+        <> Cmd.metavar "FORMAT"
+        <> Cmd.value FormatJSON
+        <> Cmd.showDefaultWith (const "json")
+    )
+  where
+    readFormat = Cmd.eitherReader $ \s -> case s of
+      "json" -> Right FormatJSON
+      "html" -> Right FormatHTML
+      "deinflections" -> Right FormatDeinflections
+      _ -> Left $ "Unknown format: " ++ s ++ ". Use `json`, `html`, or `deinflections`."
 
 importDict :: FilePath -> IO ()
 importDict fp = Sql.withConnection "jiten.db" $ \conn -> do
@@ -34,3 +66,39 @@ dropDict _ = putStrLn "NIY"
 
 serve :: IO ()
 serve = putStrLn "NIY"
+
+query :: QueryFormat -> Text -> IO ()
+query FormatJSON txt = queryResults txt
+query FormatDeinflections txt = queryDeinflections txt
+query FormatHTML txt = queryHTML txt
+
+queryHTML :: Text -> IO ()
+queryHTML q =
+  Sql.withConnection "jiten.db" $ \conn -> do
+    Db.initDatabase conn
+    dicts <- Db.getDictionaries conn
+    Core.withYomitan conn (pure (map fst dicts)) $ \ctx -> do
+      Search.setOptions ctx (map snd dicts)
+      result <- Search.findTermsHTML ctx Search.Simple q
+      let rendered = map Blaze.renderMarkup result
+      forM_ rendered LTIO.putStrLn
+
+queryDeinflections :: Text -> IO ()
+queryDeinflections q =
+  Sql.withConnection "jiten.db" $ \conn -> do
+    Db.initDatabase conn
+    dicts <- Db.getDictionaries conn
+    Core.withYomitan conn (pure (map fst dicts)) $ \ctx -> do
+      Search.setOptions ctx (map snd dicts)
+      result <- Search.getAlgorithmDeinflections ctx q
+      TIO.putStrLn result
+
+queryResults :: Text -> IO ()
+queryResults q =
+  Sql.withConnection "jiten.db" $ \conn -> do
+    Db.initDatabase conn
+    dicts <- Db.getDictionaries conn
+    Core.withYomitan conn (pure (map fst dicts)) $ \ctx -> do
+      Search.setOptions ctx (map snd dicts)
+      result <- Search.findTerms ctx Search.Simple q
+      TIO.putStrLn result
