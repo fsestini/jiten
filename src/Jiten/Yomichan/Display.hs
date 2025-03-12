@@ -15,7 +15,9 @@ import qualified Data.Text as T
 import Data.Text.Format (Only (..))
 import Data.Text.Lazy.Encoding (decodeUtf8)
 import qualified Jiten.Util as Util
+import Text.Blaze (Markup)
 import Text.Taggy (Element (..), Node (..), parseDOM)
+import qualified Text.Taggy.Renderer
 
 data NodeBuilder = NodeBuilder
   { nodeBuilderName :: !(Maybe Text),
@@ -115,3 +117,6 @@ instantiateNodeBuilder templates nb@(NodeBuilder {..}) =
       case nodeBuilderTextContent of
         Just text -> Right (NodeContent text)
         Nothing -> Left "cannot instantiate text node without content"
+
+renderNode :: Node -> Markup
+renderNode = Text.Taggy.Renderer.toMarkup True

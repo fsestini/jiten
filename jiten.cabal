@@ -51,6 +51,7 @@ library
                     , text-format
                     , taggy
                     , unordered-containers
+                    , blaze-markup
 
     cc-options:
         -static -D_GNU_SOURCE -DCONFIG_VERSION="2020-11-08" -DCONFIG_BIGNUM
