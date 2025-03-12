@@ -72,3 +72,14 @@ class DocumentShim {
 }
 
 var document = new DocumentShim()
+
+function findTermsDOM(mode, text, options) {
+  const results = translator.findTerms(mode, text, options)
+  const entries = results.dictionaryEntries
+  const nodes = []
+  for (const entry of entries) {
+    const node = displayGenerator.createTermEntry(entry)
+    nodes.push(node)
+  }
+  return nodes
+}
