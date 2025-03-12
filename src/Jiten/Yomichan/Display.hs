@@ -25,7 +25,7 @@ data NodeBuilder = NodeBuilder
     nodeBuilderTextContent :: !(Maybe Text),
     nodeBuilderChildren :: [NodeBuilder],
     nodeBuilderQueried :: [(Text, NodeBuilder)]
-  }
+  } deriving (Show)
 
 instance FromJSON NodeBuilder where
   parseJSON = A.withObject "" $ \obj -> do
