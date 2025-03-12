@@ -240,7 +240,7 @@ termResultToJSON :: TermResult -> Text
 termResultToJSON (TermResult {..}) =
   mconcat
     [ "{",
-      sformat ("\"entryId\": " % Formatting.int % ", ") termResultEntryId,
+      sformat ("\"id\": " % Formatting.int % ", ") termResultEntryId,
       sformat ("\"term\": \"" % Formatting.stext % "\", ") termResultExpression,
       sformat ("\"reading\": \"" % Formatting.stext % "\", ") termResultReading,
       sformat ("\"matchSource\": \"" % Formatting.stext % "\", ") termResultMatchSource,
