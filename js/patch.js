@@ -78,8 +78,9 @@ function findTermsDOM(mode, text, options) {
   const entries = results.dictionaryEntries
   const nodes = []
   for (const entry of entries) {
-    const node = displayGenerator.createTermEntry(entry)
-    nodes.push(node)
+    //TODO: pass dictionaryInfo
+    const node = displayGenerator.createTermEntry(entry, [])
+    nodes.push(node.toObject())
   }
   return nodes
 }
