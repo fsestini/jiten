@@ -1,8 +1,9 @@
 module Jiten.Yomichan.Search where
 
-import Control.Monad (void)
+import Control.Monad (forM, void)
 import qualified Data.Aeson as A
 import Data.Aeson.Text (encodeToLazyText)
+import qualified Data.HashMap.Strict as HashMap
 import Data.Text (Text)
 import Data.Text.Format (Only (..))
 import qualified Data.Text.Format as Format
@@ -11,6 +12,8 @@ import qualified Jiten.Util as Util
 import Jiten.Yomichan.Core (YomiContext)
 import qualified Jiten.Yomichan.Core as Core
 import Jiten.Yomichan.Display (NodeBuilder)
+import qualified Jiten.Yomichan.Display as Display
+import Text.Blaze (Markup)
 
 data FindTermsMode = Group | Merge | Split | Simple
 
@@ -58,3 +61,14 @@ findTermsDOM ctx mode text = do
     expr =
       let template = "JSON.stringify(findTermsDOM('{}', '{}', options))"
        in LT.unpack $ Format.format template (textMode mode, text)
+
+findTermsHTML :: YomiContext -> FindTermsMode -> Text -> IO [Markup]
+findTermsHTML ctx mode text = do
+  templates <- Display.loadTemplates
+  let ks = HashMap.keys templates
+  nodes <- findTermsDOM ctx mode text
+  let instantiatedMay = forM nodes (Display.instantiateNodeBuilder templates)
+  case instantiatedMay of
+    Right instantiated -> pure (map Display.renderNode instantiated)
+    Left err ->
+      fail (Util.strFormat "failed to render HTML: {}" (Only err))
