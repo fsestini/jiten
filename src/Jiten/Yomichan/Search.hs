@@ -4,8 +4,10 @@ import Control.Monad (void)
 import qualified Data.Aeson as A
 import Data.Aeson.Text (encodeToLazyText)
 import Data.Text (Text)
+import Data.Text.Format (Only (..))
 import qualified Data.Text.Format as Format
 import qualified Data.Text.Lazy as LT
+import qualified Jiten.Util as Util
 import Jiten.Yomichan.Core (YomiContext)
 import qualified Jiten.Yomichan.Core as Core
 import Jiten.Yomichan.Display (NodeBuilder)
@@ -27,6 +29,12 @@ setOptions ctx dictionaries = do
           (Format.Only dictsList)
       stmt = LT.unpack stmtText
   void (Core.jsEvalStr ctx stmt)
+
+getAlgorithmDeinflections :: YomiContext -> Text -> IO Text
+getAlgorithmDeinflections ctx text =
+  let template =
+        "JSON.stringify(translator._getAlgorithmDeinflections('{}', options))"
+   in Core.jsEvalStr ctx (Util.strFormat template (Only text))
 
 formatFindTermsQuery :: FindTermsMode -> Text -> LT.Text
 formatFindTermsQuery mode text =
