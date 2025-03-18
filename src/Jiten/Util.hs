@@ -5,6 +5,7 @@ module Jiten.Util
     decodeJSON,
     postfixes,
     encodeStrict,
+    unfold,
   )
 where
 
@@ -51,3 +52,11 @@ postfixes t = [T.drop n t | n <- [0 .. T.length t]]
 -- | Encode to strict 'Text'.
 encodeStrict :: (ToJSON a) => a -> Text
 encodeStrict = LT.toStrict . A.encodeToLazyText
+
+-- | Generate a list by repeatedly applying a function that produces both
+-- an element and a new seed value.
+unfold :: (b -> Maybe (a, b)) -> b -> [a]
+unfold f b =
+  case f b of
+    Just (a, b') -> a : unfold f b'
+    Nothing -> []
