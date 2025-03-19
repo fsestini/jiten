@@ -175,7 +175,12 @@ insertDictionary conn dict = do
     Nothing -> withTransaction conn $ do
       dictId <- insertIndex conn index
       let runStream s f = Yomichan.runStream (s dict) (void . f conn dictId)
-      runStream Yomichan.streamTerms insertTerm
+      -- runStream Yomichan.streamTerms insertTerm
+      forM_ (Yomichan.listTermBanks dict) $ \bank ->
+        forM_ (Yomichan.unfoldBank bank) $ \row ->
+          case Yomichan.parseTerm row of
+            Nothing -> fail "failed to parse term"
+            Just tm -> insertTerm conn dictId tm
       runStream Yomichan.streamTermMetas insertTermMeta
       runStream Yomichan.streamTags insertTag
       runStream Yomichan.streamKanji insertKanji
