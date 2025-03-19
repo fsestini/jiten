@@ -1,6 +1,7 @@
 .PHONY: extract-yomitan quickjs
 
 extract-yomitan:
+	git submodule update --init
 	cd ./vendor/yomitan && npm ci && npm run build chrome-dev
 	rm -rf ./js/yomitan
 	unzip ./vendor/yomitan/builds/yomitan-chrome-dev.zip -d ./js/yomitan
