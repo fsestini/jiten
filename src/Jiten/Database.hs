@@ -202,7 +202,7 @@ insertTerm conn dictId term = do
   execute
     conn
     "INSERT INTO entry (glossary, definition_tags, term_tags, rules, popularity, rules, heading_id, dictionary_id) VALUES (?,?,?,?,?,?,?,?)"
-    ( LT.toStrict . A.encodeToLazyText $ Yomichan.termDefinitions term,
+    ( Yomichan.termDefinitions term,
       Yomichan.termDefinitionTags term,
       Yomichan.termTermTags term,
       Yomichan.termRuleIdentifiers term,
@@ -264,7 +264,7 @@ insertDictionary conn dict = do
     Nothing -> withTransaction conn $ do
       dictId <- insertIndex conn index
       let runStream s f = Yomichan.runStream (s dict) (void . f conn dictId)
-      runStream Yomichan.streamTerms insertTerm
+      forM_ (Yomichan.listTerms dict) (insertTerm conn dictId)
       runStream Yomichan.streamTermMetas insertTermMeta
       runStream Yomichan.streamTags insertTag
       runStream Yomichan.streamKanji insertKanji

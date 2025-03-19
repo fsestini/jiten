@@ -1,3 +1,5 @@
+{-# LANGUAGE BangPatterns #-}
+
 module Jiten.Yomichan.Dictionary where
 
 import qualified Codec.Archive.Zip as Zip
@@ -9,17 +11,22 @@ import Data.Aeson (FromJSON, Value, parseJSON, (.:), (.:?))
 import qualified Data.Aeson as A
 import qualified Data.Aeson.Key as Key
 import qualified Data.Aeson.KeyMap as KeyMap
-import Data.Aeson.Types (Parser, prependFailure)
-import Data.Bifunctor (first)
+import Data.Aeson.Types (Parser)
+import Data.Bifunctor (Bifunctor (..), first)
+import Data.ByteString (ByteString)
+import qualified Data.ByteString as BS
 import qualified Data.ByteString.Lazy as LBS
 import Data.Conduit.Aeson (conduitArray)
 import qualified Data.Conduit.Combinators as Conduit.Combinators
 import Data.Either.Extra (maybeToEither)
 import Data.Function ((&))
 import qualified Data.List as List
-import Data.Maybe (isJust)
+import Data.Maybe (fromMaybe, isJust)
+import Data.Scientific (toBoundedInteger)
 import Data.Text (Text)
 import qualified Data.Text as Text
+import Jiten.Yomichan.Parser (JsonValue (..))
+import qualified Jiten.Yomichan.Parser as Parser
 import System.FilePath (takeExtension)
 
 -- DICTIONARY INDEX ------------------------------------------------------------
@@ -192,7 +199,7 @@ data Term = Term
     -- This score is also used to sort search results.
     termPopularity :: !Int,
     -- | List of definitions for the term.
-    termDefinitions :: !Value,
+    termDefinitions :: !ByteString,
     -- | Sequence number for the term. Terms with the same sequence number can be shown together.
     termSequenceNumber :: !Int,
     -- | Tags for the term.
@@ -200,27 +207,25 @@ data Term = Term
   }
   deriving (Show)
 
-instance FromJSON Term where
-  parseJSON v =
-    parseJSON v >>= \case
-      [tm, rd, dt, ri, p, d, sn, tt] ->
-        Term
-          <$> field "term" (parseJSON tm)
-          <*> field "reading" (parseReading rd)
-          <*> field "definitionTags" (parseDefinitionTags dt)
-          <*> field "ruleIdentifiers" (parseJSON ri)
-          <*> field "popularity" (parseJSON p)
-          <*> pure d -- field "definitions" (parseJSON d)
-          <*> field "sequenceNumber" (parseJSON sn)
-          <*> field "termTags" (parseJSON tt)
-      _other -> fail "invalid Term"
-    where
-      field f = prependFailure ("parsing Term field " <> f <> " failed, ")
-      parseReading rd =
-        fmap (\tx -> if Text.null tx then Nothing else Just tx) (parseJSON rd)
-      parseDefinitionTags :: Value -> Parser Text
-      parseDefinitionTags (A.String s) = pure s
-      parseDefinitionTags _ = pure ""
+parseTerm :: ByteString -> Maybe Term
+parseTerm bs =
+  case Parser.unfoldRow bs of
+    [ String tm,
+      String rd,
+      String dt,
+      String ri,
+      Number p,
+      defs,
+      Number sn,
+      String tt
+      ] -> do
+        let reading = if Text.null rd then Nothing else Just rd
+        pop <- toBoundedInteger p
+        seqNum <- toBoundedInteger sn
+        -- textDefs <- fromStringOrRaw defs
+        let textDefs = Parser.encode defs
+        pure (Term tm reading dt ri pop textDefs seqNum tt)
+    _ -> Nothing
 
 -- TERM META -------------------------------------------------------------------
 
@@ -290,8 +295,18 @@ streamBanks prefix dict =
             )
    in sequence_ streams
 
-streamTerms :: Dictionary -> C Term
-streamTerms = streamBanks "term_bank"
+listBanks :: String -> Dictionary -> [ByteString]
+listBanks pfx =
+  map (BS.toStrict . Zip.fromEntry)
+    . filter (List.isPrefixOf pfx . Zip.eRelativePath)
+    . Zip.zEntries
+    . dictionaryArchive
+
+listTerms :: Dictionary -> [Term]
+listTerms d = do
+  bank <- listBanks "term_bank" d
+  row <- Parser.unfoldBank bank
+  pure $ fromMaybe (error "failed to parse term") (parseTerm row)
 
 streamTermMetas :: Dictionary -> C TermMeta
 streamTermMetas = streamBanks "term_meta_bank"
