@@ -10,14 +10,19 @@
         pkgs = import nixpkgs {
           inherit system;
         };
+        hspkgs = pkgs.haskell.packages.ghc9101;
       in {
         devShells.default = pkgs.mkShell {
-          packages = with pkgs; [
+          buildInputs = with pkgs; [
+            hspkgs.ghc
+            hspkgs.cabal-install
+            hspkgs.haskell-language-server
             nodejs
             eslint_d
             nodePackages.typescript-language-server
             hlint
             esbuild
+            zlib
           ];
         };
       });
