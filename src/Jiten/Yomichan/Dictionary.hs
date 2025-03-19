@@ -91,30 +91,6 @@ instance FromJSON Index where
       <*> obj .:? "targetLanguage"
       <*> obj .:? "frequencyMode"
 
--- FREQUENCY -------------------------------------------------------------------
-
-data StructuredFrequency = StructuredFrequency
-  { structuredFrequencyValue :: !Double,
-    structuredFrequencyDisplayValue :: !(Maybe Text)
-  }
-  deriving (Show)
-
-data Frequency
-  = String !Text
-  | Number !Double
-  | Structured !StructuredFrequency
-  deriving (Show)
-
-instance FromJSON StructuredFrequency where
-  parseJSON = A.withObject "StructuredFrequency" $ \obj ->
-    StructuredFrequency <$> obj .: "value" <*> obj .:? "displayValue"
-
-instance FromJSON Frequency where
-  parseJSON v =
-    fmap String (parseJSON v)
-      <|> fmap Number (parseJSON v)
-      <|> fmap Structured (parseJSON v)
-
 -- KANJI -----------------------------------------------------------------------
 
 -- | Information about a single kanji character.
