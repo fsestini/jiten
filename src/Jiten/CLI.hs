@@ -2,9 +2,7 @@ module Jiten.CLI where
 
 import Control.Monad (forM_, join)
 import Data.Text (Text)
-import qualified Data.Text as T
 import qualified Data.Text.IO as TIO
-import qualified Data.Text.Lazy as LT
 import qualified Data.Text.Lazy.IO as LTIO
 import qualified Database.SQLite.Simple as Sql
 import qualified Jiten.Database as Db
