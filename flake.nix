@@ -17,6 +17,7 @@
             hspkgs.ghc
             hspkgs.cabal-install
             hspkgs.haskell-language-server
+            hspkgs.hspec-golden
             nodejs
             eslint_d
             nodePackages.typescript-language-server
