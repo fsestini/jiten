@@ -36,3 +36,6 @@ clean:
 	rm -r dist
 	rm -f js/.yomitan-stamp
 	cabal clean
+
+download-test-dicts:
+	wget -P ./test https://github.com/stephenmk/stephenmk.github.io/releases/latest/download/jitendex-yomitan.zip
