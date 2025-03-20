@@ -3,7 +3,7 @@ name:               jiten
 version:            0.1.0.0
 -- synopsis:
 -- description:
-license:            MIT
+license:            GPL-3.0-only
 license-file:       LICENSE
 author:             Filippo Sestini
 maintainer:         sestini.filippo@gmail.com
