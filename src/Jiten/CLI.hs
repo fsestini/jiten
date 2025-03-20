@@ -11,7 +11,7 @@ import qualified Jiten.Database as Db
 import qualified Jiten.Yomichan.Core as Core
 import qualified Jiten.Yomichan.Dictionary as Yomi
 import qualified Jiten.Yomichan.Search as Search
-import Options.Applicative (Parser)
+import Options.Applicative (Parser, (<**>))
 import qualified Options.Applicative as Cmd
 import qualified Text.Blaze.Renderer.Text as Blaze
 
@@ -22,16 +22,46 @@ data QueryFormat
   deriving (Show)
 
 main :: IO ()
-main = join $ Cmd.execParser (Cmd.info opts Cmd.idm)
+main = join $ Cmd.execParser (Cmd.info (opts <**> Cmd.helper) programInfo)
   where
+    programInfo =
+      Cmd.fullDesc
+        <> Cmd.progDesc "Jiten"
+        <> Cmd.header "Jiten - query Japanese dictionaries in Yomichan format."
+
     opts :: Parser (IO ())
     opts =
       Cmd.subparser
-        ( Cmd.command "import" (Cmd.info (importDict <$> Cmd.argument Cmd.str (Cmd.metavar "PATH")) Cmd.idm)
-            <> Cmd.command "list" (Cmd.info (pure listDicts) Cmd.idm)
-            <> Cmd.command "drop" (Cmd.info (dropDict <$> Cmd.argument Cmd.str (Cmd.metavar "NAME")) Cmd.idm)
-            <> Cmd.command "serve" (Cmd.info (pure serve) Cmd.idm)
-            <> Cmd.command "query" (Cmd.info (query <$> queryFormatOption <*> Cmd.argument Cmd.str (Cmd.metavar "QUERY")) Cmd.idm)
+        ( Cmd.command
+            "import"
+            ( Cmd.info
+                (importDict <$> Cmd.argument Cmd.str (Cmd.metavar "PATH") <**> Cmd.helper)
+                (Cmd.progDesc "Import a Yomichan dictionary")
+            )
+            <> Cmd.command
+              "list"
+              ( Cmd.info
+                  (pure listDicts <**> Cmd.helper)
+                  (Cmd.progDesc "List all imported dictionaries")
+              )
+            <> Cmd.command
+              "drop"
+              ( Cmd.info
+                  (dropDict <$> Cmd.argument Cmd.str (Cmd.metavar "NAME") <**> Cmd.helper)
+                  (Cmd.progDesc "Remove a dictionary by name")
+              )
+            <> Cmd.command
+              "serve"
+              ( Cmd.info
+                  (pure serve <**> Cmd.helper)
+                  (Cmd.progDesc "Start the dictionary server")
+              )
+            <> Cmd.command
+              "query"
+              ( Cmd.info
+                  (query <$> queryFormatOption <*> Cmd.argument Cmd.str (Cmd.metavar "QUERY") <**> Cmd.helper)
+                  (Cmd.progDesc "Search for terms")
+              )
         )
 
 queryFormatOption :: Parser QueryFormat
