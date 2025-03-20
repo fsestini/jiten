@@ -6,6 +6,7 @@ import qualified Data.Text.IO as TIO
 import qualified Data.Text.Lazy.IO as LTIO
 import qualified Database.SQLite.Simple as Sql
 import qualified Jiten.Database as Db
+import qualified Jiten.Util as Util
 import qualified Jiten.Yomichan.Core as Core
 import qualified Jiten.Yomichan.Dictionary as Yomi
 import qualified Jiten.Yomichan.Search as Search
@@ -87,7 +88,13 @@ importDict fp = Sql.withConnection "jiten.db" $ \conn -> do
   Db.insertDictionary conn dict
 
 listDicts :: IO ()
-listDicts = putStrLn "NIY"
+listDicts = do
+  Sql.withConnection "jiten.db" $ \conn -> do
+    Db.initDatabase conn
+    dicts <- Db.getDictionaries conn
+    if null dicts
+      then putStrLn "No dictionaries imported."
+      else forM_ dicts $ TIO.putStrLn . Util.sformat "{}: {}"
 
 dropDict :: Text -> IO ()
 dropDict _ = putStrLn "NIY"
