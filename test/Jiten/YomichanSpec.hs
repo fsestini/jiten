@@ -12,7 +12,7 @@ spec = do
   describe "formatFindTermsQuery" $ do
     it "should format query string correctly" $ do
       let fmtd = Search.formatFindTermsQuery Search.Simple "打"
-      fmtd `shouldBe` "translator.findTerms('simple', '打', options)"
+      fmtd `shouldBe` "JSON.stringify(translator.findTerms('simple', '打', options))"
   around withYomiCtx $ do
     describe "on test dictionary 'valid-dictionary1.zip'" $ do
       describe "findTerms" $ do

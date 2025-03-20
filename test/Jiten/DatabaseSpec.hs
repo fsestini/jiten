@@ -28,7 +28,7 @@ spec =
         it "renders JSON result correctly" $ \conn -> do
           results <- Db.findTermsBulk conn ["土木工事"] [1]
           map Db.termResultToJSON results
-            `shouldBe` [ "{\"entryId\": 19,\
+            `shouldBe` [ "{\"id\": 19,\
                          \ \"term\": \"土木工事\",\
                          \ \"reading\": \"どぼくこうじ\",\
                          \ \"matchSource\": \"term\",\
