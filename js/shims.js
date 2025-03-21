@@ -10,6 +10,7 @@ class NodeBuilder {
     this.nodeType = name == null ? 3 : 1;
     this.attributes = new Map();
     this.style = {};
+    this.href = null;
   }
   appendChild(node) {
     this.children.push(node);
@@ -55,6 +56,7 @@ class NodeBuilder {
       result.attributes.push({ attrKey: k, attrVal: v });
     }
     result.style = this.style;
+    result.href = this.href;
     return result;
   }
 }

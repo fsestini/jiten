@@ -61,6 +61,8 @@ function mkOptions(dictionaries) {
 
 var Node = { ELEMENT_NODE: 1, TEXT_NODE: 3 };
 
+var location = { protocol: "http:", host: "localhost" };
+
 function findTermsDOM(mode, text, options) {
   const results = translator.findTerms(mode, text, options);
   const entries = results.dictionaryEntries;

@@ -29,6 +29,17 @@ class HtmlTemplateShim {
   loadFromFiles(files) {}
 }
 
-const displayGenerator = new DisplayGenerator(null, null);
+class ContentManager {
+  constructor() {}
+  prepareLink(node, href, internal) {
+    if (internal) {
+      node.href = href.replace(/^http:\/\/localhost/, ".");
+    } else {
+      node.href = href;
+    }
+  }
+}
+
+const displayGenerator = new DisplayGenerator(new ContentManager(), null);
 displayGenerator._templates = new HtmlTemplateShim();
 displayGenerator.prepare();
