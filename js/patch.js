@@ -61,20 +61,6 @@ function mkOptions(dictionaries) {
 
 var Node = { ELEMENT_NODE: 1, TEXT_NODE: 3 };
 
-class DocumentShim {
-  constructor() {}
-  createElement(tag) {
-    return new NodeBuilder(tag);
-  }
-  createTextNode(text) {
-    var n = new NodeBuilder(null);
-    n.textContent = text;
-    return n;
-  }
-}
-
-var document = new DocumentShim();
-
 function findTermsDOM(mode, text, options) {
   const results = translator.findTerms(mode, text, options);
   const entries = results.dictionaryEntries;
