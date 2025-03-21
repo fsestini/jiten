@@ -9,6 +9,7 @@ class NodeBuilder {
     this.children = [];
     this.nodeType = name == null ? 3 : 1;
     this.attributes = new Map();
+    this.style = {};
   }
   appendChild(node) {
     this.children.push(node);
@@ -53,6 +54,7 @@ class NodeBuilder {
     for (const [k, v] of this.attributes) {
       result.attributes.push({ attrKey: k, attrVal: v });
     }
+    result.style = this.style;
     return result;
   }
 }
