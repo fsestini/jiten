@@ -3,6 +3,8 @@ class NodeBuilder {
     this.name = name;
     this.queried = new Map();
     this.dataset = {};
+    this.classList = new Set();
+    this.className = null;
     this.textContent = null;
     this.children = [];
     this.nodeType = name == null ? 3 : 1;
@@ -30,6 +32,18 @@ class NodeBuilder {
     result.queried = [];
     for (const [k, v] of this.queried) {
       result.queried.push({ selector: k, selected: v.toObject() });
+    }
+    result.classList = [];
+    for (const c of this.classList) {
+      result.classList.push(c);
+    }
+    if (this.className !== null) {
+      const classNames = this.className.split(" ");
+      for (const className of classNames) {
+        if (className.trim() !== "") {
+          result.classList.push(className.trim());
+        }
+      }
     }
     return result;
   }
