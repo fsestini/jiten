@@ -26,6 +26,9 @@ class HtmlTemplateShim {
   instantiate(name) {
     return new NodeBuilder("template:" + name);
   }
+  instantiateFragment(name) {
+    return new NodeBuilder("template-fragment:" + name);
+  }
   loadFromFiles(files) {}
 }
 
