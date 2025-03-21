@@ -8,6 +8,7 @@ class NodeBuilder {
     this.textContent = null;
     this.children = [];
     this.nodeType = name == null ? 3 : 1;
+    this.attributes = new Map();
   }
   appendChild(node) {
     this.children.push(node);
@@ -22,6 +23,9 @@ class NodeBuilder {
     var selected = new NodeBuilder(selector);
     this.queried.set(selector, selected);
     return selected;
+  }
+  setAttribute(key, val) {
+    this.attributes.set(key, val);
   }
   toObject() {
     var result = {};
@@ -44,6 +48,10 @@ class NodeBuilder {
           result.classList.push(className.trim());
         }
       }
+    }
+    result.attributes = [];
+    for (const [k, v] of this.attributes) {
+      result.attributes.push({ attrKey: k, attrVal: v });
     }
     return result;
   }
