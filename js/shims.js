@@ -1,6 +1,6 @@
 class NodeBuilder {
   constructor(name) {
-    this.name = name;
+    this.tag = name;
     this.queried = new Map();
     this.dataset = {};
     this.classList = new Set();
@@ -30,7 +30,7 @@ class NodeBuilder {
   }
   toObject() {
     var result = {};
-    result.name = this.name;
+    result.tag = this.tag;
     result.dataset = this.dataset;
     result.textContent = this.textContent;
     result.children = this.children.map((n) => n.toObject());
