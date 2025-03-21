@@ -19,7 +19,7 @@ import Text.Taggy (Element (..), Node (..), parseDOM)
 import qualified Text.Taggy.Renderer
 
 data NodeBuilder = NodeBuilder
-  { nodeBuilderName :: !(Maybe Text),
+  { nodeBuilderTag :: !(Maybe Text),
     nodeBuilderDataset :: Object,
     nodeBuilderTextContent :: !(Maybe Text),
     nodeBuilderChildren :: [NodeBuilder],
@@ -29,7 +29,7 @@ data NodeBuilder = NodeBuilder
 
 instance FromJSON NodeBuilder where
   parseJSON = A.withObject "" $ \obj -> do
-    name <- obj .: "name"
+    tag <- obj .: "tag"
     dataset <- obj .: "dataset"
     textContent <- obj .: "textContent"
     children <- obj .: "children"
@@ -38,7 +38,7 @@ instance FromJSON NodeBuilder where
       selector <- qObj .: "selector"
       selected <- qObj .: "selected"
       pure (selector, selected)
-    pure (NodeBuilder name dataset textContent children queried)
+    pure (NodeBuilder tag dataset textContent children queried)
 
 newtype Fragment = Fragment [Node]
 
@@ -117,7 +117,7 @@ applyFragmentBuilder templates (NodeBuilder {..}) =
 
 instantiateNodeBuilder :: Templates -> NodeBuilder -> [Node]
 instantiateNodeBuilder templates nb@(NodeBuilder {..}) =
-  case nodeBuilderName of
+  case nodeBuilderTag of
     Just name
       | T.isPrefixOf "template:" name ->
           let templateName = T.drop 9 name <> "-template"
