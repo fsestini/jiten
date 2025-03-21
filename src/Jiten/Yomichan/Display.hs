@@ -2,7 +2,7 @@
 
 module Jiten.Yomichan.Display where
 
-import Control.Monad (forM, (<=<))
+import Control.Monad (forM)
 import Data.Aeson (Object, Value, (.:))
 import qualified Data.Aeson as A
 import Data.Aeson.Types (FromJSON (..), Parser)
@@ -61,27 +61,26 @@ loadTemplates = do
       | otherwise = eltChildren el >>= collectTemplates
     collectTemplates (NodeContent _) = []
 
-applyNodeBuilder :: Templates -> NodeBuilder -> Element -> Either Text Element
+applyNodeBuilder :: Templates -> NodeBuilder -> Element -> Element
 applyNodeBuilder templates (NodeBuilder {..}) =
-  applySelections <=< applyChildren . applyTextContent
+  applySelections . applyChildren . applyTextContent
   where
-    applyChildren :: Element -> Either Text Element
-    applyChildren el = do
-      instantiatedChildren <-
-        traverse (instantiateNodeBuilder templates) nodeBuilderChildren
-      pure (el {eltChildren = eltChildren el ++ instantiatedChildren})
+    applyChildren :: Element -> Element
+    applyChildren el =
+      let instantiatedChildren = map (instantiateNodeBuilder templates) nodeBuilderChildren
+       in (el {eltChildren = eltChildren el ++ instantiatedChildren})
     applyTextContent :: Element -> Element
     applyTextContent el =
       case nodeBuilderTextContent of
         Nothing -> el
         Just text -> el {eltChildren = NodeContent text : eltChildren el}
-    applySelections :: Element -> Either Text Element
-    applySelections el = do
+    applySelections :: Element -> Element
+    applySelections el =
       let selections = HashMap.fromList nodeBuilderQueried
-      children <- forM (eltChildren el) (modifyInnerNode selections)
-      pure (el {eltChildren = children})
+          children = map (modifyInnerNode selections) (eltChildren el)
+       in (el {eltChildren = children})
       where
-        modifyInnerNode :: HashMap Text NodeBuilder -> Node -> Either Text Node
+        modifyInnerNode :: HashMap Text NodeBuilder -> Node -> Node
         modifyInnerNode selections (NodeElement innerElement) =
           let classes = case HashMap.lookup "class" (eltAttrs innerElement) of
                 Just classesStr -> T.splitOn " " classesStr
@@ -91,40 +90,38 @@ applyNodeBuilder templates (NodeBuilder {..}) =
                   (\cl -> HashMap.lookup ("." <> cl) selections)
                   classes
            in case currentSelection of
-                Just nb -> do
-                  modifiedElement <-
-                    applyNodeBuilder templates nb innerElement
-                  pure (NodeElement modifiedElement)
-                Nothing -> do
-                  modifiedChildren <-
-                    traverse
-                      (modifyInnerNode selections)
-                      (eltChildren innerElement)
-                  pure (NodeElement (innerElement {eltChildren = modifiedChildren}))
-        modifyInnerNode _ n@(NodeContent _) = pure n
+                Just nb ->
+                  let modifiedElement = applyNodeBuilder templates nb innerElement
+                   in (NodeElement modifiedElement)
+                Nothing ->
+                  let modifiedChildren =
+                        map
+                          (modifyInnerNode selections)
+                          (eltChildren innerElement)
+                   in (NodeElement (innerElement {eltChildren = modifiedChildren}))
+        modifyInnerNode _ n@(NodeContent _) = n
 
-instantiateNodeBuilder :: Templates -> NodeBuilder -> Either Text Node
+instantiateNodeBuilder :: Templates -> NodeBuilder -> Node
 instantiateNodeBuilder templates nb@(NodeBuilder {..}) =
   case nodeBuilderName of
     Just name
       | T.isPrefixOf "template:" name ->
           let templateName = T.drop 9 name <> "-template"
            in case HashMap.lookup templateName templates of
-                Just templ ->
-                  NodeElement <$> applyNodeBuilder templates nb templ
+                Just templ -> NodeElement (applyNodeBuilder templates nb templ)
                 Nothing ->
                   let msg =
-                        Util.sformat
+                        Util.strFormat
                           "template '{}' not found"
                           (Only templateName)
-                   in Left msg
+                   in error msg
       | otherwise ->
           let el = Element name HashMap.empty []
-           in NodeElement <$> applyNodeBuilder templates nb el
+           in NodeElement (applyNodeBuilder templates nb el)
     Nothing ->
       case nodeBuilderTextContent of
-        Just text -> Right (NodeContent text)
-        Nothing -> Left "cannot instantiate text node without content"
+        Just text -> NodeContent text
+        Nothing -> error "cannot instantiate text node without content"
 
 renderNode :: Node -> Markup
 renderNode = Text.Taggy.Renderer.toMarkup True
