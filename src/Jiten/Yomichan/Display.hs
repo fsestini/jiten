@@ -9,7 +9,6 @@ import Data.Aeson.Types (FromJSON (..), Parser)
 import qualified Data.ByteString.Lazy as LBS
 import Data.HashMap.Strict (HashMap)
 import qualified Data.HashMap.Strict as HashMap
-import Data.Maybe (listToMaybe)
 import Data.Text (Text)
 import qualified Data.Text as T
 import Data.Text.Format (Only (..))
@@ -41,7 +40,15 @@ instance FromJSON NodeBuilder where
       pure (selector, selected)
     pure (NodeBuilder name dataset textContent children queried)
 
-type Templates = HashMap Text Element
+newtype Fragment = Fragment [Node]
+
+data Document = DocElement !Element | DocFragment ![Node]
+
+docNodes :: Document -> [Node]
+docNodes (DocElement e) = [NodeElement e]
+docNodes (DocFragment es) = es
+
+type Templates = HashMap Text Document
 
 loadTemplates :: IO Templates
 loadTemplates = do
@@ -49,17 +56,38 @@ loadTemplates = do
   let dom = parseDOM True file
   pure (HashMap.fromList (concatMap collectTemplates dom))
   where
-    collectTemplates :: Node -> [(Text, Element)]
+    collectTemplates :: Node -> [(Text, Document)]
     collectTemplates (NodeElement el)
       | eltName el == "template" =
-          let templateIdMay = HashMap.lookup "id" (eltAttrs el)
-              templateNodeMay = listToMaybe (eltChildren el)
-           in case (templateIdMay, templateNodeMay) of
-                (Just templateId, Just (NodeElement templateNode)) ->
-                  [(templateId, templateNode)]
-                _ -> []
+          case HashMap.lookup "id" (eltAttrs el) of
+            Just templateId ->
+              case eltChildren el of
+                [NodeElement e] -> [(templateId, DocElement e)]
+                nodes -> [(templateId, (DocFragment nodes))]
+            Nothing -> []
       | otherwise = eltChildren el >>= collectTemplates
     collectTemplates (NodeContent _) = []
+
+modifyInnerNode :: Templates -> HashMap Text NodeBuilder -> Node -> Node
+modifyInnerNode _ _ n@(NodeContent _) = n
+modifyInnerNode templates selections (NodeElement innerElement) =
+  let classes = case HashMap.lookup "class" (eltAttrs innerElement) of
+        Just classesStr -> T.splitOn " " classesStr
+        Nothing -> []
+      currentSelection =
+        Util.findJust
+          (\cl -> HashMap.lookup ("." <> cl) selections)
+          classes
+   in case currentSelection of
+        Just sel ->
+          let modifiedElement = applyNodeBuilder templates sel innerElement
+           in (NodeElement modifiedElement)
+        Nothing ->
+          let modifiedChildren =
+                map
+                  (modifyInnerNode templates selections)
+                  (eltChildren innerElement)
+           in (NodeElement (innerElement {eltChildren = modifiedChildren}))
 
 applyNodeBuilder :: Templates -> NodeBuilder -> Element -> Element
 applyNodeBuilder templates (NodeBuilder {..}) =
@@ -67,7 +95,8 @@ applyNodeBuilder templates (NodeBuilder {..}) =
   where
     applyChildren :: Element -> Element
     applyChildren el =
-      let instantiatedChildren = map (instantiateNodeBuilder templates) nodeBuilderChildren
+      let instantiatedChildren =
+            concatMap (instantiateNodeBuilder templates) nodeBuilderChildren
        in (el {eltChildren = eltChildren el ++ instantiatedChildren})
     applyTextContent :: Element -> Element
     applyTextContent el =
@@ -77,38 +106,25 @@ applyNodeBuilder templates (NodeBuilder {..}) =
     applySelections :: Element -> Element
     applySelections el =
       let selections = HashMap.fromList nodeBuilderQueried
-          children = map (modifyInnerNode selections) (eltChildren el)
+          children = map (modifyInnerNode templates selections) (eltChildren el)
        in (el {eltChildren = children})
-      where
-        modifyInnerNode :: HashMap Text NodeBuilder -> Node -> Node
-        modifyInnerNode selections (NodeElement innerElement) =
-          let classes = case HashMap.lookup "class" (eltAttrs innerElement) of
-                Just classesStr -> T.splitOn " " classesStr
-                Nothing -> []
-              currentSelection =
-                Util.findJust
-                  (\cl -> HashMap.lookup ("." <> cl) selections)
-                  classes
-           in case currentSelection of
-                Just nb ->
-                  let modifiedElement = applyNodeBuilder templates nb innerElement
-                   in (NodeElement modifiedElement)
-                Nothing ->
-                  let modifiedChildren =
-                        map
-                          (modifyInnerNode selections)
-                          (eltChildren innerElement)
-                   in (NodeElement (innerElement {eltChildren = modifiedChildren}))
-        modifyInnerNode _ n@(NodeContent _) = n
 
-instantiateNodeBuilder :: Templates -> NodeBuilder -> Node
+applyFragmentBuilder :: Templates -> NodeBuilder -> [Node] -> [Node]
+applyFragmentBuilder templates (NodeBuilder {..}) =
+  map (modifyInnerNode templates selections)
+  where
+    selections = HashMap.fromList nodeBuilderQueried
+
+instantiateNodeBuilder :: Templates -> NodeBuilder -> [Node]
 instantiateNodeBuilder templates nb@(NodeBuilder {..}) =
   case nodeBuilderName of
     Just name
       | T.isPrefixOf "template:" name ->
           let templateName = T.drop 9 name <> "-template"
            in case HashMap.lookup templateName templates of
-                Just templ -> NodeElement (applyNodeBuilder templates nb templ)
+                Just (DocElement templ) ->
+                  [NodeElement (applyNodeBuilder templates nb templ)]
+                Just (DocFragment ns) -> applyFragmentBuilder templates nb ns
                 Nothing ->
                   let msg =
                         Util.strFormat
@@ -117,10 +133,10 @@ instantiateNodeBuilder templates nb@(NodeBuilder {..}) =
                    in error msg
       | otherwise ->
           let el = Element name HashMap.empty []
-           in NodeElement (applyNodeBuilder templates nb el)
+           in [NodeElement (applyNodeBuilder templates nb el)]
     Nothing ->
       case nodeBuilderTextContent of
-        Just text -> NodeContent text
+        Just text -> [NodeContent text]
         Nothing -> error "cannot instantiate text node without content"
 
 renderNode :: Node -> Markup

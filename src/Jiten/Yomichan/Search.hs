@@ -65,7 +65,6 @@ findTermsDOM ctx mode text = do
 findTermsHTML :: YomiContext -> FindTermsMode -> Text -> IO [Markup]
 findTermsHTML ctx mode text = do
   templates <- Display.loadTemplates
-  let ks = HashMap.keys templates
   nodes <- findTermsDOM ctx mode text
-  let instantiated = map (Display.instantiateNodeBuilder templates) nodes
+  let instantiated = concatMap (Display.instantiateNodeBuilder templates) nodes
   pure (map Display.renderNode instantiated)
