@@ -11,6 +11,9 @@ class NodeBuilder {
     this.attributes = new Map();
     this.style = {};
     this.href = null;
+    this.target = null;
+    this.rel = null;
+    this.lang = null;
   }
   appendChild(node) {
     this.children.push(node);
@@ -57,6 +60,9 @@ class NodeBuilder {
     }
     result.style = this.style;
     result.href = this.href;
+    result.target = this.target;
+    result.ref = this.rel;
+    result.lang = this.lang;
     return result;
   }
 }
