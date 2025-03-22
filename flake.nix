@@ -18,6 +18,7 @@
             hspkgs.cabal-install
             hspkgs.haskell-language-server
             hspkgs.hspec-golden
+            hspkgs.blaze-from-html
             nodejs
             eslint_d
             nodePackages.typescript-language-server

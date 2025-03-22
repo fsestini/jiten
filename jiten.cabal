@@ -26,6 +26,7 @@ library
                     , Jiten.Yomichan.Core
                     , Jiten.Yomichan.Search
                     , Jiten.Yomichan.Display
+                    , Jiten.Yomichan.SearchPageTemplate
                     , Jiten.Server
                     , Jiten.Database
                     , Jiten.CLI
@@ -52,6 +53,7 @@ library
                     , taggy
                     , unordered-containers
                     , blaze-markup
+                    , blaze-html
 
     cc-options:
         -static -D_GNU_SOURCE -DCONFIG_VERSION="2020-11-08" -DCONFIG_BIGNUM
