@@ -1,5 +1,16 @@
 .PHONY: extract-yomitan quickjs
 
+src/Jiten/Yomichan/SearchPageTemplate.hs: vendor/yomitan/ext/search.html
+	blaze-from-html -e -s vendor/yomitan/ext/search.html \
+		| sed 's/vendor\/yomitan\/ext\/search :: Html/instantiate :: Html -> Html/g' \
+		| sed 's/vendor\/yomitan\/ext\/search = do/instantiate results = do/g' \
+		| sed '1a\module Jiten.Yomichan.SearchPageTemplate where' \
+		| sed 's/"dictionary-entries" $$ mempty/"dictionary-entries" $$ results/g' \
+		| sed '5,6d' \
+		| sed '31d' \
+		| head -n 65 \
+		> src/Jiten/Yomichan/SearchPageTemplate.hs
+
 extract-yomitan:
 	git submodule update --init
 	cd ./vendor/yomitan && npm ci && npm run build chrome-dev

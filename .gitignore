@@ -6,3 +6,4 @@ dist/
 .direnv/
 *.zip
 *.db
+src/Jiten/Yomichan/SearchPageTemplate.hs
