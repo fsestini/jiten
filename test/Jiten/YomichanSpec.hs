@@ -21,6 +21,17 @@ pprintJson json =
     Nothing -> T.unpack json
     Just decoded -> LT.unpack . LTE.decodeUtf8 . A.Pretty.encodePretty $ decoded
 
+mkGolden :: (a -> String) -> String -> a -> Golden String
+mkGolden pp name actualOutput =
+  ( defaultGolden
+      name
+      (pp actualOutput)
+  )
+    { goldenFile = ".golden/" <> name <> ".expected",
+      actualFile = Just (".golden/" <> name <> ".actual"),
+      failFirstTime = True
+    }
+
 spec :: Spec
 spec = do
   describe "formatFindTermsQuery" $ do
@@ -33,8 +44,7 @@ spec = do
         it "correctly returns results for '打ち込む' on simple mode" $ \ctx -> do
           let text = "打ち込む"
           result <- Search.findTerms ctx Search.Simple text
-          let pprinted = pprintJson result
-          pure (defaultGolden "findTerms_1_simple" pprinted)
+          pure (mkGolden pprintJson "findTerms_simple_1" result)
   where
     dictPath = "./test/valid-dictionary1.zip" :: FilePath
     withYomiCtx f =
