@@ -22,15 +22,21 @@ spec = do
   around withYomiCtx $ do
     describe "on test dictionary 'valid-dictionary1.zip'" $ do
       describe "findTerms" $ do
+        let text = "打ち込む"
         it "打ち込む - simple" $ \ctx -> do
-          let text = "打ち込む"
           result <- Search.findTerms ctx Search.Simple text
           pure (TestUtil.mkGolden TestUtil.pprintJson "findTerms_simple_1" result)
+        it "打ち込む - split" $ \ctx -> do
+          result <- Search.findTerms ctx Search.Split text
+          pure (TestUtil.mkGolden TestUtil.pprintJson "findTerms_split_1" result)
       describe "findTermsHTML" $ do
+        let text = "打ち込む"
         it "打ち込む - simple" $ \ctx -> do
-          let text = "打ち込む"
           result <- Search.findTermsHTML ctx Search.Simple text
           pure (TestUtil.mkGolden pprintHTML "findTermsHTML_simple_1" result)
+        it "打ち込む - split" $ \ctx -> do
+          result <- Search.findTermsHTML ctx Search.Split text
+          pure (TestUtil.mkGolden pprintHTML "findTermsHTML_split_1" result)
   where
     dictPath = "./test/valid-dictionary1.zip" :: FilePath
     withYomiCtx f =
