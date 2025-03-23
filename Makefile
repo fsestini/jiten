@@ -39,6 +39,9 @@ dist/yomi_compiled.c: vendor/quickjs/qjsc dist/yomi_patched.js
 build: dist/yomi_compiled.c
 	cabal build
 
+test: build
+	cabal test
+
 build-profile: dist/yomi_compiled.c
 	cabal build --enable-profiling --profiling-detail=late exe:jiten
 
