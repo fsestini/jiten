@@ -19,6 +19,7 @@
             hspkgs.haskell-language-server
             hspkgs.hspec-golden
             hspkgs.blaze-from-html
+            hspkgs.hoogle
             nodejs
             eslint_d
             nodePackages.typescript-language-server
