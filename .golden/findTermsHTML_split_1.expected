@@ -1,4 +1,4 @@
-<div data-type="term" class="entry">
+<div data-frequency-count="6" data-headword-count="1" data-definition-count="1" data-primary-match-types="exact" data-grouped-frequency-count="2" data-pronunciation-dictionary-count="1" data-type="term" data-pronunciation-count="2" class="entry" data-format="term" data-unique-reading-count="1" data-unique-term-count="1">
     <div title="Current entry" class="entry-current-indicator">
         <span class="entry-current-indicator-inner">
         </span>
@@ -42,8 +42,8 @@
                 </span>
             </button>
         </div>
-        <div class="headword-list">
-            <div class="headword">
+        <div data-count="1" class="headword-list">
+            <div data-word-classes="v5" data-is-primary="true" data-pronunciation-categories="heiban kifuku" data-match-types="exact" data-match-sources="term" data-frequency="normal" data-index="0" class="headword" data-reading-is-same="false">
                 <div class="headword-text-container">
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
@@ -86,29 +86,29 @@
             </div>
         </div>
         <div class="headword-list-details">
-            <div class="headword-list-tag-list tag-list">
-                <span class="tag">
+            <div data-count="2" class="headword-list-tag-list tag-list">
+                <span data-category="default" data-details="E1" data-headwords="0" data-index="0" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
                     <span class="tag-label">
                         <span class="tag-label-content">
                             E1
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="default" data-details="P" data-headwords="0" data-index="1" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
                     <span class="tag-label">
                         <span class="tag-label-content">
                             P
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="search" data-details="打ち込む" class="tag">
                     <span class="tag-label">
                         <span lang="ja" class="tag-label-content">
                             打ち込む
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="search" data-details="ぶちこむ" class="tag">
                     <span class="tag-label">
                         <span lang="ja" class="tag-label-content">
                             ぶちこむ
@@ -116,15 +116,16 @@
                     </span>
                 </span>
             </div>
-            <ul class="inflection-rule-chains">
+            <ul data-count="0" class="inflection-rule-chains">
             </ul>
         </div>
     </div>
     <div class="entry-body">
         <div data-section-type="frequencies" class="entry-body-section">
-            <div class="entry-body-section-content frequency-group-list">
-                <span class="frequency-group-item">
-                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
+            <div data-count="2" class="entry-body-section-content frequency-group-list">
+                <span data-count="2" data-details="Test Dictionary" data-index="0" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -135,8 +136,9 @@
                         </span>
                     </span>
                 </span>
-                <span class="frequency-group-item">
-                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
+                <span data-count="1" data-details="Average" data-index="1" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -150,10 +152,10 @@
             </div>
         </div>
         <div data-section-type="pronunciations" class="entry-body-section">
-            <ol class="entry-body-section-content pronunciation-group-list">
-                <li class="pronunciation-group">
+            <ol data-count="1" class="entry-body-section-content pronunciation-group-list">
+                <li data-pronunciations-count="2" data-pronunciations-multi="true" data-index="0" data-dictionary="Test Dictionary" class="pronunciation-group">
                     <span class="pronunciation-group-tag-list tag-list">
-                        <span class="tag">
+                        <span data-category="pronunciation-dictionary" data-details="Test Dictionary" class="tag">
                             <span class="tag-label">
                                 <span class="tag-label-content">
                                     Test Dictionary
@@ -161,37 +163,37 @@
                             </span>
                         </span>
                     </span>
-                    <ul class="pronunciation-list">
-                        <li class="pronunciation">
-                            <span class="pronunciation-tag-list tag-list">
+                    <ul data-count="2" class="pronunciation-list" data-has-tags="false">
+                        <li data-pitch-accent-downstep-position="0" data-pronunciation-type="pitch-accent" data-tag-count="0" data-index="0" class="pronunciation">
+                            <span data-count="0" class="pronunciation-tag-list tag-list">
                             </span>
-                            <span class="pronunciation-disambiguation-list">
+                            <span data-count="0" data-reading-count="0" data-term-count="0" class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
                                 <span lang="ja" class="pronunciation-text-container">
                                     <span class="pronunciation-text">
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="0" data-pitch="low" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 ぶ
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="1" data-pitch="high" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 ち
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="2" data-pitch="high" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 こ
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="3" data-pitch="high" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 む
                                             </span>
@@ -201,7 +203,7 @@
                                     </span>
                                 </span>
                                 <span class="pronunciation-downstep-notation-container">
-                                    <span class="pronunciation-downstep-notation">
+                                    <span class="pronunciation-downstep-notation" data-downstep-position="0">
                                         <span class="pronunciation-downstep-notation-prefix">
                                             [
                                         </span>
@@ -233,36 +235,36 @@
                                 </span>
                             </span>
                         </li>
-                        <li class="pronunciation">
-                            <span class="pronunciation-tag-list tag-list">
+                        <li data-pitch-accent-downstep-position="3" data-pronunciation-type="pitch-accent" data-tag-count="0" data-index="1" class="pronunciation">
+                            <span data-count="0" class="pronunciation-tag-list tag-list">
                             </span>
-                            <span class="pronunciation-disambiguation-list">
+                            <span data-count="0" data-reading-count="0" data-term-count="0" class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
                                 <span lang="ja" class="pronunciation-text-container">
                                     <span class="pronunciation-text">
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="0" data-pitch="low" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 ぶ
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="1" data-pitch="high" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 ち
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="low" data-position="2" data-pitch="high" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 こ
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="low" data-position="3" data-pitch="low" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 む
                                             </span>
@@ -272,7 +274,7 @@
                                     </span>
                                 </span>
                                 <span class="pronunciation-downstep-notation-container">
-                                    <span class="pronunciation-downstep-notation">
+                                    <span class="pronunciation-downstep-notation" data-downstep-position="3">
                                         <span class="pronunciation-downstep-notation-prefix">
                                             [
                                         </span>
@@ -311,23 +313,23 @@
             </ol>
         </div>
         <div data-section-type="definitions" class="entry-body-section">
-            <ol class="entry-body-section-content definition-list">
-                <li class="definition-item">
+            <ol data-count="1" class="entry-body-section-content definition-list">
+                <li data-index="0" data-dictionary="Test Dictionary" class="definition-item">
                     <div class="definition-item-inner">
                         <button type="button" class="expansion-button">
                             <div data-icon="double-down-chevron" class="expansion-button-icon icon">
                             </div>
                         </button>
                         <div class="definition-item-content">
-                            <div class="definition-tag-list tag-list">
-                                <span class="tag">
+                            <div data-count="2" class="definition-tag-list tag-list">
+                                <span data-category="default" data-details="vt" data-index="0" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             vt
                                         </span>
                                     </span>
                                 </span>
-                                <span class="tag">
+                                <span data-category="dictionary" data-details="Test Dictionary" data-index="1" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             Test Dictionary
@@ -335,17 +337,17 @@
                                     </span>
                                 </span>
                             </div>
-                            <div class="definition-disambiguation-list">
+                            <div data-count="0" class="definition-disambiguation-list">
                             </div>
-                            <ul class="gloss-list">
-                                <li class="gloss-item click-scannable">
+                            <ul data-count="2" class="gloss-list">
+                                <li data-index="0" class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
                                     <span class="gloss-content">
                                         buchikomu definition 1
                                     </span>
                                 </li>
-                                <li class="gloss-item click-scannable">
+                                <li data-index="1" class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
                                     <span class="gloss-content">
@@ -361,7 +363,7 @@
     </div>
 </div>
 
-<div data-type="term" class="entry">
+<div data-frequency-count="6" data-headword-count="1" data-definition-count="1" data-primary-match-types="exact" data-grouped-frequency-count="2" data-pronunciation-dictionary-count="1" data-type="term" data-pronunciation-count="2" class="entry" data-format="term" data-unique-reading-count="1" data-unique-term-count="1">
     <div title="Current entry" class="entry-current-indicator">
         <span class="entry-current-indicator-inner">
         </span>
@@ -405,8 +407,8 @@
                 </span>
             </button>
         </div>
-        <div class="headword-list">
-            <div class="headword">
+        <div data-count="1" class="headword-list">
+            <div data-word-classes="v5" data-is-primary="true" data-pronunciation-categories="heiban kifuku" data-match-types="exact" data-match-sources="term" data-frequency="normal" data-index="0" class="headword" data-reading-is-same="false">
                 <div class="headword-text-container">
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
@@ -449,29 +451,29 @@
             </div>
         </div>
         <div class="headword-list-details">
-            <div class="headword-list-tag-list tag-list">
-                <span class="tag">
+            <div data-count="2" class="headword-list-tag-list tag-list">
+                <span data-category="default" data-details="E2" data-headwords="0" data-index="0" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
                     <span class="tag-label">
                         <span class="tag-label-content">
                             E2
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="default" data-details="P" data-headwords="0" data-index="1" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
                     <span class="tag-label">
                         <span class="tag-label-content">
                             P
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="search" data-details="打ち込む" class="tag">
                     <span class="tag-label">
                         <span lang="ja" class="tag-label-content">
                             打ち込む
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="search" data-details="ぶちこむ" class="tag">
                     <span class="tag-label">
                         <span lang="ja" class="tag-label-content">
                             ぶちこむ
@@ -479,15 +481,16 @@
                     </span>
                 </span>
             </div>
-            <ul class="inflection-rule-chains">
+            <ul data-count="0" class="inflection-rule-chains">
             </ul>
         </div>
     </div>
     <div class="entry-body">
         <div data-section-type="frequencies" class="entry-body-section">
-            <div class="entry-body-section-content frequency-group-list">
-                <span class="frequency-group-item">
-                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
+            <div data-count="2" class="entry-body-section-content frequency-group-list">
+                <span data-count="2" data-details="Test Dictionary" data-index="0" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -498,8 +501,9 @@
                         </span>
                     </span>
                 </span>
-                <span class="frequency-group-item">
-                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
+                <span data-count="1" data-details="Average" data-index="1" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -513,10 +517,10 @@
             </div>
         </div>
         <div data-section-type="pronunciations" class="entry-body-section">
-            <ol class="entry-body-section-content pronunciation-group-list">
-                <li class="pronunciation-group">
+            <ol data-count="1" class="entry-body-section-content pronunciation-group-list">
+                <li data-pronunciations-count="2" data-pronunciations-multi="true" data-index="0" data-dictionary="Test Dictionary" class="pronunciation-group">
                     <span class="pronunciation-group-tag-list tag-list">
-                        <span class="tag">
+                        <span data-category="pronunciation-dictionary" data-details="Test Dictionary" class="tag">
                             <span class="tag-label">
                                 <span class="tag-label-content">
                                     Test Dictionary
@@ -524,37 +528,37 @@
                             </span>
                         </span>
                     </span>
-                    <ul class="pronunciation-list">
-                        <li class="pronunciation">
-                            <span class="pronunciation-tag-list tag-list">
+                    <ul data-count="2" class="pronunciation-list" data-has-tags="false">
+                        <li data-pitch-accent-downstep-position="0" data-pronunciation-type="pitch-accent" data-tag-count="0" data-index="0" class="pronunciation">
+                            <span data-count="0" class="pronunciation-tag-list tag-list">
                             </span>
-                            <span class="pronunciation-disambiguation-list">
+                            <span data-count="0" data-reading-count="0" data-term-count="0" class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
                                 <span lang="ja" class="pronunciation-text-container">
                                     <span class="pronunciation-text">
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="0" data-pitch="low" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 ぶ
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="1" data-pitch="high" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 ち
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="2" data-pitch="high" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 こ
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="3" data-pitch="high" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 む
                                             </span>
@@ -564,7 +568,7 @@
                                     </span>
                                 </span>
                                 <span class="pronunciation-downstep-notation-container">
-                                    <span class="pronunciation-downstep-notation">
+                                    <span class="pronunciation-downstep-notation" data-downstep-position="0">
                                         <span class="pronunciation-downstep-notation-prefix">
                                             [
                                         </span>
@@ -596,36 +600,36 @@
                                 </span>
                             </span>
                         </li>
-                        <li class="pronunciation">
-                            <span class="pronunciation-tag-list tag-list">
+                        <li data-pitch-accent-downstep-position="3" data-pronunciation-type="pitch-accent" data-tag-count="0" data-index="1" class="pronunciation">
+                            <span data-count="0" class="pronunciation-tag-list tag-list">
                             </span>
-                            <span class="pronunciation-disambiguation-list">
+                            <span data-count="0" data-reading-count="0" data-term-count="0" class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
                                 <span lang="ja" class="pronunciation-text-container">
                                     <span class="pronunciation-text">
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="0" data-pitch="low" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 ぶ
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="1" data-pitch="high" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 ち
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="low" data-position="2" data-pitch="high" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 こ
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="low" data-position="3" data-pitch="low" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 む
                                             </span>
@@ -635,7 +639,7 @@
                                     </span>
                                 </span>
                                 <span class="pronunciation-downstep-notation-container">
-                                    <span class="pronunciation-downstep-notation">
+                                    <span class="pronunciation-downstep-notation" data-downstep-position="3">
                                         <span class="pronunciation-downstep-notation-prefix">
                                             [
                                         </span>
@@ -674,23 +678,23 @@
             </ol>
         </div>
         <div data-section-type="definitions" class="entry-body-section">
-            <ol class="entry-body-section-content definition-list">
-                <li class="definition-item">
+            <ol data-count="1" class="entry-body-section-content definition-list">
+                <li data-index="0" data-dictionary="Test Dictionary" class="definition-item">
                     <div class="definition-item-inner">
                         <button type="button" class="expansion-button">
                             <div data-icon="double-down-chevron" class="expansion-button-icon icon">
                             </div>
                         </button>
                         <div class="definition-item-content">
-                            <div class="definition-tag-list tag-list">
-                                <span class="tag">
+                            <div data-count="2" class="definition-tag-list tag-list">
+                                <span data-category="default" data-details="vt" data-index="0" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             vt
                                         </span>
                                     </span>
                                 </span>
-                                <span class="tag">
+                                <span data-category="dictionary" data-details="Test Dictionary" data-index="1" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             Test Dictionary
@@ -698,17 +702,17 @@
                                     </span>
                                 </span>
                             </div>
-                            <div class="definition-disambiguation-list">
+                            <div data-count="0" class="definition-disambiguation-list">
                             </div>
-                            <ul class="gloss-list">
-                                <li class="gloss-item click-scannable">
+                            <ul data-count="2" class="gloss-list">
+                                <li data-index="0" class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
                                     <span class="gloss-content">
                                         buchikomu definition 3
                                     </span>
                                 </li>
-                                <li class="gloss-item click-scannable">
+                                <li data-index="1" class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
                                     <span class="gloss-content">
@@ -724,7 +728,7 @@
     </div>
 </div>
 
-<div data-type="term" class="entry">
+<div data-frequency-count="6" data-headword-count="1" data-definition-count="1" data-primary-match-types="exact" data-grouped-frequency-count="2" data-pronunciation-dictionary-count="1" data-type="term" data-pronunciation-count="2" class="entry" data-format="term" data-unique-reading-count="1" data-unique-term-count="1">
     <div title="Current entry" class="entry-current-indicator">
         <span class="entry-current-indicator-inner">
         </span>
@@ -768,8 +772,8 @@
                 </span>
             </button>
         </div>
-        <div class="headword-list">
-            <div class="headword">
+        <div data-count="1" class="headword-list">
+            <div data-word-classes="v5" data-is-primary="true" data-pronunciation-categories="heiban kifuku" data-match-types="exact" data-match-sources="term" data-frequency="normal" data-index="0" class="headword" data-reading-is-same="false">
                 <div class="headword-text-container">
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
@@ -812,29 +816,29 @@
             </div>
         </div>
         <div class="headword-list-details">
-            <div class="headword-list-tag-list tag-list">
-                <span class="tag">
+            <div data-count="2" class="headword-list-tag-list tag-list">
+                <span data-category="default" data-details="E1" data-headwords="0" data-index="0" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
                     <span class="tag-label">
                         <span class="tag-label-content">
                             E1
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="default" data-details="P" data-headwords="0" data-index="1" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
                     <span class="tag-label">
                         <span class="tag-label-content">
                             P
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="search" data-details="打ち込む" class="tag">
                     <span class="tag-label">
                         <span lang="ja" class="tag-label-content">
                             打ち込む
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="search" data-details="うちこむ" class="tag">
                     <span class="tag-label">
                         <span lang="ja" class="tag-label-content">
                             うちこむ
@@ -842,15 +846,16 @@
                     </span>
                 </span>
             </div>
-            <ul class="inflection-rule-chains">
+            <ul data-count="0" class="inflection-rule-chains">
             </ul>
         </div>
     </div>
     <div class="entry-body">
         <div data-section-type="frequencies" class="entry-body-section">
-            <div class="entry-body-section-content frequency-group-list">
-                <span class="frequency-group-item">
-                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
+            <div data-count="2" class="entry-body-section-content frequency-group-list">
+                <span data-count="2" data-details="Test Dictionary" data-index="0" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -861,8 +866,9 @@
                         </span>
                     </span>
                 </span>
-                <span class="frequency-group-item">
-                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
+                <span data-count="1" data-details="Average" data-index="1" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -876,10 +882,10 @@
             </div>
         </div>
         <div data-section-type="pronunciations" class="entry-body-section">
-            <ol class="entry-body-section-content pronunciation-group-list">
-                <li class="pronunciation-group">
+            <ol data-count="1" class="entry-body-section-content pronunciation-group-list">
+                <li data-pronunciations-count="2" data-pronunciations-multi="true" data-index="0" data-dictionary="Test Dictionary" class="pronunciation-group">
                     <span class="pronunciation-group-tag-list tag-list">
-                        <span class="tag">
+                        <span data-category="pronunciation-dictionary" data-details="Test Dictionary" class="tag">
                             <span class="tag-label">
                                 <span class="tag-label-content">
                                     Test Dictionary
@@ -887,37 +893,37 @@
                             </span>
                         </span>
                     </span>
-                    <ul class="pronunciation-list">
-                        <li class="pronunciation">
-                            <span class="pronunciation-tag-list tag-list">
+                    <ul data-count="2" class="pronunciation-list" data-has-tags="false">
+                        <li data-pitch-accent-downstep-position="0" data-pronunciation-type="pitch-accent" data-tag-count="0" data-index="0" class="pronunciation">
+                            <span data-count="0" class="pronunciation-tag-list tag-list">
                             </span>
-                            <span class="pronunciation-disambiguation-list">
+                            <span data-count="0" data-reading-count="0" data-term-count="0" class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
                                 <span lang="ja" class="pronunciation-text-container">
                                     <span class="pronunciation-text">
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="0" data-pitch="low" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 う
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="1" data-pitch="high" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 ち
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="2" data-pitch="high" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 こ
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="3" data-pitch="high" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 む
                                             </span>
@@ -927,7 +933,7 @@
                                     </span>
                                 </span>
                                 <span class="pronunciation-downstep-notation-container">
-                                    <span class="pronunciation-downstep-notation">
+                                    <span class="pronunciation-downstep-notation" data-downstep-position="0">
                                         <span class="pronunciation-downstep-notation-prefix">
                                             [
                                         </span>
@@ -959,36 +965,36 @@
                                 </span>
                             </span>
                         </li>
-                        <li class="pronunciation">
-                            <span class="pronunciation-tag-list tag-list">
+                        <li data-pitch-accent-downstep-position="3" data-pronunciation-type="pitch-accent" data-tag-count="0" data-index="1" class="pronunciation">
+                            <span data-count="0" class="pronunciation-tag-list tag-list">
                             </span>
-                            <span class="pronunciation-disambiguation-list">
+                            <span data-count="0" data-reading-count="0" data-term-count="0" class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
                                 <span lang="ja" class="pronunciation-text-container">
                                     <span class="pronunciation-text">
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="0" data-pitch="low" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 う
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="1" data-pitch="high" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 ち
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="low" data-position="2" data-pitch="high" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 こ
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="low" data-position="3" data-pitch="low" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 む
                                             </span>
@@ -998,7 +1004,7 @@
                                     </span>
                                 </span>
                                 <span class="pronunciation-downstep-notation-container">
-                                    <span class="pronunciation-downstep-notation">
+                                    <span class="pronunciation-downstep-notation" data-downstep-position="3">
                                         <span class="pronunciation-downstep-notation-prefix">
                                             [
                                         </span>
@@ -1037,23 +1043,23 @@
             </ol>
         </div>
         <div data-section-type="definitions" class="entry-body-section">
-            <ol class="entry-body-section-content definition-list">
-                <li class="definition-item">
+            <ol data-count="1" class="entry-body-section-content definition-list">
+                <li data-index="0" data-dictionary="Test Dictionary" class="definition-item">
                     <div class="definition-item-inner">
                         <button type="button" class="expansion-button">
                             <div data-icon="double-down-chevron" class="expansion-button-icon icon">
                             </div>
                         </button>
                         <div class="definition-item-content">
-                            <div class="definition-tag-list tag-list">
-                                <span class="tag">
+                            <div data-count="2" class="definition-tag-list tag-list">
+                                <span data-category="default" data-details="vt" data-index="0" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             vt
                                         </span>
                                     </span>
                                 </span>
-                                <span class="tag">
+                                <span data-category="dictionary" data-details="Test Dictionary" data-index="1" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             Test Dictionary
@@ -1061,17 +1067,17 @@
                                     </span>
                                 </span>
                             </div>
-                            <div class="definition-disambiguation-list">
+                            <div data-count="0" class="definition-disambiguation-list">
                             </div>
-                            <ul class="gloss-list">
-                                <li class="gloss-item click-scannable">
+                            <ul data-count="2" class="gloss-list">
+                                <li data-index="0" class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
                                     <span class="gloss-content">
                                         uchikomu definition 1
                                     </span>
                                 </li>
-                                <li class="gloss-item click-scannable">
+                                <li data-index="1" class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
                                     <span class="gloss-content">
@@ -1087,7 +1093,7 @@
     </div>
 </div>
 
-<div data-type="term" class="entry">
+<div data-frequency-count="6" data-headword-count="1" data-definition-count="1" data-primary-match-types="exact" data-grouped-frequency-count="2" data-pronunciation-dictionary-count="1" data-type="term" data-pronunciation-count="2" class="entry" data-format="term" data-unique-reading-count="1" data-unique-term-count="1">
     <div title="Current entry" class="entry-current-indicator">
         <span class="entry-current-indicator-inner">
         </span>
@@ -1131,8 +1137,8 @@
                 </span>
             </button>
         </div>
-        <div class="headword-list">
-            <div class="headword">
+        <div data-count="1" class="headword-list">
+            <div data-word-classes="v5" data-is-primary="true" data-pronunciation-categories="heiban kifuku" data-match-types="exact" data-match-sources="term" data-frequency="normal" data-index="0" class="headword" data-reading-is-same="false">
                 <div class="headword-text-container">
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
@@ -1175,29 +1181,29 @@
             </div>
         </div>
         <div class="headword-list-details">
-            <div class="headword-list-tag-list tag-list">
-                <span class="tag">
+            <div data-count="2" class="headword-list-tag-list tag-list">
+                <span data-category="default" data-details="E2" data-headwords="0" data-index="0" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
                     <span class="tag-label">
                         <span class="tag-label-content">
                             E2
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="default" data-details="P" data-headwords="0" data-index="1" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
                     <span class="tag-label">
                         <span class="tag-label-content">
                             P
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="search" data-details="打ち込む" class="tag">
                     <span class="tag-label">
                         <span lang="ja" class="tag-label-content">
                             打ち込む
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="search" data-details="うちこむ" class="tag">
                     <span class="tag-label">
                         <span lang="ja" class="tag-label-content">
                             うちこむ
@@ -1205,15 +1211,16 @@
                     </span>
                 </span>
             </div>
-            <ul class="inflection-rule-chains">
+            <ul data-count="0" class="inflection-rule-chains">
             </ul>
         </div>
     </div>
     <div class="entry-body">
         <div data-section-type="frequencies" class="entry-body-section">
-            <div class="entry-body-section-content frequency-group-list">
-                <span class="frequency-group-item">
-                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
+            <div data-count="2" class="entry-body-section-content frequency-group-list">
+                <span data-count="2" data-details="Test Dictionary" data-index="0" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -1224,8 +1231,9 @@
                         </span>
                     </span>
                 </span>
-                <span class="frequency-group-item">
-                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
+                <span data-count="1" data-details="Average" data-index="1" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -1239,10 +1247,10 @@
             </div>
         </div>
         <div data-section-type="pronunciations" class="entry-body-section">
-            <ol class="entry-body-section-content pronunciation-group-list">
-                <li class="pronunciation-group">
+            <ol data-count="1" class="entry-body-section-content pronunciation-group-list">
+                <li data-pronunciations-count="2" data-pronunciations-multi="true" data-index="0" data-dictionary="Test Dictionary" class="pronunciation-group">
                     <span class="pronunciation-group-tag-list tag-list">
-                        <span class="tag">
+                        <span data-category="pronunciation-dictionary" data-details="Test Dictionary" class="tag">
                             <span class="tag-label">
                                 <span class="tag-label-content">
                                     Test Dictionary
@@ -1250,37 +1258,37 @@
                             </span>
                         </span>
                     </span>
-                    <ul class="pronunciation-list">
-                        <li class="pronunciation">
-                            <span class="pronunciation-tag-list tag-list">
+                    <ul data-count="2" class="pronunciation-list" data-has-tags="false">
+                        <li data-pitch-accent-downstep-position="0" data-pronunciation-type="pitch-accent" data-tag-count="0" data-index="0" class="pronunciation">
+                            <span data-count="0" class="pronunciation-tag-list tag-list">
                             </span>
-                            <span class="pronunciation-disambiguation-list">
+                            <span data-count="0" data-reading-count="0" data-term-count="0" class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
                                 <span lang="ja" class="pronunciation-text-container">
                                     <span class="pronunciation-text">
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="0" data-pitch="low" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 う
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="1" data-pitch="high" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 ち
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="2" data-pitch="high" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 こ
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="3" data-pitch="high" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 む
                                             </span>
@@ -1290,7 +1298,7 @@
                                     </span>
                                 </span>
                                 <span class="pronunciation-downstep-notation-container">
-                                    <span class="pronunciation-downstep-notation">
+                                    <span class="pronunciation-downstep-notation" data-downstep-position="0">
                                         <span class="pronunciation-downstep-notation-prefix">
                                             [
                                         </span>
@@ -1322,36 +1330,36 @@
                                 </span>
                             </span>
                         </li>
-                        <li class="pronunciation">
-                            <span class="pronunciation-tag-list tag-list">
+                        <li data-pitch-accent-downstep-position="3" data-pronunciation-type="pitch-accent" data-tag-count="0" data-index="1" class="pronunciation">
+                            <span data-count="0" class="pronunciation-tag-list tag-list">
                             </span>
-                            <span class="pronunciation-disambiguation-list">
+                            <span data-count="0" data-reading-count="0" data-term-count="0" class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
                                 <span lang="ja" class="pronunciation-text-container">
                                     <span class="pronunciation-text">
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="0" data-pitch="low" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 う
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="high" data-position="1" data-pitch="high" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 ち
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="low" data-position="2" data-pitch="high" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 こ
                                             </span>
                                             <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span class="pronunciation-mora">
+                                        <span data-pitch-next="low" data-position="3" data-pitch="low" class="pronunciation-mora">
                                             <span class="pronunciation-character">
                                                 む
                                             </span>
@@ -1361,7 +1369,7 @@
                                     </span>
                                 </span>
                                 <span class="pronunciation-downstep-notation-container">
-                                    <span class="pronunciation-downstep-notation">
+                                    <span class="pronunciation-downstep-notation" data-downstep-position="3">
                                         <span class="pronunciation-downstep-notation-prefix">
                                             [
                                         </span>
@@ -1400,23 +1408,23 @@
             </ol>
         </div>
         <div data-section-type="definitions" class="entry-body-section">
-            <ol class="entry-body-section-content definition-list">
-                <li class="definition-item">
+            <ol data-count="1" class="entry-body-section-content definition-list">
+                <li data-index="0" data-dictionary="Test Dictionary" class="definition-item">
                     <div class="definition-item-inner">
                         <button type="button" class="expansion-button">
                             <div data-icon="double-down-chevron" class="expansion-button-icon icon">
                             </div>
                         </button>
                         <div class="definition-item-content">
-                            <div class="definition-tag-list tag-list">
-                                <span class="tag">
+                            <div data-count="2" class="definition-tag-list tag-list">
+                                <span data-category="default" data-details="vt" data-index="0" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             vt
                                         </span>
                                     </span>
                                 </span>
-                                <span class="tag">
+                                <span data-category="dictionary" data-details="Test Dictionary" data-index="1" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             Test Dictionary
@@ -1424,17 +1432,17 @@
                                     </span>
                                 </span>
                             </div>
-                            <div class="definition-disambiguation-list">
+                            <div data-count="0" class="definition-disambiguation-list">
                             </div>
-                            <ul class="gloss-list">
-                                <li class="gloss-item click-scannable">
+                            <ul data-count="2" class="gloss-list">
+                                <li data-index="0" class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
                                     <span class="gloss-content">
                                         uchikomu definition 3
                                     </span>
                                 </li>
-                                <li class="gloss-item click-scannable">
+                                <li data-index="1" class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
                                     <span class="gloss-content">
@@ -1450,7 +1458,7 @@
     </div>
 </div>
 
-<div data-type="term" class="entry">
+<div data-frequency-count="6" data-headword-count="1" data-definition-count="1" data-primary-match-types="exact" data-grouped-frequency-count="2" data-pronunciation-dictionary-count="0" data-type="term" data-pronunciation-count="0" class="entry" data-format="term" data-unique-reading-count="1" data-unique-term-count="1">
     <div title="Current entry" class="entry-current-indicator">
         <span class="entry-current-indicator-inner">
         </span>
@@ -1494,8 +1502,8 @@
                 </span>
             </button>
         </div>
-        <div class="headword-list">
-            <div class="headword">
+        <div data-count="1" class="headword-list">
+            <div data-word-classes="v5" data-is-primary="true" data-match-types="exact" data-match-sources="term" data-frequency="normal" data-index="0" class="headword" data-reading-is-same="false">
                 <div class="headword-text-container">
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
@@ -1529,29 +1537,29 @@
             </div>
         </div>
         <div class="headword-list-details">
-            <div class="headword-list-tag-list tag-list">
-                <span class="tag">
+            <div data-count="2" class="headword-list-tag-list tag-list">
+                <span data-category="default" data-details="E1" data-headwords="0" data-index="0" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
                     <span class="tag-label">
                         <span class="tag-label-content">
                             E1
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="default" data-details="P" data-headwords="0" data-index="1" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
                     <span class="tag-label">
                         <span class="tag-label-content">
                             P
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="search" data-details="打つ" class="tag">
                     <span class="tag-label">
                         <span lang="ja" class="tag-label-content">
                             打つ
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="search" data-details="ぶつ" class="tag">
                     <span class="tag-label">
                         <span lang="ja" class="tag-label-content">
                             ぶつ
@@ -1559,11 +1567,11 @@
                     </span>
                 </span>
             </div>
-            <ul class="inflection-rule-chains">
-                <li class="inflection-rule-chain">
-                    <span class="inflection-source-icon">
+            <ul data-count="1" class="inflection-rule-chains">
+                <li data-count="1" data-index="0" class="inflection-rule-chain">
+                    <span class="inflection-source-icon" data-inflection-source="algorithm">
                     </span>
-                    <template-fragment:inflection>
+                    <template-fragment:inflection data-index="0">
                     </template-fragment:inflection>
                 </li>
             </ul>
@@ -1571,9 +1579,10 @@
     </div>
     <div class="entry-body">
         <div data-section-type="frequencies" class="entry-body-section">
-            <div class="entry-body-section-content frequency-group-list">
-                <span class="frequency-group-item">
-                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
+            <div data-count="2" class="entry-body-section-content frequency-group-list">
+                <span data-count="2" data-details="Test Dictionary" data-index="0" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -1584,8 +1593,9 @@
                         </span>
                     </span>
                 </span>
-                <span class="frequency-group-item">
-                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
+                <span data-count="1" data-details="Average" data-index="1" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -1599,27 +1609,27 @@
             </div>
         </div>
         <div data-section-type="pronunciations" class="entry-body-section">
-            <ol class="entry-body-section-content pronunciation-group-list">
+            <ol data-count="0" class="entry-body-section-content pronunciation-group-list">
             </ol>
         </div>
         <div data-section-type="definitions" class="entry-body-section">
-            <ol class="entry-body-section-content definition-list">
-                <li class="definition-item">
+            <ol data-count="1" class="entry-body-section-content definition-list">
+                <li data-index="0" data-dictionary="Test Dictionary" class="definition-item">
                     <div class="definition-item-inner">
                         <button type="button" class="expansion-button">
                             <div data-icon="double-down-chevron" class="expansion-button-icon icon">
                             </div>
                         </button>
                         <div class="definition-item-content">
-                            <div class="definition-tag-list tag-list">
-                                <span class="tag">
+                            <div data-count="2" class="definition-tag-list tag-list">
+                                <span data-category="default" data-details="vt" data-index="0" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             vt
                                         </span>
                                     </span>
                                 </span>
-                                <span class="tag">
+                                <span data-category="dictionary" data-details="Test Dictionary" data-index="1" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             Test Dictionary
@@ -1627,17 +1637,17 @@
                                     </span>
                                 </span>
                             </div>
-                            <div class="definition-disambiguation-list">
+                            <div data-count="0" class="definition-disambiguation-list">
                             </div>
-                            <ul class="gloss-list">
-                                <li class="gloss-item click-scannable">
+                            <ul data-count="2" class="gloss-list">
+                                <li data-index="0" class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
                                     <span class="gloss-content">
                                         butsu definition 1
                                     </span>
                                 </li>
-                                <li class="gloss-item click-scannable">
+                                <li data-index="1" class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
                                     <span class="gloss-content">
@@ -1653,7 +1663,7 @@
     </div>
 </div>
 
-<div data-type="term" class="entry">
+<div data-frequency-count="6" data-headword-count="1" data-definition-count="1" data-primary-match-types="exact" data-grouped-frequency-count="2" data-pronunciation-dictionary-count="0" data-type="term" data-pronunciation-count="0" class="entry" data-format="term" data-unique-reading-count="1" data-unique-term-count="1">
     <div title="Current entry" class="entry-current-indicator">
         <span class="entry-current-indicator-inner">
         </span>
@@ -1697,8 +1707,8 @@
                 </span>
             </button>
         </div>
-        <div class="headword-list">
-            <div class="headword">
+        <div data-count="1" class="headword-list">
+            <div data-word-classes="v5" data-is-primary="true" data-match-types="exact" data-match-sources="term" data-frequency="normal" data-index="0" class="headword" data-reading-is-same="false">
                 <div class="headword-text-container">
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
@@ -1732,29 +1742,29 @@
             </div>
         </div>
         <div class="headword-list-details">
-            <div class="headword-list-tag-list tag-list">
-                <span class="tag">
+            <div data-count="2" class="headword-list-tag-list tag-list">
+                <span data-category="default" data-details="E2" data-headwords="0" data-index="0" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
                     <span class="tag-label">
                         <span class="tag-label-content">
                             E2
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="default" data-details="P" data-headwords="0" data-index="1" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
                     <span class="tag-label">
                         <span class="tag-label-content">
                             P
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="search" data-details="打つ" class="tag">
                     <span class="tag-label">
                         <span lang="ja" class="tag-label-content">
                             打つ
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="search" data-details="ぶつ" class="tag">
                     <span class="tag-label">
                         <span lang="ja" class="tag-label-content">
                             ぶつ
@@ -1762,11 +1772,11 @@
                     </span>
                 </span>
             </div>
-            <ul class="inflection-rule-chains">
-                <li class="inflection-rule-chain">
-                    <span class="inflection-source-icon">
+            <ul data-count="1" class="inflection-rule-chains">
+                <li data-count="1" data-index="0" class="inflection-rule-chain">
+                    <span class="inflection-source-icon" data-inflection-source="algorithm">
                     </span>
-                    <template-fragment:inflection>
+                    <template-fragment:inflection data-index="0">
                     </template-fragment:inflection>
                 </li>
             </ul>
@@ -1774,9 +1784,10 @@
     </div>
     <div class="entry-body">
         <div data-section-type="frequencies" class="entry-body-section">
-            <div class="entry-body-section-content frequency-group-list">
-                <span class="frequency-group-item">
-                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
+            <div data-count="2" class="entry-body-section-content frequency-group-list">
+                <span data-count="2" data-details="Test Dictionary" data-index="0" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -1787,8 +1798,9 @@
                         </span>
                     </span>
                 </span>
-                <span class="frequency-group-item">
-                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
+                <span data-count="1" data-details="Average" data-index="1" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -1802,27 +1814,27 @@
             </div>
         </div>
         <div data-section-type="pronunciations" class="entry-body-section">
-            <ol class="entry-body-section-content pronunciation-group-list">
+            <ol data-count="0" class="entry-body-section-content pronunciation-group-list">
             </ol>
         </div>
         <div data-section-type="definitions" class="entry-body-section">
-            <ol class="entry-body-section-content definition-list">
-                <li class="definition-item">
+            <ol data-count="1" class="entry-body-section-content definition-list">
+                <li data-index="0" data-dictionary="Test Dictionary" class="definition-item">
                     <div class="definition-item-inner">
                         <button type="button" class="expansion-button">
                             <div data-icon="double-down-chevron" class="expansion-button-icon icon">
                             </div>
                         </button>
                         <div class="definition-item-content">
-                            <div class="definition-tag-list tag-list">
-                                <span class="tag">
+                            <div data-count="2" class="definition-tag-list tag-list">
+                                <span data-category="default" data-details="vt" data-index="0" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             vt
                                         </span>
                                     </span>
                                 </span>
-                                <span class="tag">
+                                <span data-category="dictionary" data-details="Test Dictionary" data-index="1" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             Test Dictionary
@@ -1830,17 +1842,17 @@
                                     </span>
                                 </span>
                             </div>
-                            <div class="definition-disambiguation-list">
+                            <div data-count="0" class="definition-disambiguation-list">
                             </div>
-                            <ul class="gloss-list">
-                                <li class="gloss-item click-scannable">
+                            <ul data-count="2" class="gloss-list">
+                                <li data-index="0" class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
                                     <span class="gloss-content">
                                         butsu definition 3
                                     </span>
                                 </li>
-                                <li class="gloss-item click-scannable">
+                                <li data-index="1" class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
                                     <span class="gloss-content">
@@ -1856,7 +1868,7 @@
     </div>
 </div>
 
-<div data-type="term" class="entry">
+<div data-frequency-count="6" data-headword-count="1" data-definition-count="1" data-primary-match-types="exact" data-grouped-frequency-count="2" data-pronunciation-dictionary-count="0" data-type="term" data-pronunciation-count="0" class="entry" data-format="term" data-unique-reading-count="1" data-unique-term-count="1">
     <div title="Current entry" class="entry-current-indicator">
         <span class="entry-current-indicator-inner">
         </span>
@@ -1900,8 +1912,8 @@
                 </span>
             </button>
         </div>
-        <div class="headword-list">
-            <div class="headword">
+        <div data-count="1" class="headword-list">
+            <div data-word-classes="v5" data-is-primary="true" data-match-types="exact" data-match-sources="term" data-frequency="normal" data-index="0" class="headword" data-reading-is-same="false">
                 <div class="headword-text-container">
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
@@ -1935,29 +1947,29 @@
             </div>
         </div>
         <div class="headword-list-details">
-            <div class="headword-list-tag-list tag-list">
-                <span class="tag">
+            <div data-count="2" class="headword-list-tag-list tag-list">
+                <span data-category="default" data-details="E1" data-headwords="0" data-index="0" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
                     <span class="tag-label">
                         <span class="tag-label-content">
                             E1
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="default" data-details="P" data-headwords="0" data-index="1" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
                     <span class="tag-label">
                         <span class="tag-label-content">
                             P
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="search" data-details="打つ" class="tag">
                     <span class="tag-label">
                         <span lang="ja" class="tag-label-content">
                             打つ
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="search" data-details="うつ" class="tag">
                     <span class="tag-label">
                         <span lang="ja" class="tag-label-content">
                             うつ
@@ -1965,11 +1977,11 @@
                     </span>
                 </span>
             </div>
-            <ul class="inflection-rule-chains">
-                <li class="inflection-rule-chain">
-                    <span class="inflection-source-icon">
+            <ul data-count="1" class="inflection-rule-chains">
+                <li data-count="1" data-index="0" class="inflection-rule-chain">
+                    <span class="inflection-source-icon" data-inflection-source="algorithm">
                     </span>
-                    <template-fragment:inflection>
+                    <template-fragment:inflection data-index="0">
                     </template-fragment:inflection>
                 </li>
             </ul>
@@ -1977,9 +1989,10 @@
     </div>
     <div class="entry-body">
         <div data-section-type="frequencies" class="entry-body-section">
-            <div class="entry-body-section-content frequency-group-list">
-                <span class="frequency-group-item">
-                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
+            <div data-count="2" class="entry-body-section-content frequency-group-list">
+                <span data-count="2" data-details="Test Dictionary" data-index="0" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -1990,8 +2003,9 @@
                         </span>
                     </span>
                 </span>
-                <span class="frequency-group-item">
-                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
+                <span data-count="1" data-details="Average" data-index="1" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -2005,27 +2019,27 @@
             </div>
         </div>
         <div data-section-type="pronunciations" class="entry-body-section">
-            <ol class="entry-body-section-content pronunciation-group-list">
+            <ol data-count="0" class="entry-body-section-content pronunciation-group-list">
             </ol>
         </div>
         <div data-section-type="definitions" class="entry-body-section">
-            <ol class="entry-body-section-content definition-list">
-                <li class="definition-item">
+            <ol data-count="1" class="entry-body-section-content definition-list">
+                <li data-index="0" data-dictionary="Test Dictionary" class="definition-item">
                     <div class="definition-item-inner">
                         <button type="button" class="expansion-button">
                             <div data-icon="double-down-chevron" class="expansion-button-icon icon">
                             </div>
                         </button>
                         <div class="definition-item-content">
-                            <div class="definition-tag-list tag-list">
-                                <span class="tag">
+                            <div data-count="2" class="definition-tag-list tag-list">
+                                <span data-category="default" data-details="vt" data-index="0" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             vt
                                         </span>
                                     </span>
                                 </span>
-                                <span class="tag">
+                                <span data-category="dictionary" data-details="Test Dictionary" data-index="1" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             Test Dictionary
@@ -2033,17 +2047,17 @@
                                     </span>
                                 </span>
                             </div>
-                            <div class="definition-disambiguation-list">
+                            <div data-count="0" class="definition-disambiguation-list">
                             </div>
-                            <ul class="gloss-list">
-                                <li class="gloss-item click-scannable">
+                            <ul data-count="2" class="gloss-list">
+                                <li data-index="0" class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
                                     <span class="gloss-content">
                                         utsu definition 1
                                     </span>
                                 </li>
-                                <li class="gloss-item click-scannable">
+                                <li data-index="1" class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
                                     <span class="gloss-content">
@@ -2059,7 +2073,7 @@
     </div>
 </div>
 
-<div data-type="term" class="entry">
+<div data-frequency-count="6" data-headword-count="1" data-definition-count="1" data-primary-match-types="exact" data-grouped-frequency-count="2" data-pronunciation-dictionary-count="0" data-type="term" data-pronunciation-count="0" class="entry" data-format="term" data-unique-reading-count="1" data-unique-term-count="1">
     <div title="Current entry" class="entry-current-indicator">
         <span class="entry-current-indicator-inner">
         </span>
@@ -2103,8 +2117,8 @@
                 </span>
             </button>
         </div>
-        <div class="headword-list">
-            <div class="headword">
+        <div data-count="1" class="headword-list">
+            <div data-word-classes="v5" data-is-primary="true" data-match-types="exact" data-match-sources="term" data-frequency="normal" data-index="0" class="headword" data-reading-is-same="false">
                 <div class="headword-text-container">
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
@@ -2138,29 +2152,29 @@
             </div>
         </div>
         <div class="headword-list-details">
-            <div class="headword-list-tag-list tag-list">
-                <span class="tag">
+            <div data-count="2" class="headword-list-tag-list tag-list">
+                <span data-category="default" data-details="E2" data-headwords="0" data-index="0" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
                     <span class="tag-label">
                         <span class="tag-label-content">
                             E2
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="default" data-details="P" data-headwords="0" data-index="1" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
                     <span class="tag-label">
                         <span class="tag-label-content">
                             P
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="search" data-details="打つ" class="tag">
                     <span class="tag-label">
                         <span lang="ja" class="tag-label-content">
                             打つ
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="search" data-details="うつ" class="tag">
                     <span class="tag-label">
                         <span lang="ja" class="tag-label-content">
                             うつ
@@ -2168,11 +2182,11 @@
                     </span>
                 </span>
             </div>
-            <ul class="inflection-rule-chains">
-                <li class="inflection-rule-chain">
-                    <span class="inflection-source-icon">
+            <ul data-count="1" class="inflection-rule-chains">
+                <li data-count="1" data-index="0" class="inflection-rule-chain">
+                    <span class="inflection-source-icon" data-inflection-source="algorithm">
                     </span>
-                    <template-fragment:inflection>
+                    <template-fragment:inflection data-index="0">
                     </template-fragment:inflection>
                 </li>
             </ul>
@@ -2180,9 +2194,10 @@
     </div>
     <div class="entry-body">
         <div data-section-type="frequencies" class="entry-body-section">
-            <div class="entry-body-section-content frequency-group-list">
-                <span class="frequency-group-item">
-                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
+            <div data-count="2" class="entry-body-section-content frequency-group-list">
+                <span data-count="2" data-details="Test Dictionary" data-index="0" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -2193,8 +2208,9 @@
                         </span>
                     </span>
                 </span>
-                <span class="frequency-group-item">
-                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
+                <span data-count="1" data-details="Average" data-index="1" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -2208,27 +2224,27 @@
             </div>
         </div>
         <div data-section-type="pronunciations" class="entry-body-section">
-            <ol class="entry-body-section-content pronunciation-group-list">
+            <ol data-count="0" class="entry-body-section-content pronunciation-group-list">
             </ol>
         </div>
         <div data-section-type="definitions" class="entry-body-section">
-            <ol class="entry-body-section-content definition-list">
-                <li class="definition-item">
+            <ol data-count="1" class="entry-body-section-content definition-list">
+                <li data-index="0" data-dictionary="Test Dictionary" class="definition-item">
                     <div class="definition-item-inner">
                         <button type="button" class="expansion-button">
                             <div data-icon="double-down-chevron" class="expansion-button-icon icon">
                             </div>
                         </button>
                         <div class="definition-item-content">
-                            <div class="definition-tag-list tag-list">
-                                <span class="tag">
+                            <div data-count="2" class="definition-tag-list tag-list">
+                                <span data-category="default" data-details="vt" data-index="0" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             vt
                                         </span>
                                     </span>
                                 </span>
-                                <span class="tag">
+                                <span data-category="dictionary" data-details="Test Dictionary" data-index="1" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             Test Dictionary
@@ -2236,17 +2252,17 @@
                                     </span>
                                 </span>
                             </div>
-                            <div class="definition-disambiguation-list">
+                            <div data-count="0" class="definition-disambiguation-list">
                             </div>
-                            <ul class="gloss-list">
-                                <li class="gloss-item click-scannable">
+                            <ul data-count="2" class="gloss-list">
+                                <li data-index="0" class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
                                     <span class="gloss-content">
                                         utsu definition 3
                                     </span>
                                 </li>
-                                <li class="gloss-item click-scannable">
+                                <li data-index="1" class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
                                     <span class="gloss-content">
@@ -2262,7 +2278,7 @@
     </div>
 </div>
 
-<div data-type="term" class="entry">
+<div data-frequency-count="7" data-headword-count="1" data-definition-count="1" data-primary-match-types="exact" data-grouped-frequency-count="2" data-pronunciation-dictionary-count="0" data-type="term" data-pronunciation-count="0" class="entry" data-format="term" data-unique-reading-count="1" data-unique-term-count="1">
     <div title="Current entry" class="entry-current-indicator">
         <span class="entry-current-indicator-inner">
         </span>
@@ -2306,8 +2322,8 @@
                 </span>
             </button>
         </div>
-        <div class="headword-list">
-            <div class="headword">
+        <div data-count="1" class="headword-list">
+            <div data-word-classes="n" data-is-primary="true" data-match-types="exact" data-match-sources="term" data-frequency="normal" data-index="0" class="headword" data-reading-is-same="false">
                 <div class="headword-text-container">
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
@@ -2340,22 +2356,22 @@
             </div>
         </div>
         <div class="headword-list-details">
-            <div class="headword-list-tag-list tag-list">
-                <span class="tag">
+            <div data-count="1" class="headword-list-tag-list tag-list">
+                <span data-category="default" data-details="E1" data-headwords="0" data-index="0" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
                     <span class="tag-label">
                         <span class="tag-label-content">
                             E1
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="search" data-details="打" class="tag">
                     <span class="tag-label">
                         <span lang="ja" class="tag-label-content">
                             打
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="search" data-details="ダース" class="tag">
                     <span class="tag-label">
                         <span lang="ja" class="tag-label-content">
                             ダース
@@ -2363,15 +2379,16 @@
                     </span>
                 </span>
             </div>
-            <ul class="inflection-rule-chains">
+            <ul data-count="0" class="inflection-rule-chains">
             </ul>
         </div>
     </div>
     <div class="entry-body">
         <div data-section-type="frequencies" class="entry-body-section">
-            <div class="entry-body-section-content frequency-group-list">
-                <span class="frequency-group-item">
-                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
+            <div data-count="2" class="entry-body-section-content frequency-group-list">
+                <span data-count="2" data-details="Test Dictionary" data-index="0" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -2382,8 +2399,9 @@
                         </span>
                     </span>
                 </span>
-                <span class="frequency-group-item">
-                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
+                <span data-count="1" data-details="Average" data-index="1" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -2397,34 +2415,34 @@
             </div>
         </div>
         <div data-section-type="pronunciations" class="entry-body-section">
-            <ol class="entry-body-section-content pronunciation-group-list">
+            <ol data-count="0" class="entry-body-section-content pronunciation-group-list">
             </ol>
         </div>
         <div data-section-type="definitions" class="entry-body-section">
-            <ol class="entry-body-section-content definition-list">
-                <li class="definition-item">
+            <ol data-count="1" class="entry-body-section-content definition-list">
+                <li data-index="0" data-dictionary="Test Dictionary" class="definition-item">
                     <div class="definition-item-inner">
                         <button type="button" class="expansion-button">
                             <div data-icon="double-down-chevron" class="expansion-button-icon icon">
                             </div>
                         </button>
                         <div class="definition-item-content">
-                            <div class="definition-tag-list tag-list">
-                                <span class="tag">
+                            <div data-count="3" class="definition-tag-list tag-list">
+                                <span data-category="default" data-details="abbr" data-index="0" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             abbr
                                         </span>
                                     </span>
                                 </span>
-                                <span class="tag">
+                                <span data-category="default" data-details="n" data-index="1" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             n
                                         </span>
                                     </span>
                                 </span>
-                                <span class="tag">
+                                <span data-category="dictionary" data-details="Test Dictionary" data-index="2" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             Test Dictionary
@@ -2432,17 +2450,17 @@
                                     </span>
                                 </span>
                             </div>
-                            <div class="definition-disambiguation-list">
+                            <div data-count="0" class="definition-disambiguation-list">
                             </div>
-                            <ul class="gloss-list">
-                                <li class="gloss-item click-scannable">
+                            <ul data-count="2" class="gloss-list">
+                                <li data-index="0" class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
                                     <span class="gloss-content">
                                         daasu definition 1
                                     </span>
                                 </li>
-                                <li class="gloss-item click-scannable">
+                                <li data-index="1" class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
                                     <span class="gloss-content">
@@ -2458,7 +2476,7 @@
     </div>
 </div>
 
-<div data-type="term" class="entry">
+<div data-frequency-count="7" data-headword-count="1" data-definition-count="1" data-primary-match-types="exact" data-grouped-frequency-count="2" data-pronunciation-dictionary-count="0" data-type="term" data-pronunciation-count="0" class="entry" data-format="term" data-unique-reading-count="1" data-unique-term-count="1">
     <div title="Current entry" class="entry-current-indicator">
         <span class="entry-current-indicator-inner">
         </span>
@@ -2502,8 +2520,8 @@
                 </span>
             </button>
         </div>
-        <div class="headword-list">
-            <div class="headword">
+        <div data-count="1" class="headword-list">
+            <div data-word-classes="n" data-is-primary="true" data-match-types="exact" data-match-sources="term" data-frequency="normal" data-index="0" class="headword" data-reading-is-same="false">
                 <div class="headword-text-container">
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
@@ -2536,22 +2554,22 @@
             </div>
         </div>
         <div class="headword-list-details">
-            <div class="headword-list-tag-list tag-list">
-                <span class="tag">
+            <div data-count="1" class="headword-list-tag-list tag-list">
+                <span data-category="default" data-details="E1" data-headwords="0" data-index="0" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
                     <span class="tag-label">
                         <span class="tag-label-content">
                             E1
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="search" data-details="打" class="tag">
                     <span class="tag-label">
                         <span lang="ja" class="tag-label-content">
                             打
                         </span>
                     </span>
                 </span>
-                <span class="tag">
+                <span data-category="search" data-details="だ" class="tag">
                     <span class="tag-label">
                         <span lang="ja" class="tag-label-content">
                             だ
@@ -2559,15 +2577,16 @@
                     </span>
                 </span>
             </div>
-            <ul class="inflection-rule-chains">
+            <ul data-count="0" class="inflection-rule-chains">
             </ul>
         </div>
     </div>
     <div class="entry-body">
         <div data-section-type="frequencies" class="entry-body-section">
-            <div class="entry-body-section-content frequency-group-list">
-                <span class="frequency-group-item">
-                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
+            <div data-count="2" class="entry-body-section-content frequency-group-list">
+                <span data-count="2" data-details="Test Dictionary" data-index="0" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -2578,8 +2597,9 @@
                         </span>
                     </span>
                 </span>
-                <span class="frequency-group-item">
-                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
+                <span data-count="1" data-details="Average" data-index="1" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -2593,27 +2613,27 @@
             </div>
         </div>
         <div data-section-type="pronunciations" class="entry-body-section">
-            <ol class="entry-body-section-content pronunciation-group-list">
+            <ol data-count="0" class="entry-body-section-content pronunciation-group-list">
             </ol>
         </div>
         <div data-section-type="definitions" class="entry-body-section">
-            <ol class="entry-body-section-content definition-list">
-                <li class="definition-item">
+            <ol data-count="1" class="entry-body-section-content definition-list">
+                <li data-index="0" data-dictionary="Test Dictionary" class="definition-item">
                     <div class="definition-item-inner">
                         <button type="button" class="expansion-button">
                             <div data-icon="double-down-chevron" class="expansion-button-icon icon">
                             </div>
                         </button>
                         <div class="definition-item-content">
-                            <div class="definition-tag-list tag-list">
-                                <span class="tag">
+                            <div data-count="2" class="definition-tag-list tag-list">
+                                <span data-category="default" data-details="n" data-index="0" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             n
                                         </span>
                                     </span>
                                 </span>
-                                <span class="tag">
+                                <span data-category="dictionary" data-details="Test Dictionary" data-index="1" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             Test Dictionary
@@ -2621,17 +2641,17 @@
                                     </span>
                                 </span>
                             </div>
-                            <div class="definition-disambiguation-list">
+                            <div data-count="0" class="definition-disambiguation-list">
                             </div>
-                            <ul class="gloss-list">
-                                <li class="gloss-item click-scannable">
+                            <ul data-count="2" class="gloss-list">
+                                <li data-index="0" class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
                                     <span class="gloss-content">
                                         da definition 1
                                     </span>
                                 </li>
-                                <li class="gloss-item click-scannable">
+                                <li data-index="1" class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
                                     <span class="gloss-content">

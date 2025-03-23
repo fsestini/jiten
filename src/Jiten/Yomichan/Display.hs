@@ -9,6 +9,7 @@ import qualified Data.Aeson.KeyMap as KeyMap
 import Data.Aeson.Types (FromJSON (..), Parser)
 import qualified Data.ByteString.Lazy as LBS
 import qualified Data.Char as Char
+import Data.Function ((&))
 import Data.HashMap.Strict (HashMap)
 import qualified Data.HashMap.Strict as HashMap
 import qualified Data.Maybe as Maybe
@@ -24,7 +25,7 @@ import qualified Text.Taggy.Renderer
 
 data NodeBuilder = NodeBuilder
   { nbTag :: !(Maybe Text),
-    nbDataset :: Object,
+    nbDataset :: ![(Text, Text)],
     nbTextContent :: !(Maybe Text),
     nbChildren :: [NodeBuilder],
     nbQueried :: [(Text, NodeBuilder)],
@@ -38,7 +39,12 @@ data NodeBuilder = NodeBuilder
 instance FromJSON NodeBuilder where
   parseJSON = A.withObject "" $ \obj -> do
     tag <- obj .: "tag"
-    dataset <- obj .: "dataset"
+    datasetObj <- obj .: "dataset" :: Parser Object
+    dataset <-
+      datasetObj
+        & KeyMap.toHashMapText
+        & HashMap.toList
+        & traverse (traverse parseJSON)
     textContent <- obj .: "textContent"
     children <- obj .: "children"
     queriedObjs <- obj .: "queried" :: Parser [Value]
@@ -84,8 +90,8 @@ appendAttributes separator attrs av =
   let separated = T.intercalate separator attrs
    in if T.null av then separated else av <> separator <> separated
 
-toStyleName :: Text -> Text
-toStyleName =
+toDashedName :: Text -> Text
+toDashedName =
   T.foldl'
     ( \txt c ->
         if Char.isUpper c
@@ -145,7 +151,8 @@ modifyInnerNode templates selections (NodeElement innerElement) =
 
 applyNodeBuilder :: Templates -> NodeBuilder -> Element -> Element
 applyNodeBuilder templates nb@(NodeBuilder {..}) =
-  applyAttributes
+  applyDataset
+    . applyAttributes
     . applyStyle
     . applyClasses
     . applySelections
@@ -180,7 +187,7 @@ applyNodeBuilder templates nb@(NodeBuilder {..}) =
       let formatted =
             map
               ( \(k, v) ->
-                  mconcat [toStyleName k, ": ", v, ";"]
+                  mconcat [toDashedName k, ": ", v, ";"]
               )
               nbStyle
           separated = T.intercalate " " formatted
@@ -191,6 +198,11 @@ applyNodeBuilder templates nb@(NodeBuilder {..}) =
     applyAttributes :: Element -> Element
     applyAttributes el =
       let newAttrs = foldr (uncurry HashMap.insert) (eltAttrs el) nbAttributes
+       in el {eltAttrs = newAttrs}
+    applyDataset :: Element -> Element
+    applyDataset el =
+      let dataset = map (\(k, v) -> ("data-" <> toDashedName k, v)) nbDataset
+          newAttrs = foldr (uncurry HashMap.insert) (eltAttrs el) dataset
        in el {eltAttrs = newAttrs}
 
 applyFragmentBuilder :: Templates -> NodeBuilder -> [Node] -> [Node]
