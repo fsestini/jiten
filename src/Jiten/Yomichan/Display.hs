@@ -11,6 +11,7 @@ import qualified Data.ByteString.Lazy as LBS
 import qualified Data.Char as Char
 import Data.HashMap.Strict (HashMap)
 import qualified Data.HashMap.Strict as HashMap
+import qualified Data.Maybe as Maybe
 import Data.Text (Text)
 import qualified Data.Text as T
 import Data.Text.Format (Only (..))
@@ -56,6 +57,12 @@ instance FromJSON NodeBuilder where
     styleList <-
       forM (HashMap.toList . KeyMap.toHashMapText $ style) $ \(k, v) ->
         parseJSON v >>= \txt -> pure (k, txt)
+    href <- obj .:? "href"
+    target <- obj .:? "target"
+    rel <- obj .:? "rel"
+    lang <- obj .:? "lang"
+    let extraAttrs =
+          [("href", href), ("target", target), ("rel", rel), ("lang", lang)]
     pure
       ( NodeBuilder
           tag
@@ -66,7 +73,7 @@ instance FromJSON NodeBuilder where
           className
           classList
           styleList
-          attrs
+          (attrs ++ (Maybe.catMaybes . fmap sequence $ extraAttrs))
       )
 
 nbClasses :: NodeBuilder -> [Text]

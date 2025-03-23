@@ -48,9 +48,9 @@
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
                         </span>
-                        <span class="headword-term">
+                        <span lang="ja" class="headword-term">
                             <ruby>
-                                <a class="headword-kanji-link">
+                                <a lang="ja" class="headword-kanji-link">
                                     打
                                 </a>
                                 <rt>
@@ -59,7 +59,7 @@
                             </ruby>
                             ち
                             <ruby>
-                                <a class="headword-kanji-link">
+                                <a lang="ja" class="headword-kanji-link">
                                     込
                                 </a>
                                 <rt>
@@ -70,7 +70,7 @@
                         </span>
                     </span>
                     <span class="headword-reading-outer">
-                        <span class="headword-reading">
+                        <span lang="ja" class="headword-reading">
                             ぶちこむ
                         </span>
                     </span>
@@ -103,14 +103,14 @@
                 </span>
                 <span class="tag">
                     <span class="tag-label">
-                        <span class="tag-label-content">
+                        <span lang="ja" class="tag-label-content">
                             打ち込む
                         </span>
                     </span>
                 </span>
                 <span class="tag">
                     <span class="tag-label">
-                        <span class="tag-label-content">
+                        <span lang="ja" class="tag-label-content">
                             ぶちこむ
                         </span>
                     </span>
@@ -168,7 +168,7 @@
                             <span class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
-                                <span class="pronunciation-text-container">
+                                <span lang="ja" class="pronunciation-text-container">
                                     <span class="pronunciation-text">
                                         <span class="pronunciation-mora">
                                             <span class="pronunciation-character">
@@ -239,7 +239,7 @@
                             <span class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
-                                <span class="pronunciation-text-container">
+                                <span lang="ja" class="pronunciation-text-container">
                                     <span class="pronunciation-text">
                                         <span class="pronunciation-mora">
                                             <span class="pronunciation-character">
@@ -411,9 +411,9 @@
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
                         </span>
-                        <span class="headword-term">
+                        <span lang="ja" class="headword-term">
                             <ruby>
-                                <a class="headword-kanji-link">
+                                <a lang="ja" class="headword-kanji-link">
                                     打
                                 </a>
                                 <rt>
@@ -422,7 +422,7 @@
                             </ruby>
                             ち
                             <ruby>
-                                <a class="headword-kanji-link">
+                                <a lang="ja" class="headword-kanji-link">
                                     込
                                 </a>
                                 <rt>
@@ -433,7 +433,7 @@
                         </span>
                     </span>
                     <span class="headword-reading-outer">
-                        <span class="headword-reading">
+                        <span lang="ja" class="headword-reading">
                             ぶちこむ
                         </span>
                     </span>
@@ -466,14 +466,14 @@
                 </span>
                 <span class="tag">
                     <span class="tag-label">
-                        <span class="tag-label-content">
+                        <span lang="ja" class="tag-label-content">
                             打ち込む
                         </span>
                     </span>
                 </span>
                 <span class="tag">
                     <span class="tag-label">
-                        <span class="tag-label-content">
+                        <span lang="ja" class="tag-label-content">
                             ぶちこむ
                         </span>
                     </span>
@@ -531,7 +531,7 @@
                             <span class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
-                                <span class="pronunciation-text-container">
+                                <span lang="ja" class="pronunciation-text-container">
                                     <span class="pronunciation-text">
                                         <span class="pronunciation-mora">
                                             <span class="pronunciation-character">
@@ -602,7 +602,7 @@
                             <span class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
-                                <span class="pronunciation-text-container">
+                                <span lang="ja" class="pronunciation-text-container">
                                     <span class="pronunciation-text">
                                         <span class="pronunciation-mora">
                                             <span class="pronunciation-character">
@@ -774,9 +774,9 @@
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
                         </span>
-                        <span class="headword-term">
+                        <span lang="ja" class="headword-term">
                             <ruby>
-                                <a class="headword-kanji-link">
+                                <a lang="ja" class="headword-kanji-link">
                                     打
                                 </a>
                                 <rt>
@@ -785,7 +785,7 @@
                             </ruby>
                             ち
                             <ruby>
-                                <a class="headword-kanji-link">
+                                <a lang="ja" class="headword-kanji-link">
                                     込
                                 </a>
                                 <rt>
@@ -796,7 +796,7 @@
                         </span>
                     </span>
                     <span class="headword-reading-outer">
-                        <span class="headword-reading">
+                        <span lang="ja" class="headword-reading">
                             うちこむ
                         </span>
                     </span>
@@ -829,14 +829,14 @@
                 </span>
                 <span class="tag">
                     <span class="tag-label">
-                        <span class="tag-label-content">
+                        <span lang="ja" class="tag-label-content">
                             打ち込む
                         </span>
                     </span>
                 </span>
                 <span class="tag">
                     <span class="tag-label">
-                        <span class="tag-label-content">
+                        <span lang="ja" class="tag-label-content">
                             うちこむ
                         </span>
                     </span>
@@ -894,7 +894,7 @@
                             <span class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
-                                <span class="pronunciation-text-container">
+                                <span lang="ja" class="pronunciation-text-container">
                                     <span class="pronunciation-text">
                                         <span class="pronunciation-mora">
                                             <span class="pronunciation-character">
@@ -965,7 +965,7 @@
                             <span class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
-                                <span class="pronunciation-text-container">
+                                <span lang="ja" class="pronunciation-text-container">
                                     <span class="pronunciation-text">
                                         <span class="pronunciation-mora">
                                             <span class="pronunciation-character">
@@ -1137,9 +1137,9 @@
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
                         </span>
-                        <span class="headword-term">
+                        <span lang="ja" class="headword-term">
                             <ruby>
-                                <a class="headword-kanji-link">
+                                <a lang="ja" class="headword-kanji-link">
                                     打
                                 </a>
                                 <rt>
@@ -1148,7 +1148,7 @@
                             </ruby>
                             ち
                             <ruby>
-                                <a class="headword-kanji-link">
+                                <a lang="ja" class="headword-kanji-link">
                                     込
                                 </a>
                                 <rt>
@@ -1159,7 +1159,7 @@
                         </span>
                     </span>
                     <span class="headword-reading-outer">
-                        <span class="headword-reading">
+                        <span lang="ja" class="headword-reading">
                             うちこむ
                         </span>
                     </span>
@@ -1192,14 +1192,14 @@
                 </span>
                 <span class="tag">
                     <span class="tag-label">
-                        <span class="tag-label-content">
+                        <span lang="ja" class="tag-label-content">
                             打ち込む
                         </span>
                     </span>
                 </span>
                 <span class="tag">
                     <span class="tag-label">
-                        <span class="tag-label-content">
+                        <span lang="ja" class="tag-label-content">
                             うちこむ
                         </span>
                     </span>
@@ -1257,7 +1257,7 @@
                             <span class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
-                                <span class="pronunciation-text-container">
+                                <span lang="ja" class="pronunciation-text-container">
                                     <span class="pronunciation-text">
                                         <span class="pronunciation-mora">
                                             <span class="pronunciation-character">
@@ -1328,7 +1328,7 @@
                             <span class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
-                                <span class="pronunciation-text-container">
+                                <span lang="ja" class="pronunciation-text-container">
                                     <span class="pronunciation-text">
                                         <span class="pronunciation-mora">
                                             <span class="pronunciation-character">
@@ -1500,9 +1500,9 @@
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
                         </span>
-                        <span class="headword-term">
+                        <span lang="ja" class="headword-term">
                             <ruby>
-                                <a class="headword-kanji-link">
+                                <a lang="ja" class="headword-kanji-link">
                                     打
                                 </a>
                                 <rt>
@@ -1513,7 +1513,7 @@
                         </span>
                     </span>
                     <span class="headword-reading-outer">
-                        <span class="headword-reading">
+                        <span lang="ja" class="headword-reading">
                             ぶつ
                         </span>
                     </span>
@@ -1546,14 +1546,14 @@
                 </span>
                 <span class="tag">
                     <span class="tag-label">
-                        <span class="tag-label-content">
+                        <span lang="ja" class="tag-label-content">
                             打つ
                         </span>
                     </span>
                 </span>
                 <span class="tag">
                     <span class="tag-label">
-                        <span class="tag-label-content">
+                        <span lang="ja" class="tag-label-content">
                             ぶつ
                         </span>
                     </span>
@@ -1703,9 +1703,9 @@
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
                         </span>
-                        <span class="headword-term">
+                        <span lang="ja" class="headword-term">
                             <ruby>
-                                <a class="headword-kanji-link">
+                                <a lang="ja" class="headword-kanji-link">
                                     打
                                 </a>
                                 <rt>
@@ -1716,7 +1716,7 @@
                         </span>
                     </span>
                     <span class="headword-reading-outer">
-                        <span class="headword-reading">
+                        <span lang="ja" class="headword-reading">
                             ぶつ
                         </span>
                     </span>
@@ -1749,14 +1749,14 @@
                 </span>
                 <span class="tag">
                     <span class="tag-label">
-                        <span class="tag-label-content">
+                        <span lang="ja" class="tag-label-content">
                             打つ
                         </span>
                     </span>
                 </span>
                 <span class="tag">
                     <span class="tag-label">
-                        <span class="tag-label-content">
+                        <span lang="ja" class="tag-label-content">
                             ぶつ
                         </span>
                     </span>
@@ -1906,9 +1906,9 @@
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
                         </span>
-                        <span class="headword-term">
+                        <span lang="ja" class="headword-term">
                             <ruby>
-                                <a class="headword-kanji-link">
+                                <a lang="ja" class="headword-kanji-link">
                                     打
                                 </a>
                                 <rt>
@@ -1919,7 +1919,7 @@
                         </span>
                     </span>
                     <span class="headword-reading-outer">
-                        <span class="headword-reading">
+                        <span lang="ja" class="headword-reading">
                             うつ
                         </span>
                     </span>
@@ -1952,14 +1952,14 @@
                 </span>
                 <span class="tag">
                     <span class="tag-label">
-                        <span class="tag-label-content">
+                        <span lang="ja" class="tag-label-content">
                             打つ
                         </span>
                     </span>
                 </span>
                 <span class="tag">
                     <span class="tag-label">
-                        <span class="tag-label-content">
+                        <span lang="ja" class="tag-label-content">
                             うつ
                         </span>
                     </span>
@@ -2109,9 +2109,9 @@
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
                         </span>
-                        <span class="headword-term">
+                        <span lang="ja" class="headword-term">
                             <ruby>
-                                <a class="headword-kanji-link">
+                                <a lang="ja" class="headword-kanji-link">
                                     打
                                 </a>
                                 <rt>
@@ -2122,7 +2122,7 @@
                         </span>
                     </span>
                     <span class="headword-reading-outer">
-                        <span class="headword-reading">
+                        <span lang="ja" class="headword-reading">
                             うつ
                         </span>
                     </span>
@@ -2155,14 +2155,14 @@
                 </span>
                 <span class="tag">
                     <span class="tag-label">
-                        <span class="tag-label-content">
+                        <span lang="ja" class="tag-label-content">
                             打つ
                         </span>
                     </span>
                 </span>
                 <span class="tag">
                     <span class="tag-label">
-                        <span class="tag-label-content">
+                        <span lang="ja" class="tag-label-content">
                             うつ
                         </span>
                     </span>
@@ -2312,9 +2312,9 @@
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
                         </span>
-                        <span class="headword-term">
+                        <span lang="ja" class="headword-term">
                             <ruby>
-                                <a class="headword-kanji-link">
+                                <a lang="ja" class="headword-kanji-link">
                                     打
                                 </a>
                                 <rt>
@@ -2324,7 +2324,7 @@
                         </span>
                     </span>
                     <span class="headword-reading-outer">
-                        <span class="headword-reading">
+                        <span lang="ja" class="headword-reading">
                             ダース
                         </span>
                     </span>
@@ -2350,14 +2350,14 @@
                 </span>
                 <span class="tag">
                     <span class="tag-label">
-                        <span class="tag-label-content">
+                        <span lang="ja" class="tag-label-content">
                             打
                         </span>
                     </span>
                 </span>
                 <span class="tag">
                     <span class="tag-label">
-                        <span class="tag-label-content">
+                        <span lang="ja" class="tag-label-content">
                             ダース
                         </span>
                     </span>
@@ -2508,9 +2508,9 @@
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
                         </span>
-                        <span class="headword-term">
+                        <span lang="ja" class="headword-term">
                             <ruby>
-                                <a class="headword-kanji-link">
+                                <a lang="ja" class="headword-kanji-link">
                                     打
                                 </a>
                                 <rt>
@@ -2520,7 +2520,7 @@
                         </span>
                     </span>
                     <span class="headword-reading-outer">
-                        <span class="headword-reading">
+                        <span lang="ja" class="headword-reading">
                             だ
                         </span>
                     </span>
@@ -2546,14 +2546,14 @@
                 </span>
                 <span class="tag">
                     <span class="tag-label">
-                        <span class="tag-label-content">
+                        <span lang="ja" class="tag-label-content">
                             打
                         </span>
                     </span>
                 </span>
                 <span class="tag">
                     <span class="tag-label">
-                        <span class="tag-label-content">
+                        <span lang="ja" class="tag-label-content">
                             だ
                         </span>
                     </span>
