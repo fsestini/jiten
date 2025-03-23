@@ -7,167 +7,10 @@
                     "dictionaryAlias": "Test Dictionary",
                     "dictionaryIndex": 0,
                     "entries": [
-                        "uchikomu definition 1",
-                        "uchikomu definition 2"
-                    ],
-                    "frequencyOrder": 0,
-                    "headwordIndices": [
-                        0
-                    ],
-                    "id": 7,
-                    "index": 0,
-                    "isPrimary": true,
-                    "score": 10,
-                    "sequences": [
-                        -1
-                    ],
-                    "tags": []
-                }
-            ],
-            "dictionaryAlias": "Test Dictionary",
-            "dictionaryIndex": 0,
-            "frequencies": [
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "displayValue": null,
-                    "displayValueParsed": false,
-                    "frequency": 3,
-                    "hasReading": false,
-                    "headwordIndex": 0,
-                    "index": 0
-                },
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "displayValue": "seven",
-                    "displayValueParsed": false,
-                    "frequency": 7,
-                    "hasReading": false,
-                    "headwordIndex": 0,
-                    "index": 1
-                },
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "displayValue": "eighteen",
-                    "displayValueParsed": true,
-                    "frequency": 0,
-                    "hasReading": true,
-                    "headwordIndex": 0,
-                    "index": 2
-                },
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "displayValue": "twenty-four (24)",
-                    "displayValueParsed": true,
-                    "frequency": 24,
-                    "hasReading": true,
-                    "headwordIndex": 0,
-                    "index": 3
-                },
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "displayValue": null,
-                    "displayValueParsed": false,
-                    "frequency": 12,
-                    "hasReading": true,
-                    "headwordIndex": 0,
-                    "index": 4
-                },
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "displayValue": null,
-                    "displayValueParsed": false,
-                    "frequency": 30,
-                    "hasReading": true,
-                    "headwordIndex": 0,
-                    "index": 5
-                }
-            ],
-            "frequencyOrder": 0,
-            "headwords": [
-                {
-                    "index": 0,
-                    "reading": "うちこむ",
-                    "sources": [
-                        {
-                            "deinflectedText": "打ち込む",
-                            "isPrimary": true,
-                            "matchSource": "term",
-                            "matchType": "exact",
-                            "originalText": "打ち込む",
-                            "transformedText": "打ち込む"
-                        }
-                    ],
-                    "tags": [],
-                    "term": "打ち込む",
-                    "wordClasses": [
-                        "v5"
-                    ]
-                }
-            ],
-            "inflectionRuleChainCandidates": [
-                {
-                    "inflectionRules": [],
-                    "source": "algorithm"
-                }
-            ],
-            "isPrimary": true,
-            "matchPrimaryReading": false,
-            "maxOriginalTextLength": 4,
-            "pronunciations": [
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "headwordIndex": 0,
-                    "index": 0,
-                    "pronunciations": [
-                        {
-                            "devoicePositions": [],
-                            "nasalPositions": [],
-                            "position": 0,
-                            "tags": [],
-                            "type": "pitch-accent"
-                        },
-                        {
-                            "devoicePositions": [],
-                            "nasalPositions": [],
-                            "position": 3,
-                            "tags": [],
-                            "type": "pitch-accent"
-                        }
-                    ]
-                }
-            ],
-            "score": 10,
-            "sourceTermExactMatchCount": 1,
-            "textProcessorRuleChainCandidates": [
-                []
-            ],
-            "type": "term"
-        },
-        {
-            "definitions": [
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "entries": [
                         "buchikomu definition 1",
                         "buchikomu definition 2"
                     ],
-                    "frequencyOrder": 0,
+                    "frequencyOrder": -31,
                     "headwordIndices": [
                         0
                     ],
@@ -251,7 +94,7 @@
                     "index": 5
                 }
             ],
-            "frequencyOrder": 0,
+            "frequencyOrder": -31,
             "headwords": [
                 {
                     "index": 0,
@@ -321,167 +164,10 @@
                     "dictionaryAlias": "Test Dictionary",
                     "dictionaryIndex": 0,
                     "entries": [
-                        "uchikomu definition 3",
-                        "uchikomu definition 4"
-                    ],
-                    "frequencyOrder": 0,
-                    "headwordIndices": [
-                        0
-                    ],
-                    "id": 8,
-                    "index": 0,
-                    "isPrimary": true,
-                    "score": 1,
-                    "sequences": [
-                        -1
-                    ],
-                    "tags": []
-                }
-            ],
-            "dictionaryAlias": "Test Dictionary",
-            "dictionaryIndex": 0,
-            "frequencies": [
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "displayValue": null,
-                    "displayValueParsed": false,
-                    "frequency": 3,
-                    "hasReading": false,
-                    "headwordIndex": 0,
-                    "index": 0
-                },
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "displayValue": "seven",
-                    "displayValueParsed": false,
-                    "frequency": 7,
-                    "hasReading": false,
-                    "headwordIndex": 0,
-                    "index": 1
-                },
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "displayValue": "eighteen",
-                    "displayValueParsed": true,
-                    "frequency": 0,
-                    "hasReading": true,
-                    "headwordIndex": 0,
-                    "index": 2
-                },
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "displayValue": "twenty-four (24)",
-                    "displayValueParsed": true,
-                    "frequency": 24,
-                    "hasReading": true,
-                    "headwordIndex": 0,
-                    "index": 3
-                },
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "displayValue": null,
-                    "displayValueParsed": false,
-                    "frequency": 12,
-                    "hasReading": true,
-                    "headwordIndex": 0,
-                    "index": 4
-                },
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "displayValue": null,
-                    "displayValueParsed": false,
-                    "frequency": 30,
-                    "hasReading": true,
-                    "headwordIndex": 0,
-                    "index": 5
-                }
-            ],
-            "frequencyOrder": 0,
-            "headwords": [
-                {
-                    "index": 0,
-                    "reading": "うちこむ",
-                    "sources": [
-                        {
-                            "deinflectedText": "打ち込む",
-                            "isPrimary": true,
-                            "matchSource": "term",
-                            "matchType": "exact",
-                            "originalText": "打ち込む",
-                            "transformedText": "打ち込む"
-                        }
-                    ],
-                    "tags": [],
-                    "term": "打ち込む",
-                    "wordClasses": [
-                        "v5"
-                    ]
-                }
-            ],
-            "inflectionRuleChainCandidates": [
-                {
-                    "inflectionRules": [],
-                    "source": "algorithm"
-                }
-            ],
-            "isPrimary": true,
-            "matchPrimaryReading": false,
-            "maxOriginalTextLength": 4,
-            "pronunciations": [
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "headwordIndex": 0,
-                    "index": 0,
-                    "pronunciations": [
-                        {
-                            "devoicePositions": [],
-                            "nasalPositions": [],
-                            "position": 0,
-                            "tags": [],
-                            "type": "pitch-accent"
-                        },
-                        {
-                            "devoicePositions": [],
-                            "nasalPositions": [],
-                            "position": 3,
-                            "tags": [],
-                            "type": "pitch-accent"
-                        }
-                    ]
-                }
-            ],
-            "score": 1,
-            "sourceTermExactMatchCount": 1,
-            "textProcessorRuleChainCandidates": [
-                []
-            ],
-            "type": "term"
-        },
-        {
-            "definitions": [
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "entries": [
                         "buchikomu definition 3",
                         "buchikomu definition 4"
                     ],
-                    "frequencyOrder": 0,
+                    "frequencyOrder": -31,
                     "headwordIndices": [
                         0
                     ],
@@ -565,7 +251,7 @@
                     "index": 5
                 }
             ],
-            "frequencyOrder": 0,
+            "frequencyOrder": -31,
             "headwords": [
                 {
                     "index": 0,
@@ -635,14 +321,14 @@
                     "dictionaryAlias": "Test Dictionary",
                     "dictionaryIndex": 0,
                     "entries": [
-                        "utsu definition 1",
-                        "utsu definition 2"
+                        "uchikomu definition 1",
+                        "uchikomu definition 2"
                     ],
-                    "frequencyOrder": 0,
+                    "frequencyOrder": -30,
                     "headwordIndices": [
                         0
                     ],
-                    "id": 3,
+                    "id": 7,
                     "index": 0,
                     "isPrimary": true,
                     "score": 10,
@@ -661,7 +347,7 @@
                     "dictionaryIndex": 0,
                     "displayValue": null,
                     "displayValueParsed": false,
-                    "frequency": 2,
+                    "frequency": 3,
                     "hasReading": false,
                     "headwordIndex": 0,
                     "index": 0
@@ -670,10 +356,10 @@
                     "dictionary": "Test Dictionary",
                     "dictionaryAlias": "Test Dictionary",
                     "dictionaryIndex": 0,
-                    "displayValue": "sixteen",
-                    "displayValueParsed": true,
-                    "frequency": 0,
-                    "hasReading": true,
+                    "displayValue": "seven",
+                    "displayValueParsed": false,
+                    "frequency": 7,
+                    "hasReading": false,
                     "headwordIndex": 0,
                     "index": 1
                 },
@@ -681,9 +367,9 @@
                     "dictionary": "Test Dictionary",
                     "dictionaryAlias": "Test Dictionary",
                     "dictionaryIndex": 0,
-                    "displayValue": "twenty-two (22)",
+                    "displayValue": "eighteen",
                     "displayValueParsed": true,
-                    "frequency": 22,
+                    "frequency": 0,
                     "hasReading": true,
                     "headwordIndex": 0,
                     "index": 2
@@ -692,9 +378,9 @@
                     "dictionary": "Test Dictionary",
                     "dictionaryAlias": "Test Dictionary",
                     "dictionaryIndex": 0,
-                    "displayValue": null,
-                    "displayValueParsed": false,
-                    "frequency": 10,
+                    "displayValue": "twenty-four (24)",
+                    "displayValueParsed": true,
+                    "frequency": 24,
                     "hasReading": true,
                     "headwordIndex": 0,
                     "index": 3
@@ -705,7 +391,7 @@
                     "dictionaryIndex": 0,
                     "displayValue": null,
                     "displayValueParsed": false,
-                    "frequency": 28,
+                    "frequency": 12,
                     "hasReading": true,
                     "headwordIndex": 0,
                     "index": 4
@@ -716,29 +402,29 @@
                     "dictionaryIndex": 0,
                     "displayValue": null,
                     "displayValueParsed": false,
-                    "frequency": 6,
-                    "hasReading": false,
+                    "frequency": 30,
+                    "hasReading": true,
                     "headwordIndex": 0,
                     "index": 5
                 }
             ],
-            "frequencyOrder": 0,
+            "frequencyOrder": -30,
             "headwords": [
                 {
                     "index": 0,
-                    "reading": "うつ",
+                    "reading": "うちこむ",
                     "sources": [
                         {
-                            "deinflectedText": "打つ",
+                            "deinflectedText": "打ち込む",
                             "isPrimary": true,
                             "matchSource": "term",
                             "matchType": "exact",
-                            "originalText": "打ち",
-                            "transformedText": "打ち"
+                            "originalText": "打ち込む",
+                            "transformedText": "打ち込む"
                         }
                     ],
                     "tags": [],
-                    "term": "打つ",
+                    "term": "打ち込む",
                     "wordClasses": [
                         "v5"
                     ]
@@ -746,20 +432,196 @@
             ],
             "inflectionRuleChainCandidates": [
                 {
-                    "inflectionRules": [
-                        {
-                            "description": "Used to indicate actions that are (being) carried out.\nRefers to 連用形, the part of the verb after conjugating with -ます and dropping ます.",
-                            "name": "continuative"
-                        }
-                    ],
+                    "inflectionRules": [],
                     "source": "algorithm"
                 }
             ],
             "isPrimary": true,
             "matchPrimaryReading": false,
-            "maxOriginalTextLength": 2,
-            "pronunciations": [],
+            "maxOriginalTextLength": 4,
+            "pronunciations": [
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "headwordIndex": 0,
+                    "index": 0,
+                    "pronunciations": [
+                        {
+                            "devoicePositions": [],
+                            "nasalPositions": [],
+                            "position": 0,
+                            "tags": [],
+                            "type": "pitch-accent"
+                        },
+                        {
+                            "devoicePositions": [],
+                            "nasalPositions": [],
+                            "position": 3,
+                            "tags": [],
+                            "type": "pitch-accent"
+                        }
+                    ]
+                }
+            ],
             "score": 10,
+            "sourceTermExactMatchCount": 1,
+            "textProcessorRuleChainCandidates": [
+                []
+            ],
+            "type": "term"
+        },
+        {
+            "definitions": [
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "entries": [
+                        "uchikomu definition 3",
+                        "uchikomu definition 4"
+                    ],
+                    "frequencyOrder": -30,
+                    "headwordIndices": [
+                        0
+                    ],
+                    "id": 8,
+                    "index": 0,
+                    "isPrimary": true,
+                    "score": 1,
+                    "sequences": [
+                        -1
+                    ],
+                    "tags": []
+                }
+            ],
+            "dictionaryAlias": "Test Dictionary",
+            "dictionaryIndex": 0,
+            "frequencies": [
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "displayValue": null,
+                    "displayValueParsed": false,
+                    "frequency": 3,
+                    "hasReading": false,
+                    "headwordIndex": 0,
+                    "index": 0
+                },
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "displayValue": "seven",
+                    "displayValueParsed": false,
+                    "frequency": 7,
+                    "hasReading": false,
+                    "headwordIndex": 0,
+                    "index": 1
+                },
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "displayValue": "eighteen",
+                    "displayValueParsed": true,
+                    "frequency": 0,
+                    "hasReading": true,
+                    "headwordIndex": 0,
+                    "index": 2
+                },
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "displayValue": "twenty-four (24)",
+                    "displayValueParsed": true,
+                    "frequency": 24,
+                    "hasReading": true,
+                    "headwordIndex": 0,
+                    "index": 3
+                },
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "displayValue": null,
+                    "displayValueParsed": false,
+                    "frequency": 12,
+                    "hasReading": true,
+                    "headwordIndex": 0,
+                    "index": 4
+                },
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "displayValue": null,
+                    "displayValueParsed": false,
+                    "frequency": 30,
+                    "hasReading": true,
+                    "headwordIndex": 0,
+                    "index": 5
+                }
+            ],
+            "frequencyOrder": -30,
+            "headwords": [
+                {
+                    "index": 0,
+                    "reading": "うちこむ",
+                    "sources": [
+                        {
+                            "deinflectedText": "打ち込む",
+                            "isPrimary": true,
+                            "matchSource": "term",
+                            "matchType": "exact",
+                            "originalText": "打ち込む",
+                            "transformedText": "打ち込む"
+                        }
+                    ],
+                    "tags": [],
+                    "term": "打ち込む",
+                    "wordClasses": [
+                        "v5"
+                    ]
+                }
+            ],
+            "inflectionRuleChainCandidates": [
+                {
+                    "inflectionRules": [],
+                    "source": "algorithm"
+                }
+            ],
+            "isPrimary": true,
+            "matchPrimaryReading": false,
+            "maxOriginalTextLength": 4,
+            "pronunciations": [
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "headwordIndex": 0,
+                    "index": 0,
+                    "pronunciations": [
+                        {
+                            "devoicePositions": [],
+                            "nasalPositions": [],
+                            "position": 0,
+                            "tags": [],
+                            "type": "pitch-accent"
+                        },
+                        {
+                            "devoicePositions": [],
+                            "nasalPositions": [],
+                            "position": 3,
+                            "tags": [],
+                            "type": "pitch-accent"
+                        }
+                    ]
+                }
+            ],
+            "score": 1,
             "sourceTermExactMatchCount": 1,
             "textProcessorRuleChainCandidates": [
                 []
@@ -776,7 +638,7 @@
                         "butsu definition 1",
                         "butsu definition 2"
                     ],
-                    "frequencyOrder": 0,
+                    "frequencyOrder": -6,
                     "headwordIndices": [
                         0
                     ],
@@ -860,7 +722,7 @@
                     "index": 5
                 }
             ],
-            "frequencyOrder": 0,
+            "frequencyOrder": -29,
             "headwords": [
                 {
                     "index": 0,
@@ -911,148 +773,10 @@
                     "dictionaryAlias": "Test Dictionary",
                     "dictionaryIndex": 0,
                     "entries": [
-                        "utsu definition 3",
-                        "utsu definition 4"
-                    ],
-                    "frequencyOrder": 0,
-                    "headwordIndices": [
-                        0
-                    ],
-                    "id": 4,
-                    "index": 0,
-                    "isPrimary": true,
-                    "score": 1,
-                    "sequences": [
-                        -1
-                    ],
-                    "tags": []
-                }
-            ],
-            "dictionaryAlias": "Test Dictionary",
-            "dictionaryIndex": 0,
-            "frequencies": [
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "displayValue": null,
-                    "displayValueParsed": false,
-                    "frequency": 2,
-                    "hasReading": false,
-                    "headwordIndex": 0,
-                    "index": 0
-                },
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "displayValue": "sixteen",
-                    "displayValueParsed": true,
-                    "frequency": 0,
-                    "hasReading": true,
-                    "headwordIndex": 0,
-                    "index": 1
-                },
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "displayValue": "twenty-two (22)",
-                    "displayValueParsed": true,
-                    "frequency": 22,
-                    "hasReading": true,
-                    "headwordIndex": 0,
-                    "index": 2
-                },
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "displayValue": null,
-                    "displayValueParsed": false,
-                    "frequency": 10,
-                    "hasReading": true,
-                    "headwordIndex": 0,
-                    "index": 3
-                },
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "displayValue": null,
-                    "displayValueParsed": false,
-                    "frequency": 28,
-                    "hasReading": true,
-                    "headwordIndex": 0,
-                    "index": 4
-                },
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "displayValue": null,
-                    "displayValueParsed": false,
-                    "frequency": 6,
-                    "hasReading": false,
-                    "headwordIndex": 0,
-                    "index": 5
-                }
-            ],
-            "frequencyOrder": 0,
-            "headwords": [
-                {
-                    "index": 0,
-                    "reading": "うつ",
-                    "sources": [
-                        {
-                            "deinflectedText": "打つ",
-                            "isPrimary": true,
-                            "matchSource": "term",
-                            "matchType": "exact",
-                            "originalText": "打ち",
-                            "transformedText": "打ち"
-                        }
-                    ],
-                    "tags": [],
-                    "term": "打つ",
-                    "wordClasses": [
-                        "v5"
-                    ]
-                }
-            ],
-            "inflectionRuleChainCandidates": [
-                {
-                    "inflectionRules": [
-                        {
-                            "description": "Used to indicate actions that are (being) carried out.\nRefers to 連用形, the part of the verb after conjugating with -ます and dropping ます.",
-                            "name": "continuative"
-                        }
-                    ],
-                    "source": "algorithm"
-                }
-            ],
-            "isPrimary": true,
-            "matchPrimaryReading": false,
-            "maxOriginalTextLength": 2,
-            "pronunciations": [],
-            "score": 1,
-            "sourceTermExactMatchCount": 1,
-            "textProcessorRuleChainCandidates": [
-                []
-            ],
-            "type": "term"
-        },
-        {
-            "definitions": [
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "entries": [
                         "butsu definition 3",
                         "butsu definition 4"
                     ],
-                    "frequencyOrder": 0,
+                    "frequencyOrder": -6,
                     "headwordIndices": [
                         0
                     ],
@@ -1136,7 +860,7 @@
                     "index": 5
                 }
             ],
-            "frequencyOrder": 0,
+            "frequencyOrder": -29,
             "headwords": [
                 {
                     "index": 0,
@@ -1187,14 +911,152 @@
                     "dictionaryAlias": "Test Dictionary",
                     "dictionaryIndex": 0,
                     "entries": [
-                        "da definition 1",
-                        "da definition 2"
+                        "utsu definition 1",
+                        "utsu definition 2"
                     ],
-                    "frequencyOrder": 0,
+                    "frequencyOrder": -6,
                     "headwordIndices": [
                         0
                     ],
-                    "id": 1,
+                    "id": 3,
+                    "index": 0,
+                    "isPrimary": true,
+                    "score": 10,
+                    "sequences": [
+                        -1
+                    ],
+                    "tags": []
+                }
+            ],
+            "dictionaryAlias": "Test Dictionary",
+            "dictionaryIndex": 0,
+            "frequencies": [
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "displayValue": null,
+                    "displayValueParsed": false,
+                    "frequency": 2,
+                    "hasReading": false,
+                    "headwordIndex": 0,
+                    "index": 0
+                },
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "displayValue": "sixteen",
+                    "displayValueParsed": true,
+                    "frequency": 0,
+                    "hasReading": true,
+                    "headwordIndex": 0,
+                    "index": 1
+                },
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "displayValue": "twenty-two (22)",
+                    "displayValueParsed": true,
+                    "frequency": 22,
+                    "hasReading": true,
+                    "headwordIndex": 0,
+                    "index": 2
+                },
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "displayValue": null,
+                    "displayValueParsed": false,
+                    "frequency": 10,
+                    "hasReading": true,
+                    "headwordIndex": 0,
+                    "index": 3
+                },
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "displayValue": null,
+                    "displayValueParsed": false,
+                    "frequency": 28,
+                    "hasReading": true,
+                    "headwordIndex": 0,
+                    "index": 4
+                },
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "displayValue": null,
+                    "displayValueParsed": false,
+                    "frequency": 6,
+                    "hasReading": false,
+                    "headwordIndex": 0,
+                    "index": 5
+                }
+            ],
+            "frequencyOrder": -28,
+            "headwords": [
+                {
+                    "index": 0,
+                    "reading": "うつ",
+                    "sources": [
+                        {
+                            "deinflectedText": "打つ",
+                            "isPrimary": true,
+                            "matchSource": "term",
+                            "matchType": "exact",
+                            "originalText": "打ち",
+                            "transformedText": "打ち"
+                        }
+                    ],
+                    "tags": [],
+                    "term": "打つ",
+                    "wordClasses": [
+                        "v5"
+                    ]
+                }
+            ],
+            "inflectionRuleChainCandidates": [
+                {
+                    "inflectionRules": [
+                        {
+                            "description": "Used to indicate actions that are (being) carried out.\nRefers to 連用形, the part of the verb after conjugating with -ます and dropping ます.",
+                            "name": "continuative"
+                        }
+                    ],
+                    "source": "algorithm"
+                }
+            ],
+            "isPrimary": true,
+            "matchPrimaryReading": false,
+            "maxOriginalTextLength": 2,
+            "pronunciations": [],
+            "score": 10,
+            "sourceTermExactMatchCount": 1,
+            "textProcessorRuleChainCandidates": [
+                []
+            ],
+            "type": "term"
+        },
+        {
+            "definitions": [
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "entries": [
+                        "utsu definition 3",
+                        "utsu definition 4"
+                    ],
+                    "frequencyOrder": -6,
+                    "headwordIndices": [
+                        0
+                    ],
+                    "id": 4,
                     "index": 0,
                     "isPrimary": true,
                     "score": 1,
@@ -1211,9 +1073,9 @@
                     "dictionary": "Test Dictionary",
                     "dictionaryAlias": "Test Dictionary",
                     "dictionaryIndex": 0,
-                    "displayValue": "five (5)",
-                    "displayValueParsed": true,
-                    "frequency": 5,
+                    "displayValue": null,
+                    "displayValueParsed": false,
+                    "frequency": 2,
                     "hasReading": false,
                     "headwordIndex": 0,
                     "index": 0
@@ -1222,10 +1084,10 @@
                     "dictionary": "Test Dictionary",
                     "dictionaryAlias": "Test Dictionary",
                     "dictionaryIndex": 0,
-                    "displayValue": "four",
+                    "displayValue": "sixteen",
                     "displayValueParsed": true,
                     "frequency": 0,
-                    "hasReading": false,
+                    "hasReading": true,
                     "headwordIndex": 0,
                     "index": 1
                 },
@@ -1233,10 +1095,10 @@
                     "dictionary": "Test Dictionary",
                     "dictionaryAlias": "Test Dictionary",
                     "dictionaryIndex": 0,
-                    "displayValue": null,
-                    "displayValueParsed": false,
-                    "frequency": 1,
-                    "hasReading": false,
+                    "displayValue": "twenty-two (22)",
+                    "displayValueParsed": true,
+                    "frequency": 22,
+                    "hasReading": true,
                     "headwordIndex": 0,
                     "index": 2
                 },
@@ -1244,9 +1106,9 @@
                     "dictionary": "Test Dictionary",
                     "dictionaryAlias": "Test Dictionary",
                     "dictionaryIndex": 0,
-                    "displayValue": "fourteen",
-                    "displayValueParsed": true,
-                    "frequency": 0,
+                    "displayValue": null,
+                    "displayValueParsed": false,
+                    "frequency": 10,
                     "hasReading": true,
                     "headwordIndex": 0,
                     "index": 3
@@ -1255,9 +1117,9 @@
                     "dictionary": "Test Dictionary",
                     "dictionaryAlias": "Test Dictionary",
                     "dictionaryIndex": 0,
-                    "displayValue": "twenty (20)",
-                    "displayValueParsed": true,
-                    "frequency": 20,
+                    "displayValue": null,
+                    "displayValueParsed": false,
+                    "frequency": 28,
                     "hasReading": true,
                     "headwordIndex": 0,
                     "index": 4
@@ -1268,54 +1130,48 @@
                     "dictionaryIndex": 0,
                     "displayValue": null,
                     "displayValueParsed": false,
-                    "frequency": 8,
-                    "hasReading": true,
+                    "frequency": 6,
+                    "hasReading": false,
                     "headwordIndex": 0,
                     "index": 5
-                },
-                {
-                    "dictionary": "Test Dictionary",
-                    "dictionaryAlias": "Test Dictionary",
-                    "dictionaryIndex": 0,
-                    "displayValue": null,
-                    "displayValueParsed": false,
-                    "frequency": 26,
-                    "hasReading": true,
-                    "headwordIndex": 0,
-                    "index": 6
                 }
             ],
-            "frequencyOrder": 0,
+            "frequencyOrder": -28,
             "headwords": [
                 {
                     "index": 0,
-                    "reading": "だ",
+                    "reading": "うつ",
                     "sources": [
                         {
-                            "deinflectedText": "打",
+                            "deinflectedText": "打つ",
                             "isPrimary": true,
                             "matchSource": "term",
                             "matchType": "exact",
-                            "originalText": "打",
-                            "transformedText": "打"
+                            "originalText": "打ち",
+                            "transformedText": "打ち"
                         }
                     ],
                     "tags": [],
-                    "term": "打",
+                    "term": "打つ",
                     "wordClasses": [
-                        "n"
+                        "v5"
                     ]
                 }
             ],
             "inflectionRuleChainCandidates": [
                 {
-                    "inflectionRules": [],
+                    "inflectionRules": [
+                        {
+                            "description": "Used to indicate actions that are (being) carried out.\nRefers to 連用形, the part of the verb after conjugating with -ます and dropping ます.",
+                            "name": "continuative"
+                        }
+                    ],
                     "source": "algorithm"
                 }
             ],
             "isPrimary": true,
             "matchPrimaryReading": false,
-            "maxOriginalTextLength": 1,
+            "maxOriginalTextLength": 2,
             "pronunciations": [],
             "score": 1,
             "sourceTermExactMatchCount": 1,
@@ -1334,7 +1190,7 @@
                         "daasu definition 1",
                         "daasu definition 2"
                     ],
-                    "frequencyOrder": 0,
+                    "frequencyOrder": -27,
                     "headwordIndices": [
                         0
                     ],
@@ -1429,11 +1285,155 @@
                     "index": 6
                 }
             ],
-            "frequencyOrder": 0,
+            "frequencyOrder": -27,
             "headwords": [
                 {
                     "index": 0,
                     "reading": "ダース",
+                    "sources": [
+                        {
+                            "deinflectedText": "打",
+                            "isPrimary": true,
+                            "matchSource": "term",
+                            "matchType": "exact",
+                            "originalText": "打",
+                            "transformedText": "打"
+                        }
+                    ],
+                    "tags": [],
+                    "term": "打",
+                    "wordClasses": [
+                        "n"
+                    ]
+                }
+            ],
+            "inflectionRuleChainCandidates": [
+                {
+                    "inflectionRules": [],
+                    "source": "algorithm"
+                }
+            ],
+            "isPrimary": true,
+            "matchPrimaryReading": false,
+            "maxOriginalTextLength": 1,
+            "pronunciations": [],
+            "score": 1,
+            "sourceTermExactMatchCount": 1,
+            "textProcessorRuleChainCandidates": [
+                []
+            ],
+            "type": "term"
+        },
+        {
+            "definitions": [
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "entries": [
+                        "da definition 1",
+                        "da definition 2"
+                    ],
+                    "frequencyOrder": -26,
+                    "headwordIndices": [
+                        0
+                    ],
+                    "id": 1,
+                    "index": 0,
+                    "isPrimary": true,
+                    "score": 1,
+                    "sequences": [
+                        -1
+                    ],
+                    "tags": []
+                }
+            ],
+            "dictionaryAlias": "Test Dictionary",
+            "dictionaryIndex": 0,
+            "frequencies": [
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "displayValue": "five (5)",
+                    "displayValueParsed": true,
+                    "frequency": 5,
+                    "hasReading": false,
+                    "headwordIndex": 0,
+                    "index": 0
+                },
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "displayValue": "four",
+                    "displayValueParsed": true,
+                    "frequency": 0,
+                    "hasReading": false,
+                    "headwordIndex": 0,
+                    "index": 1
+                },
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "displayValue": null,
+                    "displayValueParsed": false,
+                    "frequency": 1,
+                    "hasReading": false,
+                    "headwordIndex": 0,
+                    "index": 2
+                },
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "displayValue": "fourteen",
+                    "displayValueParsed": true,
+                    "frequency": 0,
+                    "hasReading": true,
+                    "headwordIndex": 0,
+                    "index": 3
+                },
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "displayValue": "twenty (20)",
+                    "displayValueParsed": true,
+                    "frequency": 20,
+                    "hasReading": true,
+                    "headwordIndex": 0,
+                    "index": 4
+                },
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "displayValue": null,
+                    "displayValueParsed": false,
+                    "frequency": 8,
+                    "hasReading": true,
+                    "headwordIndex": 0,
+                    "index": 5
+                },
+                {
+                    "dictionary": "Test Dictionary",
+                    "dictionaryAlias": "Test Dictionary",
+                    "dictionaryIndex": 0,
+                    "displayValue": null,
+                    "displayValueParsed": false,
+                    "frequency": 26,
+                    "hasReading": true,
+                    "headwordIndex": 0,
+                    "index": 6
+                }
+            ],
+            "frequencyOrder": -26,
+            "headwords": [
+                {
+                    "index": 0,
+                    "reading": "だ",
                     "sources": [
                         {
                             "deinflectedText": "打",
