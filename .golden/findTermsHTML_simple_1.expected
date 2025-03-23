@@ -200,20 +200,20 @@
                                     </span>
                                 </span>
                                 <span style="" class=" pronunciation-graph-container">
-                                    <svg style="" class="">
-                                        <path style="" class="">
+                                    <svg viewBox="0 0 250 100" focusable="false" style="" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
+                                        <path d="M25 75 L75 25 L125 25 L175 25" style="" class="pronunciation-graph-line">
                                         </path>
-                                        <path style="" class="">
+                                        <path d="M175 25 L225 25" style="" class="pronunciation-graph-line-tail">
                                         </path>
-                                        <circle style="" class="">
+                                        <circle style="" cx="25" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="75" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="125" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="175" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <path style="" class="">
+                                        <path transform="translate(225,25)" d="M0 13 L15 -13 L-15 -13 Z" style="" class="pronunciation-graph-triangle">
                                         </path>
                                     </svg>
                                 </span>
@@ -271,22 +271,22 @@
                                     </span>
                                 </span>
                                 <span style="" class=" pronunciation-graph-container">
-                                    <svg style="" class="">
-                                        <path style="" class="">
+                                    <svg viewBox="0 0 250 100" focusable="false" style="" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
+                                        <path d="M25 75 L75 25 L125 25 L175 75" style="" class="pronunciation-graph-line">
                                         </path>
-                                        <path style="" class="">
+                                        <path d="M175 75 L225 75" style="" class="pronunciation-graph-line-tail">
                                         </path>
-                                        <circle style="" class="">
+                                        <circle style="" cx="25" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="75" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="125" r="15" class="pronunciation-graph-dot-downstep1" cy="25">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="125" r="5" class="pronunciation-graph-dot-downstep2" cy="25">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="175" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <path style="" class="">
+                                        <path transform="translate(225,75)" d="M0 13 L15 -13 L-15 -13 Z" style="" class="pronunciation-graph-triangle">
                                         </path>
                                     </svg>
                                 </span>
@@ -542,20 +542,20 @@
                                     </span>
                                 </span>
                                 <span style="" class=" pronunciation-graph-container">
-                                    <svg style="" class="">
-                                        <path style="" class="">
+                                    <svg viewBox="0 0 250 100" focusable="false" style="" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
+                                        <path d="M25 75 L75 25 L125 25 L175 25" style="" class="pronunciation-graph-line">
                                         </path>
-                                        <path style="" class="">
+                                        <path d="M175 25 L225 25" style="" class="pronunciation-graph-line-tail">
                                         </path>
-                                        <circle style="" class="">
+                                        <circle style="" cx="25" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="75" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="125" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="175" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <path style="" class="">
+                                        <path transform="translate(225,25)" d="M0 13 L15 -13 L-15 -13 Z" style="" class="pronunciation-graph-triangle">
                                         </path>
                                     </svg>
                                 </span>
@@ -613,22 +613,22 @@
                                     </span>
                                 </span>
                                 <span style="" class=" pronunciation-graph-container">
-                                    <svg style="" class="">
-                                        <path style="" class="">
+                                    <svg viewBox="0 0 250 100" focusable="false" style="" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
+                                        <path d="M25 75 L75 25 L125 25 L175 75" style="" class="pronunciation-graph-line">
                                         </path>
-                                        <path style="" class="">
+                                        <path d="M175 75 L225 75" style="" class="pronunciation-graph-line-tail">
                                         </path>
-                                        <circle style="" class="">
+                                        <circle style="" cx="25" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="75" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="125" r="15" class="pronunciation-graph-dot-downstep1" cy="25">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="125" r="5" class="pronunciation-graph-dot-downstep2" cy="25">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="175" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <path style="" class="">
+                                        <path transform="translate(225,75)" d="M0 13 L15 -13 L-15 -13 Z" style="" class="pronunciation-graph-triangle">
                                         </path>
                                     </svg>
                                 </span>
@@ -884,20 +884,20 @@
                                     </span>
                                 </span>
                                 <span style="" class=" pronunciation-graph-container">
-                                    <svg style="" class="">
-                                        <path style="" class="">
+                                    <svg viewBox="0 0 250 100" focusable="false" style="" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
+                                        <path d="M25 75 L75 25 L125 25 L175 25" style="" class="pronunciation-graph-line">
                                         </path>
-                                        <path style="" class="">
+                                        <path d="M175 25 L225 25" style="" class="pronunciation-graph-line-tail">
                                         </path>
-                                        <circle style="" class="">
+                                        <circle style="" cx="25" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="75" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="125" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="175" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <path style="" class="">
+                                        <path transform="translate(225,25)" d="M0 13 L15 -13 L-15 -13 Z" style="" class="pronunciation-graph-triangle">
                                         </path>
                                     </svg>
                                 </span>
@@ -955,22 +955,22 @@
                                     </span>
                                 </span>
                                 <span style="" class=" pronunciation-graph-container">
-                                    <svg style="" class="">
-                                        <path style="" class="">
+                                    <svg viewBox="0 0 250 100" focusable="false" style="" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
+                                        <path d="M25 75 L75 25 L125 25 L175 75" style="" class="pronunciation-graph-line">
                                         </path>
-                                        <path style="" class="">
+                                        <path d="M175 75 L225 75" style="" class="pronunciation-graph-line-tail">
                                         </path>
-                                        <circle style="" class="">
+                                        <circle style="" cx="25" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="75" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="125" r="15" class="pronunciation-graph-dot-downstep1" cy="25">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="125" r="5" class="pronunciation-graph-dot-downstep2" cy="25">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="175" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <path style="" class="">
+                                        <path transform="translate(225,75)" d="M0 13 L15 -13 L-15 -13 Z" style="" class="pronunciation-graph-triangle">
                                         </path>
                                     </svg>
                                 </span>
@@ -1226,20 +1226,20 @@
                                     </span>
                                 </span>
                                 <span style="" class=" pronunciation-graph-container">
-                                    <svg style="" class="">
-                                        <path style="" class="">
+                                    <svg viewBox="0 0 250 100" focusable="false" style="" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
+                                        <path d="M25 75 L75 25 L125 25 L175 25" style="" class="pronunciation-graph-line">
                                         </path>
-                                        <path style="" class="">
+                                        <path d="M175 25 L225 25" style="" class="pronunciation-graph-line-tail">
                                         </path>
-                                        <circle style="" class="">
+                                        <circle style="" cx="25" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="75" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="125" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="175" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <path style="" class="">
+                                        <path transform="translate(225,25)" d="M0 13 L15 -13 L-15 -13 Z" style="" class="pronunciation-graph-triangle">
                                         </path>
                                     </svg>
                                 </span>
@@ -1297,22 +1297,22 @@
                                     </span>
                                 </span>
                                 <span style="" class=" pronunciation-graph-container">
-                                    <svg style="" class="">
-                                        <path style="" class="">
+                                    <svg viewBox="0 0 250 100" focusable="false" style="" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
+                                        <path d="M25 75 L75 25 L125 25 L175 75" style="" class="pronunciation-graph-line">
                                         </path>
-                                        <path style="" class="">
+                                        <path d="M175 75 L225 75" style="" class="pronunciation-graph-line-tail">
                                         </path>
-                                        <circle style="" class="">
+                                        <circle style="" cx="25" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="75" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="125" r="15" class="pronunciation-graph-dot-downstep1" cy="25">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="125" r="5" class="pronunciation-graph-dot-downstep2" cy="25">
                                         </circle>
-                                        <circle style="" class="">
+                                        <circle style="" cx="175" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <path style="" class="">
+                                        <path transform="translate(225,75)" d="M0 13 L15 -13 L-15 -13 Z" style="" class="pronunciation-graph-triangle">
                                         </path>
                                     </svg>
                                 </span>

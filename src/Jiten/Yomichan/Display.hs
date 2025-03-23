@@ -30,6 +30,7 @@ data NodeBuilder = NodeBuilder
     nbClassName :: !(Maybe Text),
     nbClassList :: ![Text],
     nbStyle :: ![(Text, Text)],
+    nbAttributes :: ![(Text, Text)]
   }
   deriving (Show)
 
@@ -44,6 +45,11 @@ instance FromJSON NodeBuilder where
       selector <- qObj .: "selector"
       selected <- qObj .: "selected"
       pure (selector, selected)
+    attributeObjs <- obj .: "attributes" :: Parser [Value]
+    attrs <- forM attributeObjs $ A.withObject "" $ \aObj -> do
+      attrKey <- aObj .: "attrKey"
+      attrVal <- aObj .: "attrVal"
+      pure (attrKey, attrVal)
     className <- obj .:? "className"
     classList <- obj .: "classList"
     style <- obj .: "style" :: Parser Object
@@ -60,6 +66,7 @@ instance FromJSON NodeBuilder where
           className
           classList
           styleList
+          attrs
       )
 
 nbClasses :: NodeBuilder -> [Text]
@@ -131,7 +138,8 @@ modifyInnerNode templates selections (NodeElement innerElement) =
 
 applyNodeBuilder :: Templates -> NodeBuilder -> Element -> Element
 applyNodeBuilder templates nb@(NodeBuilder {..}) =
-  applyStyle
+  applyAttributes
+    . applyStyle
     . applyClasses
     . applySelections
     . applyChildren
@@ -172,6 +180,10 @@ applyNodeBuilder templates nb@(NodeBuilder {..}) =
           newAttrs =
             let joinAttrs x y = mconcat [x, " ", y]
              in HashMap.insertWith joinAttrs "style" separated (eltAttrs el)
+       in el {eltAttrs = newAttrs}
+    applyAttributes :: Element -> Element
+    applyAttributes el =
+      let newAttrs = foldr (uncurry HashMap.insert) (eltAttrs el) nbAttributes
        in el {eltAttrs = newAttrs}
 
 applyFragmentBuilder :: Templates -> NodeBuilder -> [Node] -> [Node]
