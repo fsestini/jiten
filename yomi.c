@@ -80,7 +80,13 @@ void register_functions(JSContext *ctx) {
 
 const char *js_eval_str(JSContext *ctx, const char *js_code) {
     JSValue val = JS_Eval(ctx, js_code, strlen(js_code), "<input>", JS_EVAL_TYPE_GLOBAL);
-    const char *result = JS_ToCString(ctx, val);
+    const char *result;
+    if (JS_IsException(val)) {
+        js_std_dump_error(ctx);
+        result = NULL;
+    } else {
+        result = JS_ToCString(ctx, val);
+    }
     JS_FreeValue(ctx, val);
     return result;
 }
