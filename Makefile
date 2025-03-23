@@ -42,6 +42,9 @@ build: dist/yomi_compiled.c
 test: build
 	cabal test
 
+update-golden:
+	find .golden -name "*.actual" -type f -exec sh -c 'mv "$$1" "$${1%.actual}.expected"' _ {} \;
+
 build-profile: dist/yomi_compiled.c
 	cabal build --enable-profiling --profiling-detail=late exe:jiten
 

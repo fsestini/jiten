@@ -17,7 +17,6 @@
             hspkgs.ghc
             hspkgs.cabal-install
             hspkgs.haskell-language-server
-            hspkgs.hspec-golden
             hspkgs.blaze-from-html
             hspkgs.hoogle
             nodejs
