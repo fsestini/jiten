@@ -113,7 +113,7 @@ queryHTML q =
   Sql.withConnection "jiten.db" $ \conn -> do
     Db.initDatabase conn
     dicts <- Db.getDictionaries conn
-    Core.withYomitan conn (pure (map fst dicts)) $ \ctx -> do
+    Core.withYomitan conn $ \ctx -> do
       Search.setOptions ctx (map snd dicts)
       result <- Search.findTermsHTML ctx Search.Simple q
       let rendered = map Blaze.renderMarkup result
@@ -124,7 +124,7 @@ queryDeinflections q =
   Sql.withConnection "jiten.db" $ \conn -> do
     Db.initDatabase conn
     dicts <- Db.getDictionaries conn
-    Core.withYomitan conn (pure (map fst dicts)) $ \ctx -> do
+    Core.withYomitan conn $ \ctx -> do
       Search.setOptions ctx (map snd dicts)
       result <- Search.getAlgorithmDeinflections ctx q
       TIO.putStrLn result
@@ -134,7 +134,7 @@ queryResults q =
   Sql.withConnection "jiten.db" $ \conn -> do
     Db.initDatabase conn
     dicts <- Db.getDictionaries conn
-    Core.withYomitan conn (pure (map fst dicts)) $ \ctx -> do
+    Core.withYomitan conn $ \ctx -> do
       Search.setOptions ctx (map snd dicts)
       result <- Search.findTerms ctx Search.Simple q
       TIO.putStrLn result

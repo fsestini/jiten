@@ -2,16 +2,31 @@ import { Translator } from "./yomitan/js/language/translator.js";
 import { DisplayGenerator } from "./yomitan/js/display/display-generator.js";
 
 class DictionaryDatabase {
-  findTermsBulk(termList, dictionaries, matchType) {
-    // TODO: use other arguments
-    const resultJson = _findTermsBulk(JSON.stringify(termList));
+  findTermsBulk(termList, enabledDictionaryMap, matchType) {
+    const dictionaries = Array.from(enabledDictionaryMap.keys());
+    const query = {
+      terms: termList,
+      dictionaries: dictionaries,
+      matchType: matchType,
+    };
+    const resultJson = _findTermsBulk(JSON.stringify(query));
     const result = JSON.parse(resultJson);
     return result;
   }
 
-  findTermMetaBulk(termList, dictionaries) {
-    // TODO: use other arguments
-    const resultJson = _findTermMetaBulk(JSON.stringify(termList));
+  findTermMetaBulk(termList, enabledDictionaries) {
+    let dictionaries;
+    if (enabledDictionaries instanceof Map) {
+      dictionaries = Array.from(enabledDictionaries.keys());
+    } else {
+      dictionaries = Array.from(enabledDictionaries);
+    }
+    const query = {
+      terms: termList,
+      dictionaries: dictionaries,
+    };
+    console.log("_findTermMetaBulk: ", JSON.stringify(query));
+    const resultJson = _findTermMetaBulk(JSON.stringify(query));
     const result = JSON.parse(resultJson);
     return result;
   }

@@ -5,12 +5,14 @@ module Jiten.Database where
 import Control.Monad (forM_, void)
 import qualified Control.Monad as Monad
 import Control.Monad.Trans (liftIO)
-import Data.Aeson (ToJSON (..))
+import Data.Aeson (FromJSON, ToJSON (..), (.:))
+import qualified Data.Aeson as A
 import qualified Data.Aeson.Text as A
+import Data.Aeson.Types (FromJSON (..))
 import Data.ByteString (ByteString)
 import qualified Data.ByteString.Lazy as LBS
 import Data.Int (Int64)
-import Data.Text (Text, pack)
+import Data.Text (Text)
 import qualified Data.Text as T
 import qualified Data.Text.Lazy as LT
 import Data.Time.Clock (getCurrentTime)
@@ -204,6 +206,20 @@ insertDictionary conn dict = do
 
 -- SEARCH ----------------------------------------------------------------------
 
+data TermQuery = TermQuery
+  { tmqTerms :: ![Text],
+    tmqDictionaries :: ![Text],
+    tmqMatchType :: !Text
+  }
+
+instance FromJSON TermQuery where
+  parseJSON =
+    A.withObject "" $ \o ->
+      TermQuery
+        <$> o .: "terms"
+        <*> o .: "dictionaries"
+        <*> o .: "matchType"
+
 data TermResult = TermResult
   { termResultEntryId :: !Int64,
     termResultExpression :: !Text,
@@ -219,10 +235,11 @@ data TermResult = TermResult
   }
   deriving (Show, Eq)
 
-findTermsBulk :: Connection -> [Text] -> [DictionaryId] -> IO [TermResult]
-findTermsBulk _ _ [] = pure []
-findTermsBulk conn texts dictIds = do
-  rows <- concat <$> Monad.forM (zip [0 ..] texts) (uncurry findTerm)
+-- TODO: use tmqMatchType
+findTermsBulk :: Connection -> TermQuery -> IO [TermResult]
+findTermsBulk _ (TermQuery {tmqDictionaries = []}) = pure []
+findTermsBulk conn (TermQuery {..}) = do
+  rows <- concat <$> Monad.forM (zip [0 ..] tmqTerms) (uncurry findTerm)
   pure $ map (\(i, text, row) -> mkResult i text row) rows
   where
     findTerm i text =
@@ -232,8 +249,8 @@ findTermsBulk conn texts dictIds = do
                 " FROM heading INNER JOIN entry ON heading.id = entry.heading_id",
                 " INNER JOIN dictionary ON dictionary.id = entry.dictionary_id",
                 " WHERE ",
-                "dictionary.id IN (",
-                foldr1 (\x y -> x <> "," <> y) (fmap (pack . show) dictIds),
+                "dictionary.name IN (",
+                foldr1 (\x y -> x <> "," <> y) (fmap (\x -> "'" <> x <> "'") tmqDictionaries),
                 ")",
                 " AND (heading.term = ? OR heading.reading = ?)"
               ]
@@ -267,6 +284,18 @@ instance ToTextJSON TermResult where
         "}"
       ]
 
+data TermMetaQuery = TermMetaQuery
+  { tmmqTerms :: ![Text],
+    tmmqDictionaries :: ![Text]
+  }
+
+instance FromJSON TermMetaQuery where
+  parseJSON =
+    A.withObject "" $ \o ->
+      TermMetaQuery
+        <$> o .: "terms"
+        <*> o .: "dictionaries"
+
 data TermMetaResult = TermMetaResult
   { termMetaResultIndex :: !Int,
     termMetaResultTerm :: !Text,
@@ -276,10 +305,10 @@ data TermMetaResult = TermMetaResult
   }
   deriving (Show, Eq)
 
-findTermMetaBulk :: Connection -> [Text] -> [DictionaryId] -> IO [TermMetaResult]
-findTermMetaBulk _ _ [] = pure []
-findTermMetaBulk conn texts dictIds = do
-  rows <- concat <$> Monad.forM (zip [0 ..] texts) (uncurry findTermMeta)
+findTermMetaBulk :: Connection -> TermMetaQuery -> IO [TermMetaResult]
+findTermMetaBulk _ (TermMetaQuery {tmmqDictionaries = []}) = pure []
+findTermMetaBulk conn (TermMetaQuery {..}) = do
+  rows <- concat <$> Monad.forM (zip [0 ..] tmmqTerms) (uncurry findTermMeta)
   pure $ map (uncurry mkResult) rows
   where
     findTermMeta i text =
@@ -288,8 +317,8 @@ findTermMetaBulk conn texts dictIds = do
               [ "SELECT term, mode, data, dictionary.name",
                 " FROM term_meta INNER JOIN dictionary ON dictionary.id = term_meta.dictionary_id",
                 " WHERE ",
-                "dictionary.id IN (",
-                foldr1 (\x y -> x <> "," <> y) (fmap (pack . show) dictIds),
+                "dictionary.name IN (",
+                foldr1 (\x y -> x <> "," <> y) (fmap (\x -> "'" <> x <> "'") tmmqDictionaries),
                 ")",
                 " AND (term_meta.term = ?)"
               ]

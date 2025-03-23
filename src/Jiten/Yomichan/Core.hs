@@ -136,16 +136,13 @@ freeJs rt ctx = do
   jsFreeContext ctx
   jsFreeRuntime rt
 
-withYomitan :: Connection -> IO [Db.DictionaryId] -> (Ptr JSContext -> IO a) -> IO a
-withYomitan conn getEnabledDicts h =
+withYomitan :: Connection -> (Ptr JSContext -> IO a) -> IO a
+withYomitan conn h =
   bracket initAll freeAll (\(_, ctx, _) -> h ctx)
   where
-    mkFunPtr :: (FromJSON q, ToTextJSON r) => (q -> [Db.DictionaryId] -> IO r) -> IO (FunPtr StringToStringFunc)
+    mkFunPtr :: (FromJSON q, ToTextJSON r) => (q -> IO r) -> IO (FunPtr StringToStringFunc)
     mkFunPtr f =
-      let callback txt = do
-            enabledDicts <- getEnabledDicts
-            results <- f (Util.decodeJSON txt) enabledDicts
-            pure (toTextJSON results)
+      let callback txt = toTextJSON <$> f (Util.decodeJSON txt)
        in mkStringToStringFunc (textToStringFuncAdapter callback)
     initAll = do
       (rt, ctx) <- initJs

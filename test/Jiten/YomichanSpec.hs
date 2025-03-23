@@ -38,7 +38,6 @@ spec = do
         Db.initDatabase conn
         dict <- Dict.openArchiveFile dictPath
         Db.insertDictionary conn dict
-        let getDictIds = map fst <$> Db.getDictionaries conn
-        Core.withYomitan conn getDictIds $ \ctx -> do
+        Core.withYomitan conn $ \ctx -> do
           dicts <- map snd <$> Db.getDictionaries conn
           Search.setOptions ctx dicts >> f ctx

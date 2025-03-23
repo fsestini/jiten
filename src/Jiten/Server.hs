@@ -52,7 +52,7 @@ runServer = do
   Sql.withConnection "jiten.db" $ \conn -> do
     Db.initDatabase conn
     dicts <- Db.getDictionaries conn
-    Core.withYomitan conn (pure (map fst dicts)) $ \ctx -> do
+    Core.withYomitan conn $ \ctx -> do
       Search.setOptions ctx (map snd dicts)
       serve
         ( ServerConfig
