@@ -5,6 +5,7 @@ module Jiten.Database where
 import Control.Monad (forM_, void)
 import qualified Control.Monad as Monad
 import Control.Monad.Trans (liftIO)
+import Data.Aeson (ToJSON (..))
 import qualified Data.Aeson.Text as A
 import Data.ByteString (ByteString)
 import qualified Data.ByteString.Lazy as LBS
@@ -17,6 +18,17 @@ import Database.SQLite.Simple (Connection, FromRow (..), Only (Only), Query (..)
 import Formatting (sformat, (%))
 import qualified Formatting
 import qualified Jiten.Yomichan.Dictionary as Yomichan
+
+class ToTextJSON a where
+  toTextJSON :: a -> Text
+
+newtype AesonValue a = AesonValue a
+
+instance (ToJSON a) => ToTextJSON (AesonValue a) where
+  toTextJSON (AesonValue v) = LT.toStrict (A.encodeToLazyText v)
+
+instance (ToTextJSON a) => ToTextJSON [a] where
+  toTextJSON v = "[" <> T.intercalate ", " (map toTextJSON v) <> "]"
 
 type DictionaryId = Int64
 
@@ -236,24 +248,24 @@ findTermsBulk conn texts dictIds = do
           rulesList = filter (not . T.null) $ T.splitOn " " rules
        in TermResult entryId term reading src glossary defTagsList termTagsList rulesList score dictionary i
 
-termResultToJSON :: TermResult -> Text
-termResultToJSON (TermResult {..}) =
-  mconcat
-    [ "{",
-      sformat ("\"id\": " % Formatting.int % ", ") termResultEntryId,
-      sformat ("\"term\": \"" % Formatting.stext % "\", ") termResultExpression,
-      sformat ("\"reading\": \"" % Formatting.stext % "\", ") termResultReading,
-      sformat ("\"matchSource\": \"" % Formatting.stext % "\", ") termResultMatchSource,
-      "\"matchType\": \"exact\", ",
-      sformat ("\"definitions\": " % Formatting.stext % ", ") termResultGlossary,
-      sformat ("\"definitionTags\": " % Formatting.text % ", ") (A.encodeToLazyText termResultDefinitionTags),
-      sformat ("\"termTags\": " % Formatting.text % ", ") (A.encodeToLazyText termResultTermTags),
-      sformat ("\"rules\": " % Formatting.text % ", ") (A.encodeToLazyText termResultRules),
-      sformat ("\"score\": " % Formatting.int % ", ") termResultScore,
-      sformat ("\"dictionary\": \"" % Formatting.stext % "\", ") termResultDictionary,
-      sformat ("\"index\": " % Formatting.int) termResultIndex,
-      "}"
-    ]
+instance ToTextJSON TermResult where
+  toTextJSON (TermResult {..}) =
+    mconcat
+      [ "{",
+        sformat ("\"id\": " % Formatting.int % ", ") termResultEntryId,
+        sformat ("\"term\": \"" % Formatting.stext % "\", ") termResultExpression,
+        sformat ("\"reading\": \"" % Formatting.stext % "\", ") termResultReading,
+        sformat ("\"matchSource\": \"" % Formatting.stext % "\", ") termResultMatchSource,
+        "\"matchType\": \"exact\", ",
+        sformat ("\"definitions\": " % Formatting.stext % ", ") termResultGlossary,
+        sformat ("\"definitionTags\": " % Formatting.text % ", ") (A.encodeToLazyText termResultDefinitionTags),
+        sformat ("\"termTags\": " % Formatting.text % ", ") (A.encodeToLazyText termResultTermTags),
+        sformat ("\"rules\": " % Formatting.text % ", ") (A.encodeToLazyText termResultRules),
+        sformat ("\"score\": " % Formatting.int % ", ") termResultScore,
+        sformat ("\"dictionary\": \"" % Formatting.stext % "\", ") termResultDictionary,
+        sformat ("\"index\": " % Formatting.int) termResultIndex,
+        "}"
+      ]
 
 data TermMetaResult = TermMetaResult
   { termMetaResultIndex :: !Int,
@@ -286,14 +298,14 @@ findTermMetaBulk conn texts dictIds = do
             pure $ map (i,) rs
     mkResult i (term, mode, data_, dictionary) = TermMetaResult i term mode data_ dictionary
 
-termMetaResultToJSON :: TermMetaResult -> Text
-termMetaResultToJSON (TermMetaResult {..}) =
-  mconcat
-    [ "{",
-      sformat ("\"index\": " % Formatting.int % ", ") termMetaResultIndex,
-      sformat ("\"term\": \"" % Formatting.stext % "\", ") termMetaResultTerm,
-      sformat ("\"mode\": \"" % Formatting.stext % "\", ") termMetaResultMode,
-      sformat ("\"data\": " % Formatting.stext % ", ") termMetaResultData,
-      sformat ("\"dictionary\": \"" % Formatting.stext % "\"") termMetaResultDictionary,
-      "}"
-    ]
+instance ToTextJSON TermMetaResult where
+  toTextJSON (TermMetaResult {..}) =
+    mconcat
+      [ "{",
+        sformat ("\"index\": " % Formatting.int % ", ") termMetaResultIndex,
+        sformat ("\"term\": \"" % Formatting.stext % "\", ") termMetaResultTerm,
+        sformat ("\"mode\": \"" % Formatting.stext % "\", ") termMetaResultMode,
+        sformat ("\"data\": " % Formatting.stext % ", ") termMetaResultData,
+        sformat ("\"dictionary\": \"" % Formatting.stext % "\"") termMetaResultDictionary,
+        "}"
+      ]

@@ -1,21 +1,24 @@
 {-# LANGUAGE CApiFFI #-}
+{-# LANGUAGE RankNTypes #-}
 {-# LANGUAGE RecordWildCards #-}
 
 module Jiten.Yomichan.Core where
 
 import Control.Exception (bracket)
 import qualified Control.Monad as Monad
-import qualified Data.Aeson as A
+import Data.Aeson (FromJSON)
 import Data.ByteString (ByteString, packCString)
 import Data.ByteString.Unsafe (unsafeUseAsCStringLen)
-import Data.Text (Text, unpack)
+import Data.Text (Text)
 import qualified Data.Text.Encoding as TE
 import Database.SQLite.Simple (Connection)
 import Foreign (Ptr, freeHaskellFunPtr)
 import Foreign.C (CString, newCString, peekCString, withCString)
 import Foreign.C.Types (CSize (..))
 import Foreign.Ptr (FunPtr, nullPtr)
+import Jiten.Database (ToTextJSON (..))
 import qualified Jiten.Database as Db
+import qualified Jiten.Util as Util
 
 data JSRuntime
 
@@ -137,23 +140,18 @@ withYomitan :: Connection -> IO [Db.DictionaryId] -> (Ptr JSContext -> IO a) -> 
 withYomitan conn getEnabledDicts h =
   bracket initAll freeAll (\(_, ctx, _) -> h ctx)
   where
-    mkFunPtr :: ([Text] -> [Db.DictionaryId] -> IO [a]) -> (a -> Text) -> IO (FunPtr StringToStringFunc)
-    mkFunPtr f g =
-      let callback txt =
-            case A.decodeStrictText txt of
-              Nothing -> fail ("malformed JSON list: " <> unpack txt)
-              Just lst -> do
-                enabledDicts <- getEnabledDicts
-                results <- map g <$> f lst enabledDicts
-                pure $ case results of
-                  [] -> "[]"
-                  rs -> "[" <> foldr1 (\x y -> x <> "," <> y) rs <> "]"
+    mkFunPtr :: (FromJSON q, ToTextJSON r) => (q -> [Db.DictionaryId] -> IO r) -> IO (FunPtr StringToStringFunc)
+    mkFunPtr f =
+      let callback txt = do
+            enabledDicts <- getEnabledDicts
+            results <- f (Util.decodeJSON txt) enabledDicts
+            pure (toTextJSON results)
        in mkStringToStringFunc (textToStringFuncAdapter callback)
     initAll = do
       (rt, ctx) <- initJs
-      findTermsPtr <- mkFunPtr (Db.findTermsBulk conn) Db.termResultToJSON
-      findTermMetasPtr <- mkFunPtr (Db.findTermMetaBulk conn) Db.termMetaResultToJSON
-      placeholderPtr <- mkFunPtr (\_ _ -> pure []) (const "")
+      findTermsPtr <- mkFunPtr (Db.findTermsBulk conn)
+      findTermMetasPtr <- mkFunPtr (Db.findTermMetaBulk conn)
+      placeholderPtr <- mkStringToStringFunc (textToStringFuncAdapter pure)
       setStringProcessors
         findTermsPtr
         findTermMetasPtr

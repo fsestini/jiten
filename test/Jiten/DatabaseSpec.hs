@@ -27,7 +27,7 @@ spec =
       describe "termResultToJSON" $ do
         it "renders JSON result correctly" $ \conn -> do
           results <- Db.findTermsBulk conn ["土木工事"] [1]
-          map Db.termResultToJSON results
+          map Db.toTextJSON results
             `shouldBe` [ "{\"id\": 19,\
                          \ \"term\": \"土木工事\",\
                          \ \"reading\": \"どぼくこうじ\",\
@@ -44,7 +44,7 @@ spec =
       describe "termMetaResultToJSON" $ do
         it "renders JSON result correctly" $ \conn -> do
           results <- Db.findTermMetaBulk conn ["土木工事"] [1]
-          map Db.termMetaResultToJSON results
+          map Db.toTextJSON results
             `shouldBe` [ "{\"index\": 0, \"term\": \"土木工事\", \"mode\": \"pitch\",\
                          \ \"data\": {\"pitches\":[{\"devoice\":3,\"position\":4}],\"reading\":\"どぼくこうじ\"},\
                          \ \"dictionary\": \"Test Dictionary\"}"
