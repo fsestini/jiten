@@ -22,14 +22,14 @@ import Text.Taggy.DOM (AttrValue)
 import qualified Text.Taggy.Renderer
 
 data NodeBuilder = NodeBuilder
-  { nodeBuilderTag :: !(Maybe Text),
-    nodeBuilderDataset :: Object,
-    nodeBuilderTextContent :: !(Maybe Text),
-    nodeBuilderChildren :: [NodeBuilder],
-    nodeBuilderQueried :: [(Text, NodeBuilder)],
-    nodeBuilderClassName :: !(Maybe Text),
-    nodeBuilderClassList :: ![Text],
-    nodeBuilderStyle :: ![(Text, Text)]
+  { nbTag :: !(Maybe Text),
+    nbDataset :: Object,
+    nbTextContent :: !(Maybe Text),
+    nbChildren :: [NodeBuilder],
+    nbQueried :: [(Text, NodeBuilder)],
+    nbClassName :: !(Maybe Text),
+    nbClassList :: ![Text],
+    nbStyle :: ![(Text, Text)],
   }
   deriving (Show)
 
@@ -63,8 +63,7 @@ instance FromJSON NodeBuilder where
       )
 
 nbClasses :: NodeBuilder -> [Text]
-nbClasses nb =
-  maybe [] pure (nodeBuilderClassName nb) ++ nodeBuilderClassList nb
+nbClasses nb = maybe [] pure (nbClassName nb) ++ nbClassList nb
 
 appendAttributes :: Text -> [Text] -> AttrValue -> AttrValue
 appendAttributes separator attrs av =
@@ -141,16 +140,16 @@ applyNodeBuilder templates nb@(NodeBuilder {..}) =
     applyChildren :: Element -> Element
     applyChildren el =
       let instantiatedChildren =
-            concatMap (instantiateNodeBuilder templates) nodeBuilderChildren
+            concatMap (instantiateNodeBuilder templates) nbChildren
        in (el {eltChildren = eltChildren el ++ instantiatedChildren})
     applyTextContent :: Element -> Element
     applyTextContent el =
-      case nodeBuilderTextContent of
+      case nbTextContent of
         Nothing -> el
         Just text -> el {eltChildren = NodeContent text : eltChildren el}
     applySelections :: Element -> Element
     applySelections el =
-      let selections = HashMap.fromList nodeBuilderQueried
+      let selections = HashMap.fromList nbQueried
           children = map (modifyInnerNode templates selections) (eltChildren el)
        in (el {eltChildren = children})
     applyClasses :: Element -> Element
@@ -168,7 +167,7 @@ applyNodeBuilder templates nb@(NodeBuilder {..}) =
               ( \(k, v) ->
                   mconcat [toStyleName k, ": ", v, ";"]
               )
-              nodeBuilderStyle
+              nbStyle
           separated = T.intercalate " " formatted
           newAttrs =
             let joinAttrs x y = mconcat [x, " ", y]
@@ -179,11 +178,11 @@ applyFragmentBuilder :: Templates -> NodeBuilder -> [Node] -> [Node]
 applyFragmentBuilder templates (NodeBuilder {..}) =
   map (modifyInnerNode templates selections)
   where
-    selections = HashMap.fromList nodeBuilderQueried
+    selections = HashMap.fromList nbQueried
 
 instantiateNodeBuilder :: Templates -> NodeBuilder -> [Node]
 instantiateNodeBuilder templates nb@(NodeBuilder {..}) =
-  case nodeBuilderTag of
+  case nbTag of
     Just name
       | T.isPrefixOf "template:" name ->
           let templateName = T.drop 9 name <> "-template"
@@ -201,7 +200,7 @@ instantiateNodeBuilder templates nb@(NodeBuilder {..}) =
           let el = Element name HashMap.empty []
            in [NodeElement (applyNodeBuilder templates nb el)]
     Nothing ->
-      case nodeBuilderTextContent of
+      case nbTextContent of
         Just text -> [NodeContent text]
         Nothing -> error "cannot instantiate text node without content"
 
