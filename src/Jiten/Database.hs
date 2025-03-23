@@ -1,3 +1,5 @@
+{-# LANGUAGE DerivingStrategies #-}
+{-# LANGUAGE DerivingVia #-}
 {-# LANGUAGE RecordWildCards #-}
 
 module Jiten.Database where
@@ -11,7 +13,9 @@ import qualified Data.Aeson.Text as A
 import Data.Aeson.Types (FromJSON (..))
 import Data.ByteString (ByteString)
 import qualified Data.ByteString.Lazy as LBS
+import Data.Functor ((<&>))
 import Data.Int (Int64)
+import qualified Data.Maybe as Maybe
 import Data.Text (Text)
 import qualified Data.Text as T
 import qualified Data.Text.Lazy as LT
@@ -338,3 +342,54 @@ instance ToTextJSON TermMetaResult where
         sformat ("\"dictionary\": \"" % Formatting.stext % "\"") termMetaResultDictionary,
         "}"
       ]
+
+data DictionaryAndQueryRequest = DictionaryAndQueryRequest
+  { dqrQuery :: Text,
+    dqrDictionary :: Text
+  }
+  deriving (Show)
+
+instance FromJSON DictionaryAndQueryRequest where
+  parseJSON =
+    A.withObject
+      ""
+      (\o -> DictionaryAndQueryRequest <$> o .: "query" <*> o .: "dictionary")
+
+data Tag = Tag
+  { tagName :: !Text,
+    tagCategory :: !Text,
+    tagOrder :: !Int,
+    tagNotes :: !Text,
+    tagScore :: !Int,
+    tagDictionary :: !Text
+  }
+  deriving (Show)
+  deriving (ToTextJSON) via AesonValue Tag
+
+instance ToJSON Tag where
+  toJSON Tag {..} =
+    A.object
+      [ "name" A..= tagName,
+        "category" A..= tagCategory,
+        "order" A..= tagOrder,
+        "notes" A..= tagNotes,
+        "score" A..= tagScore,
+        "dictionary" A..= tagDictionary
+      ]
+
+findTagMetaBulk :: Connection -> [DictionaryAndQueryRequest] -> IO [Tag]
+findTagMetaBulk conn = fmap Maybe.catMaybes . mapM findTagMeta
+  where
+    findTagMeta :: DictionaryAndQueryRequest -> IO (Maybe Tag)
+    findTagMeta (DictionaryAndQueryRequest {..}) =
+      let sql =
+            mconcat
+              [ "SELECT tag.name, category, sorting_order, notes, popularity ",
+                "FROM tag INNER JOIN dictionary ON dictionary.id = tag.dictionary_id ",
+                "WHERE tag.name = ? AND dictionary.name = ? ",
+                "LIMIT 1"
+              ]
+       in query conn (Query sql) (dqrQuery, dqrDictionary) <&> \case
+            [(name, category, order, notes, score)] ->
+              Just (Tag name category order notes score dqrDictionary)
+            _ -> Nothing

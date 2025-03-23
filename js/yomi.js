@@ -29,6 +29,10 @@ class DictionaryDatabase {
     const result = JSON.parse(resultJson);
     return result;
   }
+
+  findTagMetaBulk(query) {
+    return _findTagMetaBulk(JSON.stringify(query));
+  }
 }
 
 var db = new DictionaryDatabase();

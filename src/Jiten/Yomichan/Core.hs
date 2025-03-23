@@ -148,13 +148,14 @@ withYomitan conn h =
       (rt, ctx) <- initJs
       findTermsPtr <- mkFunPtr (Db.findTermsBulk conn)
       findTermMetasPtr <- mkFunPtr (Db.findTermMetaBulk conn)
+      findTagMetaPtr <- mkFunPtr (Db.findTagMetaBulk conn)
       placeholderPtr <- mkStringToStringFunc (textToStringFuncAdapter pure)
       setStringProcessors
         findTermsPtr
         findTermMetasPtr
         placeholderPtr
         placeholderPtr
-        placeholderPtr
+        findTagMetaPtr
         placeholderPtr
       pure (rt, ctx, [findTermsPtr, findTermMetasPtr, placeholderPtr])
     freeAll (rt, ctx, ptrs) = do
