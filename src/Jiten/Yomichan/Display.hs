@@ -5,8 +5,10 @@ module Jiten.Yomichan.Display where
 import Control.Monad (forM)
 import Data.Aeson (Object, Value, (.:), (.:?))
 import qualified Data.Aeson as A
+import qualified Data.Aeson.KeyMap as KeyMap
 import Data.Aeson.Types (FromJSON (..), Parser)
 import qualified Data.ByteString.Lazy as LBS
+import qualified Data.Char as Char
 import Data.HashMap.Strict (HashMap)
 import qualified Data.HashMap.Strict as HashMap
 import Data.Text (Text)
@@ -26,7 +28,8 @@ data NodeBuilder = NodeBuilder
     nodeBuilderChildren :: [NodeBuilder],
     nodeBuilderQueried :: [(Text, NodeBuilder)],
     nodeBuilderClassName :: !(Maybe Text),
-    nodeBuilderClassList :: ![Text]
+    nodeBuilderClassList :: ![Text],
+    nodeBuilderStyle :: ![(Text, Text)]
   }
   deriving (Show)
 
@@ -43,6 +46,10 @@ instance FromJSON NodeBuilder where
       pure (selector, selected)
     className <- obj .:? "className"
     classList <- obj .: "classList"
+    style <- obj .: "style" :: Parser Object
+    styleList <-
+      forM (HashMap.toList . KeyMap.toHashMapText $ style) $ \(k, v) ->
+        parseJSON v >>= \txt -> pure (k, txt)
     pure
       ( NodeBuilder
           tag
@@ -52,6 +59,7 @@ instance FromJSON NodeBuilder where
           queried
           className
           classList
+          styleList
       )
 
 nbClasses :: NodeBuilder -> [Text]
@@ -62,6 +70,16 @@ appendAttributes :: Text -> [Text] -> AttrValue -> AttrValue
 appendAttributes separator attrs av =
   let separated = T.intercalate separator attrs
    in if T.null av then separated else av <> separator <> separated
+
+toStyleName :: Text -> Text
+toStyleName =
+  T.foldl'
+    ( \txt c ->
+        if Char.isUpper c
+          then txt <> "-" <> T.singleton c
+          else txt <> T.singleton c
+    )
+    ""
 
 newtype Fragment = Fragment [Node]
 
@@ -114,7 +132,11 @@ modifyInnerNode templates selections (NodeElement innerElement) =
 
 applyNodeBuilder :: Templates -> NodeBuilder -> Element -> Element
 applyNodeBuilder templates nb@(NodeBuilder {..}) =
-  applyClasses . applySelections . applyChildren . applyTextContent
+  applyStyle
+    . applyClasses
+    . applySelections
+    . applyChildren
+    . applyTextContent
   where
     applyChildren :: Element -> Element
     applyChildren el =
@@ -138,6 +160,19 @@ applyNodeBuilder templates nb@(NodeBuilder {..}) =
           newAttrs =
             let joinAttrs x y = mconcat [x, " ", y]
              in HashMap.insertWith joinAttrs "class" separated (eltAttrs el)
+       in el {eltAttrs = newAttrs}
+    applyStyle :: Element -> Element
+    applyStyle el =
+      let formatted =
+            map
+              ( \(k, v) ->
+                  mconcat [toStyleName k, ": ", v, ";"]
+              )
+              nodeBuilderStyle
+          separated = T.intercalate " " formatted
+          newAttrs =
+            let joinAttrs x y = mconcat [x, " ", y]
+             in HashMap.insertWith joinAttrs "style" separated (eltAttrs el)
        in el {eltAttrs = newAttrs}
 
 applyFragmentBuilder :: Templates -> NodeBuilder -> [Node] -> [Node]
