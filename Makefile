@@ -36,7 +36,7 @@ dist/yomi_patched.js: js/shims.js js/patch.js dist/yomi_stripped.js
 dist/yomi_compiled.c: vendor/quickjs/qjsc dist/yomi_patched.js
 	./vendor/quickjs/qjsc -c -o dist/yomi_compiled.c dist/yomi_patched.js
 
-build: dist/yomi_compiled.c
+build: src/Jiten/Yomichan/SearchPageTemplate.hs dist/yomi_compiled.c
 	cabal build
 
 test: build
