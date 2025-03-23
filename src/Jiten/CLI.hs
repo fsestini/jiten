@@ -6,6 +6,7 @@ import qualified Data.Text.IO as TIO
 import qualified Data.Text.Lazy.IO as LTIO
 import qualified Database.SQLite.Simple as Sql
 import qualified Jiten.Database as Db
+import qualified Jiten.Server as Server
 import qualified Jiten.Util as Util
 import qualified Jiten.Yomichan.Core as Core
 import qualified Jiten.Yomichan.Dictionary as Yomi
@@ -100,7 +101,7 @@ dropDict :: Text -> IO ()
 dropDict _ = putStrLn "NIY"
 
 serve :: IO ()
-serve = putStrLn "NIY"
+serve = Server.runServer
 
 query :: QueryFormat -> Text -> IO ()
 query FormatJSON txt = queryResults txt
