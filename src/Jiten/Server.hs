@@ -1,6 +1,9 @@
 module Jiten.Server where
 
+import Data.Function ((&))
 import Data.List (isPrefixOf)
+import Data.Text (Text)
+import qualified Data.Text as T
 import qualified Database.SQLite.Simple as Sql
 import qualified Jiten.Database as Db
 import qualified Jiten.Yomichan.Core as Core
@@ -10,6 +13,7 @@ import Network.Wai.Middleware.Cors (simpleCors)
 import qualified Network.Wai.Middleware.Static as Static
 import qualified Paths_jiten
 import Text.Blaze ((!))
+import Text.Blaze.Html (Html)
 import qualified Text.Blaze.Html.Renderer.Text as Blaze
 import qualified Text.Blaze.Html5 as H
 import qualified Text.Blaze.Html5.Attributes as A
@@ -31,16 +35,31 @@ serve cfg = scotty (cfgPort cfg) $ do
       H.a ! A.href "/search" $ "Search"
   Scotty.get "/search" $ do
     qMay <- Scotty.queryParamMaybe "query"
-    contents <-
+    (queryRow, contents) <-
       case qMay of
         Just q ->
-          Scotty.liftIO (Search.findTermsHTML (cfgYomiCtx cfg) Search.Split q)
-        Nothing -> pure [H.text "No results"]
-    Scotty.html . Blaze.renderHtml . SearchPageTemplate.instantiate $
-      mconcat contents
+          (queryContainer q,) <$> findTermsHTML (cfgYomiCtx cfg) Search.Split q
+        Nothing -> pure (mempty, [H.text "No results"])
+    Scotty.html . Blaze.renderHtml $
+      SearchPageTemplate.instantiate (mconcat contents) queryRow
   Scotty.get "/api/status" $ do
     Scotty.text "Ok."
   where
+    findTermsHTML ctx m q = Scotty.liftIO (Search.findTermsHTML ctx m q)
+    queryContainer :: Text -> Html
+    queryContainer txt =
+      txt
+        & T.unpack
+        & foldr
+          ( \c (pfx, h) ->
+              let newPfx = c : pfx
+                  a =
+                    H.a ! A.href (H.toValue ("/search?query=" <> newPfx)) $
+                      H.toHtml c
+               in (newPfx, a <> h)
+          )
+          ("", mempty)
+        & snd
     policy = Static.policy $ \s ->
       if ("css" `isPrefixOf` s) || ("images" `isPrefixOf` s)
         then Just (cfgDataDir cfg <> "/" <> "vendor/yomitan/ext/" <> s)

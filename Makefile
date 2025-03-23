@@ -2,10 +2,11 @@
 
 src/Jiten/Yomichan/SearchPageTemplate.hs: vendor/yomitan/ext/search.html
 	blaze-from-html -e -s vendor/yomitan/ext/search.html \
-		| sed 's/vendor\/yomitan\/ext\/search :: Html/instantiate :: Html -> Html/g' \
-		| sed 's/vendor\/yomitan\/ext\/search = do/instantiate results = do/g' \
+		| sed 's/vendor\/yomitan\/ext\/search :: Html/instantiate :: Html -> Html -> Html/g' \
+		| sed 's/vendor\/yomitan\/ext\/search = do/instantiate results query = do/g' \
 		| sed '1a\module Jiten.Yomichan.SearchPageTemplate where' \
 		| sed 's/"dictionary-entries" $$ mempty/"dictionary-entries" $$ results/g' \
+		| sed 's/"query-parser-content" ! lang "ja" $$ mempty/"query-parser-content" ! lang "ja" $$ query/g' \
 		| sed 's/! hidden ""//g' \
 		| sed 's/Yomitan Search/Jiten Search/g' \
 		| sed '5,6d' \
