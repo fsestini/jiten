@@ -1,9 +1,8 @@
 module Jiten.Yomichan.Search where
 
-import Control.Monad (forM, void)
+import Control.Monad (void)
 import qualified Data.Aeson as A
 import Data.Aeson.Text (encodeToLazyText)
-import qualified Data.HashMap.Strict as HashMap
 import Data.Text (Text)
 import Data.Text.Format (Only (..))
 import qualified Data.Text.Format as Format
