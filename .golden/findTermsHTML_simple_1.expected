@@ -1,4 +1,4 @@
-<div data-type="term" style="" class="entry">
+<div data-type="term" class="entry">
     <div title="Current entry" class="entry-current-indicator">
         <span class="entry-current-indicator-inner">
         </span>
@@ -42,27 +42,27 @@
                 </span>
             </button>
         </div>
-        <div style="" class="headword-list">
-            <div style="" class="headword">
+        <div class="headword-list">
+            <div class="headword">
                 <div class="headword-text-container">
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
                         </span>
-                        <span style="" class="headword-term">
-                            <ruby style="">
-                                <a style="" class="headword-kanji-link">
+                        <span class="headword-term">
+                            <ruby>
+                                <a class="headword-kanji-link">
                                     打
                                 </a>
-                                <rt style="">
+                                <rt>
                                     ぶ
                                 </rt>
                             </ruby>
                             ち
-                            <ruby style="">
-                                <a style="" class="headword-kanji-link">
+                            <ruby>
+                                <a class="headword-kanji-link">
                                     込
                                 </a>
-                                <rt style="">
+                                <rt>
                                     こ
                                 </rt>
                             </ruby>
@@ -70,7 +70,7 @@
                         </span>
                     </span>
                     <span class="headword-reading-outer">
-                        <span style="" class="headword-reading">
+                        <span class="headword-reading">
                             ぶちこむ
                         </span>
                     </span>
@@ -86,31 +86,31 @@
             </div>
         </div>
         <div class="headword-list-details">
-            <div style="" class="headword-list-tag-list tag-list">
-                <span style="" class="tag">
+            <div class="headword-list-tag-list tag-list">
+                <span class="tag">
                     <span class="tag-label">
-                        <span style="" class="tag-label-content">
+                        <span class="tag-label-content">
                             打ち込む
                         </span>
                     </span>
                 </span>
-                <span style="" class="tag">
+                <span class="tag">
                     <span class="tag-label">
-                        <span style="" class="tag-label-content">
+                        <span class="tag-label-content">
                             ぶちこむ
                         </span>
                     </span>
                 </span>
             </div>
-            <ul style="" class="inflection-rule-chains">
+            <ul class="inflection-rule-chains">
             </ul>
         </div>
     </div>
     <div class="entry-body">
         <div data-section-type="frequencies" class="entry-body-section">
-            <div style="" class="entry-body-section-content frequency-group-list">
-                <span style="" class="frequency-group-item">
-                    <span data-category="frequency" style="" class="tag tag-has-body frequency-group-tag">
+            <div class="entry-body-section-content frequency-group-list">
+                <span class="frequency-group-item">
+                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -121,8 +121,8 @@
                         </span>
                     </span>
                 </span>
-                <span style="" class="frequency-group-item">
-                    <span data-category="frequency" style="" class="tag tag-has-body frequency-group-tag">
+                <span class="frequency-group-item">
+                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -136,157 +136,157 @@
             </div>
         </div>
         <div data-section-type="pronunciations" class="entry-body-section">
-            <ol style="" class="entry-body-section-content pronunciation-group-list">
-                <li style="" class="pronunciation-group">
-                    <span style="" class="pronunciation-group-tag-list tag-list">
-                        <span style="" class="tag">
+            <ol class="entry-body-section-content pronunciation-group-list">
+                <li class="pronunciation-group">
+                    <span class="pronunciation-group-tag-list tag-list">
+                        <span class="tag">
                             <span class="tag-label">
-                                <span style="" class="tag-label-content">
+                                <span class="tag-label-content">
                                     Test Dictionary
                                 </span>
                             </span>
                         </span>
                     </span>
-                    <ul style="" class="pronunciation-list">
-                        <li style="" class="pronunciation">
-                            <span style="" class="pronunciation-tag-list tag-list">
+                    <ul class="pronunciation-list">
+                        <li class="pronunciation">
+                            <span class="pronunciation-tag-list tag-list">
                             </span>
-                            <span style="" class="pronunciation-disambiguation-list">
+                            <span class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
-                                <span style="" class="pronunciation-text-container">
-                                    <span style="" class="pronunciation-text">
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                <span class="pronunciation-text-container">
+                                    <span class="pronunciation-text">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 ぶ
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 ち
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 こ
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 む
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
                                     </span>
                                 </span>
-                                <span style="" class="pronunciation-downstep-notation-container">
-                                    <span style="" class="pronunciation-downstep-notation">
-                                        <span style="" class="pronunciation-downstep-notation-prefix">
+                                <span class="pronunciation-downstep-notation-container">
+                                    <span class="pronunciation-downstep-notation">
+                                        <span class="pronunciation-downstep-notation-prefix">
                                             [
                                         </span>
-                                        <span style="" class="pronunciation-downstep-notation-number">
+                                        <span class="pronunciation-downstep-notation-number">
                                             0
                                         </span>
-                                        <span style="" class="pronunciation-downstep-notation-suffix">
+                                        <span class="pronunciation-downstep-notation-suffix">
                                             ]
                                         </span>
                                     </span>
                                 </span>
-                                <span style="" class="pronunciation-graph-container">
-                                    <svg viewBox="0 0 250 100" focusable="false" style="" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
-                                        <path d="M25 75 L75 25 L125 25 L175 25" style="" class="pronunciation-graph-line">
+                                <span class="pronunciation-graph-container">
+                                    <svg viewBox="0 0 250 100" focusable="false" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
+                                        <path d="M25 75 L75 25 L125 25 L175 25" class="pronunciation-graph-line">
                                         </path>
-                                        <path d="M175 25 L225 25" style="" class="pronunciation-graph-line-tail">
+                                        <path d="M175 25 L225 25" class="pronunciation-graph-line-tail">
                                         </path>
-                                        <circle style="" cx="25" r="15" class="pronunciation-graph-dot" cy="75">
+                                        <circle cx="25" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <circle style="" cx="75" r="15" class="pronunciation-graph-dot" cy="25">
+                                        <circle cx="75" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" cx="125" r="15" class="pronunciation-graph-dot" cy="25">
+                                        <circle cx="125" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" cx="175" r="15" class="pronunciation-graph-dot" cy="25">
+                                        <circle cx="175" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <path transform="translate(225,25)" d="M0 13 L15 -13 L-15 -13 Z" style="" class="pronunciation-graph-triangle">
+                                        <path transform="translate(225,25)" d="M0 13 L15 -13 L-15 -13 Z" class="pronunciation-graph-triangle">
                                         </path>
                                     </svg>
                                 </span>
                             </span>
                         </li>
-                        <li style="" class="pronunciation">
-                            <span style="" class="pronunciation-tag-list tag-list">
+                        <li class="pronunciation">
+                            <span class="pronunciation-tag-list tag-list">
                             </span>
-                            <span style="" class="pronunciation-disambiguation-list">
+                            <span class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
-                                <span style="" class="pronunciation-text-container">
-                                    <span style="" class="pronunciation-text">
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                <span class="pronunciation-text-container">
+                                    <span class="pronunciation-text">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 ぶ
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 ち
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 こ
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 む
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
                                     </span>
                                 </span>
-                                <span style="" class="pronunciation-downstep-notation-container">
-                                    <span style="" class="pronunciation-downstep-notation">
-                                        <span style="" class="pronunciation-downstep-notation-prefix">
+                                <span class="pronunciation-downstep-notation-container">
+                                    <span class="pronunciation-downstep-notation">
+                                        <span class="pronunciation-downstep-notation-prefix">
                                             [
                                         </span>
-                                        <span style="" class="pronunciation-downstep-notation-number">
+                                        <span class="pronunciation-downstep-notation-number">
                                             3
                                         </span>
-                                        <span style="" class="pronunciation-downstep-notation-suffix">
+                                        <span class="pronunciation-downstep-notation-suffix">
                                             ]
                                         </span>
                                     </span>
                                 </span>
-                                <span style="" class="pronunciation-graph-container">
-                                    <svg viewBox="0 0 250 100" focusable="false" style="" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
-                                        <path d="M25 75 L75 25 L125 25 L175 75" style="" class="pronunciation-graph-line">
+                                <span class="pronunciation-graph-container">
+                                    <svg viewBox="0 0 250 100" focusable="false" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
+                                        <path d="M25 75 L75 25 L125 25 L175 75" class="pronunciation-graph-line">
                                         </path>
-                                        <path d="M175 75 L225 75" style="" class="pronunciation-graph-line-tail">
+                                        <path d="M175 75 L225 75" class="pronunciation-graph-line-tail">
                                         </path>
-                                        <circle style="" cx="25" r="15" class="pronunciation-graph-dot" cy="75">
+                                        <circle cx="25" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <circle style="" cx="75" r="15" class="pronunciation-graph-dot" cy="25">
+                                        <circle cx="75" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" cx="125" r="15" class="pronunciation-graph-dot-downstep1" cy="25">
+                                        <circle cx="125" r="15" class="pronunciation-graph-dot-downstep1" cy="25">
                                         </circle>
-                                        <circle style="" cx="125" r="5" class="pronunciation-graph-dot-downstep2" cy="25">
+                                        <circle cx="125" r="5" class="pronunciation-graph-dot-downstep2" cy="25">
                                         </circle>
-                                        <circle style="" cx="175" r="15" class="pronunciation-graph-dot" cy="75">
+                                        <circle cx="175" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <path transform="translate(225,75)" d="M0 13 L15 -13 L-15 -13 Z" style="" class="pronunciation-graph-triangle">
+                                        <path transform="translate(225,75)" d="M0 13 L15 -13 L-15 -13 Z" class="pronunciation-graph-triangle">
                                         </path>
                                     </svg>
                                 </span>
@@ -297,37 +297,37 @@
             </ol>
         </div>
         <div data-section-type="definitions" class="entry-body-section">
-            <ol style="" class="entry-body-section-content definition-list">
-                <li style="" class="definition-item">
+            <ol class="entry-body-section-content definition-list">
+                <li class="definition-item">
                     <div class="definition-item-inner">
                         <button type="button" class="expansion-button">
                             <div data-icon="double-down-chevron" class="expansion-button-icon icon">
                             </div>
                         </button>
                         <div class="definition-item-content">
-                            <div style="" class="definition-tag-list tag-list">
-                                <span style="" class="tag">
+                            <div class="definition-tag-list tag-list">
+                                <span class="tag">
                                     <span class="tag-label">
-                                        <span style="" class="tag-label-content">
+                                        <span class="tag-label-content">
                                             Test Dictionary
                                         </span>
                                     </span>
                                 </span>
                             </div>
-                            <div style="" class="definition-disambiguation-list">
+                            <div class="definition-disambiguation-list">
                             </div>
-                            <ul style="" class="gloss-list">
-                                <li style="" class="gloss-item click-scannable">
+                            <ul class="gloss-list">
+                                <li class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
-                                    <span style="" class="gloss-content">
+                                    <span class="gloss-content">
                                         buchikomu definition 1
                                     </span>
                                 </li>
-                                <li style="" class="gloss-item click-scannable">
+                                <li class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
-                                    <span style="" class="gloss-content">
+                                    <span class="gloss-content">
                                         buchikomu definition 2
                                     </span>
                                 </li>
@@ -340,7 +340,7 @@
     </div>
 </div>
 
-<div data-type="term" style="" class="entry">
+<div data-type="term" class="entry">
     <div title="Current entry" class="entry-current-indicator">
         <span class="entry-current-indicator-inner">
         </span>
@@ -384,27 +384,27 @@
                 </span>
             </button>
         </div>
-        <div style="" class="headword-list">
-            <div style="" class="headword">
+        <div class="headword-list">
+            <div class="headword">
                 <div class="headword-text-container">
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
                         </span>
-                        <span style="" class="headword-term">
-                            <ruby style="">
-                                <a style="" class="headword-kanji-link">
+                        <span class="headword-term">
+                            <ruby>
+                                <a class="headword-kanji-link">
                                     打
                                 </a>
-                                <rt style="">
+                                <rt>
                                     ぶ
                                 </rt>
                             </ruby>
                             ち
-                            <ruby style="">
-                                <a style="" class="headword-kanji-link">
+                            <ruby>
+                                <a class="headword-kanji-link">
                                     込
                                 </a>
-                                <rt style="">
+                                <rt>
                                     こ
                                 </rt>
                             </ruby>
@@ -412,7 +412,7 @@
                         </span>
                     </span>
                     <span class="headword-reading-outer">
-                        <span style="" class="headword-reading">
+                        <span class="headword-reading">
                             ぶちこむ
                         </span>
                     </span>
@@ -428,31 +428,31 @@
             </div>
         </div>
         <div class="headword-list-details">
-            <div style="" class="headword-list-tag-list tag-list">
-                <span style="" class="tag">
+            <div class="headword-list-tag-list tag-list">
+                <span class="tag">
                     <span class="tag-label">
-                        <span style="" class="tag-label-content">
+                        <span class="tag-label-content">
                             打ち込む
                         </span>
                     </span>
                 </span>
-                <span style="" class="tag">
+                <span class="tag">
                     <span class="tag-label">
-                        <span style="" class="tag-label-content">
+                        <span class="tag-label-content">
                             ぶちこむ
                         </span>
                     </span>
                 </span>
             </div>
-            <ul style="" class="inflection-rule-chains">
+            <ul class="inflection-rule-chains">
             </ul>
         </div>
     </div>
     <div class="entry-body">
         <div data-section-type="frequencies" class="entry-body-section">
-            <div style="" class="entry-body-section-content frequency-group-list">
-                <span style="" class="frequency-group-item">
-                    <span data-category="frequency" style="" class="tag tag-has-body frequency-group-tag">
+            <div class="entry-body-section-content frequency-group-list">
+                <span class="frequency-group-item">
+                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -463,8 +463,8 @@
                         </span>
                     </span>
                 </span>
-                <span style="" class="frequency-group-item">
-                    <span data-category="frequency" style="" class="tag tag-has-body frequency-group-tag">
+                <span class="frequency-group-item">
+                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -478,157 +478,157 @@
             </div>
         </div>
         <div data-section-type="pronunciations" class="entry-body-section">
-            <ol style="" class="entry-body-section-content pronunciation-group-list">
-                <li style="" class="pronunciation-group">
-                    <span style="" class="pronunciation-group-tag-list tag-list">
-                        <span style="" class="tag">
+            <ol class="entry-body-section-content pronunciation-group-list">
+                <li class="pronunciation-group">
+                    <span class="pronunciation-group-tag-list tag-list">
+                        <span class="tag">
                             <span class="tag-label">
-                                <span style="" class="tag-label-content">
+                                <span class="tag-label-content">
                                     Test Dictionary
                                 </span>
                             </span>
                         </span>
                     </span>
-                    <ul style="" class="pronunciation-list">
-                        <li style="" class="pronunciation">
-                            <span style="" class="pronunciation-tag-list tag-list">
+                    <ul class="pronunciation-list">
+                        <li class="pronunciation">
+                            <span class="pronunciation-tag-list tag-list">
                             </span>
-                            <span style="" class="pronunciation-disambiguation-list">
+                            <span class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
-                                <span style="" class="pronunciation-text-container">
-                                    <span style="" class="pronunciation-text">
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                <span class="pronunciation-text-container">
+                                    <span class="pronunciation-text">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 ぶ
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 ち
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 こ
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 む
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
                                     </span>
                                 </span>
-                                <span style="" class="pronunciation-downstep-notation-container">
-                                    <span style="" class="pronunciation-downstep-notation">
-                                        <span style="" class="pronunciation-downstep-notation-prefix">
+                                <span class="pronunciation-downstep-notation-container">
+                                    <span class="pronunciation-downstep-notation">
+                                        <span class="pronunciation-downstep-notation-prefix">
                                             [
                                         </span>
-                                        <span style="" class="pronunciation-downstep-notation-number">
+                                        <span class="pronunciation-downstep-notation-number">
                                             0
                                         </span>
-                                        <span style="" class="pronunciation-downstep-notation-suffix">
+                                        <span class="pronunciation-downstep-notation-suffix">
                                             ]
                                         </span>
                                     </span>
                                 </span>
-                                <span style="" class="pronunciation-graph-container">
-                                    <svg viewBox="0 0 250 100" focusable="false" style="" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
-                                        <path d="M25 75 L75 25 L125 25 L175 25" style="" class="pronunciation-graph-line">
+                                <span class="pronunciation-graph-container">
+                                    <svg viewBox="0 0 250 100" focusable="false" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
+                                        <path d="M25 75 L75 25 L125 25 L175 25" class="pronunciation-graph-line">
                                         </path>
-                                        <path d="M175 25 L225 25" style="" class="pronunciation-graph-line-tail">
+                                        <path d="M175 25 L225 25" class="pronunciation-graph-line-tail">
                                         </path>
-                                        <circle style="" cx="25" r="15" class="pronunciation-graph-dot" cy="75">
+                                        <circle cx="25" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <circle style="" cx="75" r="15" class="pronunciation-graph-dot" cy="25">
+                                        <circle cx="75" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" cx="125" r="15" class="pronunciation-graph-dot" cy="25">
+                                        <circle cx="125" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" cx="175" r="15" class="pronunciation-graph-dot" cy="25">
+                                        <circle cx="175" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <path transform="translate(225,25)" d="M0 13 L15 -13 L-15 -13 Z" style="" class="pronunciation-graph-triangle">
+                                        <path transform="translate(225,25)" d="M0 13 L15 -13 L-15 -13 Z" class="pronunciation-graph-triangle">
                                         </path>
                                     </svg>
                                 </span>
                             </span>
                         </li>
-                        <li style="" class="pronunciation">
-                            <span style="" class="pronunciation-tag-list tag-list">
+                        <li class="pronunciation">
+                            <span class="pronunciation-tag-list tag-list">
                             </span>
-                            <span style="" class="pronunciation-disambiguation-list">
+                            <span class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
-                                <span style="" class="pronunciation-text-container">
-                                    <span style="" class="pronunciation-text">
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                <span class="pronunciation-text-container">
+                                    <span class="pronunciation-text">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 ぶ
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 ち
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 こ
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 む
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
                                     </span>
                                 </span>
-                                <span style="" class="pronunciation-downstep-notation-container">
-                                    <span style="" class="pronunciation-downstep-notation">
-                                        <span style="" class="pronunciation-downstep-notation-prefix">
+                                <span class="pronunciation-downstep-notation-container">
+                                    <span class="pronunciation-downstep-notation">
+                                        <span class="pronunciation-downstep-notation-prefix">
                                             [
                                         </span>
-                                        <span style="" class="pronunciation-downstep-notation-number">
+                                        <span class="pronunciation-downstep-notation-number">
                                             3
                                         </span>
-                                        <span style="" class="pronunciation-downstep-notation-suffix">
+                                        <span class="pronunciation-downstep-notation-suffix">
                                             ]
                                         </span>
                                     </span>
                                 </span>
-                                <span style="" class="pronunciation-graph-container">
-                                    <svg viewBox="0 0 250 100" focusable="false" style="" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
-                                        <path d="M25 75 L75 25 L125 25 L175 75" style="" class="pronunciation-graph-line">
+                                <span class="pronunciation-graph-container">
+                                    <svg viewBox="0 0 250 100" focusable="false" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
+                                        <path d="M25 75 L75 25 L125 25 L175 75" class="pronunciation-graph-line">
                                         </path>
-                                        <path d="M175 75 L225 75" style="" class="pronunciation-graph-line-tail">
+                                        <path d="M175 75 L225 75" class="pronunciation-graph-line-tail">
                                         </path>
-                                        <circle style="" cx="25" r="15" class="pronunciation-graph-dot" cy="75">
+                                        <circle cx="25" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <circle style="" cx="75" r="15" class="pronunciation-graph-dot" cy="25">
+                                        <circle cx="75" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" cx="125" r="15" class="pronunciation-graph-dot-downstep1" cy="25">
+                                        <circle cx="125" r="15" class="pronunciation-graph-dot-downstep1" cy="25">
                                         </circle>
-                                        <circle style="" cx="125" r="5" class="pronunciation-graph-dot-downstep2" cy="25">
+                                        <circle cx="125" r="5" class="pronunciation-graph-dot-downstep2" cy="25">
                                         </circle>
-                                        <circle style="" cx="175" r="15" class="pronunciation-graph-dot" cy="75">
+                                        <circle cx="175" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <path transform="translate(225,75)" d="M0 13 L15 -13 L-15 -13 Z" style="" class="pronunciation-graph-triangle">
+                                        <path transform="translate(225,75)" d="M0 13 L15 -13 L-15 -13 Z" class="pronunciation-graph-triangle">
                                         </path>
                                     </svg>
                                 </span>
@@ -639,37 +639,37 @@
             </ol>
         </div>
         <div data-section-type="definitions" class="entry-body-section">
-            <ol style="" class="entry-body-section-content definition-list">
-                <li style="" class="definition-item">
+            <ol class="entry-body-section-content definition-list">
+                <li class="definition-item">
                     <div class="definition-item-inner">
                         <button type="button" class="expansion-button">
                             <div data-icon="double-down-chevron" class="expansion-button-icon icon">
                             </div>
                         </button>
                         <div class="definition-item-content">
-                            <div style="" class="definition-tag-list tag-list">
-                                <span style="" class="tag">
+                            <div class="definition-tag-list tag-list">
+                                <span class="tag">
                                     <span class="tag-label">
-                                        <span style="" class="tag-label-content">
+                                        <span class="tag-label-content">
                                             Test Dictionary
                                         </span>
                                     </span>
                                 </span>
                             </div>
-                            <div style="" class="definition-disambiguation-list">
+                            <div class="definition-disambiguation-list">
                             </div>
-                            <ul style="" class="gloss-list">
-                                <li style="" class="gloss-item click-scannable">
+                            <ul class="gloss-list">
+                                <li class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
-                                    <span style="" class="gloss-content">
+                                    <span class="gloss-content">
                                         buchikomu definition 3
                                     </span>
                                 </li>
-                                <li style="" class="gloss-item click-scannable">
+                                <li class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
-                                    <span style="" class="gloss-content">
+                                    <span class="gloss-content">
                                         buchikomu definition 4
                                     </span>
                                 </li>
@@ -682,7 +682,7 @@
     </div>
 </div>
 
-<div data-type="term" style="" class="entry">
+<div data-type="term" class="entry">
     <div title="Current entry" class="entry-current-indicator">
         <span class="entry-current-indicator-inner">
         </span>
@@ -726,27 +726,27 @@
                 </span>
             </button>
         </div>
-        <div style="" class="headword-list">
-            <div style="" class="headword">
+        <div class="headword-list">
+            <div class="headword">
                 <div class="headword-text-container">
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
                         </span>
-                        <span style="" class="headword-term">
-                            <ruby style="">
-                                <a style="" class="headword-kanji-link">
+                        <span class="headword-term">
+                            <ruby>
+                                <a class="headword-kanji-link">
                                     打
                                 </a>
-                                <rt style="">
+                                <rt>
                                     う
                                 </rt>
                             </ruby>
                             ち
-                            <ruby style="">
-                                <a style="" class="headword-kanji-link">
+                            <ruby>
+                                <a class="headword-kanji-link">
                                     込
                                 </a>
-                                <rt style="">
+                                <rt>
                                     こ
                                 </rt>
                             </ruby>
@@ -754,7 +754,7 @@
                         </span>
                     </span>
                     <span class="headword-reading-outer">
-                        <span style="" class="headword-reading">
+                        <span class="headword-reading">
                             うちこむ
                         </span>
                     </span>
@@ -770,31 +770,31 @@
             </div>
         </div>
         <div class="headword-list-details">
-            <div style="" class="headword-list-tag-list tag-list">
-                <span style="" class="tag">
+            <div class="headword-list-tag-list tag-list">
+                <span class="tag">
                     <span class="tag-label">
-                        <span style="" class="tag-label-content">
+                        <span class="tag-label-content">
                             打ち込む
                         </span>
                     </span>
                 </span>
-                <span style="" class="tag">
+                <span class="tag">
                     <span class="tag-label">
-                        <span style="" class="tag-label-content">
+                        <span class="tag-label-content">
                             うちこむ
                         </span>
                     </span>
                 </span>
             </div>
-            <ul style="" class="inflection-rule-chains">
+            <ul class="inflection-rule-chains">
             </ul>
         </div>
     </div>
     <div class="entry-body">
         <div data-section-type="frequencies" class="entry-body-section">
-            <div style="" class="entry-body-section-content frequency-group-list">
-                <span style="" class="frequency-group-item">
-                    <span data-category="frequency" style="" class="tag tag-has-body frequency-group-tag">
+            <div class="entry-body-section-content frequency-group-list">
+                <span class="frequency-group-item">
+                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -805,8 +805,8 @@
                         </span>
                     </span>
                 </span>
-                <span style="" class="frequency-group-item">
-                    <span data-category="frequency" style="" class="tag tag-has-body frequency-group-tag">
+                <span class="frequency-group-item">
+                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -820,157 +820,157 @@
             </div>
         </div>
         <div data-section-type="pronunciations" class="entry-body-section">
-            <ol style="" class="entry-body-section-content pronunciation-group-list">
-                <li style="" class="pronunciation-group">
-                    <span style="" class="pronunciation-group-tag-list tag-list">
-                        <span style="" class="tag">
+            <ol class="entry-body-section-content pronunciation-group-list">
+                <li class="pronunciation-group">
+                    <span class="pronunciation-group-tag-list tag-list">
+                        <span class="tag">
                             <span class="tag-label">
-                                <span style="" class="tag-label-content">
+                                <span class="tag-label-content">
                                     Test Dictionary
                                 </span>
                             </span>
                         </span>
                     </span>
-                    <ul style="" class="pronunciation-list">
-                        <li style="" class="pronunciation">
-                            <span style="" class="pronunciation-tag-list tag-list">
+                    <ul class="pronunciation-list">
+                        <li class="pronunciation">
+                            <span class="pronunciation-tag-list tag-list">
                             </span>
-                            <span style="" class="pronunciation-disambiguation-list">
+                            <span class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
-                                <span style="" class="pronunciation-text-container">
-                                    <span style="" class="pronunciation-text">
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                <span class="pronunciation-text-container">
+                                    <span class="pronunciation-text">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 う
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 ち
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 こ
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 む
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
                                     </span>
                                 </span>
-                                <span style="" class="pronunciation-downstep-notation-container">
-                                    <span style="" class="pronunciation-downstep-notation">
-                                        <span style="" class="pronunciation-downstep-notation-prefix">
+                                <span class="pronunciation-downstep-notation-container">
+                                    <span class="pronunciation-downstep-notation">
+                                        <span class="pronunciation-downstep-notation-prefix">
                                             [
                                         </span>
-                                        <span style="" class="pronunciation-downstep-notation-number">
+                                        <span class="pronunciation-downstep-notation-number">
                                             0
                                         </span>
-                                        <span style="" class="pronunciation-downstep-notation-suffix">
+                                        <span class="pronunciation-downstep-notation-suffix">
                                             ]
                                         </span>
                                     </span>
                                 </span>
-                                <span style="" class="pronunciation-graph-container">
-                                    <svg viewBox="0 0 250 100" focusable="false" style="" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
-                                        <path d="M25 75 L75 25 L125 25 L175 25" style="" class="pronunciation-graph-line">
+                                <span class="pronunciation-graph-container">
+                                    <svg viewBox="0 0 250 100" focusable="false" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
+                                        <path d="M25 75 L75 25 L125 25 L175 25" class="pronunciation-graph-line">
                                         </path>
-                                        <path d="M175 25 L225 25" style="" class="pronunciation-graph-line-tail">
+                                        <path d="M175 25 L225 25" class="pronunciation-graph-line-tail">
                                         </path>
-                                        <circle style="" cx="25" r="15" class="pronunciation-graph-dot" cy="75">
+                                        <circle cx="25" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <circle style="" cx="75" r="15" class="pronunciation-graph-dot" cy="25">
+                                        <circle cx="75" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" cx="125" r="15" class="pronunciation-graph-dot" cy="25">
+                                        <circle cx="125" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" cx="175" r="15" class="pronunciation-graph-dot" cy="25">
+                                        <circle cx="175" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <path transform="translate(225,25)" d="M0 13 L15 -13 L-15 -13 Z" style="" class="pronunciation-graph-triangle">
+                                        <path transform="translate(225,25)" d="M0 13 L15 -13 L-15 -13 Z" class="pronunciation-graph-triangle">
                                         </path>
                                     </svg>
                                 </span>
                             </span>
                         </li>
-                        <li style="" class="pronunciation">
-                            <span style="" class="pronunciation-tag-list tag-list">
+                        <li class="pronunciation">
+                            <span class="pronunciation-tag-list tag-list">
                             </span>
-                            <span style="" class="pronunciation-disambiguation-list">
+                            <span class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
-                                <span style="" class="pronunciation-text-container">
-                                    <span style="" class="pronunciation-text">
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                <span class="pronunciation-text-container">
+                                    <span class="pronunciation-text">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 う
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 ち
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 こ
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 む
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
                                     </span>
                                 </span>
-                                <span style="" class="pronunciation-downstep-notation-container">
-                                    <span style="" class="pronunciation-downstep-notation">
-                                        <span style="" class="pronunciation-downstep-notation-prefix">
+                                <span class="pronunciation-downstep-notation-container">
+                                    <span class="pronunciation-downstep-notation">
+                                        <span class="pronunciation-downstep-notation-prefix">
                                             [
                                         </span>
-                                        <span style="" class="pronunciation-downstep-notation-number">
+                                        <span class="pronunciation-downstep-notation-number">
                                             3
                                         </span>
-                                        <span style="" class="pronunciation-downstep-notation-suffix">
+                                        <span class="pronunciation-downstep-notation-suffix">
                                             ]
                                         </span>
                                     </span>
                                 </span>
-                                <span style="" class="pronunciation-graph-container">
-                                    <svg viewBox="0 0 250 100" focusable="false" style="" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
-                                        <path d="M25 75 L75 25 L125 25 L175 75" style="" class="pronunciation-graph-line">
+                                <span class="pronunciation-graph-container">
+                                    <svg viewBox="0 0 250 100" focusable="false" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
+                                        <path d="M25 75 L75 25 L125 25 L175 75" class="pronunciation-graph-line">
                                         </path>
-                                        <path d="M175 75 L225 75" style="" class="pronunciation-graph-line-tail">
+                                        <path d="M175 75 L225 75" class="pronunciation-graph-line-tail">
                                         </path>
-                                        <circle style="" cx="25" r="15" class="pronunciation-graph-dot" cy="75">
+                                        <circle cx="25" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <circle style="" cx="75" r="15" class="pronunciation-graph-dot" cy="25">
+                                        <circle cx="75" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" cx="125" r="15" class="pronunciation-graph-dot-downstep1" cy="25">
+                                        <circle cx="125" r="15" class="pronunciation-graph-dot-downstep1" cy="25">
                                         </circle>
-                                        <circle style="" cx="125" r="5" class="pronunciation-graph-dot-downstep2" cy="25">
+                                        <circle cx="125" r="5" class="pronunciation-graph-dot-downstep2" cy="25">
                                         </circle>
-                                        <circle style="" cx="175" r="15" class="pronunciation-graph-dot" cy="75">
+                                        <circle cx="175" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <path transform="translate(225,75)" d="M0 13 L15 -13 L-15 -13 Z" style="" class="pronunciation-graph-triangle">
+                                        <path transform="translate(225,75)" d="M0 13 L15 -13 L-15 -13 Z" class="pronunciation-graph-triangle">
                                         </path>
                                     </svg>
                                 </span>
@@ -981,37 +981,37 @@
             </ol>
         </div>
         <div data-section-type="definitions" class="entry-body-section">
-            <ol style="" class="entry-body-section-content definition-list">
-                <li style="" class="definition-item">
+            <ol class="entry-body-section-content definition-list">
+                <li class="definition-item">
                     <div class="definition-item-inner">
                         <button type="button" class="expansion-button">
                             <div data-icon="double-down-chevron" class="expansion-button-icon icon">
                             </div>
                         </button>
                         <div class="definition-item-content">
-                            <div style="" class="definition-tag-list tag-list">
-                                <span style="" class="tag">
+                            <div class="definition-tag-list tag-list">
+                                <span class="tag">
                                     <span class="tag-label">
-                                        <span style="" class="tag-label-content">
+                                        <span class="tag-label-content">
                                             Test Dictionary
                                         </span>
                                     </span>
                                 </span>
                             </div>
-                            <div style="" class="definition-disambiguation-list">
+                            <div class="definition-disambiguation-list">
                             </div>
-                            <ul style="" class="gloss-list">
-                                <li style="" class="gloss-item click-scannable">
+                            <ul class="gloss-list">
+                                <li class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
-                                    <span style="" class="gloss-content">
+                                    <span class="gloss-content">
                                         uchikomu definition 1
                                     </span>
                                 </li>
-                                <li style="" class="gloss-item click-scannable">
+                                <li class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
-                                    <span style="" class="gloss-content">
+                                    <span class="gloss-content">
                                         uchikomu definition 2
                                     </span>
                                 </li>
@@ -1024,7 +1024,7 @@
     </div>
 </div>
 
-<div data-type="term" style="" class="entry">
+<div data-type="term" class="entry">
     <div title="Current entry" class="entry-current-indicator">
         <span class="entry-current-indicator-inner">
         </span>
@@ -1068,27 +1068,27 @@
                 </span>
             </button>
         </div>
-        <div style="" class="headword-list">
-            <div style="" class="headword">
+        <div class="headword-list">
+            <div class="headword">
                 <div class="headword-text-container">
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
                         </span>
-                        <span style="" class="headword-term">
-                            <ruby style="">
-                                <a style="" class="headword-kanji-link">
+                        <span class="headword-term">
+                            <ruby>
+                                <a class="headword-kanji-link">
                                     打
                                 </a>
-                                <rt style="">
+                                <rt>
                                     う
                                 </rt>
                             </ruby>
                             ち
-                            <ruby style="">
-                                <a style="" class="headword-kanji-link">
+                            <ruby>
+                                <a class="headword-kanji-link">
                                     込
                                 </a>
-                                <rt style="">
+                                <rt>
                                     こ
                                 </rt>
                             </ruby>
@@ -1096,7 +1096,7 @@
                         </span>
                     </span>
                     <span class="headword-reading-outer">
-                        <span style="" class="headword-reading">
+                        <span class="headword-reading">
                             うちこむ
                         </span>
                     </span>
@@ -1112,31 +1112,31 @@
             </div>
         </div>
         <div class="headword-list-details">
-            <div style="" class="headword-list-tag-list tag-list">
-                <span style="" class="tag">
+            <div class="headword-list-tag-list tag-list">
+                <span class="tag">
                     <span class="tag-label">
-                        <span style="" class="tag-label-content">
+                        <span class="tag-label-content">
                             打ち込む
                         </span>
                     </span>
                 </span>
-                <span style="" class="tag">
+                <span class="tag">
                     <span class="tag-label">
-                        <span style="" class="tag-label-content">
+                        <span class="tag-label-content">
                             うちこむ
                         </span>
                     </span>
                 </span>
             </div>
-            <ul style="" class="inflection-rule-chains">
+            <ul class="inflection-rule-chains">
             </ul>
         </div>
     </div>
     <div class="entry-body">
         <div data-section-type="frequencies" class="entry-body-section">
-            <div style="" class="entry-body-section-content frequency-group-list">
-                <span style="" class="frequency-group-item">
-                    <span data-category="frequency" style="" class="tag tag-has-body frequency-group-tag">
+            <div class="entry-body-section-content frequency-group-list">
+                <span class="frequency-group-item">
+                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -1147,8 +1147,8 @@
                         </span>
                     </span>
                 </span>
-                <span style="" class="frequency-group-item">
-                    <span data-category="frequency" style="" class="tag tag-has-body frequency-group-tag">
+                <span class="frequency-group-item">
+                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -1162,157 +1162,157 @@
             </div>
         </div>
         <div data-section-type="pronunciations" class="entry-body-section">
-            <ol style="" class="entry-body-section-content pronunciation-group-list">
-                <li style="" class="pronunciation-group">
-                    <span style="" class="pronunciation-group-tag-list tag-list">
-                        <span style="" class="tag">
+            <ol class="entry-body-section-content pronunciation-group-list">
+                <li class="pronunciation-group">
+                    <span class="pronunciation-group-tag-list tag-list">
+                        <span class="tag">
                             <span class="tag-label">
-                                <span style="" class="tag-label-content">
+                                <span class="tag-label-content">
                                     Test Dictionary
                                 </span>
                             </span>
                         </span>
                     </span>
-                    <ul style="" class="pronunciation-list">
-                        <li style="" class="pronunciation">
-                            <span style="" class="pronunciation-tag-list tag-list">
+                    <ul class="pronunciation-list">
+                        <li class="pronunciation">
+                            <span class="pronunciation-tag-list tag-list">
                             </span>
-                            <span style="" class="pronunciation-disambiguation-list">
+                            <span class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
-                                <span style="" class="pronunciation-text-container">
-                                    <span style="" class="pronunciation-text">
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                <span class="pronunciation-text-container">
+                                    <span class="pronunciation-text">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 う
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 ち
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 こ
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 む
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
                                     </span>
                                 </span>
-                                <span style="" class="pronunciation-downstep-notation-container">
-                                    <span style="" class="pronunciation-downstep-notation">
-                                        <span style="" class="pronunciation-downstep-notation-prefix">
+                                <span class="pronunciation-downstep-notation-container">
+                                    <span class="pronunciation-downstep-notation">
+                                        <span class="pronunciation-downstep-notation-prefix">
                                             [
                                         </span>
-                                        <span style="" class="pronunciation-downstep-notation-number">
+                                        <span class="pronunciation-downstep-notation-number">
                                             0
                                         </span>
-                                        <span style="" class="pronunciation-downstep-notation-suffix">
+                                        <span class="pronunciation-downstep-notation-suffix">
                                             ]
                                         </span>
                                     </span>
                                 </span>
-                                <span style="" class="pronunciation-graph-container">
-                                    <svg viewBox="0 0 250 100" focusable="false" style="" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
-                                        <path d="M25 75 L75 25 L125 25 L175 25" style="" class="pronunciation-graph-line">
+                                <span class="pronunciation-graph-container">
+                                    <svg viewBox="0 0 250 100" focusable="false" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
+                                        <path d="M25 75 L75 25 L125 25 L175 25" class="pronunciation-graph-line">
                                         </path>
-                                        <path d="M175 25 L225 25" style="" class="pronunciation-graph-line-tail">
+                                        <path d="M175 25 L225 25" class="pronunciation-graph-line-tail">
                                         </path>
-                                        <circle style="" cx="25" r="15" class="pronunciation-graph-dot" cy="75">
+                                        <circle cx="25" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <circle style="" cx="75" r="15" class="pronunciation-graph-dot" cy="25">
+                                        <circle cx="75" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" cx="125" r="15" class="pronunciation-graph-dot" cy="25">
+                                        <circle cx="125" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" cx="175" r="15" class="pronunciation-graph-dot" cy="25">
+                                        <circle cx="175" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <path transform="translate(225,25)" d="M0 13 L15 -13 L-15 -13 Z" style="" class="pronunciation-graph-triangle">
+                                        <path transform="translate(225,25)" d="M0 13 L15 -13 L-15 -13 Z" class="pronunciation-graph-triangle">
                                         </path>
                                     </svg>
                                 </span>
                             </span>
                         </li>
-                        <li style="" class="pronunciation">
-                            <span style="" class="pronunciation-tag-list tag-list">
+                        <li class="pronunciation">
+                            <span class="pronunciation-tag-list tag-list">
                             </span>
-                            <span style="" class="pronunciation-disambiguation-list">
+                            <span class="pronunciation-disambiguation-list">
                             </span>
                             <span class="pronunciation-representation-list">
-                                <span style="" class="pronunciation-text-container">
-                                    <span style="" class="pronunciation-text">
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                <span class="pronunciation-text-container">
+                                    <span class="pronunciation-text">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 う
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 ち
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 こ
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
-                                        <span style="" class="pronunciation-mora">
-                                            <span style="" class="pronunciation-character">
+                                        <span class="pronunciation-mora">
+                                            <span class="pronunciation-character">
                                                 む
                                             </span>
-                                            <span style="" class="pronunciation-mora-line">
+                                            <span class="pronunciation-mora-line">
                                             </span>
                                         </span>
                                     </span>
                                 </span>
-                                <span style="" class="pronunciation-downstep-notation-container">
-                                    <span style="" class="pronunciation-downstep-notation">
-                                        <span style="" class="pronunciation-downstep-notation-prefix">
+                                <span class="pronunciation-downstep-notation-container">
+                                    <span class="pronunciation-downstep-notation">
+                                        <span class="pronunciation-downstep-notation-prefix">
                                             [
                                         </span>
-                                        <span style="" class="pronunciation-downstep-notation-number">
+                                        <span class="pronunciation-downstep-notation-number">
                                             3
                                         </span>
-                                        <span style="" class="pronunciation-downstep-notation-suffix">
+                                        <span class="pronunciation-downstep-notation-suffix">
                                             ]
                                         </span>
                                     </span>
                                 </span>
-                                <span style="" class="pronunciation-graph-container">
-                                    <svg viewBox="0 0 250 100" focusable="false" style="" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
-                                        <path d="M25 75 L75 25 L125 25 L175 75" style="" class="pronunciation-graph-line">
+                                <span class="pronunciation-graph-container">
+                                    <svg viewBox="0 0 250 100" focusable="false" xmlns="http://www.w3.org/2000/svg" class="pronunciation-graph">
+                                        <path d="M25 75 L75 25 L125 25 L175 75" class="pronunciation-graph-line">
                                         </path>
-                                        <path d="M175 75 L225 75" style="" class="pronunciation-graph-line-tail">
+                                        <path d="M175 75 L225 75" class="pronunciation-graph-line-tail">
                                         </path>
-                                        <circle style="" cx="25" r="15" class="pronunciation-graph-dot" cy="75">
+                                        <circle cx="25" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <circle style="" cx="75" r="15" class="pronunciation-graph-dot" cy="25">
+                                        <circle cx="75" r="15" class="pronunciation-graph-dot" cy="25">
                                         </circle>
-                                        <circle style="" cx="125" r="15" class="pronunciation-graph-dot-downstep1" cy="25">
+                                        <circle cx="125" r="15" class="pronunciation-graph-dot-downstep1" cy="25">
                                         </circle>
-                                        <circle style="" cx="125" r="5" class="pronunciation-graph-dot-downstep2" cy="25">
+                                        <circle cx="125" r="5" class="pronunciation-graph-dot-downstep2" cy="25">
                                         </circle>
-                                        <circle style="" cx="175" r="15" class="pronunciation-graph-dot" cy="75">
+                                        <circle cx="175" r="15" class="pronunciation-graph-dot" cy="75">
                                         </circle>
-                                        <path transform="translate(225,75)" d="M0 13 L15 -13 L-15 -13 Z" style="" class="pronunciation-graph-triangle">
+                                        <path transform="translate(225,75)" d="M0 13 L15 -13 L-15 -13 Z" class="pronunciation-graph-triangle">
                                         </path>
                                     </svg>
                                 </span>
@@ -1323,37 +1323,37 @@
             </ol>
         </div>
         <div data-section-type="definitions" class="entry-body-section">
-            <ol style="" class="entry-body-section-content definition-list">
-                <li style="" class="definition-item">
+            <ol class="entry-body-section-content definition-list">
+                <li class="definition-item">
                     <div class="definition-item-inner">
                         <button type="button" class="expansion-button">
                             <div data-icon="double-down-chevron" class="expansion-button-icon icon">
                             </div>
                         </button>
                         <div class="definition-item-content">
-                            <div style="" class="definition-tag-list tag-list">
-                                <span style="" class="tag">
+                            <div class="definition-tag-list tag-list">
+                                <span class="tag">
                                     <span class="tag-label">
-                                        <span style="" class="tag-label-content">
+                                        <span class="tag-label-content">
                                             Test Dictionary
                                         </span>
                                     </span>
                                 </span>
                             </div>
-                            <div style="" class="definition-disambiguation-list">
+                            <div class="definition-disambiguation-list">
                             </div>
-                            <ul style="" class="gloss-list">
-                                <li style="" class="gloss-item click-scannable">
+                            <ul class="gloss-list">
+                                <li class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
-                                    <span style="" class="gloss-content">
+                                    <span class="gloss-content">
                                         uchikomu definition 3
                                     </span>
                                 </li>
-                                <li style="" class="gloss-item click-scannable">
+                                <li class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
-                                    <span style="" class="gloss-content">
+                                    <span class="gloss-content">
                                         uchikomu definition 4
                                     </span>
                                 </li>
@@ -1366,7 +1366,7 @@
     </div>
 </div>
 
-<div data-type="term" style="" class="entry">
+<div data-type="term" class="entry">
     <div title="Current entry" class="entry-current-indicator">
         <span class="entry-current-indicator-inner">
         </span>
@@ -1410,18 +1410,18 @@
                 </span>
             </button>
         </div>
-        <div style="" class="headword-list">
-            <div style="" class="headword">
+        <div class="headword-list">
+            <div class="headword">
                 <div class="headword-text-container">
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
                         </span>
-                        <span style="" class="headword-term">
-                            <ruby style="">
-                                <a style="" class="headword-kanji-link">
+                        <span class="headword-term">
+                            <ruby>
+                                <a class="headword-kanji-link">
                                     打
                                 </a>
-                                <rt style="">
+                                <rt>
                                     ぶ
                                 </rt>
                             </ruby>
@@ -1429,7 +1429,7 @@
                         </span>
                     </span>
                     <span class="headword-reading-outer">
-                        <span style="" class="headword-reading">
+                        <span class="headword-reading">
                             ぶつ
                         </span>
                     </span>
@@ -1445,27 +1445,27 @@
             </div>
         </div>
         <div class="headword-list-details">
-            <div style="" class="headword-list-tag-list tag-list">
-                <span style="" class="tag">
+            <div class="headword-list-tag-list tag-list">
+                <span class="tag">
                     <span class="tag-label">
-                        <span style="" class="tag-label-content">
+                        <span class="tag-label-content">
                             打つ
                         </span>
                     </span>
                 </span>
-                <span style="" class="tag">
+                <span class="tag">
                     <span class="tag-label">
-                        <span style="" class="tag-label-content">
+                        <span class="tag-label-content">
                             ぶつ
                         </span>
                     </span>
                 </span>
             </div>
-            <ul style="" class="inflection-rule-chains">
-                <li style="" class="inflection-rule-chain">
-                    <span style="" class="inflection-source-icon">
+            <ul class="inflection-rule-chains">
+                <li class="inflection-rule-chain">
+                    <span class="inflection-source-icon">
                     </span>
-                    <template-fragment:inflection style="">
+                    <template-fragment:inflection>
                     </template-fragment:inflection>
                 </li>
             </ul>
@@ -1473,9 +1473,9 @@
     </div>
     <div class="entry-body">
         <div data-section-type="frequencies" class="entry-body-section">
-            <div style="" class="entry-body-section-content frequency-group-list">
-                <span style="" class="frequency-group-item">
-                    <span data-category="frequency" style="" class="tag tag-has-body frequency-group-tag">
+            <div class="entry-body-section-content frequency-group-list">
+                <span class="frequency-group-item">
+                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -1486,8 +1486,8 @@
                         </span>
                     </span>
                 </span>
-                <span style="" class="frequency-group-item">
-                    <span data-category="frequency" style="" class="tag tag-has-body frequency-group-tag">
+                <span class="frequency-group-item">
+                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -1501,41 +1501,41 @@
             </div>
         </div>
         <div data-section-type="pronunciations" class="entry-body-section">
-            <ol style="" class="entry-body-section-content pronunciation-group-list">
+            <ol class="entry-body-section-content pronunciation-group-list">
             </ol>
         </div>
         <div data-section-type="definitions" class="entry-body-section">
-            <ol style="" class="entry-body-section-content definition-list">
-                <li style="" class="definition-item">
+            <ol class="entry-body-section-content definition-list">
+                <li class="definition-item">
                     <div class="definition-item-inner">
                         <button type="button" class="expansion-button">
                             <div data-icon="double-down-chevron" class="expansion-button-icon icon">
                             </div>
                         </button>
                         <div class="definition-item-content">
-                            <div style="" class="definition-tag-list tag-list">
-                                <span style="" class="tag">
+                            <div class="definition-tag-list tag-list">
+                                <span class="tag">
                                     <span class="tag-label">
-                                        <span style="" class="tag-label-content">
+                                        <span class="tag-label-content">
                                             Test Dictionary
                                         </span>
                                     </span>
                                 </span>
                             </div>
-                            <div style="" class="definition-disambiguation-list">
+                            <div class="definition-disambiguation-list">
                             </div>
-                            <ul style="" class="gloss-list">
-                                <li style="" class="gloss-item click-scannable">
+                            <ul class="gloss-list">
+                                <li class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
-                                    <span style="" class="gloss-content">
+                                    <span class="gloss-content">
                                         butsu definition 1
                                     </span>
                                 </li>
-                                <li style="" class="gloss-item click-scannable">
+                                <li class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
-                                    <span style="" class="gloss-content">
+                                    <span class="gloss-content">
                                         butsu definition 2
                                     </span>
                                 </li>
@@ -1548,7 +1548,7 @@
     </div>
 </div>
 
-<div data-type="term" style="" class="entry">
+<div data-type="term" class="entry">
     <div title="Current entry" class="entry-current-indicator">
         <span class="entry-current-indicator-inner">
         </span>
@@ -1592,18 +1592,18 @@
                 </span>
             </button>
         </div>
-        <div style="" class="headword-list">
-            <div style="" class="headword">
+        <div class="headword-list">
+            <div class="headword">
                 <div class="headword-text-container">
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
                         </span>
-                        <span style="" class="headword-term">
-                            <ruby style="">
-                                <a style="" class="headword-kanji-link">
+                        <span class="headword-term">
+                            <ruby>
+                                <a class="headword-kanji-link">
                                     打
                                 </a>
-                                <rt style="">
+                                <rt>
                                     ぶ
                                 </rt>
                             </ruby>
@@ -1611,7 +1611,7 @@
                         </span>
                     </span>
                     <span class="headword-reading-outer">
-                        <span style="" class="headword-reading">
+                        <span class="headword-reading">
                             ぶつ
                         </span>
                     </span>
@@ -1627,27 +1627,27 @@
             </div>
         </div>
         <div class="headword-list-details">
-            <div style="" class="headword-list-tag-list tag-list">
-                <span style="" class="tag">
+            <div class="headword-list-tag-list tag-list">
+                <span class="tag">
                     <span class="tag-label">
-                        <span style="" class="tag-label-content">
+                        <span class="tag-label-content">
                             打つ
                         </span>
                     </span>
                 </span>
-                <span style="" class="tag">
+                <span class="tag">
                     <span class="tag-label">
-                        <span style="" class="tag-label-content">
+                        <span class="tag-label-content">
                             ぶつ
                         </span>
                     </span>
                 </span>
             </div>
-            <ul style="" class="inflection-rule-chains">
-                <li style="" class="inflection-rule-chain">
-                    <span style="" class="inflection-source-icon">
+            <ul class="inflection-rule-chains">
+                <li class="inflection-rule-chain">
+                    <span class="inflection-source-icon">
                     </span>
-                    <template-fragment:inflection style="">
+                    <template-fragment:inflection>
                     </template-fragment:inflection>
                 </li>
             </ul>
@@ -1655,9 +1655,9 @@
     </div>
     <div class="entry-body">
         <div data-section-type="frequencies" class="entry-body-section">
-            <div style="" class="entry-body-section-content frequency-group-list">
-                <span style="" class="frequency-group-item">
-                    <span data-category="frequency" style="" class="tag tag-has-body frequency-group-tag">
+            <div class="entry-body-section-content frequency-group-list">
+                <span class="frequency-group-item">
+                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -1668,8 +1668,8 @@
                         </span>
                     </span>
                 </span>
-                <span style="" class="frequency-group-item">
-                    <span data-category="frequency" style="" class="tag tag-has-body frequency-group-tag">
+                <span class="frequency-group-item">
+                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -1683,41 +1683,41 @@
             </div>
         </div>
         <div data-section-type="pronunciations" class="entry-body-section">
-            <ol style="" class="entry-body-section-content pronunciation-group-list">
+            <ol class="entry-body-section-content pronunciation-group-list">
             </ol>
         </div>
         <div data-section-type="definitions" class="entry-body-section">
-            <ol style="" class="entry-body-section-content definition-list">
-                <li style="" class="definition-item">
+            <ol class="entry-body-section-content definition-list">
+                <li class="definition-item">
                     <div class="definition-item-inner">
                         <button type="button" class="expansion-button">
                             <div data-icon="double-down-chevron" class="expansion-button-icon icon">
                             </div>
                         </button>
                         <div class="definition-item-content">
-                            <div style="" class="definition-tag-list tag-list">
-                                <span style="" class="tag">
+                            <div class="definition-tag-list tag-list">
+                                <span class="tag">
                                     <span class="tag-label">
-                                        <span style="" class="tag-label-content">
+                                        <span class="tag-label-content">
                                             Test Dictionary
                                         </span>
                                     </span>
                                 </span>
                             </div>
-                            <div style="" class="definition-disambiguation-list">
+                            <div class="definition-disambiguation-list">
                             </div>
-                            <ul style="" class="gloss-list">
-                                <li style="" class="gloss-item click-scannable">
+                            <ul class="gloss-list">
+                                <li class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
-                                    <span style="" class="gloss-content">
+                                    <span class="gloss-content">
                                         butsu definition 3
                                     </span>
                                 </li>
-                                <li style="" class="gloss-item click-scannable">
+                                <li class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
-                                    <span style="" class="gloss-content">
+                                    <span class="gloss-content">
                                         butsu definition 4
                                     </span>
                                 </li>
@@ -1730,7 +1730,7 @@
     </div>
 </div>
 
-<div data-type="term" style="" class="entry">
+<div data-type="term" class="entry">
     <div title="Current entry" class="entry-current-indicator">
         <span class="entry-current-indicator-inner">
         </span>
@@ -1774,18 +1774,18 @@
                 </span>
             </button>
         </div>
-        <div style="" class="headword-list">
-            <div style="" class="headword">
+        <div class="headword-list">
+            <div class="headword">
                 <div class="headword-text-container">
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
                         </span>
-                        <span style="" class="headword-term">
-                            <ruby style="">
-                                <a style="" class="headword-kanji-link">
+                        <span class="headword-term">
+                            <ruby>
+                                <a class="headword-kanji-link">
                                     打
                                 </a>
-                                <rt style="">
+                                <rt>
                                     う
                                 </rt>
                             </ruby>
@@ -1793,7 +1793,7 @@
                         </span>
                     </span>
                     <span class="headword-reading-outer">
-                        <span style="" class="headword-reading">
+                        <span class="headword-reading">
                             うつ
                         </span>
                     </span>
@@ -1809,27 +1809,27 @@
             </div>
         </div>
         <div class="headword-list-details">
-            <div style="" class="headword-list-tag-list tag-list">
-                <span style="" class="tag">
+            <div class="headword-list-tag-list tag-list">
+                <span class="tag">
                     <span class="tag-label">
-                        <span style="" class="tag-label-content">
+                        <span class="tag-label-content">
                             打つ
                         </span>
                     </span>
                 </span>
-                <span style="" class="tag">
+                <span class="tag">
                     <span class="tag-label">
-                        <span style="" class="tag-label-content">
+                        <span class="tag-label-content">
                             うつ
                         </span>
                     </span>
                 </span>
             </div>
-            <ul style="" class="inflection-rule-chains">
-                <li style="" class="inflection-rule-chain">
-                    <span style="" class="inflection-source-icon">
+            <ul class="inflection-rule-chains">
+                <li class="inflection-rule-chain">
+                    <span class="inflection-source-icon">
                     </span>
-                    <template-fragment:inflection style="">
+                    <template-fragment:inflection>
                     </template-fragment:inflection>
                 </li>
             </ul>
@@ -1837,9 +1837,9 @@
     </div>
     <div class="entry-body">
         <div data-section-type="frequencies" class="entry-body-section">
-            <div style="" class="entry-body-section-content frequency-group-list">
-                <span style="" class="frequency-group-item">
-                    <span data-category="frequency" style="" class="tag tag-has-body frequency-group-tag">
+            <div class="entry-body-section-content frequency-group-list">
+                <span class="frequency-group-item">
+                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -1850,8 +1850,8 @@
                         </span>
                     </span>
                 </span>
-                <span style="" class="frequency-group-item">
-                    <span data-category="frequency" style="" class="tag tag-has-body frequency-group-tag">
+                <span class="frequency-group-item">
+                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -1865,41 +1865,41 @@
             </div>
         </div>
         <div data-section-type="pronunciations" class="entry-body-section">
-            <ol style="" class="entry-body-section-content pronunciation-group-list">
+            <ol class="entry-body-section-content pronunciation-group-list">
             </ol>
         </div>
         <div data-section-type="definitions" class="entry-body-section">
-            <ol style="" class="entry-body-section-content definition-list">
-                <li style="" class="definition-item">
+            <ol class="entry-body-section-content definition-list">
+                <li class="definition-item">
                     <div class="definition-item-inner">
                         <button type="button" class="expansion-button">
                             <div data-icon="double-down-chevron" class="expansion-button-icon icon">
                             </div>
                         </button>
                         <div class="definition-item-content">
-                            <div style="" class="definition-tag-list tag-list">
-                                <span style="" class="tag">
+                            <div class="definition-tag-list tag-list">
+                                <span class="tag">
                                     <span class="tag-label">
-                                        <span style="" class="tag-label-content">
+                                        <span class="tag-label-content">
                                             Test Dictionary
                                         </span>
                                     </span>
                                 </span>
                             </div>
-                            <div style="" class="definition-disambiguation-list">
+                            <div class="definition-disambiguation-list">
                             </div>
-                            <ul style="" class="gloss-list">
-                                <li style="" class="gloss-item click-scannable">
+                            <ul class="gloss-list">
+                                <li class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
-                                    <span style="" class="gloss-content">
+                                    <span class="gloss-content">
                                         utsu definition 1
                                     </span>
                                 </li>
-                                <li style="" class="gloss-item click-scannable">
+                                <li class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
-                                    <span style="" class="gloss-content">
+                                    <span class="gloss-content">
                                         utsu definition 2
                                     </span>
                                 </li>
@@ -1912,7 +1912,7 @@
     </div>
 </div>
 
-<div data-type="term" style="" class="entry">
+<div data-type="term" class="entry">
     <div title="Current entry" class="entry-current-indicator">
         <span class="entry-current-indicator-inner">
         </span>
@@ -1956,18 +1956,18 @@
                 </span>
             </button>
         </div>
-        <div style="" class="headword-list">
-            <div style="" class="headword">
+        <div class="headword-list">
+            <div class="headword">
                 <div class="headword-text-container">
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
                         </span>
-                        <span style="" class="headword-term">
-                            <ruby style="">
-                                <a style="" class="headword-kanji-link">
+                        <span class="headword-term">
+                            <ruby>
+                                <a class="headword-kanji-link">
                                     打
                                 </a>
-                                <rt style="">
+                                <rt>
                                     う
                                 </rt>
                             </ruby>
@@ -1975,7 +1975,7 @@
                         </span>
                     </span>
                     <span class="headword-reading-outer">
-                        <span style="" class="headword-reading">
+                        <span class="headword-reading">
                             うつ
                         </span>
                     </span>
@@ -1991,27 +1991,27 @@
             </div>
         </div>
         <div class="headword-list-details">
-            <div style="" class="headword-list-tag-list tag-list">
-                <span style="" class="tag">
+            <div class="headword-list-tag-list tag-list">
+                <span class="tag">
                     <span class="tag-label">
-                        <span style="" class="tag-label-content">
+                        <span class="tag-label-content">
                             打つ
                         </span>
                     </span>
                 </span>
-                <span style="" class="tag">
+                <span class="tag">
                     <span class="tag-label">
-                        <span style="" class="tag-label-content">
+                        <span class="tag-label-content">
                             うつ
                         </span>
                     </span>
                 </span>
             </div>
-            <ul style="" class="inflection-rule-chains">
-                <li style="" class="inflection-rule-chain">
-                    <span style="" class="inflection-source-icon">
+            <ul class="inflection-rule-chains">
+                <li class="inflection-rule-chain">
+                    <span class="inflection-source-icon">
                     </span>
-                    <template-fragment:inflection style="">
+                    <template-fragment:inflection>
                     </template-fragment:inflection>
                 </li>
             </ul>
@@ -2019,9 +2019,9 @@
     </div>
     <div class="entry-body">
         <div data-section-type="frequencies" class="entry-body-section">
-            <div style="" class="entry-body-section-content frequency-group-list">
-                <span style="" class="frequency-group-item">
-                    <span data-category="frequency" style="" class="tag tag-has-body frequency-group-tag">
+            <div class="entry-body-section-content frequency-group-list">
+                <span class="frequency-group-item">
+                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -2032,8 +2032,8 @@
                         </span>
                     </span>
                 </span>
-                <span style="" class="frequency-group-item">
-                    <span data-category="frequency" style="" class="tag tag-has-body frequency-group-tag">
+                <span class="frequency-group-item">
+                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -2047,41 +2047,41 @@
             </div>
         </div>
         <div data-section-type="pronunciations" class="entry-body-section">
-            <ol style="" class="entry-body-section-content pronunciation-group-list">
+            <ol class="entry-body-section-content pronunciation-group-list">
             </ol>
         </div>
         <div data-section-type="definitions" class="entry-body-section">
-            <ol style="" class="entry-body-section-content definition-list">
-                <li style="" class="definition-item">
+            <ol class="entry-body-section-content definition-list">
+                <li class="definition-item">
                     <div class="definition-item-inner">
                         <button type="button" class="expansion-button">
                             <div data-icon="double-down-chevron" class="expansion-button-icon icon">
                             </div>
                         </button>
                         <div class="definition-item-content">
-                            <div style="" class="definition-tag-list tag-list">
-                                <span style="" class="tag">
+                            <div class="definition-tag-list tag-list">
+                                <span class="tag">
                                     <span class="tag-label">
-                                        <span style="" class="tag-label-content">
+                                        <span class="tag-label-content">
                                             Test Dictionary
                                         </span>
                                     </span>
                                 </span>
                             </div>
-                            <div style="" class="definition-disambiguation-list">
+                            <div class="definition-disambiguation-list">
                             </div>
-                            <ul style="" class="gloss-list">
-                                <li style="" class="gloss-item click-scannable">
+                            <ul class="gloss-list">
+                                <li class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
-                                    <span style="" class="gloss-content">
+                                    <span class="gloss-content">
                                         utsu definition 3
                                     </span>
                                 </li>
-                                <li style="" class="gloss-item click-scannable">
+                                <li class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
-                                    <span style="" class="gloss-content">
+                                    <span class="gloss-content">
                                         utsu definition 4
                                     </span>
                                 </li>
@@ -2094,7 +2094,7 @@
     </div>
 </div>
 
-<div data-type="term" style="" class="entry">
+<div data-type="term" class="entry">
     <div title="Current entry" class="entry-current-indicator">
         <span class="entry-current-indicator-inner">
         </span>
@@ -2138,25 +2138,25 @@
                 </span>
             </button>
         </div>
-        <div style="" class="headword-list">
-            <div style="" class="headword">
+        <div class="headword-list">
+            <div class="headword">
                 <div class="headword-text-container">
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
                         </span>
-                        <span style="" class="headword-term">
-                            <ruby style="">
-                                <a style="" class="headword-kanji-link">
+                        <span class="headword-term">
+                            <ruby>
+                                <a class="headword-kanji-link">
                                     打
                                 </a>
-                                <rt style="">
+                                <rt>
                                     ダース
                                 </rt>
                             </ruby>
                         </span>
                     </span>
                     <span class="headword-reading-outer">
-                        <span style="" class="headword-reading">
+                        <span class="headword-reading">
                             ダース
                         </span>
                     </span>
@@ -2172,31 +2172,31 @@
             </div>
         </div>
         <div class="headword-list-details">
-            <div style="" class="headword-list-tag-list tag-list">
-                <span style="" class="tag">
+            <div class="headword-list-tag-list tag-list">
+                <span class="tag">
                     <span class="tag-label">
-                        <span style="" class="tag-label-content">
+                        <span class="tag-label-content">
                             打
                         </span>
                     </span>
                 </span>
-                <span style="" class="tag">
+                <span class="tag">
                     <span class="tag-label">
-                        <span style="" class="tag-label-content">
+                        <span class="tag-label-content">
                             ダース
                         </span>
                     </span>
                 </span>
             </div>
-            <ul style="" class="inflection-rule-chains">
+            <ul class="inflection-rule-chains">
             </ul>
         </div>
     </div>
     <div class="entry-body">
         <div data-section-type="frequencies" class="entry-body-section">
-            <div style="" class="entry-body-section-content frequency-group-list">
-                <span style="" class="frequency-group-item">
-                    <span data-category="frequency" style="" class="tag tag-has-body frequency-group-tag">
+            <div class="entry-body-section-content frequency-group-list">
+                <span class="frequency-group-item">
+                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -2207,8 +2207,8 @@
                         </span>
                     </span>
                 </span>
-                <span style="" class="frequency-group-item">
-                    <span data-category="frequency" style="" class="tag tag-has-body frequency-group-tag">
+                <span class="frequency-group-item">
+                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -2222,41 +2222,41 @@
             </div>
         </div>
         <div data-section-type="pronunciations" class="entry-body-section">
-            <ol style="" class="entry-body-section-content pronunciation-group-list">
+            <ol class="entry-body-section-content pronunciation-group-list">
             </ol>
         </div>
         <div data-section-type="definitions" class="entry-body-section">
-            <ol style="" class="entry-body-section-content definition-list">
-                <li style="" class="definition-item">
+            <ol class="entry-body-section-content definition-list">
+                <li class="definition-item">
                     <div class="definition-item-inner">
                         <button type="button" class="expansion-button">
                             <div data-icon="double-down-chevron" class="expansion-button-icon icon">
                             </div>
                         </button>
                         <div class="definition-item-content">
-                            <div style="" class="definition-tag-list tag-list">
-                                <span style="" class="tag">
+                            <div class="definition-tag-list tag-list">
+                                <span class="tag">
                                     <span class="tag-label">
-                                        <span style="" class="tag-label-content">
+                                        <span class="tag-label-content">
                                             Test Dictionary
                                         </span>
                                     </span>
                                 </span>
                             </div>
-                            <div style="" class="definition-disambiguation-list">
+                            <div class="definition-disambiguation-list">
                             </div>
-                            <ul style="" class="gloss-list">
-                                <li style="" class="gloss-item click-scannable">
+                            <ul class="gloss-list">
+                                <li class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
-                                    <span style="" class="gloss-content">
+                                    <span class="gloss-content">
                                         daasu definition 1
                                     </span>
                                 </li>
-                                <li style="" class="gloss-item click-scannable">
+                                <li class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
-                                    <span style="" class="gloss-content">
+                                    <span class="gloss-content">
                                         daasu definition 2
                                     </span>
                                 </li>
@@ -2269,7 +2269,7 @@
     </div>
 </div>
 
-<div data-type="term" style="" class="entry">
+<div data-type="term" class="entry">
     <div title="Current entry" class="entry-current-indicator">
         <span class="entry-current-indicator-inner">
         </span>
@@ -2313,25 +2313,25 @@
                 </span>
             </button>
         </div>
-        <div style="" class="headword-list">
-            <div style="" class="headword">
+        <div class="headword-list">
+            <div class="headword">
                 <div class="headword-text-container">
                     <span class="headword-term-outer source-text">
                         <span class="headword-current-indicator">
                         </span>
-                        <span style="" class="headword-term">
-                            <ruby style="">
-                                <a style="" class="headword-kanji-link">
+                        <span class="headword-term">
+                            <ruby>
+                                <a class="headword-kanji-link">
                                     打
                                 </a>
-                                <rt style="">
+                                <rt>
                                     だ
                                 </rt>
                             </ruby>
                         </span>
                     </span>
                     <span class="headword-reading-outer">
-                        <span style="" class="headword-reading">
+                        <span class="headword-reading">
                             だ
                         </span>
                     </span>
@@ -2347,31 +2347,31 @@
             </div>
         </div>
         <div class="headword-list-details">
-            <div style="" class="headword-list-tag-list tag-list">
-                <span style="" class="tag">
+            <div class="headword-list-tag-list tag-list">
+                <span class="tag">
                     <span class="tag-label">
-                        <span style="" class="tag-label-content">
+                        <span class="tag-label-content">
                             打
                         </span>
                     </span>
                 </span>
-                <span style="" class="tag">
+                <span class="tag">
                     <span class="tag-label">
-                        <span style="" class="tag-label-content">
+                        <span class="tag-label-content">
                             だ
                         </span>
                     </span>
                 </span>
             </div>
-            <ul style="" class="inflection-rule-chains">
+            <ul class="inflection-rule-chains">
             </ul>
         </div>
     </div>
     <div class="entry-body">
         <div data-section-type="frequencies" class="entry-body-section">
-            <div style="" class="entry-body-section-content frequency-group-list">
-                <span style="" class="frequency-group-item">
-                    <span data-category="frequency" style="" class="tag tag-has-body frequency-group-tag">
+            <div class="entry-body-section-content frequency-group-list">
+                <span class="frequency-group-item">
+                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -2382,8 +2382,8 @@
                         </span>
                     </span>
                 </span>
-                <span style="" class="frequency-group-item">
-                    <span data-category="frequency" style="" class="tag tag-has-body frequency-group-tag">
+                <span class="frequency-group-item">
+                    <span data-category="frequency" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
                             </span>
@@ -2397,41 +2397,41 @@
             </div>
         </div>
         <div data-section-type="pronunciations" class="entry-body-section">
-            <ol style="" class="entry-body-section-content pronunciation-group-list">
+            <ol class="entry-body-section-content pronunciation-group-list">
             </ol>
         </div>
         <div data-section-type="definitions" class="entry-body-section">
-            <ol style="" class="entry-body-section-content definition-list">
-                <li style="" class="definition-item">
+            <ol class="entry-body-section-content definition-list">
+                <li class="definition-item">
                     <div class="definition-item-inner">
                         <button type="button" class="expansion-button">
                             <div data-icon="double-down-chevron" class="expansion-button-icon icon">
                             </div>
                         </button>
                         <div class="definition-item-content">
-                            <div style="" class="definition-tag-list tag-list">
-                                <span style="" class="tag">
+                            <div class="definition-tag-list tag-list">
+                                <span class="tag">
                                     <span class="tag-label">
-                                        <span style="" class="tag-label-content">
+                                        <span class="tag-label-content">
                                             Test Dictionary
                                         </span>
                                     </span>
                                 </span>
                             </div>
-                            <div style="" class="definition-disambiguation-list">
+                            <div class="definition-disambiguation-list">
                             </div>
-                            <ul style="" class="gloss-list">
-                                <li style="" class="gloss-item click-scannable">
+                            <ul class="gloss-list">
+                                <li class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
-                                    <span style="" class="gloss-content">
+                                    <span class="gloss-content">
                                         da definition 1
                                     </span>
                                 </li>
-                                <li style="" class="gloss-item click-scannable">
+                                <li class="gloss-item click-scannable">
                                     <span class="gloss-separator">
                                     </span>
-                                    <span style="" class="gloss-content">
+                                    <span class="gloss-content">
                                         da definition 2
                                     </span>
                                 </li>

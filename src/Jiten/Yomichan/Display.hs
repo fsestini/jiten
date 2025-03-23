@@ -180,7 +180,7 @@ applyNodeBuilder templates nb@(NodeBuilder {..}) =
           newAttrs =
             let joinAttrs x y = mconcat [x, " ", y]
              in HashMap.insertWith joinAttrs "style" separated (eltAttrs el)
-       in el {eltAttrs = newAttrs}
+       in if null formatted then el else el {eltAttrs = newAttrs}
     applyAttributes :: Element -> Element
     applyAttributes el =
       let newAttrs = foldr (uncurry HashMap.insert) (eltAttrs el) nbAttributes
