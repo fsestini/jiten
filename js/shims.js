@@ -19,12 +19,10 @@ class NodeBuilder {
     this.children.push(node);
   }
   querySelector(selector) {
-    // Check if the selector already exists in the map
     if (this.queried.has(selector)) {
       return this.queried.get(selector);
     }
 
-    // If not, create a new NodeBuilder and store it
     var selected = new NodeBuilder(selector);
     this.queried.set(selector, selected);
     return selected;
