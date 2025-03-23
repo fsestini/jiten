@@ -34,7 +34,7 @@ serve cfg = scotty (cfgPort cfg) $ do
     contents <-
       case qMay of
         Just q ->
-          Scotty.liftIO (Search.findTermsHTML (cfgYomiCtx cfg) Search.Simple q)
+          Scotty.liftIO (Search.findTermsHTML (cfgYomiCtx cfg) Search.Split q)
         Nothing -> pure [H.text "No results"]
     Scotty.html . Blaze.renderHtml . SearchPageTemplate.instantiate $
       mconcat contents
