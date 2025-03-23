@@ -3,7 +3,7 @@
 module Jiten.Yomichan.Display where
 
 import Control.Monad (forM)
-import Data.Aeson (Object, Value, (.:))
+import Data.Aeson (Object, Value, (.:), (.:?))
 import qualified Data.Aeson as A
 import Data.Aeson.Types (FromJSON (..), Parser)
 import qualified Data.ByteString.Lazy as LBS
@@ -16,6 +16,7 @@ import Data.Text.Lazy.Encoding (decodeUtf8)
 import qualified Jiten.Util as Util
 import Text.Blaze (Markup)
 import Text.Taggy (Element (..), Node (..), parseDOM)
+import Text.Taggy.DOM (AttrValue)
 import qualified Text.Taggy.Renderer
 
 data NodeBuilder = NodeBuilder
@@ -23,7 +24,9 @@ data NodeBuilder = NodeBuilder
     nodeBuilderDataset :: Object,
     nodeBuilderTextContent :: !(Maybe Text),
     nodeBuilderChildren :: [NodeBuilder],
-    nodeBuilderQueried :: [(Text, NodeBuilder)]
+    nodeBuilderQueried :: [(Text, NodeBuilder)],
+    nodeBuilderClassName :: !(Maybe Text),
+    nodeBuilderClassList :: ![Text]
   }
   deriving (Show)
 
@@ -38,7 +41,27 @@ instance FromJSON NodeBuilder where
       selector <- qObj .: "selector"
       selected <- qObj .: "selected"
       pure (selector, selected)
-    pure (NodeBuilder tag dataset textContent children queried)
+    className <- obj .:? "className"
+    classList <- obj .: "classList"
+    pure
+      ( NodeBuilder
+          tag
+          dataset
+          textContent
+          children
+          queried
+          className
+          classList
+      )
+
+nbClasses :: NodeBuilder -> [Text]
+nbClasses nb =
+  maybe [] pure (nodeBuilderClassName nb) ++ nodeBuilderClassList nb
+
+appendAttributes :: Text -> [Text] -> AttrValue -> AttrValue
+appendAttributes separator attrs av =
+  let separated = T.intercalate separator attrs
+   in if T.null av then separated else av <> separator <> separated
 
 newtype Fragment = Fragment [Node]
 
@@ -90,8 +113,8 @@ modifyInnerNode templates selections (NodeElement innerElement) =
            in (NodeElement (innerElement {eltChildren = modifiedChildren}))
 
 applyNodeBuilder :: Templates -> NodeBuilder -> Element -> Element
-applyNodeBuilder templates (NodeBuilder {..}) =
-  applySelections . applyChildren . applyTextContent
+applyNodeBuilder templates nb@(NodeBuilder {..}) =
+  applyClasses . applySelections . applyChildren . applyTextContent
   where
     applyChildren :: Element -> Element
     applyChildren el =
@@ -108,6 +131,14 @@ applyNodeBuilder templates (NodeBuilder {..}) =
       let selections = HashMap.fromList nodeBuilderQueried
           children = map (modifyInnerNode templates selections) (eltChildren el)
        in (el {eltChildren = children})
+    applyClasses :: Element -> Element
+    applyClasses el =
+      let classes = nbClasses nb
+          separated = T.intercalate " " classes
+          newAttrs =
+            let joinAttrs x y = mconcat [x, " ", y]
+             in HashMap.insertWith joinAttrs "class" separated (eltAttrs el)
+       in el {eltAttrs = newAttrs}
 
 applyFragmentBuilder :: Templates -> NodeBuilder -> [Node] -> [Node]
 applyFragmentBuilder templates (NodeBuilder {..}) =
