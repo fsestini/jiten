@@ -22,7 +22,7 @@ spec = do
   around withYomiCtx $ do
     describe "on test dictionary 'valid-dictionary1.zip'" $ do
       describe "findTerms" $ do
-        it "correctly returns results for '打ち込む' on simple mode" $ \ctx -> do
+        it "打ち込む - simple" $ \ctx -> do
           let text = "打ち込む"
           result <- Search.findTerms ctx Search.Simple text
           pure (TestUtil.mkGolden TestUtil.pprintJson "findTerms_simple_1" result)
