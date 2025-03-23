@@ -7,3 +7,4 @@ dist/
 *.zip
 *.db
 src/Jiten/Yomichan/SearchPageTemplate.hs
+*.actual
