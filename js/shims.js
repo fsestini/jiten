@@ -72,6 +72,9 @@ class DocumentShim {
   createElement(tag) {
     return new NodeBuilder(tag);
   }
+  createElementNS(ns, tag) {
+    return this.createElement(tag);
+  }
   createTextNode(text) {
     var n = new NodeBuilder(null);
     n.textContent = text;
