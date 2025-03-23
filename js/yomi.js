@@ -25,7 +25,6 @@ class DictionaryDatabase {
       terms: termList,
       dictionaries: dictionaries,
     };
-    console.log("_findTermMetaBulk: ", JSON.stringify(query));
     const resultJson = _findTermMetaBulk(JSON.stringify(query));
     const result = JSON.parse(resultJson);
     return result;
