@@ -114,7 +114,7 @@ queryHTML q =
     Db.initDatabase conn
     dicts <- Db.getDictionaries conn
     Core.withYomitan conn $ \ctx -> do
-      Search.setOptions ctx (map snd dicts)
+      Search.setOptions ctx (map snd dicts) Nothing
       result <- Search.findTermsHTML ctx Search.Simple q
       let rendered = map Blaze.renderMarkup result
       forM_ rendered LTIO.putStrLn
@@ -125,7 +125,7 @@ queryDeinflections q =
     Db.initDatabase conn
     dicts <- Db.getDictionaries conn
     Core.withYomitan conn $ \ctx -> do
-      Search.setOptions ctx (map snd dicts)
+      Search.setOptions ctx (map snd dicts) Nothing
       result <- Search.getAlgorithmDeinflections ctx q
       TIO.putStrLn result
 
@@ -135,6 +135,6 @@ queryResults q =
     Db.initDatabase conn
     dicts <- Db.getDictionaries conn
     Core.withYomitan conn $ \ctx -> do
-      Search.setOptions ctx (map snd dicts)
+      Search.setOptions ctx (map snd dicts) Nothing
       result <- Search.findTerms ctx Search.Simple q
       TIO.putStrLn result

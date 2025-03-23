@@ -40,4 +40,4 @@ spec = do
         Db.insertDictionary conn dict
         Core.withYomitan conn $ \ctx -> do
           dicts <- map snd <$> Db.getDictionaries conn
-          Search.setOptions ctx dicts >> f ctx
+          Search.setOptions ctx dicts (Just "Test Dictionary") >> f ctx

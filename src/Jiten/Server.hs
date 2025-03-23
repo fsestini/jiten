@@ -53,7 +53,8 @@ runServer = do
     Db.initDatabase conn
     dicts <- Db.getDictionaries conn
     Core.withYomitan conn $ \ctx -> do
-      Search.setOptions ctx (map snd dicts)
+      -- TODO: set frequency dictionary
+      Search.setOptions ctx (map snd dicts) Nothing
       serve
         ( ServerConfig
             { cfgPort = 3000,

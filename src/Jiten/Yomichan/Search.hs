@@ -22,13 +22,14 @@ textMode Merge = "merge"
 textMode Split = "split"
 textMode Simple = "simple"
 
-setOptions :: YomiContext -> [Text] -> IO ()
-setOptions ctx dictionaries = do
+setOptions :: YomiContext -> [Text] -> Maybe Text -> IO ()
+setOptions ctx dictionaries sortFrequencyDictionary = do
   let dictsList = encodeToLazyText dictionaries
+      sortDict = encodeToLazyText sortFrequencyDictionary
       stmtText =
         Format.format
-          "var options = mkOptions({})"
-          (Format.Only dictsList)
+          "var options = mkOptions({}, {})"
+          (dictsList, sortDict)
       stmt = LT.unpack stmtText
   void (Core.jsEvalStr ctx stmt)
 

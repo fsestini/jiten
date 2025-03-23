@@ -35,7 +35,7 @@ class Performance {
 
 var performance = new Performance();
 
-function mkOptions(dictionaries) {
+function mkOptions(dictionaries, sortFrequencyDictionary) {
   var edm = new Map();
   for (let i = 0; i < dictionaries.length; i++) {
     edm.set(dictionaries[i], {
@@ -56,6 +56,7 @@ function mkOptions(dictionaries) {
     enabledDictionaryMap: edm,
     primaryReading: "",
     excludeDictionaryDefinitions: null,
+    sortFrequencyDictionary: sortFrequencyDictionary,
   };
 }
 
