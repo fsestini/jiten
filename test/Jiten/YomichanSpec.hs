@@ -7,7 +7,11 @@ import qualified Jiten.Yomichan.Core as Core
 import qualified Jiten.Yomichan.Dictionary as Dict
 import qualified Jiten.Yomichan.Search as Search
 import Test.Hspec (Spec, around, describe, it, shouldBe)
+import Text.Blaze.Html (Html)
+import qualified Text.Blaze.Html.Renderer.Pretty as Html.Pretty
 
+pprintHTML :: [Html] -> String
+pprintHTML = unlines . map Html.Pretty.renderHtml
 
 spec :: Spec
 spec = do
@@ -22,6 +26,11 @@ spec = do
           let text = "打ち込む"
           result <- Search.findTerms ctx Search.Simple text
           pure (TestUtil.mkGolden TestUtil.pprintJson "findTerms_simple_1" result)
+      describe "findTermsHTML" $ do
+        it "打ち込む - simple" $ \ctx -> do
+          let text = "打ち込む"
+          result <- Search.findTermsHTML ctx Search.Simple text
+          pure (TestUtil.mkGolden pprintHTML "findTermsHTML_simple_1" result)
   where
     dictPath = "./test/valid-dictionary1.zip" :: FilePath
     withYomiCtx f =
