@@ -89,7 +89,7 @@ toStyleName =
   T.foldl'
     ( \txt c ->
         if Char.isUpper c
-          then txt <> "-" <> T.singleton c
+          then txt <> "-" <> T.singleton (Char.toLower c)
           else txt <> T.singleton c
     )
     ""
