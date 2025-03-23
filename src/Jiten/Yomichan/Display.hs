@@ -167,7 +167,7 @@ applyNodeBuilder templates nb@(NodeBuilder {..}) =
           newAttrs =
             let joinAttrs x y = mconcat [x, " ", y]
              in HashMap.insertWith joinAttrs "class" separated (eltAttrs el)
-       in el {eltAttrs = newAttrs}
+       in if null classes then el else el {eltAttrs = newAttrs}
     applyStyle :: Element -> Element
     applyStyle el =
       let formatted =
