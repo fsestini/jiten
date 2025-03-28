@@ -54,7 +54,9 @@ class ContentManager {
   constructor() {}
   prepareLink(node, href, internal) {
     if (internal) {
-      node.href = href.replace(/^http:\/\/localhost/, ".");
+      node.href = href
+        .replace(/^http:\/\/localhost/, ".")
+        .replace(/search\.html/, "search");
     } else {
       node.href = href;
     }
