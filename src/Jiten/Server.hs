@@ -34,11 +34,11 @@ serve cfg = scotty (cfgPort cfg) $ do
       H.h1 "Jiten"
       H.a ! A.href "/search" $ "Search"
   Scotty.get "/search" $ do
-    qMay <- Scotty.queryParamMaybe "query"
+    queryParamMay <- Scotty.queryParamMaybe "query"
     (queryRow, contents) <-
-      case qMay of
-        Just q ->
-          (queryContainer q,) <$> findTermsHTML (cfgYomiCtx cfg) Search.Split q
+      case queryParamMay of
+        Just queryParam -> do
+          (mkQueryContainer queryParam,) <$> findTermsHTML (cfgYomiCtx cfg) Search.Split queryParam
         Nothing -> pure (mempty, [H.text "No results"])
     Scotty.html . Blaze.renderHtml $
       SearchPageTemplate.instantiate (mconcat contents) queryRow
@@ -46,8 +46,8 @@ serve cfg = scotty (cfgPort cfg) $ do
     Scotty.text "Ok."
   where
     findTermsHTML ctx m q = Scotty.liftIO (Search.findTermsHTML ctx m q)
-    queryContainer :: Text -> Html
-    queryContainer txt =
+    mkQueryContainer :: Text -> Html
+    mkQueryContainer txt =
       txt
         & T.unpack
         & foldr
