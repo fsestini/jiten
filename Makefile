@@ -1,7 +1,7 @@
 .PHONY: extract-yomitan quickjs
 
 src/Jiten/Yomichan/SearchPageTemplate.hs: vendor/yomitan/ext/search.html
-	blaze-from-html -e -s vendor/yomitan/ext/search.html \
+	set -o pipefail && blaze-from-html -e -s vendor/yomitan/ext/search.html \
 		| sed 's/vendor\/yomitan\/ext\/search :: Html/instantiate :: Html -> Html -> Html/g' \
 		| sed 's/vendor\/yomitan\/ext\/search = do/instantiate results query = do/g' \
 		| sed '1a\module Jiten.Yomichan.SearchPageTemplate where' \
