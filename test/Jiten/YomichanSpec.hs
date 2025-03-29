@@ -13,6 +13,7 @@ import qualified Text.Blaze.Html.Renderer.Pretty as Html.Pretty
 pprintHTML :: [Html] -> String
 pprintHTML = unlines . map Html.Pretty.renderHtml
 
+-- 内容
 spec :: Spec
 spec = do
   describe "formatFindTermsQuery" $ do
@@ -21,22 +22,30 @@ spec = do
       fmtd `shouldBe` "JSON.stringify(translator.findTerms('simple', '打', options))"
   around withYomiCtx $ do
     describe "on test dictionary 'valid-dictionary1.zip'" $ do
-      describe "findTerms" $ do
+      describe "findTerms 打ち込む" $ do
         let text = "打ち込む"
-        it "打ち込む - simple" $ \ctx -> do
+        it "simple" $ \ctx -> do
           result <- Search.findTerms ctx Search.Simple text
           pure (TestUtil.mkGolden TestUtil.pprintJson "findTerms_simple_1" result)
-        it "打ち込む - split" $ \ctx -> do
+        it "split" $ \ctx -> do
           result <- Search.findTerms ctx Search.Split text
           pure (TestUtil.mkGolden TestUtil.pprintJson "findTerms_split_1" result)
-      describe "findTermsHTML" $ do
+      describe "findTermsHTML 打ち込む" $ do
         let text = "打ち込む"
-        it "打ち込む - simple" $ \ctx -> do
+        it "simple" $ \ctx -> do
           result <- Search.findTermsHTML ctx Search.Simple text
           pure (TestUtil.mkGolden pprintHTML "findTermsHTML_simple_1" result)
-        it "打ち込む - split" $ \ctx -> do
+        it "split" $ \ctx -> do
           result <- Search.findTermsHTML ctx Search.Split text
           pure (TestUtil.mkGolden pprintHTML "findTermsHTML_split_1" result)
+      describe "findTermsHTML 内容" $ do
+        let text = "内容"
+        it "simple" $ \ctx -> do
+          result <- Search.findTermsHTML ctx Search.Simple text
+          pure (TestUtil.mkGolden pprintHTML "findTermsHTML_simple_2" result)
+        it "split" $ \ctx -> do
+          result <- Search.findTermsHTML ctx Search.Split text
+          pure (TestUtil.mkGolden pprintHTML "findTermsHTML_split_2" result)
   where
     dictPath = "./test/valid-dictionary1.zip" :: FilePath
     withYomiCtx f =

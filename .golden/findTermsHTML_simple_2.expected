@@ -1,0 +1,1133 @@
+<div data-frequency-count="0" data-headword-count="1" data-definition-count="1" data-primary-match-types="exact" data-grouped-frequency-count="1" data-pronunciation-dictionary-count="0" data-type="term" data-pronunciation-count="0" class="entry" data-format="term" data-unique-reading-count="1" data-unique-term-count="1">
+    <div title="Current entry" class="entry-current-indicator">
+        <span class="entry-current-indicator-inner">
+        </span>
+    </div>
+    <div class="entry-header">
+        <div class="actions">
+            <button type="button" hidden disabled="" class="action-button action-button-collapsible" data-action="view-flags">
+                <span data-icon="flag" class="action-icon icon">
+                </span>
+            </button>
+            <button type="button" hidden disabled="" class="action-button action-button-collapsible" data-action="view-tags">
+                <span data-icon="tag" class="action-icon icon">
+                </span>
+            </button>
+            <button type="button" data-menu-position="left below h-cover v-cover" data-hotkey="[&quot;viewNotes&quot;,&quot;title&quot;,&quot;View added note ({0})&quot;]" hidden disabled title="View added note" class="action-button" data-action="view-note">
+                <span data-icon="view-note" class="action-icon icon color-icon">
+                </span>
+                <span hidden="" class="action-button-badge icon">
+                </span>
+            </button>
+            <button hidden disabled data-mode="term-kanji" type="button" data-hotkey="[&quot;addNoteTermKanji&quot;,&quot;title&quot;,&quot;Add expression ({0})&quot;]" title="Add expression" class="action-button" data-action="save-note">
+                <span data-icon="add-term-kanji" class="action-icon icon color-icon">
+                </span>
+            </button>
+            <button hidden disabled data-mode="term-kana" type="button" data-hotkey="[&quot;addNoteTermKana&quot;,&quot;title&quot;,&quot;Add reading ({0})&quot;]" title="Add reading" class="action-button" data-action="save-note">
+                <span data-icon="add-term-kana" class="action-icon icon color-icon">
+                </span>
+            </button>
+            <button type="button" data-title-default="Play audio" data-menu-position="left below h-cover v-cover" data-hotkey="[&quot;playAudio&quot;,[&quot;title&quot;,&quot;data-title-default&quot;],&quot;Play audio ({0})&quot;]" title="Play audio" class="action-button" data-action="play-audio">
+                <span data-icon="play-audio" class="action-icon icon color-icon">
+                </span>
+                <span hidden="" class="action-button-badge icon">
+                </span>
+            </button>
+            <span title="Current entry" class="entry-current-indicator-icon">
+                <span data-icon="entry-current" class="icon color-icon">
+                </span>
+            </span>
+            <button type="button" data-menu-position="left below h-cover v-cover" class="action-button action-button-collapsible" data-action="menu">
+                <span data-icon="kebab-menu" class="action-icon icon">
+                </span>
+            </button>
+        </div>
+        <div data-count="1" class="headword-list">
+            <div data-word-classes="n" data-is-primary="true" data-match-types="exact" data-match-sources="term" data-frequency="normal" data-index="0" class="headword" data-reading-is-same="false">
+                <div class="headword-text-container">
+                    <span class="headword-term-outer source-text">
+                        <span class="headword-current-indicator">
+                        </span>
+                        <span lang="ja" class="headword-term">
+                            <ruby>
+                                <a lang="ja" class="headword-kanji-link">
+                                    内
+                                </a>
+                                <a lang="ja" class="headword-kanji-link">
+                                    容
+                                </a>
+                                <rt>
+                                    ないよう
+                                </rt>
+                            </ruby>
+                        </span>
+                    </span>
+                    <span class="headword-reading-outer">
+                        <span lang="ja" class="headword-reading">
+                            ないよう
+                        </span>
+                    </span>
+                </div>
+                <div class="headword-details">
+                    <button type="button" data-title-default="Play audio" data-menu-position="right below h-cover v-cover" data-hotkey="[&quot;playAudio&quot;,[&quot;title&quot;,&quot;data-title-default&quot;],&quot;Play audio ({0})&quot;]" title="Play audio" class="action-button" data-action="play-audio">
+                        <span data-icon="play-audio" class="action-icon icon color-icon">
+                        </span>
+                        <span hidden="" class="action-button-badge icon">
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="headword-list-details">
+            <div data-count="0" class="headword-list-tag-list tag-list">
+                <span data-category="search" data-details="内容" class="tag">
+                    <span class="tag-label">
+                        <span lang="ja" class="tag-label-content">
+                            内容
+                        </span>
+                    </span>
+                </span>
+                <span data-category="search" data-details="ないよう" class="tag">
+                    <span class="tag-label">
+                        <span lang="ja" class="tag-label-content">
+                            ないよう
+                        </span>
+                    </span>
+                </span>
+            </div>
+            <ul data-count="0" class="inflection-rule-chains">
+            </ul>
+        </div>
+    </div>
+    <div class="entry-body">
+        <div data-section-type="frequencies" class="entry-body-section">
+            <div data-count="1" class="entry-body-section-content frequency-group-list">
+                <span data-count="0" data-details="Average" data-index="0" class="frequency-group-item">
+                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
+                        <span class="tag-label">
+                            <span class="tag-label-content">
+                            </span>
+                        </span>
+                        <span class="tag-body">
+                            <span class="tag-body-content frequency-list">
+                            </span>
+                        </span>
+                    </span>
+                </span>
+            </div>
+        </div>
+        <div data-section-type="pronunciations" class="entry-body-section">
+            <ol data-count="0" class="entry-body-section-content pronunciation-group-list">
+            </ol>
+        </div>
+        <div data-section-type="definitions" class="entry-body-section">
+            <ol data-count="1" class="entry-body-section-content definition-list">
+                <li data-index="0" data-dictionary="Test Dictionary" class="definition-item">
+                    <div class="definition-item-inner">
+                        <button type="button" class="expansion-button">
+                            <div data-icon="double-down-chevron" class="expansion-button-icon icon">
+                            </div>
+                        </button>
+                        <div class="definition-item-content">
+                            <div data-count="1" class="definition-tag-list tag-list">
+                                <span data-category="dictionary" data-details="Test Dictionary" data-index="0" class="tag">
+                                    <span class="tag-label">
+                                        <span class="tag-label-content">
+                                            Test Dictionary
+                                        </span>
+                                    </span>
+                                </span>
+                            </div>
+                            <div data-count="0" class="definition-disambiguation-list">
+                            </div>
+                            <ul data-count="25" class="gloss-list">
+                                <li data-index="0" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="gloss-content">
+                                        naiyou definition 1
+                                    </span>
+                                </li>
+                                <li data-index="1" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        naiyou definition 2
+                                    </span>
+                                </li>
+                                <li data-index="2" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        naiyou definition 3
+                                    </span>
+                                </li>
+                                <li data-index="3" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        <a data-appearance="auto" data-image-rendering="pixelated" data-image-load-state="not-loaded" data-collapsible="true" data-background="true" data-path="image.gif" target="_blank" data-dictionary="Test Dictionary" data-collapsed="false" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="width: 35em;" class="gloss-image-container">
+                                                <span style="padding-top: 100%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                    </span>
+                                </li>
+                                <li data-index="4" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        naiyou definition 5: 
+                                        <a data-appearance="auto" data-image-rendering="pixelated" data-image-load-state="not-loaded" data-collapsible="false" data-background="true" data-path="image.gif" target="_blank" data-dictionary="Test Dictionary" data-collapsed="false" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="width: 35em;" class="gloss-image-container">
+                                                <span style="padding-top: 100%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                        
+more content 1: 
+                                        <a data-appearance="auto" data-image-rendering="pixelated" data-image-load-state="not-loaded" data-collapsible="true" data-background="true" data-path="image.gif" target="_blank" data-dictionary="Test Dictionary" data-collapsed="false" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="width: 35em;" class="gloss-image-container">
+                                                <span style="padding-top: 100%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                        
+more content 2: 
+                                        <a data-appearance="auto" data-image-rendering="pixelated" data-image-load-state="not-loaded" data-collapsible="false" data-background="true" data-path="image.gif" target="_blank" data-vertical-align="middle" data-dictionary="Test Dictionary" data-collapsed="false" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="width: 35em;" class="gloss-image-container">
+                                                <span style="padding-top: 100%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                         and 
+                                        <a data-appearance="auto" data-image-rendering="pixelated" data-image-load-state="not-loaded" data-collapsible="false" data-background="true" data-path="image.gif" target="_blank" data-dictionary="Test Dictionary" data-collapsed="true" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="width: 35em;" class="gloss-image-container">
+                                                <span style="padding-top: 100%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                         and 
+                                        <a data-appearance="auto" data-image-rendering="pixelated" data-image-load-state="not-loaded" data-collapsible="false" data-background="true" data-path="image.gif" target="_blank" data-dictionary="Test Dictionary" data-collapsed="false" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="width: 1em;" class="gloss-image-container">
+                                                <span style="padding-top: 100%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                    </span>
+                                </li>
+                                <li data-index="5" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        naiyou definition 6: 
+                                        <ruby lang="ja" class="gloss-sc-ruby">
+                                            内
+                                            <rp class="gloss-sc-rp">
+                                                (
+                                            </rp>
+                                            <rt lang="ja" class="gloss-sc-rt">
+                                                ない
+                                            </rt>
+                                            <rp class="gloss-sc-rp">
+                                                )
+                                            </rp>
+                                        </ruby>
+                                        <ruby lang="ja" class="gloss-sc-ruby">
+                                            容
+                                            <rp class="gloss-sc-rp">
+                                                (
+                                            </rp>
+                                            <rt lang="ja" class="gloss-sc-rt">
+                                                よう
+                                            </rt>
+                                            <rp class="gloss-sc-rp">
+                                                )
+                                            </rp>
+                                        </ruby>
+                                    </span>
+                                </li>
+                                <li data-index="6" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span lang="ja" class="structured-content gloss-content">
+                                        imageRendering=auto: 
+                                        <a data-appearance="auto" data-image-rendering="auto" data-image-load-state="not-loaded" data-collapsible="false" data-background="true" data-path="character.gif" target="_blank" data-dictionary="Test Dictionary" data-collapsed="false" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="width: 1em;" class="gloss-image-container">
+                                                <span style="padding-top: 100%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                        莢 
+                                        <a data-appearance="auto" data-image-rendering="auto" data-image-load-state="not-loaded" data-collapsible="false" data-background="false" data-path="character.gif" target="_blank" data-dictionary="Test Dictionary" data-collapsed="false" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="width: 1em;" class="gloss-image-container">
+                                                <span style="padding-top: 100%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                        莢 
+                                        <a data-appearance="monochrome" data-image-rendering="auto" data-image-load-state="not-loaded" data-collapsible="false" data-background="false" data-path="character.gif" target="_blank" data-dictionary="Test Dictionary" data-collapsed="false" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="width: 1em;" class="gloss-image-container">
+                                                <span style="padding-top: 100%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                        莢
+
+                                        imageRendering=pixelated: 
+                                        <a data-appearance="auto" data-image-rendering="pixelated" data-image-load-state="not-loaded" data-collapsible="false" data-background="true" data-path="character.gif" target="_blank" data-dictionary="Test Dictionary" data-collapsed="false" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="width: 1em;" class="gloss-image-container">
+                                                <span style="padding-top: 100%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                        莢 
+                                        <a data-appearance="auto" data-image-rendering="pixelated" data-image-load-state="not-loaded" data-collapsible="false" data-background="false" data-path="character.gif" target="_blank" data-dictionary="Test Dictionary" data-collapsed="false" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="width: 1em;" class="gloss-image-container">
+                                                <span style="padding-top: 100%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                        莢 
+                                        <a data-appearance="monochrome" data-image-rendering="pixelated" data-image-load-state="not-loaded" data-collapsible="false" data-background="false" data-path="character.gif" target="_blank" data-dictionary="Test Dictionary" data-collapsed="false" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="width: 1em;" class="gloss-image-container">
+                                                <span style="padding-top: 100%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                        莢
+
+                                        imageRendering=crisp-edges: 
+                                        <a data-appearance="auto" data-image-rendering="crisp-edges" data-image-load-state="not-loaded" data-collapsible="false" data-background="true" data-path="character.gif" target="_blank" data-dictionary="Test Dictionary" data-collapsed="false" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="width: 1em;" class="gloss-image-container">
+                                                <span style="padding-top: 100%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                        莢 
+                                        <a data-appearance="auto" data-image-rendering="crisp-edges" data-image-load-state="not-loaded" data-collapsible="false" data-background="false" data-path="character.gif" target="_blank" data-dictionary="Test Dictionary" data-collapsed="false" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="width: 1em;" class="gloss-image-container">
+                                                <span style="padding-top: 100%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                        莢 
+                                        <a data-appearance="monochrome" data-image-rendering="crisp-edges" data-image-load-state="not-loaded" data-collapsible="false" data-background="false" data-path="character.gif" target="_blank" data-dictionary="Test Dictionary" data-collapsed="false" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="width: 1em;" class="gloss-image-container">
+                                                <span style="padding-top: 100%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                        莢
+
+                                    </span>
+                                </li>
+                                <li data-index="7" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span lang="ja" class="structured-content gloss-content">
+                                        Image aspect ratio tests:
+あ
+                                        <a data-appearance="monochrome" data-image-rendering="crisp-edges" data-image-load-state="not-loaded" data-collapsible="false" data-background="false" data-path="character2.gif" target="_blank" data-dictionary="Test Dictionary" data-collapsed="false" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="width: 100em;" class="gloss-image-container">
+                                                <span style="padding-top: 1.1%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                        あ
+あ
+                                        <a data-appearance="monochrome" data-image-rendering="crisp-edges" data-image-load-state="not-loaded" data-collapsible="false" data-background="false" data-path="character2.gif" target="_blank" data-dictionary="Test Dictionary" data-collapsed="false" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="width: 0.4125em;" class="gloss-image-container">
+                                                <span style="padding-top: 24242.424242424244%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                        あ
+あ
+                                        <a data-appearance="monochrome" data-image-rendering="crisp-edges" data-image-load-state="not-loaded" data-collapsible="false" data-background="false" data-path="character3.gif" target="_blank" data-dictionary="Test Dictionary" data-collapsed="false" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="width: 1.1em;" class="gloss-image-container">
+                                                <span style="padding-top: 9090.90909090909%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                        あ
+あ
+                                        <a data-appearance="monochrome" data-image-rendering="crisp-edges" data-image-load-state="not-loaded" data-collapsible="false" data-background="false" data-path="character3.gif" target="_blank" data-dictionary="Test Dictionary" data-collapsed="false" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="width: 100em;" class="gloss-image-container">
+                                                <span style="padding-top: 0.41250000000000003%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                        あ
+                                    </span>
+                                </li>
+                                <li data-index="8" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span lang="ja" class="structured-content gloss-content">
+                                        Image alt text tests.
+𬵪 = Unicode character
+
+                                        <a data-appearance="monochrome" data-image-rendering="auto" data-image-load-state="not-loaded" data-collapsible="false" data-background="false" data-path="aosaba_mono.png" target="_blank" data-dictionary="Test Dictionary" data-collapsed="false" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="width: 1em;" class="gloss-image-container">
+                                                <span style="padding-top: 100%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                         = monochrome PNG
+
+                                        <a data-appearance="auto" data-image-rendering="auto" data-image-load-state="not-loaded" data-collapsible="false" data-background="false" data-path="aosaba_auto.png" target="_blank" data-dictionary="Test Dictionary" data-collapsed="false" data-has-aspect-ratio="true" class="gloss-image-link">
+                                            <span style="border: solid 1px red; border-radius: 20%; width: 1em;" class="gloss-image-container">
+                                                <span style="padding-top: 100%;" class="gloss-image-sizer">
+                                                </span>
+                                                <span class="gloss-image-background">
+                                                </span>
+                                                <span class="gloss-image-container-overlay">
+                                                </span>
+                                                <img style="width: 100%; height: 100%;" class="gloss-image">
+                                                </img>
+                                            </span>
+                                            <span class="gloss-image-link-text">
+                                                Image
+                                            </span>
+                                        </a>
+                                         = color PNG
+                                    </span>
+                                </li>
+                                <li data-index="9" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        <div style="font-style: normal;" class="gloss-sc-div">
+                                            fontStyle:normal
+                                        </div>
+                                        <div style="font-style: italic;" class="gloss-sc-div">
+                                            fontStyle:italic
+                                        </div>
+                                        <div style="font-weight: normal;" class="gloss-sc-div">
+                                            fontWeight:normal
+                                        </div>
+                                        <div style="font-weight: bold;" class="gloss-sc-div">
+                                            fontWeight:bold
+                                        </div>
+                                        <div style="font-size: xx-small;" class="gloss-sc-div">
+                                            fontSize:xx-small
+                                        </div>
+                                        <div style="font-size: x-small;" class="gloss-sc-div">
+                                            fontSize:x-small
+                                        </div>
+                                        <div style="font-size: 70%;" class="gloss-sc-div">
+                                            fontSize:70%
+                                        </div>
+                                        <div style="font-size: smaller;" class="gloss-sc-div">
+                                            fontSize:smaller
+                                        </div>
+                                        <div style="font-size: small;" class="gloss-sc-div">
+                                            fontSize:small
+                                        </div>
+                                        <div style="font-size: medium;" class="gloss-sc-div">
+                                            fontSize:medium
+                                        </div>
+                                        <div style="font-size: large;" class="gloss-sc-div">
+                                            fontSize:large
+                                        </div>
+                                        <div style="font-size: larger;" class="gloss-sc-div">
+                                            fontSize:larger
+                                        </div>
+                                        <div style="font-size: 130%;" class="gloss-sc-div">
+                                            fontSize:130%
+                                        </div>
+                                        <div style="font-size: x-large;" class="gloss-sc-div">
+                                            fontSize:x-large
+                                        </div>
+                                        <div style="font-size: xx-large;" class="gloss-sc-div">
+                                            fontSize:xx-large
+                                        </div>
+                                        <div style="font-size: xxx-large;" class="gloss-sc-div">
+                                            fontSize:xxx-large
+                                        </div>
+                                        <div style="text-decoration: none;" class="gloss-sc-div">
+                                            textDecorationLine:none 
+                                        </div>
+                                        <div style="text-decoration: underline;" class="gloss-sc-div">
+                                            textDecorationLine:underline 
+                                        </div>
+                                        <div style="text-decoration: overline;" class="gloss-sc-div">
+                                            textDecorationLine:overline 
+                                        </div>
+                                        <div style="text-decoration: line-through;" class="gloss-sc-div">
+                                            textDecorationLine:line-through 
+                                        </div>
+                                        <div style="text-decoration: underline overline line-through;" class="gloss-sc-div">
+                                            textDecorationLine:[underline,overline,line-through] 
+                                        </div>
+                                        <div class="gloss-sc-div">
+                                            baseline 
+                                            <span style="vertical-align: baseline;" class="gloss-sc-span">
+                                                verticalAlign:baseline 
+                                            </span>
+                                        </div>
+                                        <div class="gloss-sc-div">
+                                            baseline 
+                                            <span style="vertical-align: sub;" class="gloss-sc-span">
+                                                verticalAlign:sub 
+                                            </span>
+                                        </div>
+                                        <div class="gloss-sc-div">
+                                            baseline 
+                                            <span style="vertical-align: super;" class="gloss-sc-span">
+                                                verticalAlign:super 
+                                            </span>
+                                        </div>
+                                        <div class="gloss-sc-div">
+                                            baseline 
+                                            <span style="vertical-align: text-top;" class="gloss-sc-span">
+                                                verticalAlign:text-top 
+                                            </span>
+                                        </div>
+                                        <div class="gloss-sc-div">
+                                            baseline 
+                                            <span style="vertical-align: text-bottom;" class="gloss-sc-span">
+                                                verticalAlign:text-bottom 
+                                            </span>
+                                        </div>
+                                        <div class="gloss-sc-div">
+                                            baseline 
+                                            <span style="vertical-align: middle;" class="gloss-sc-span">
+                                                verticalAlign:middle 
+                                            </span>
+                                        </div>
+                                        <div class="gloss-sc-div">
+                                            baseline 
+                                            <span style="vertical-align: top;" class="gloss-sc-span">
+                                                verticalAlign:top 
+                                            </span>
+                                        </div>
+                                        <div class="gloss-sc-div">
+                                            baseline 
+                                            <span style="vertical-align: bottom;" class="gloss-sc-span">
+                                                verticalAlign:bottom 
+                                            </span>
+                                        </div>
+                                    </span>
+                                </li>
+                                <li data-index="10" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        br
+                                        <br class="gloss-sc-br">
+                                        </br>
+                                        br
+                                    </span>
+                                </li>
+                                <li data-index="11" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        <div class="gloss-sc-table-container">
+                                            <table class="gloss-sc-table">
+                                                <thead class="gloss-sc-thead">
+                                                    <tr class="gloss-sc-tr">
+                                                        <th class="gloss-sc-th">
+                                                            Header 1
+                                                        </th>
+                                                        <th class="gloss-sc-th">
+                                                            Header 2
+                                                        </th>
+                                                        <th class="gloss-sc-th">
+                                                            Header 3
+                                                        </th>
+                                                        <th class="gloss-sc-th">
+                                                            Header 4
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="gloss-sc-tbody">
+                                                    <tr class="gloss-sc-tr">
+                                                        <td class="gloss-sc-td">
+                                                            Cell A1
+                                                        </td>
+                                                        <td class="gloss-sc-td">
+                                                            Cell B1
+                                                        </td>
+                                                        <td class="gloss-sc-td">
+                                                            Cell C1
+                                                        </td>
+                                                        <td class="gloss-sc-td">
+                                                            Cell D1
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="gloss-sc-tr">
+                                                        <td class="gloss-sc-td">
+                                                            Cell A2
+                                                        </td>
+                                                        <td class="gloss-sc-td">
+                                                            Cell B2
+                                                        </td>
+                                                        <td class="gloss-sc-td">
+                                                            Cell C2:D2
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="gloss-sc-tr">
+                                                        <td class="gloss-sc-td">
+                                                            Cell A3
+                                                        </td>
+                                                        <td class="gloss-sc-td">
+                                                            Cell B3
+Cell B4
+                                                        </td>
+                                                        <td class="gloss-sc-td">
+                                                            Cell C3:D3
+Cell C4:D4
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="gloss-sc-tr">
+                                                        <td class="gloss-sc-td">
+                                                            Cell A4
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="gloss-sc-tr">
+                                                        <td style="text-align: left;" class="gloss-sc-td">
+                                                            Cell A5
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="gloss-sc-tr">
+                                                        <td style="text-align: center;" class="gloss-sc-td">
+                                                            Cell A6
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="gloss-sc-tr">
+                                                        <td style="text-align: right;" class="gloss-sc-td">
+                                                            Cell A7
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                                <tfoot class="gloss-sc-tfoot">
+                                                    <tr class="gloss-sc-tr">
+                                                        <th class="gloss-sc-th">
+                                                            Footer 1
+                                                        </th>
+                                                        <th class="gloss-sc-th">
+                                                            Footer 2
+                                                        </th>
+                                                        <th class="gloss-sc-th">
+                                                            Footer 3
+                                                        </th>
+                                                        <th class="gloss-sc-th">
+                                                            Footer 4
+                                                        </th>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
+                                        </div>
+                                    </span>
+                                </li>
+                                <li data-index="12" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        margin
+                                        <div style="margin-top: 1em; margin-bottom: 1em; margin-left: 1em; margin-right: 1em;" class="gloss-sc-div">
+                                            inner
+                                        </div>
+                                        margin
+                                    </span>
+                                </li>
+                                <li data-index="13" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        text 1 
+                                        <span data-sc-c="d" data-sc-a="b" data-sc="empty" class="gloss-sc-span">
+                                            text 2
+                                        </span>
+                                         text 3
+                                    </span>
+                                </li>
+                                <li data-index="14" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        <a data-external="false" class="gloss-link" href="./search">
+                                            <span class="gloss-link-text">
+                                                internal link 1
+                                            </span>
+                                        </a>
+                                         
+                                        <a data-external="false" class="gloss-link" href="./search?query=よみ&amp;wildcards=off">
+                                            <span class="gloss-link-text">
+                                                internal link 2
+                                            </span>
+                                        </a>
+                                         
+                                        <a data-external="true" class="gloss-link" href="https://foosoft.net/projects/yomichan/">
+                                            <span class="gloss-link-text">
+                                                external link
+                                            </span>
+                                            <span data-icon="external-link" class="gloss-link-external-icon icon">
+                                            </span>
+                                        </a>
+                                    </span>
+                                </li>
+                                <li data-index="15" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        <ul class="gloss-sc-ul">
+                                            <li class="gloss-sc-li">
+                                                Unordered list item 1
+                                            </li>
+                                            <li class="gloss-sc-li">
+                                                Unordered list item 2
+                                            </li>
+                                            <li class="gloss-sc-li">
+                                                Unordered list item 3
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </li>
+                                <li data-index="16" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        <ol class="gloss-sc-ol">
+                                            <li class="gloss-sc-li">
+                                                Ordered list item 1
+                                            </li>
+                                            <li class="gloss-sc-li">
+                                                Ordered list item 2
+                                            </li>
+                                            <li class="gloss-sc-li">
+                                                Ordered list item 3
+                                            </li>
+                                        </ol>
+                                    </span>
+                                </li>
+                                <li data-index="17" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        <ol style="list-style-type: hiragana-iroha;" class="gloss-sc-ol">
+                                            <li class="gloss-sc-li">
+                                                List item i
+                                            </li>
+                                            <li class="gloss-sc-li">
+                                                List item ro
+                                            </li>
+                                            <li class="gloss-sc-li">
+                                                List item ha
+                                            </li>
+                                        </ol>
+                                    </span>
+                                </li>
+                                <li data-index="18" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        <ul class="gloss-sc-ul">
+                                            <li lang="ja" style="list-style-type: &#39;⇄&#39;;" class="gloss-sc-li">
+                                                【
+                                                <a data-external="false" class="gloss-link" href="./search?query=よみ&amp;wildcards=off">
+                                                    <span class="gloss-link-text">
+                                                        Antonym
+                                                    </span>
+                                                </a>
+                                                】
+                                            </li>
+                                            <li lang="ja" style="list-style-type: &#39;🔄&#39;;" class="gloss-sc-li">
+                                                【
+                                                <a data-external="false" class="gloss-link" href="./search?query=よみ&amp;wildcards=off">
+                                                    <span class="gloss-link-text">
+                                                        References and is referenced by
+                                                    </span>
+                                                </a>
+                                                】
+                                            </li>
+                                            <li lang="ja" style="list-style-type: &#39;➡️&#39;;" class="gloss-sc-li">
+                                                【
+                                                <a data-external="false" class="gloss-link" href="./search?query=よみ&amp;wildcards=off">
+                                                    <span class="gloss-link-text">
+                                                        References
+                                                    </span>
+                                                </a>
+                                                】
+                                            </li>
+                                            <li lang="ja" style="list-style-type: &#39;⬅️&#39;;" class="gloss-sc-li">
+                                                【
+                                                <a data-external="false" class="gloss-link" href="./search?query=よみ&amp;wildcards=off">
+                                                    <span class="gloss-link-text">
+                                                        Referenced by
+                                                    </span>
+                                                </a>
+                                                】
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </li>
+                                <li data-index="19" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        <ol class="gloss-sc-ol">
+                                            <li lang="ja" style="list-style-type: &#39;①&#39;;" class="gloss-sc-li">
+                                                まるいち
+                                            </li>
+                                            <li lang="ja" style="list-style-type: &#39;②&#39;;" class="gloss-sc-li">
+                                                まるに
+                                            </li>
+                                            <li lang="ja" style="list-style-type: &#39;③&#39;;" class="gloss-sc-li">
+                                                まるさん
+                                            </li>
+                                            <li lang="ja" style="list-style-type: &#39;④&#39;;" class="gloss-sc-li">
+                                                まるよん
+                                            </li>
+                                        </ol>
+                                    </span>
+                                </li>
+                                <li data-index="20" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        <div lang="ja" style="font-size: xxx-large;" class="gloss-sc-div">
+                                            直次茶冷 (auto lang)
+                                        </div>
+                                        <div lang="?????" style="font-size: xxx-large;" class="gloss-sc-div">
+                                            直次茶冷 (invalid lang)
+                                        </div>
+                                        <div lang="ja-JP" style="font-size: xxx-large;" class="gloss-sc-div">
+                                            直次茶冷 (lang=ja-JP)
+                                        </div>
+                                        <div lang="zh-CN" style="font-size: xxx-large;" class="gloss-sc-div">
+                                            直次茶冷 (lang=zh-CN)
+                                        </div>
+                                        <div lang="zh-TW" style="font-size: xxx-large;" class="gloss-sc-div">
+                                            直次茶冷 (lang=zh-TW)
+                                        </div>
+                                    </span>
+                                </li>
+                                <li data-index="21" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        <ul style="list-style-type: japanese-formal;" class="gloss-sc-ul">
+                                            <li lang="ja" class="gloss-sc-li">
+                                                【
+                                                <a data-external="false" class="gloss-link" href="./search?query=直次茶冷&amp;wildcards=off">
+                                                    <span lang="ja" class="gloss-link-text">
+                                                        直次茶冷
+                                                    </span>
+                                                </a>
+                                                】(default)
+                                            </li>
+                                            <li lang="ja" class="gloss-sc-li">
+                                                【
+                                                <a data-external="false" lang="ja" class="gloss-link" href="./search?query=直次茶冷&amp;wildcards=off">
+                                                    <span class="gloss-link-text">
+                                                        直次茶冷
+                                                    </span>
+                                                </a>
+                                                】(lang=ja)
+                                            </li>
+                                            <li lang="ja" class="gloss-sc-li">
+                                                【
+                                                <a data-external="false" lang="zh-CN" class="gloss-link" href="./search?query=直次茶冷&amp;wildcards=off">
+                                                    <span class="gloss-link-text">
+                                                        直次茶冷
+                                                    </span>
+                                                </a>
+                                                】(lang=zh-CN)
+                                            </li>
+                                            <li lang="ja" class="gloss-sc-li">
+                                                【
+                                                <a data-external="false" lang="zh-TW" class="gloss-link" href="./search?query=直次茶冷&amp;wildcards=off">
+                                                    <span class="gloss-link-text">
+                                                        直次茶冷
+                                                    </span>
+                                                </a>
+                                                】(lang=zh-TW)
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </li>
+                                <li data-index="22" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        <div class="gloss-sc-table-container">
+                                            <table lang="" class="gloss-sc-table">
+                                                <thead class="gloss-sc-thead">
+                                                    <tr class="gloss-sc-tr">
+                                                        <th class="gloss-sc-th">
+                                                            JP
+                                                        </th>
+                                                        <th class="gloss-sc-th">
+                                                            SC
+                                                        </th>
+                                                        <th class="gloss-sc-th">
+                                                            TC
+                                                        </th>
+                                                        <th class="gloss-sc-th">
+                                                            ??
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="gloss-sc-tbody">
+                                                    <tr class="gloss-sc-tr">
+                                                        <td lang="ja-JP" class="gloss-sc-td">
+                                                            直次茶冷
+                                                        </td>
+                                                        <td lang="zh-CN" class="gloss-sc-td">
+                                                            直次茶冷
+                                                        </td>
+                                                        <td lang="zh-TW" class="gloss-sc-td">
+                                                            直次茶冷
+                                                        </td>
+                                                        <td class="gloss-sc-td">
+                                                            直次茶冷
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </span>
+                                </li>
+                                <li data-index="23" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        <div class="gloss-sc-table-container">
+                                            <table lang="ja" class="gloss-sc-table">
+                                                <thead class="gloss-sc-thead">
+                                                    <tr class="gloss-sc-tr">
+                                                        <th class="gloss-sc-th">
+                                                            lang=ja applied to whole table
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="gloss-sc-tbody">
+                                                    <tr class="gloss-sc-tr">
+                                                        <td class="gloss-sc-td">
+                                                            直次茶冷
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </span>
+                                </li>
+                                <li data-index="24" class="gloss-item click-scannable">
+                                    <span class="gloss-separator">
+                                    </span>
+                                    <span class="structured-content gloss-content">
+                                        <div class="gloss-sc-table-container">
+                                            <table lang="zh-CN" class="gloss-sc-table">
+                                                <thead class="gloss-sc-thead">
+                                                    <tr class="gloss-sc-tr">
+                                                        <th class="gloss-sc-th">
+                                                            lang=zh-CN applied to whole table
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="gloss-sc-tbody">
+                                                    <tr class="gloss-sc-tr">
+                                                        <td class="gloss-sc-td">
+                                                            直次茶冷
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+
