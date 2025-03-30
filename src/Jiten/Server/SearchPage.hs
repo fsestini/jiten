@@ -22,12 +22,15 @@ import Prelude
 
 mkParseElem :: Char -> Int -> Text -> Html
 mkParseElem c offset q =
-  H.a ! A.href (H.toValue ("/search?query=" <> q))
+  H.a ! A.href (H.toValue url)
     $ H.span
       ! A.class_ "query-parser-term"
       ! dataAttribute "data-offset" (H.stringValue (show offset))
     $ toHtml c
+  where
+    url = "/search?query=" <> q <> "&offset=" <> T.show offset
 
+-- TODO: take offset into account
 instantiate :: [Html] -> Text -> Html
 instantiate results originalQuery = do
   docTypeHtml ! lang "en" ! dataAttribute "page-type" "search" $ do
