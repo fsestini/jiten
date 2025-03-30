@@ -1,10 +1,11 @@
-module Jiten.Util (sformat, strFormat, findJust, decodeJSON) where
+module Jiten.Util (sformat, strFormat, findJust, decodeJSON, postfixes) where
 
 import Data.Aeson (FromJSON)
 import qualified Data.Aeson as A
 import Data.Foldable (asum)
 import qualified Data.Maybe as Maybe
 import Data.Text (Text)
+import qualified Data.Text as T
 import qualified Data.Text.Format as Format
 import qualified Data.Text.Format.Params as Format
 import qualified Data.Text.Lazy as LT
@@ -28,3 +29,12 @@ decodeJSON :: (FromJSON a) => Text -> a
 decodeJSON =
   Maybe.fromMaybe (error "decodeJSON: failed to decode JSON")
     . A.decodeStrictText
+
+-- | Return all the postfixes of a given string.
+--
+-- Example:
+-- @
+-- postfixes "abc" == ["abc", "bc", "c", ""]
+-- @
+postfixes :: Text -> [Text]
+postfixes t = [T.drop n t | n <- [0 .. T.length t]]
