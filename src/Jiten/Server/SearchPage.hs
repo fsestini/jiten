@@ -12,7 +12,6 @@ import Text.Blaze.Html5
     h1,
     link,
     meta,
-    textarea,
     toHtml,
     (!),
   )
@@ -57,21 +56,31 @@ instantiate results originalQuery = do
             H.div ! class_ "search-header-wrapper" $ H.div ! class_ "search-header" $ do
               H.div ! A.id "intro" $ h1 "Jiten Search"
           H.div ! class_ "search-header-wrapper" ! A.id "sticky-search-header" $ H.div ! class_ "search-header" $ do
-            H.div ! class_ "search-textbox-container" $ do
-              textarea ! A.id "search-textbox" ! class_ "scrollbar" ! placeholder "Input a term, expression, sentence, or block of text" ! autocomplete "off" ! lang "ja" ! autofocus "" $ mempty
-              button
-                ! type_ "button"
-                ! A.id "clear-button"
-                ! class_ "clear-button"
-                ! onclick "window.location.href='/search';"
-                $ H.span ! class_ "icon" ! dataAttribute "icon" "cross"
-                $ mempty
-              button ! type_ "button" ! A.id "search-button" ! class_ "search-button" $
-                H.span ! class_ "icon" ! dataAttribute "icon" "magnifying-glass" $
-                  mempty
-            H.div ! class_ "scan-disable scrollbar" ! A.id "query-parser-container" $
-              H.div ! A.id "query-parser-content" ! lang "ja" $
-                parseContainer
+            H.form ! A.method "get" ! A.action "/search" ! class_ "search-form" $ do
+              H.div ! class_ "search-textbox-container" $ do
+                H.input
+                  ! A.type_ "text"
+                  ! A.name "query"
+                  ! A.id "search-textbox"
+                  ! class_ "scrollbar"
+                  ! placeholder "Input a term, expression, sentence, or block of text"
+                  ! autocomplete "off"
+                  ! lang "ja"
+                  ! autofocus ""
+                  ! A.value (H.toValue originalQuery)
+                button
+                  ! type_ "button"
+                  ! A.id "clear-button"
+                  ! class_ "clear-button"
+                  ! onclick "window.location.href='/search';"
+                  $ H.span ! class_ "icon" ! dataAttribute "icon" "cross"
+                  $ mempty
+                button ! type_ "submit" ! A.id "search-button" ! class_ "search-button" $
+                  H.span ! class_ "icon" ! dataAttribute "icon" "magnifying-glass" $
+                    mempty
+              H.div ! class_ "scan-disable scrollbar" ! A.id "query-parser-container" $
+                H.div ! A.id "query-parser-content" ! lang "ja" $
+                  parseContainer
           H.div ! class_ "content-body" ! A.id "content-body" $
             H.div ! class_ "content-body-inner" $ do
               H.span ! tabindex "-1" ! A.id "content-scroll-focus" $ mempty
