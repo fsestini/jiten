@@ -10,9 +10,9 @@ import Data.Text (Text)
 import qualified Data.Text as T
 import qualified Database.SQLite.Simple as Sql
 import qualified Jiten.Database as Db
+import qualified Jiten.Server.SearchPage as SearchPage
 import qualified Jiten.Yomichan.Core as Core
 import qualified Jiten.Yomichan.Search as Search
-import qualified Jiten.Yomichan.SearchPageTemplate as SearchPageTemplate
 import Network.Wai.Middleware.Cors (simpleCors)
 import qualified Network.Wai.Middleware.Static as Static
 import qualified Paths_jiten
@@ -39,13 +39,12 @@ serve cfg = scotty (cfgPort cfg) $ do
       H.a ! A.href "/search" $ "Search"
   Scotty.get "/search" $ do
     queryParamMay <- Scotty.queryParamMaybe "query"
-    (queryRow, contents) <-
+    (query, contents) <-
       case queryParamMay of
-        Just queryParam ->
-          (mkQueryContainer queryParam,) <$> findTermsHTML queryParam
-        Nothing -> pure (mempty, [H.text "No results"])
+        Just queryParam -> (queryParam,) <$> findTermsHTML queryParam
+        Nothing -> pure (mempty, [])
     Scotty.html . Blaze.renderHtml $
-      SearchPageTemplate.instantiate (mconcat contents) queryRow
+      SearchPage.instantiate contents query
   Scotty.get "/api/status" $ do
     Scotty.text "Ok."
   where
@@ -54,20 +53,6 @@ serve cfg = scotty (cfgPort cfg) $ do
       v <- MVar.newEmptyMVar
       MVar.putMVar (cfgYomiVar cfg) (q, v)
       MVar.readMVar v
-    mkQueryContainer :: Text -> Html
-    mkQueryContainer txt =
-      txt
-        & T.unpack
-        & foldr
-          ( \c (pfx, h) ->
-              let newPfx = c : pfx
-                  a =
-                    H.a ! A.href (H.toValue ("/search?query=" <> newPfx)) $
-                      H.toHtml c
-               in (newPfx, a <> h)
-          )
-          ("", mempty)
-        & snd
     policy = Static.policy $ \s ->
       if ("css" `isPrefixOf` s) || ("images" `isPrefixOf` s)
         then Just (cfgDataDir cfg <> "/" <> "vendor/yomitan/ext/" <> s)
