@@ -5,10 +5,8 @@ import qualified Data.Text as T
 import Text.Blaze.Html5
   ( Html,
     body,
-    button,
     dataAttribute,
     docTypeHtml,
-    h1,
     link,
     meta,
     toHtml,
@@ -53,49 +51,30 @@ instantiate results originalQuery offset = do
       link ! rel "stylesheet" ! type_ "text/css" ! href "/css/display.css"
       link ! rel "stylesheet" ! type_ "text/css" ! href "/css/display-pronunciation.css"
       link ! rel "stylesheet" ! type_ "text/css" ! href "/css/structured-content.css"
-      link ! rel "stylesheet" ! type_ "text/css" ! href "/css/search.css"
       link ! rel "stylesheet" ! type_ "text/css" ! href "/css/search-settings.css"
-    body $ do
-      H.div ! class_ "content-outer" $ H.div ! class_ "content" $ do
-        H.div ! class_ "content-scroll scrollbar" ! A.id "content-scroll" $ do
-          H.div ! A.id "above-sticky-header" $ do
-            H.div ! class_ "top-progress-bar-container" $ H.div ! class_ "progress-bar-indeterminant" ! A.id "progress-indicator" $ mempty
-            H.div ! class_ "search-header-wrapper" $ H.div ! class_ "search-header" $ do
-              H.div ! A.id "intro" $ h1 "Jiten Search"
-          H.div ! class_ "search-header-wrapper" ! A.id "sticky-search-header" $ H.div ! class_ "search-header" $ do
-            H.form ! A.method "get" ! A.action "/search" ! class_ "search-form" $ do
-              H.div ! class_ "search-textbox-container" $ do
-                H.input
-                  ! A.type_ "text"
-                  ! A.name "query"
-                  ! A.id "search-textbox"
-                  ! class_ "scrollbar"
-                  ! placeholder "Input a term, expression, sentence, or block of text"
-                  ! autocomplete "off"
-                  ! lang "ja"
-                  ! autofocus ""
-                  ! A.value (H.toValue originalQuery)
-                button
-                  ! type_ "button"
-                  ! A.id "clear-button"
-                  ! class_ "clear-button"
-                  ! onclick "window.location.href='/search';"
-                  $ H.span ! class_ "icon" ! dataAttribute "icon" "cross"
-                  $ mempty
-                button ! type_ "submit" ! A.id "search-button" ! class_ "search-button" $
-                  H.span ! class_ "icon" ! dataAttribute "icon" "magnifying-glass" $
-                    mempty
-              H.div ! class_ "scan-disable scrollbar" ! A.id "query-parser-container" $
-                H.div ! A.id "query-parser-content" ! lang "ja" $
-                  parseContainer
-          H.div ! class_ "content-body" ! A.id "content-body" $
-            H.div ! class_ "content-body-inner" $ do
-              H.span ! tabindex "-1" ! A.id "content-scroll-focus" $ mempty
-              H.div ! A.id "dictionary-entries" $ mconcat results
-        H.div ! class_ "content-footer-container1" $ H.div ! class_ "content-footer-container2" $ do
-          H.div ! class_ "content-footer" ! A.id "content-footer" $ mempty
-          H.div ! class_ "scrollbar-spacer scrollbar" $ mempty
+    body ! A.style "overflow: auto;" $ do
+      H.div ! class_ "content-body-inner" $ do
+        parsed
+        H.span ! tabindex "-1" ! A.id "content-scroll-focus" $ mempty
+        H.div ! A.id "dictionary-entries" $ mconcat results
   where
+    parsed = do
+      H.form ! A.method "get" ! A.action "/search" ! class_ "search-form" $ do
+        H.div ! A.style "width: 100%; padding-top: 1em;" ! class_ "search-textbox-container" $ do
+          H.input
+            ! A.type_ "text"
+            ! A.name "query"
+            ! A.id "search-textbox"
+            ! A.style "width: 100%;"
+            ! class_ "scrollbar"
+            ! placeholder "Input a term, expression, sentence, or block of text"
+            ! autocomplete "off"
+            ! lang "ja"
+            ! autofocus ""
+            ! A.value (H.toValue originalQuery)
+      H.div ! class_ "scan-disable scrollbar" ! A.id "query-parser-container" $
+        H.div ! A.id "query-parser-content" ! lang "ja" $
+          parseContainer
     parseContainer =
       mconcat
         . zipWith (\ix c -> mkParseElem originalQuery c offset ix) [0 ..]
