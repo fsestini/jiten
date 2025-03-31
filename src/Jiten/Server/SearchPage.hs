@@ -21,15 +21,16 @@ import Prelude
 
 mkParseElem :: Text -> Char -> Int -> Int -> Html
 mkParseElem fullQuery c queryOffset charOffset =
-  H.a ! A.href (H.toValue url)
-    $ H.span
-      ! A.class_ "query-parser-term"
-      ! A.style sty
-      ! dataAttribute "offset" (H.stringValue (show charOffset))
+  H.span
+    ! A.class_ "query-parser-term"
+    ! A.style sty
+    ! dataAttribute "offset" (H.stringValue (show charOffset))
+    ! A.onclick (H.toValue jsNavigate)
     $ toHtml c
   where
     sty = if charOffset >= queryOffset then "background-color: #dddddd;" else ""
     url = "/search?query=" <> fullQuery <> "&offset=" <> T.show charOffset
+    jsNavigate = "window.location.href='" <> url <> "';"
 
 instantiate :: [Html] -> Text -> Int -> Html
 instantiate results originalQuery offset = do
