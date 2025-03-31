@@ -25,7 +25,7 @@ mkParseElem c offset q =
   H.a ! A.href (H.toValue url)
     $ H.span
       ! A.class_ "query-parser-term"
-      ! dataAttribute "data-offset" (H.stringValue (show offset))
+      ! dataAttribute "offset" (H.stringValue (show offset))
     $ toHtml c
   where
     url = "/search?query=" <> q <> "&offset=" <> T.show offset
