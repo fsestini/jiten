@@ -4,10 +4,8 @@ import Control.Concurrent (forkIO, forkOS, rtsSupportsBoundThreads)
 import Control.Concurrent.MVar (MVar)
 import qualified Control.Concurrent.MVar as MVar
 import Control.Monad (forever, void)
-import Data.Function ((&))
 import Data.List (isPrefixOf)
 import Data.Maybe (fromMaybe)
-import qualified Data.Maybe as Maybe
 import Data.Text (Text)
 import qualified Data.Text as T
 import qualified Database.SQLite.Simple as Sql
@@ -19,7 +17,6 @@ import Network.Wai.Middleware.Cors (simpleCors)
 import qualified Network.Wai.Middleware.Static as Static
 import qualified Paths_jiten
 import Text.Blaze (Markup, (!))
-import Text.Blaze.Html (Html)
 import qualified Text.Blaze.Html.Renderer.Text as Blaze
 import qualified Text.Blaze.Html5 as H
 import qualified Text.Blaze.Html5.Attributes as A

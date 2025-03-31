@@ -2,7 +2,6 @@ module Jiten.Server.SearchPage (instantiate) where
 
 import Data.Text (Text)
 import qualified Data.Text as T
-import qualified Jiten.Util as Util
 import Text.Blaze.Html5
   ( Html,
     body,
