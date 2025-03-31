@@ -20,19 +20,20 @@ import Text.Blaze.Html5.Attributes
 import qualified Text.Blaze.Html5.Attributes as A
 import Prelude
 
-mkParseElem :: Char -> Int -> Text -> Html
-mkParseElem c offset q =
+mkParseElem :: Text -> Char -> Int -> Int -> Html
+mkParseElem fullQuery c queryOffset charOffset =
   H.a ! A.href (H.toValue url)
     $ H.span
       ! A.class_ "query-parser-term"
-      ! dataAttribute "offset" (H.stringValue (show offset))
+      ! A.style sty
+      ! dataAttribute "offset" (H.stringValue (show charOffset))
     $ toHtml c
   where
-    url = "/search?query=" <> q <> "&offset=" <> T.show offset
+    sty = if charOffset >= queryOffset then "background-color: #dddddd;" else ""
+    url = "/search?query=" <> fullQuery <> "&offset=" <> T.show charOffset
 
--- TODO: take offset into account
-instantiate :: [Html] -> Text -> Html
-instantiate results originalQuery = do
+instantiate :: [Html] -> Text -> Int -> Html
+instantiate results originalQuery offset = do
   docTypeHtml ! lang "en" ! dataAttribute "page-type" "search" $ do
     H.head $ do
       meta ! charset "UTF-8"
@@ -93,7 +94,7 @@ instantiate results originalQuery = do
           H.div ! class_ "scrollbar-spacer scrollbar" $ mempty
   where
     parseContainer =
-      mconcat $ zipWith (\(ix, c) pfx -> mkParseElem c ix pfx) chars pfxs
-      where
-        pfxs = Util.postfixes originalQuery
-        chars = zip [0 ..] (T.unpack originalQuery)
+      mconcat
+        . zipWith (\ix c -> mkParseElem originalQuery c offset ix) [0 ..]
+        . T.unpack
+        $ originalQuery

@@ -6,6 +6,8 @@ import qualified Control.Concurrent.MVar as MVar
 import Control.Monad (forever, void)
 import Data.Function ((&))
 import Data.List (isPrefixOf)
+import Data.Maybe (fromMaybe)
+import qualified Data.Maybe as Maybe
 import Data.Text (Text)
 import qualified Data.Text as T
 import qualified Database.SQLite.Simple as Sql
@@ -39,12 +41,15 @@ serve cfg = scotty (cfgPort cfg) $ do
       H.a ! A.href "/search" $ "Search"
   Scotty.get "/search" $ do
     queryParamMay <- Scotty.queryParamMaybe "query"
-    (query, contents) <-
+    offset <- fromMaybe (0 :: Int) <$> Scotty.queryParamMaybe "offset"
+    (queryParam, contents) <-
       case queryParamMay of
-        Just queryParam -> (queryParam,) <$> findTermsHTML queryParam
+        Just queryParam ->
+          let query = T.drop offset queryParam
+           in (queryParam,) <$> findTermsHTML query
         Nothing -> pure (mempty, [])
     Scotty.html . Blaze.renderHtml $
-      SearchPage.instantiate contents query
+      SearchPage.instantiate contents queryParam offset
   Scotty.get "/api/status" $ do
     Scotty.text "Ok."
   where
