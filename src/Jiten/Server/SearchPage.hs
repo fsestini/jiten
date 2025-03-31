@@ -28,7 +28,10 @@ mkParseElem fullQuery c queryOffset charOffset =
     ! A.onclick (H.toValue jsNavigate)
     $ toHtml c
   where
-    sty = if charOffset >= queryOffset then "background-color: #dddddd;" else ""
+    sty =
+      if queryOffset > 0 && charOffset >= queryOffset
+        then "background-color: #dddddd;"
+        else ""
     url = "/search?query=" <> fullQuery <> "&offset=" <> T.show charOffset
     jsNavigate = "window.location.href='" <> url <> "';"
 
