@@ -19,10 +19,10 @@ spec =
             Db.findTermsBulk
               conn
               (Db.TermQuery ["打つ"] ["Test Dictionary"] "exact")
-          let res1 = Db.TermResult 3 "打つ" "うつ" "term" "[\"utsu definition 1\",\"utsu definition 2\"]" ["vt"] ["P", "E1"] ["v5"] 10 "Test Dictionary" 0
-          let res2 = Db.TermResult 4 "打つ" "うつ" "term" "[\"utsu definition 3\",\"utsu definition 4\"]" ["vt"] ["P", "E2"] ["v5"] 1 "Test Dictionary" 0
-          let res3 = Db.TermResult 5 "打つ" "ぶつ" "term" "[\"butsu definition 1\",\"butsu definition 2\"]" ["vt"] ["P", "E1"] ["v5"] 10 "Test Dictionary" 0
-          let res4 = Db.TermResult 6 "打つ" "ぶつ" "term" "[\"butsu definition 3\",\"butsu definition 4\"]" ["vt"] ["P", "E2"] ["v5"] 1 "Test Dictionary" 0
+          let res1 = Db.TermResult 3 "打つ" (Just "うつ") "term" "[\"utsu definition 1\",\"utsu definition 2\"]" ["vt"] ["P", "E1"] ["v5"] 10 "Test Dictionary" 0
+          let res2 = Db.TermResult 4 "打つ" (Just "うつ") "term" "[\"utsu definition 3\",\"utsu definition 4\"]" ["vt"] ["P", "E2"] ["v5"] 1 "Test Dictionary" 0
+          let res3 = Db.TermResult 5 "打つ" (Just "ぶつ") "term" "[\"butsu definition 1\",\"butsu definition 2\"]" ["vt"] ["P", "E1"] ["v5"] 10 "Test Dictionary" 0
+          let res4 = Db.TermResult 6 "打つ" (Just "ぶつ") "term" "[\"butsu definition 3\",\"butsu definition 4\"]" ["vt"] ["P", "E2"] ["v5"] 1 "Test Dictionary" 0
           results `shouldBe` [res1, res2, res3, res4]
         it "returns an empty list when disabling the dictionary" $ \conn -> do
           results <-

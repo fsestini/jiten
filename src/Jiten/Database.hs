@@ -227,7 +227,7 @@ instance FromJSON TermQuery where
 data TermResult = TermResult
   { termResultEntryId :: !Int64,
     termResultExpression :: !Text,
-    termResultReading :: !Text,
+    termResultReading :: !(Maybe Text),
     termResultMatchSource :: !Text,
     termResultGlossary :: !Text,
     termResultDefinitionTags :: ![Text],
@@ -275,7 +275,7 @@ instance ToTextJSON TermResult where
       [ "{",
         sformat ("\"id\": " % Formatting.int % ", ") termResultEntryId,
         sformat ("\"term\": \"" % Formatting.stext % "\", ") termResultExpression,
-        sformat ("\"reading\": \"" % Formatting.stext % "\", ") termResultReading,
+        sformat ("\"reading\": \"" % Formatting.stext % "\", ") reading,
         sformat ("\"matchSource\": \"" % Formatting.stext % "\", ") termResultMatchSource,
         "\"matchType\": \"exact\", ",
         sformat ("\"definitions\": " % Formatting.stext % ", ") termResultGlossary,
@@ -287,6 +287,8 @@ instance ToTextJSON TermResult where
         sformat ("\"index\": " % Formatting.int) termResultIndex,
         "}"
       ]
+    where
+      reading = Maybe.fromMaybe "" termResultReading
 
 data TermMetaQuery = TermMetaQuery
   { tmmqTerms :: ![Text],
