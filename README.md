@@ -55,7 +55,7 @@ General:
 
 DB:
 
-- [x] DB: term bulk search
-- [x] DB: term meta bulk search
-- [ ] DB: kanji bulk search
-- [ ] DB: media search
+- [x] Term bulk search
+- [x] Term meta bulk search
+- [ ] Kanji bulk search
+- [ ] Media search
