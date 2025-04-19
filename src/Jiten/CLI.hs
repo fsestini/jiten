@@ -108,33 +108,32 @@ query FormatJSON txt = queryResults txt
 query FormatDeinflections txt = queryDeinflections txt
 query FormatHTML txt = queryHTML txt
 
-queryHTML :: Text -> IO ()
-queryHTML q =
+withYomi :: (Core.YomiContext -> IO ()) -> IO ()
+withYomi h =
   Sql.withConnection "jiten.db" $ \conn -> do
     Db.initDatabase conn
     dicts <- Db.getDictionaries conn
+    summaries <- Db.getDictionarySummaries conn
     Core.withYomitan conn $ \ctx -> do
       Search.setOptions ctx (map snd dicts) Nothing
-      result <- Search.findTermsHTML ctx Search.Simple q
-      let rendered = map Blaze.renderMarkup result
-      forM_ rendered LTIO.putStrLn
+      Search.setDictionaryInfo ctx summaries
+      h ctx
+
+queryHTML :: Text -> IO ()
+queryHTML q =
+  withYomi $ \ctx -> do
+    result <- Search.findTermsHTML ctx Search.Simple q
+    let rendered = map Blaze.renderMarkup result
+    forM_ rendered LTIO.putStrLn
 
 queryDeinflections :: Text -> IO ()
 queryDeinflections q =
-  Sql.withConnection "jiten.db" $ \conn -> do
-    Db.initDatabase conn
-    dicts <- Db.getDictionaries conn
-    Core.withYomitan conn $ \ctx -> do
-      Search.setOptions ctx (map snd dicts) Nothing
-      result <- Search.getAlgorithmDeinflections ctx q
-      TIO.putStrLn result
+  withYomi $ \ctx -> do
+    result <- Search.getAlgorithmDeinflections ctx q
+    TIO.putStrLn result
 
 queryResults :: Text -> IO ()
 queryResults q =
-  Sql.withConnection "jiten.db" $ \conn -> do
-    Db.initDatabase conn
-    dicts <- Db.getDictionaries conn
-    Core.withYomitan conn $ \ctx -> do
-      Search.setOptions ctx (map snd dicts) Nothing
-      result <- Search.findTerms ctx Search.Simple q
-      TIO.putStrLn result
+  withYomi $ \ctx -> do
+    result <- Search.findTerms ctx Search.Simple q
+    TIO.putStrLn result
