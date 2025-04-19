@@ -25,6 +25,7 @@ import Formatting (sformat, (%))
 import qualified Formatting
 import qualified Jiten.Util as Util
 import qualified Jiten.Yomichan.Dictionary as Yomichan
+import qualified Jiten.Yomichan.Summary as Yomichan
 
 class ToTextJSON a where
   toTextJSON :: a -> Text
@@ -96,6 +97,26 @@ initDatabase conn = do
           "media_count INTEGER NOT NULL,",
           "CONSTRAINT unique_dict_name UNIQUE (name))"
         ]
+
+getDictionarySummaries :: Connection -> IO [Yomichan.Summary]
+getDictionarySummaries conn = do
+  rs <-
+    query_ conn . mconcat $
+      [ "SELECT name, terms_count, term_meta_count, tag_meta_count ",
+        "FROM dictionary"
+      ]
+  pure . flip map rs $ \(dName, termsC, metaC, tagC) ->
+    Yomichan.Summary
+      dName
+      ( Yomichan.Counts
+          { terms = Yomichan.SummaryItemCount {total = termsC},
+            termMeta = Yomichan.SummaryMetaCount {total = metaC},
+            kanji = Yomichan.SummaryItemCount {total = 0},
+            kanjiMeta = Yomichan.SummaryMetaCount {total = 0},
+            tagMeta = Yomichan.SummaryItemCount {total = tagC},
+            media = Yomichan.SummaryItemCount {total = 0}
+          }
+      )
 
 insertIndex :: Connection -> Yomichan.Index -> IO Int64
 insertIndex conn index = do
