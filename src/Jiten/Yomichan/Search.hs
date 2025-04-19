@@ -59,7 +59,7 @@ findTermsDOM ctx mode text = do
     Just nodes -> pure nodes
   where
     expr =
-      let template = "JSON.stringify(findTermsDOM('{}', '{}', options))"
+      let template = "JSON.stringify(findTermsDOM('{}', '{}', options, dictionaryInfo))"
        in LT.unpack $ Format.format template (textMode mode, text)
 
 findTermsHTML :: YomiContext -> FindTermsMode -> Text -> IO [Markup]

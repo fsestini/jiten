@@ -64,13 +64,12 @@ var Node = { ELEMENT_NODE: 1, TEXT_NODE: 3 };
 
 var location = { protocol: "http:", host: "localhost" };
 
-function findTermsDOM(mode, text, options) {
+function findTermsDOM(mode, text, options, dictionaryInfo) {
   const results = translator.findTerms(mode, text, options);
   const entries = results.dictionaryEntries;
   const nodes = [];
   for (const entry of entries) {
-    //TODO: pass dictionaryInfo
-    const node = displayGenerator.createTermEntry(entry, []);
+    const node = displayGenerator.createTermEntry(entry, dictionaryInfo);
     nodes.push(node.toObject());
   }
   return nodes;
