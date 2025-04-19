@@ -20,7 +20,6 @@ import Data.Text.Lazy.Encoding (decodeUtf8)
 import qualified Jiten.Util as Util
 import Text.Blaze (Markup)
 import Text.Taggy (Element (..), Node (..), parseDOM)
-import Text.Taggy.DOM (AttrValue)
 import qualified Text.Taggy.Renderer
 
 data NodeBuilder = NodeBuilder
@@ -84,11 +83,6 @@ instance FromJSON NodeBuilder where
 
 nbClasses :: NodeBuilder -> [Text]
 nbClasses nb = maybe [] pure (nbClassName nb) ++ nbClassList nb
-
-appendAttributes :: Text -> [Text] -> AttrValue -> AttrValue
-appendAttributes separator attrs av =
-  let separated = T.intercalate separator attrs
-   in if T.null av then separated else av <> separator <> separated
 
 toDashedName :: Text -> Text
 toDashedName =
