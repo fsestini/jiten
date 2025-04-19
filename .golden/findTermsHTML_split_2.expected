@@ -121,10 +121,11 @@
 Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Average
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="0" class="tag-body-content frequency-list">
                             </span>
                         </span>
                     </span>

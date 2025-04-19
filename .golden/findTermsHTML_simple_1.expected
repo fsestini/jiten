@@ -114,10 +114,101 @@
 Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Test Dictionary
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="2" class="tag-body-content frequency-list">
+                                <span data-details="Test Dictionary" data-has-reading="false" data-index="0" data-term="打ち込む" data-dictionary="Test Dictionary" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Test Dictionary
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打ち込む
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="3, seven" class="frequency-value-list">
+                                                    <span lang="ja" data-frequency="3" class="frequency-value">
+                                                        3
+                                                    </span>
+                                                    <span data-frequency="7" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="seven" lang="ja" data-frequency="7" class="frequency-value">
+                                                        seven
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span data-details="Test Dictionary" data-has-reading="true" data-reading="ぶちこむ" data-index="1" data-term="打ち込む" data-dictionary="Test Dictionary" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Test Dictionary
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打ち込む
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            ぶちこむ
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="nineteen, twenty-five (25), 13, thirty-one" class="frequency-value-list">
+                                                    <span data-display-value="nineteen" lang="ja" data-frequency="0" class="frequency-value">
+                                                        nineteen
+                                                    </span>
+                                                    <span data-frequency="25" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="twenty-five (25)" lang="ja" data-frequency="25" class="frequency-value">
+                                                        twenty-five (25)
+                                                    </span>
+                                                    <span data-frequency="13" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="13" class="frequency-value">
+                                                        13
+                                                    </span>
+                                                    <span data-frequency="31" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="thirty-one" lang="ja" data-frequency="31" class="frequency-value">
+                                                        thirty-one
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
                         </span>
                     </span>
@@ -127,10 +218,44 @@ Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
 Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Average
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="1" class="tag-body-content frequency-list">
+                                <span data-details="Average" data-has-reading="true" data-reading="ぶちこむ" data-index="0" data-term="打ち込む" data-dictionary="Average" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Average
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打ち込む
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            ぶちこむ
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="0" class="frequency-value-list">
+                                                    <span data-display-value="0" lang="ja" data-frequency="0" class="frequency-value">
+                                                        0
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
                         </span>
                     </span>
@@ -458,10 +583,101 @@ Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
 Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Test Dictionary
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="2" class="tag-body-content frequency-list">
+                                <span data-details="Test Dictionary" data-has-reading="false" data-index="0" data-term="打ち込む" data-dictionary="Test Dictionary" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Test Dictionary
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打ち込む
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="3, seven" class="frequency-value-list">
+                                                    <span lang="ja" data-frequency="3" class="frequency-value">
+                                                        3
+                                                    </span>
+                                                    <span data-frequency="7" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="seven" lang="ja" data-frequency="7" class="frequency-value">
+                                                        seven
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span data-details="Test Dictionary" data-has-reading="true" data-reading="ぶちこむ" data-index="1" data-term="打ち込む" data-dictionary="Test Dictionary" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Test Dictionary
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打ち込む
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            ぶちこむ
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="nineteen, twenty-five (25), 13, thirty-one" class="frequency-value-list">
+                                                    <span data-display-value="nineteen" lang="ja" data-frequency="0" class="frequency-value">
+                                                        nineteen
+                                                    </span>
+                                                    <span data-frequency="25" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="twenty-five (25)" lang="ja" data-frequency="25" class="frequency-value">
+                                                        twenty-five (25)
+                                                    </span>
+                                                    <span data-frequency="13" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="13" class="frequency-value">
+                                                        13
+                                                    </span>
+                                                    <span data-frequency="31" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="thirty-one" lang="ja" data-frequency="31" class="frequency-value">
+                                                        thirty-one
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
                         </span>
                     </span>
@@ -471,10 +687,44 @@ Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
 Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Average
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="1" class="tag-body-content frequency-list">
+                                <span data-details="Average" data-has-reading="true" data-reading="ぶちこむ" data-index="0" data-term="打ち込む" data-dictionary="Average" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Average
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打ち込む
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            ぶちこむ
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="0" class="frequency-value-list">
+                                                    <span data-display-value="0" lang="ja" data-frequency="0" class="frequency-value">
+                                                        0
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
                         </span>
                     </span>
@@ -802,10 +1052,101 @@ Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
 Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Test Dictionary
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="2" class="tag-body-content frequency-list">
+                                <span data-details="Test Dictionary" data-has-reading="false" data-index="0" data-term="打ち込む" data-dictionary="Test Dictionary" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Test Dictionary
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打ち込む
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="3, seven" class="frequency-value-list">
+                                                    <span lang="ja" data-frequency="3" class="frequency-value">
+                                                        3
+                                                    </span>
+                                                    <span data-frequency="7" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="seven" lang="ja" data-frequency="7" class="frequency-value">
+                                                        seven
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span data-details="Test Dictionary" data-has-reading="true" data-reading="うちこむ" data-index="1" data-term="打ち込む" data-dictionary="Test Dictionary" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Test Dictionary
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打ち込む
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            うちこむ
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="eighteen, twenty-four (24), 12, 30" class="frequency-value-list">
+                                                    <span data-display-value="eighteen" lang="ja" data-frequency="0" class="frequency-value">
+                                                        eighteen
+                                                    </span>
+                                                    <span data-frequency="24" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="twenty-four (24)" lang="ja" data-frequency="24" class="frequency-value">
+                                                        twenty-four (24)
+                                                    </span>
+                                                    <span data-frequency="12" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="12" class="frequency-value">
+                                                        12
+                                                    </span>
+                                                    <span data-frequency="30" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="30" class="frequency-value">
+                                                        30
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
                         </span>
                     </span>
@@ -815,10 +1156,44 @@ Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
 Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Average
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="1" class="tag-body-content frequency-list">
+                                <span data-details="Average" data-has-reading="true" data-reading="うちこむ" data-index="0" data-term="打ち込む" data-dictionary="Average" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Average
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打ち込む
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            うちこむ
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="0" class="frequency-value-list">
+                                                    <span data-display-value="0" lang="ja" data-frequency="0" class="frequency-value">
+                                                        0
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
                         </span>
                     </span>
@@ -1146,10 +1521,101 @@ Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
 Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Test Dictionary
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="2" class="tag-body-content frequency-list">
+                                <span data-details="Test Dictionary" data-has-reading="false" data-index="0" data-term="打ち込む" data-dictionary="Test Dictionary" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Test Dictionary
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打ち込む
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="3, seven" class="frequency-value-list">
+                                                    <span lang="ja" data-frequency="3" class="frequency-value">
+                                                        3
+                                                    </span>
+                                                    <span data-frequency="7" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="seven" lang="ja" data-frequency="7" class="frequency-value">
+                                                        seven
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span data-details="Test Dictionary" data-has-reading="true" data-reading="うちこむ" data-index="1" data-term="打ち込む" data-dictionary="Test Dictionary" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Test Dictionary
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打ち込む
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            うちこむ
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="eighteen, twenty-four (24), 12, 30" class="frequency-value-list">
+                                                    <span data-display-value="eighteen" lang="ja" data-frequency="0" class="frequency-value">
+                                                        eighteen
+                                                    </span>
+                                                    <span data-frequency="24" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="twenty-four (24)" lang="ja" data-frequency="24" class="frequency-value">
+                                                        twenty-four (24)
+                                                    </span>
+                                                    <span data-frequency="12" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="12" class="frequency-value">
+                                                        12
+                                                    </span>
+                                                    <span data-frequency="30" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="30" class="frequency-value">
+                                                        30
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
                         </span>
                     </span>
@@ -1159,10 +1625,44 @@ Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
 Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Average
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="1" class="tag-body-content frequency-list">
+                                <span data-details="Average" data-has-reading="true" data-reading="うちこむ" data-index="0" data-term="打ち込む" data-dictionary="Average" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Average
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打ち込む
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            うちこむ
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="0" class="frequency-value-list">
+                                                    <span data-display-value="0" lang="ja" data-frequency="0" class="frequency-value">
+                                                        0
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
                         </span>
                     </span>
@@ -1487,10 +1987,101 @@ Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
 Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Test Dictionary
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="2" class="tag-body-content frequency-list">
+                                <span data-details="Test Dictionary" data-has-reading="false" data-index="0" data-term="打つ" data-dictionary="Test Dictionary" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Test Dictionary
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打つ
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="2, 6" class="frequency-value-list">
+                                                    <span lang="ja" data-frequency="2" class="frequency-value">
+                                                        2
+                                                    </span>
+                                                    <span data-frequency="6" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="6" class="frequency-value">
+                                                        6
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span data-details="Test Dictionary" data-has-reading="true" data-reading="ぶつ" data-index="1" data-term="打つ" data-dictionary="Test Dictionary" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Test Dictionary
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打つ
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            ぶつ
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="seventeen, twenty-three (23), 11, twenty-nine" class="frequency-value-list">
+                                                    <span data-display-value="seventeen" lang="ja" data-frequency="0" class="frequency-value">
+                                                        seventeen
+                                                    </span>
+                                                    <span data-frequency="23" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="twenty-three (23)" lang="ja" data-frequency="23" class="frequency-value">
+                                                        twenty-three (23)
+                                                    </span>
+                                                    <span data-frequency="11" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="11" class="frequency-value">
+                                                        11
+                                                    </span>
+                                                    <span data-frequency="29" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="twenty-nine" lang="ja" data-frequency="29" class="frequency-value">
+                                                        twenty-nine
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
                         </span>
                     </span>
@@ -1500,10 +2091,44 @@ Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
 Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Average
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="1" class="tag-body-content frequency-list">
+                                <span data-details="Average" data-has-reading="true" data-reading="ぶつ" data-index="0" data-term="打つ" data-dictionary="Average" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Average
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打つ
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            ぶつ
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="0" class="frequency-value-list">
+                                                    <span data-display-value="0" lang="ja" data-frequency="0" class="frequency-value">
+                                                        0
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
                         </span>
                     </span>
@@ -1671,10 +2296,101 @@ Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
 Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Test Dictionary
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="2" class="tag-body-content frequency-list">
+                                <span data-details="Test Dictionary" data-has-reading="false" data-index="0" data-term="打つ" data-dictionary="Test Dictionary" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Test Dictionary
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打つ
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="2, 6" class="frequency-value-list">
+                                                    <span lang="ja" data-frequency="2" class="frequency-value">
+                                                        2
+                                                    </span>
+                                                    <span data-frequency="6" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="6" class="frequency-value">
+                                                        6
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span data-details="Test Dictionary" data-has-reading="true" data-reading="ぶつ" data-index="1" data-term="打つ" data-dictionary="Test Dictionary" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Test Dictionary
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打つ
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            ぶつ
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="seventeen, twenty-three (23), 11, twenty-nine" class="frequency-value-list">
+                                                    <span data-display-value="seventeen" lang="ja" data-frequency="0" class="frequency-value">
+                                                        seventeen
+                                                    </span>
+                                                    <span data-frequency="23" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="twenty-three (23)" lang="ja" data-frequency="23" class="frequency-value">
+                                                        twenty-three (23)
+                                                    </span>
+                                                    <span data-frequency="11" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="11" class="frequency-value">
+                                                        11
+                                                    </span>
+                                                    <span data-frequency="29" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="twenty-nine" lang="ja" data-frequency="29" class="frequency-value">
+                                                        twenty-nine
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
                         </span>
                     </span>
@@ -1684,10 +2400,44 @@ Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
 Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Average
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="1" class="tag-body-content frequency-list">
+                                <span data-details="Average" data-has-reading="true" data-reading="ぶつ" data-index="0" data-term="打つ" data-dictionary="Average" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Average
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打つ
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            ぶつ
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="0" class="frequency-value-list">
+                                                    <span data-display-value="0" lang="ja" data-frequency="0" class="frequency-value">
+                                                        0
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
                         </span>
                     </span>
@@ -1855,10 +2605,101 @@ Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
 Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Test Dictionary
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="2" class="tag-body-content frequency-list">
+                                <span data-details="Test Dictionary" data-has-reading="false" data-index="0" data-term="打つ" data-dictionary="Test Dictionary" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Test Dictionary
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打つ
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="2, 6" class="frequency-value-list">
+                                                    <span lang="ja" data-frequency="2" class="frequency-value">
+                                                        2
+                                                    </span>
+                                                    <span data-frequency="6" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="6" class="frequency-value">
+                                                        6
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span data-details="Test Dictionary" data-has-reading="true" data-reading="うつ" data-index="1" data-term="打つ" data-dictionary="Test Dictionary" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Test Dictionary
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打つ
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            うつ
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="sixteen, twenty-two (22), 10, 28" class="frequency-value-list">
+                                                    <span data-display-value="sixteen" lang="ja" data-frequency="0" class="frequency-value">
+                                                        sixteen
+                                                    </span>
+                                                    <span data-frequency="22" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="twenty-two (22)" lang="ja" data-frequency="22" class="frequency-value">
+                                                        twenty-two (22)
+                                                    </span>
+                                                    <span data-frequency="10" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="10" class="frequency-value">
+                                                        10
+                                                    </span>
+                                                    <span data-frequency="28" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="28" class="frequency-value">
+                                                        28
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
                         </span>
                     </span>
@@ -1868,10 +2709,44 @@ Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
 Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Average
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="1" class="tag-body-content frequency-list">
+                                <span data-details="Average" data-has-reading="true" data-reading="うつ" data-index="0" data-term="打つ" data-dictionary="Average" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Average
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打つ
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            うつ
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="0" class="frequency-value-list">
+                                                    <span data-display-value="0" lang="ja" data-frequency="0" class="frequency-value">
+                                                        0
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
                         </span>
                     </span>
@@ -2039,10 +2914,101 @@ Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
 Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Test Dictionary
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="2" class="tag-body-content frequency-list">
+                                <span data-details="Test Dictionary" data-has-reading="false" data-index="0" data-term="打つ" data-dictionary="Test Dictionary" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Test Dictionary
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打つ
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="2, 6" class="frequency-value-list">
+                                                    <span lang="ja" data-frequency="2" class="frequency-value">
+                                                        2
+                                                    </span>
+                                                    <span data-frequency="6" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="6" class="frequency-value">
+                                                        6
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span data-details="Test Dictionary" data-has-reading="true" data-reading="うつ" data-index="1" data-term="打つ" data-dictionary="Test Dictionary" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Test Dictionary
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打つ
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            うつ
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="sixteen, twenty-two (22), 10, 28" class="frequency-value-list">
+                                                    <span data-display-value="sixteen" lang="ja" data-frequency="0" class="frequency-value">
+                                                        sixteen
+                                                    </span>
+                                                    <span data-frequency="22" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="twenty-two (22)" lang="ja" data-frequency="22" class="frequency-value">
+                                                        twenty-two (22)
+                                                    </span>
+                                                    <span data-frequency="10" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="10" class="frequency-value">
+                                                        10
+                                                    </span>
+                                                    <span data-frequency="28" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="28" class="frequency-value">
+                                                        28
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
                         </span>
                     </span>
@@ -2052,10 +3018,44 @@ Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
 Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Average
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="1" class="tag-body-content frequency-list">
+                                <span data-details="Average" data-has-reading="true" data-reading="うつ" data-index="0" data-term="打つ" data-dictionary="Average" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Average
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打つ
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            うつ
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="0" class="frequency-value-list">
+                                                    <span data-display-value="0" lang="ja" data-frequency="0" class="frequency-value">
+                                                        0
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
                         </span>
                     </span>
@@ -2216,10 +3216,107 @@ Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
 Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Test Dictionary
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="2" class="tag-body-content frequency-list">
+                                <span data-details="Test Dictionary" data-has-reading="false" data-index="0" data-term="打" data-dictionary="Test Dictionary" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Test Dictionary
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="five (5), four, 1" class="frequency-value-list">
+                                                    <span data-display-value="five (5)" lang="ja" data-frequency="5" class="frequency-value">
+                                                        five (5)
+                                                    </span>
+                                                    <span data-frequency="0" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="four" lang="ja" data-frequency="0" class="frequency-value">
+                                                        four
+                                                    </span>
+                                                    <span data-frequency="1" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="1" class="frequency-value">
+                                                        1
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span data-details="Test Dictionary" data-has-reading="true" data-reading="ダース" data-index="1" data-term="打" data-dictionary="Test Dictionary" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Test Dictionary
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            ダース
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="fifteen, twenty-one (21), 9, twenty-seven" class="frequency-value-list">
+                                                    <span data-display-value="fifteen" lang="ja" data-frequency="0" class="frequency-value">
+                                                        fifteen
+                                                    </span>
+                                                    <span data-frequency="21" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="twenty-one (21)" lang="ja" data-frequency="21" class="frequency-value">
+                                                        twenty-one (21)
+                                                    </span>
+                                                    <span data-frequency="9" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="9" class="frequency-value">
+                                                        9
+                                                    </span>
+                                                    <span data-frequency="27" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="twenty-seven" lang="ja" data-frequency="27" class="frequency-value">
+                                                        twenty-seven
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
                         </span>
                     </span>
@@ -2229,10 +3326,44 @@ Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
 Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Average
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="1" class="tag-body-content frequency-list">
+                                <span data-details="Average" data-has-reading="true" data-reading="ダース" data-index="0" data-term="打" data-dictionary="Average" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Average
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            ダース
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="0" class="frequency-value-list">
+                                                    <span data-display-value="0" lang="ja" data-frequency="0" class="frequency-value">
+                                                        0
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
                         </span>
                     </span>
@@ -2393,10 +3524,107 @@ Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
 Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Test Dictionary
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="2" class="tag-body-content frequency-list">
+                                <span data-details="Test Dictionary" data-has-reading="false" data-index="0" data-term="打" data-dictionary="Test Dictionary" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Test Dictionary
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="five (5), four, 1" class="frequency-value-list">
+                                                    <span data-display-value="five (5)" lang="ja" data-frequency="5" class="frequency-value">
+                                                        five (5)
+                                                    </span>
+                                                    <span data-frequency="0" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="four" lang="ja" data-frequency="0" class="frequency-value">
+                                                        four
+                                                    </span>
+                                                    <span data-frequency="1" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="1" class="frequency-value">
+                                                        1
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                                <span data-details="Test Dictionary" data-has-reading="true" data-reading="だ" data-index="1" data-term="打" data-dictionary="Test Dictionary" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Test Dictionary
+Dictionary size: 0 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Test Dictionary
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            だ
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="fourteen, twenty (20), 8, 26" class="frequency-value-list">
+                                                    <span data-display-value="fourteen" lang="ja" data-frequency="0" class="frequency-value">
+                                                        fourteen
+                                                    </span>
+                                                    <span data-frequency="20" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span data-display-value="twenty (20)" lang="ja" data-frequency="20" class="frequency-value">
+                                                        twenty (20)
+                                                    </span>
+                                                    <span data-frequency="8" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="8" class="frequency-value">
+                                                        8
+                                                    </span>
+                                                    <span data-frequency="26" class="frequency-value">
+                                                        , 
+                                                    </span>
+                                                    <span lang="ja" data-frequency="26" class="frequency-value">
+                                                        26
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
                         </span>
                     </span>
@@ -2406,10 +3634,44 @@ Dictionary size: 0 terms" class="tag tag-has-body frequency-group-tag">
 Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         <span class="tag-label">
                             <span class="tag-label-content">
+                                Average
                             </span>
                         </span>
                         <span class="tag-body">
-                            <span class="tag-body-content frequency-list">
+                            <span data-count="1" class="tag-body-content frequency-list">
+                                <span data-details="Average" data-has-reading="true" data-reading="だ" data-index="0" data-term="打" data-dictionary="Average" class="frequency-item" data-reading-is-same="false">
+                                    <span data-category="frequency" data-details="Average
+Dictionary size: 1 terms" class="tag tag-has-body frequency-tag" data-frequency-type="term">
+                                        <span class="tag-label">
+                                            <span class="tag-label-content">
+                                                Average
+                                            </span>
+                                        </span>
+                                        <span class="tag-body">
+                                            <span class="tag-body-content frequency-body">
+                                                <span class="frequency-disambiguation">
+                                                    <ruby>
+                                                        <span lang="ja" class="frequency-disambiguation-term">
+                                                            打
+                                                        </span>
+                                                        <span class="frequency-disambiguation-separator">
+                                                        </span>
+                                                        <rt lang="ja" class="frequency-disambiguation-reading">
+                                                            だ
+                                                        </rt>
+                                                    </ruby>
+                                                </span>
+                                                <span class="frequency-separator">
+                                                </span>
+                                                <span data-frequency="0" class="frequency-value-list">
+                                                    <span data-display-value="0" lang="ja" data-frequency="0" class="frequency-value">
+                                                        0
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
                             </span>
                         </span>
                     </span>
