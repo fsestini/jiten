@@ -69,7 +69,7 @@ instance ToRow KanjiRow where
 initDatabase :: Connection -> IO ()
 initDatabase conn = do
   execute_ conn "CREATE TABLE IF NOT EXISTS heading(id INTEGER PRIMARY KEY,term VARCHAR NOT NULL,reading VARCHAR NULL,CONSTRAINT unique_heading UNIQUE (term,reading))"
-  execute_ conn "CREATE TABLE IF NOT EXISTS dictionary(id INTEGER PRIMARY KEY,name VARCHAR NOT NULL,revision VARCHAR NOT NULL,sequenced BOOLEAN NOT NULL,import_date TIMESTAMP NOT NULL,CONSTRAINT unique_dict_name UNIQUE (name))"
+  execute_ conn dictionarySchema
   execute_ conn "CREATE TABLE IF NOT EXISTS entry(id INTEGER PRIMARY KEY,glossary VARCHAR NOT NULL,definition_tags VARCHAR NOT NULL,term_tags VARCHAR NOT NULL,popularity INTEGER NOT NULL,rules VARCHAR NOT NULL,heading_id INTEGER NOT NULL REFERENCES heading ON DELETE RESTRICT ON UPDATE RESTRICT,dictionary_id INTEGER NOT NULL REFERENCES dictionary ON DELETE RESTRICT ON UPDATE RESTRICT)"
   execute_ conn "CREATE TABLE IF NOT EXISTS tag(id INTEGER PRIMARY KEY,name VARCHAR NOT NULL,category VARCHAR NOT NULL,sorting_order INTEGER NOT NULL,notes VARCHAR NOT NULL,popularity INTEGER NOT NULL,dictionary_id INTEGER NOT NULL REFERENCES dictionary ON DELETE RESTRICT ON UPDATE RESTRICT,CONSTRAINT unique_tag_name UNIQUE (name,dictionary_id))"
   execute_ conn "CREATE TABLE IF NOT EXISTS kanji(id INTEGER PRIMARY KEY,kanji VARCHAR NOT NULL,onyomi VARCHAR NOT NULL,kunyomi VARCHAR NOT NULL,tags VARCHAR NOT NULL,meanings VARCHAR NOT NULL,stats BLOB NOT NULL,dictionary_id INTEGER NOT NULL REFERENCES dictionary ON DELETE RESTRICT ON UPDATE RESTRICT,CONSTRAINT unique_kanji UNIQUE (kanji,dictionary_id))"
@@ -78,17 +78,42 @@ initDatabase conn = do
   execute_ conn "CREATE TABLE IF NOT EXISTS term_meta(id INTEGER PRIMARY KEY,term VARCHAR NOT NULL,mode VARCHAR NOT NULL,data VARCHAR NOT NULL,dictionary_id INTEGER NOT NULL REFERENCES dictionary ON DELETE RESTRICT ON UPDATE RESTRICT,CONSTRAINT unique_term_meta UNIQUE (term,mode,data,dictionary_id))"
   execute_ conn "CREATE INDEX IF NOT EXISTS heading_reading_ix ON heading(reading)"
   execute_ conn "CREATE INDEX IF NOT EXISTS entry_heading_ix ON entry(heading_id)"
+  where
+    dictionarySchema =
+      mconcat
+        [ "CREATE TABLE IF NOT EXISTS dictionary(",
+          "id INTEGER PRIMARY KEY,",
+          "name VARCHAR NOT NULL,",
+          "revision VARCHAR NOT NULL,",
+          "sequenced BOOLEAN NOT NULL,",
+          "import_date TIMESTAMP NOT NULL,",
+          "terms_count INTEGER NOT NULL,",
+          "term_meta_count INTEGER NOT NULL,",
+          "kanji_count INTEGER NOT NULL,",
+          "kanji_meta_count INTEGER NOT NULL,",
+          "tag_meta_count INTEGER NOT NULL,",
+          "media_count INTEGER NOT NULL,",
+          "CONSTRAINT unique_dict_name UNIQUE (name))"
+        ]
 
 insertIndex :: Connection -> Yomichan.Index -> IO Int64
 insertIndex conn index = do
   now <- getCurrentTime
   let dictRow = (name, revision, sequenced, now)
-  execute conn "INSERT INTO dictionary (name, revision, sequenced, import_date) VALUES (?,?,?,?)" dictRow
+  execute conn cmd dictRow
   lastInsertRowId conn
   where
     name = Yomichan.indexTitle index
     revision = Yomichan.indexRevision index
     sequenced = Yomichan.indexSequenced index
+    cmd =
+      mconcat
+        [ "INSERT INTO dictionary (",
+          "name, revision, sequenced, import_date, ",
+          "terms_count, term_meta_count, kanji_count,",
+          "kanji_meta_count, tag_meta_count, media_count",
+          ") VALUES (?,?,?,?,0,0,0,0,0,0)"
+        ]
 
 findDictionaryId :: Connection -> Text -> IO (Maybe DictionaryId)
 findDictionaryId conn dictName = do
