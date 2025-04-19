@@ -12,7 +12,9 @@ import qualified Data.Char as Char
 import Data.Function ((&))
 import Data.HashMap.Strict (HashMap)
 import qualified Data.HashMap.Strict as HashMap
+import Data.Maybe (fromMaybe)
 import qualified Data.Maybe as Maybe
+import Data.Monoid (Endo (..))
 import Data.Text (Text)
 import qualified Data.Text as T
 import Data.Text.Format (Only (..))
@@ -22,12 +24,14 @@ import Text.Blaze (Markup)
 import Text.Taggy (Element (..), Node (..), parseDOM)
 import qualified Text.Taggy.Renderer
 
+data Selection = Selection !Text !NodeBuilder deriving (Show)
+
 data NodeBuilder = NodeBuilder
   { nbTag :: !(Maybe Text),
     nbDataset :: ![(Text, Text)],
     nbTextContent :: !(Maybe Text),
     nbChildren :: [NodeBuilder],
-    nbQueried :: [(Text, NodeBuilder)],
+    nbQueried :: ![Selection],
     nbClassName :: !(Maybe Text),
     nbClassList :: ![Text],
     nbStyle :: ![(Text, Text)],
@@ -50,7 +54,7 @@ instance FromJSON NodeBuilder where
     queried <- forM queriedObjs $ A.withObject "" $ \qObj -> do
       selector <- qObj .: "selector"
       selected <- qObj .: "selected"
-      pure (selector, selected)
+      pure (Selection selector selected)
     attributeObjs <- obj .: "attributes" :: Parser [Value]
     attrs <- forM attributeObjs $ A.withObject "" $ \aObj -> do
       attrKey <- aObj .: "attrKey"
@@ -122,26 +126,41 @@ loadTemplates = do
       | otherwise = eltChildren el >>= collectTemplates
     collectTemplates (NodeContent _) = []
 
-modifyInnerNode :: Templates -> HashMap Text NodeBuilder -> Node -> Node
-modifyInnerNode _ _ n@(NodeContent _) = n
-modifyInnerNode templates selections (NodeElement innerElement) =
-  let classes = case HashMap.lookup "class" (eltAttrs innerElement) of
+applySelection :: Templates -> Selection -> [Node] -> [Node]
+applySelection templates (Selection cl sel) ns =
+  fromMaybe ns (modifyElemsDF modifier ns)
+  where
+    modifier :: Element -> Maybe Element
+    modifier e =
+      if T.drop 1 cl `elem` eltClasses e
+        then Just (applyNodeBuilder templates sel e)
+        else Nothing
+    modifyElemsDF :: (Element -> Maybe Element) -> [Node] -> Maybe [Node]
+    modifyElemsDF _ [] = Nothing
+    modifyElemsDF f (x : xs) =
+      maybe
+        ((x :) <$> modifyElemsDF f xs)
+        (\x' -> Just (x' : xs))
+        (modifyElemDF f x)
+    modifyElemDF :: (Element -> Maybe Element) -> Node -> Maybe Node
+    modifyElemDF _ (NodeContent _) = Nothing
+    modifyElemDF f (NodeElement el) =
+      case f el of
+        Just el' -> Just (NodeElement el')
+        Nothing -> do
+          ch <- modifyElemsDF f (eltChildren el)
+          pure (NodeElement (el {eltChildren = ch}))
+
+    eltClasses :: Element -> [Text]
+    eltClasses e =
+      case HashMap.lookup "class" (eltAttrs e) of
         Just classesStr -> T.splitOn " " classesStr
         Nothing -> []
-      currentSelection =
-        Util.findJust
-          (\cl -> HashMap.lookup ("." <> cl) selections)
-          classes
-   in case currentSelection of
-        Just sel ->
-          let modifiedElement = applyNodeBuilder templates sel innerElement
-           in (NodeElement modifiedElement)
-        Nothing ->
-          let modifiedChildren =
-                map
-                  (modifyInnerNode templates selections)
-                  (eltChildren innerElement)
-           in (NodeElement (innerElement {eltChildren = modifiedChildren}))
+
+applySelection' :: Templates -> Selection -> Element -> Element
+applySelection' templates s e =
+  let ch = eltChildren e
+   in e {eltChildren = applySelection templates s ch}
 
 applyNodeBuilder :: Templates -> NodeBuilder -> Element -> Element
 applyNodeBuilder templates nb@(NodeBuilder {..}) =
@@ -165,9 +184,9 @@ applyNodeBuilder templates nb@(NodeBuilder {..}) =
         Just text -> el {eltChildren = NodeContent text : eltChildren el}
     applySelections :: Element -> Element
     applySelections el =
-      let selections = HashMap.fromList nbQueried
-          children = map (modifyInnerNode templates selections) (eltChildren el)
-       in (el {eltChildren = children})
+      let apply :: Selection -> Endo Element
+          apply = Endo . applySelection' templates
+       in appEndo (mconcat (map apply nbQueried)) el
     applyClasses :: Element -> Element
     applyClasses el =
       let classes = nbClasses nb
@@ -201,9 +220,7 @@ applyNodeBuilder templates nb@(NodeBuilder {..}) =
 
 applyFragmentBuilder :: Templates -> NodeBuilder -> [Node] -> [Node]
 applyFragmentBuilder templates (NodeBuilder {..}) =
-  map (modifyInnerNode templates selections)
-  where
-    selections = HashMap.fromList nbQueried
+  appEndo (mconcat (map (Endo . applySelection templates) nbQueried))
 
 instantiateNodeBuilder :: Templates -> NodeBuilder -> [Node]
 instantiateNodeBuilder templates nb@(NodeBuilder {..}) =
