@@ -23,6 +23,7 @@ import Data.Time.Clock (getCurrentTime)
 import Database.SQLite.Simple (Connection, FromRow (..), Only (Only), Query (..), ToRow (..), execute, execute_, field, lastInsertRowId, query, query_, withTransaction)
 import Formatting (sformat, (%))
 import qualified Formatting
+import qualified Jiten.Util as Util
 import qualified Jiten.Yomichan.Dictionary as Yomichan
 
 class ToTextJSON a where
@@ -113,6 +114,30 @@ insertIndex conn index = do
           "terms_count, term_meta_count, kanji_count,",
           "kanji_meta_count, tag_meta_count, media_count",
           ") VALUES (?,?,?,?,0,0,0,0,0,0)"
+        ]
+
+updateDictionaryCounts :: Connection -> DictionaryId -> IO ()
+updateDictionaryCounts conn dId = do
+  termsC <- queryCount "entry"
+  metaC <- queryCount "term_meta"
+  tagC <- queryCount "tag"
+  execute conn updateStmt (termsC, metaC, tagC, dId)
+  where
+    queryCount :: Text -> IO Int
+    queryCount table = do
+      let q =
+            Util.sformat
+              "SELECT COUNT(*) FROM {} r WHERE r.dictionary_id = {}"
+              (table, dId)
+      [Only c] <- query_ conn (Query q)
+      pure c
+    updateStmt =
+      mconcat $
+        [ "UPDATE dictionary ",
+          "SET terms_count = ?, ",
+          "term_meta_count = ?, ",
+          "tag_meta_count = ? ",
+          "WHERE id = ?"
         ]
 
 findDictionaryId :: Connection -> Text -> IO (Maybe DictionaryId)
@@ -231,6 +256,7 @@ insertDictionary conn dict = do
             ( \(fp, content) ->
                 insertMedia conn dictId fp (LBS.toStrict content)
             )
+      updateDictionaryCounts conn dictId
     Just _ -> Yomichan.throwImport "dictionary is already imported"
 
 -- SEARCH ----------------------------------------------------------------------
