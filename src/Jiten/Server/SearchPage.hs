@@ -35,7 +35,7 @@ mkParseElem fullQuery c queryOffset charOffset =
 
 instantiate :: [Html] -> Text -> Int -> Html
 instantiate results originalQuery offset = do
-  docTypeHtml ! lang "en" ! dataAttribute "page-type" "search" $ do
+  setRootAttributes . docTypeHtml $ do
     H.head $ do
       meta ! charset "UTF-8"
       meta ! name "viewport" ! content "width=device-width,initial-scale=1"
@@ -58,6 +58,16 @@ instantiate results originalQuery offset = do
         H.span ! tabindex "-1" ! A.id "content-scroll-focus" $ mempty
         H.div ! A.id "dictionary-entries" $ mconcat results
   where
+    setRootAttributes :: Html -> Html
+    setRootAttributes h =
+      foldl' (!) h $
+        [ lang "en",
+          dataAttribute "page-type" "search",
+          dataAttribute "theme" "dark",
+          dataAttribute "outer-theme" "dark",
+          -- TODO: this should probably come from centralized config
+          dataAttribute "frequency-display-mode" "split-tags-grouped"
+        ]
     parsed = do
       H.form ! A.method "get" ! A.action "/search" ! class_ "search-form" $ do
         H.div ! A.style "width: 100%; padding-top: 1em;" ! class_ "search-textbox-container" $ do
