@@ -3,6 +3,7 @@ module Jiten.Yomichan.Search where
 import Control.Monad (void)
 import qualified Data.Aeson as A
 import Data.Aeson.Text (encodeToLazyText)
+import qualified Data.Aeson.Text as A
 import Data.Text (Text)
 import Data.Text.Format (Only (..))
 import qualified Data.Text.Format as Format
@@ -12,6 +13,7 @@ import Jiten.Yomichan.Core (YomiContext)
 import qualified Jiten.Yomichan.Core as Core
 import Jiten.Yomichan.Display (NodeBuilder)
 import qualified Jiten.Yomichan.Display as Display
+import qualified Jiten.Yomichan.Summary as Yomichan
 import Text.Blaze (Markup)
 
 data FindTermsMode = Group | Merge | Split | Simple
@@ -31,6 +33,14 @@ setOptions ctx dictionaries sortFrequencyDictionary = do
           "var options = mkOptions({}, {})"
           (dictsList, sortDict)
       stmt = LT.unpack stmtText
+  void (Core.jsEvalStr ctx stmt)
+
+setDictionaryInfo :: YomiContext -> [Yomichan.Summary] -> IO ()
+setDictionaryInfo ctx summaries = do
+  let stmt =
+        Util.strFormat
+          "dictionaryInfo = {}"
+          (Format.Only (A.encodeToLazyText summaries))
   void (Core.jsEvalStr ctx stmt)
 
 getAlgorithmDeinflections :: YomiContext -> Text -> IO Text
