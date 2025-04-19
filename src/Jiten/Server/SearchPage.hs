@@ -66,6 +66,7 @@ instantiate results originalQuery offset = do
           dataAttribute "theme" "dark",
           dataAttribute "outer-theme" "dark",
           -- TODO: this should probably come from centralized config
+          dataAttribute "average-frequency" "false",
           dataAttribute "frequency-display-mode" "split-tags-grouped"
         ]
     parsed = do
