@@ -65,9 +65,11 @@ runYomi v =
   Sql.withConnection "jiten.db" $ \conn -> do
     Db.initDatabase conn
     dicts <- Db.getDictionaries conn
+    summaries <- Db.getDictionarySummaries conn
     Core.withYomitan conn $ \ctx -> do
       -- TODO: set frequency dictionary
       Search.setOptions ctx (map snd dicts) Nothing
+      Search.setDictionaryInfo ctx summaries
       forever $ do
         (query, returnVar) <- MVar.takeMVar v
         result <- Search.findTermsHTML ctx Search.Split query
