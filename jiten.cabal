@@ -26,6 +26,7 @@ library
                     , Jiten.Yomichan.Core
                     , Jiten.Yomichan.Search
                     , Jiten.Yomichan.Display
+                    , Jiten.Yomichan.Summary
                     , Jiten.Server.SearchPage
                     , Jiten.Server
                     , Jiten.Database
