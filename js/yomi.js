@@ -31,7 +31,8 @@ class DictionaryDatabase {
   }
 
   findTagMetaBulk(query) {
-    return _findTagMetaBulk(JSON.stringify(query));
+    const resultStr = _findTagMetaBulk(JSON.stringify(query));
+    return JSON.parse(resultStr);
   }
 }
 
