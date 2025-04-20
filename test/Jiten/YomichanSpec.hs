@@ -13,7 +13,6 @@ import qualified Text.Blaze.Html.Renderer.Pretty as Html.Pretty
 pprintHTML :: [Html] -> String
 pprintHTML = unlines . map Html.Pretty.renderHtml
 
--- 内容
 spec :: Spec
 spec = do
   describe "formatFindTermsQuery" $ do
