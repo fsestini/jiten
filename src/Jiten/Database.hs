@@ -18,6 +18,7 @@ import Data.Int (Int64)
 import qualified Data.Maybe as Maybe
 import Data.Text (Text)
 import qualified Data.Text as T
+import Data.Text.Encoding (decodeUtf8)
 import qualified Data.Text.Format as Format
 import qualified Data.Text.Lazy as LT
 import Data.Time.Clock (getCurrentTime)
@@ -71,7 +72,7 @@ initDatabase :: Connection -> IO ()
 initDatabase conn = do
   execute_ conn "CREATE TABLE IF NOT EXISTS heading(id INTEGER PRIMARY KEY,term VARCHAR NOT NULL,reading VARCHAR NULL,CONSTRAINT unique_heading UNIQUE (term,reading))"
   execute_ conn dictionarySchema
-  execute_ conn "CREATE TABLE IF NOT EXISTS entry(id INTEGER PRIMARY KEY,glossary VARCHAR NOT NULL,definition_tags VARCHAR NOT NULL,term_tags VARCHAR NOT NULL,popularity INTEGER NOT NULL,rules VARCHAR NOT NULL,heading_id INTEGER NOT NULL REFERENCES heading ON DELETE RESTRICT ON UPDATE RESTRICT,dictionary_id INTEGER NOT NULL REFERENCES dictionary ON DELETE RESTRICT ON UPDATE RESTRICT)"
+  execute_ conn "CREATE TABLE IF NOT EXISTS entry(id INTEGER PRIMARY KEY,glossary BLOB NOT NULL,definition_tags VARCHAR NOT NULL,term_tags VARCHAR NOT NULL,popularity INTEGER NOT NULL,rules VARCHAR NOT NULL,heading_id INTEGER NOT NULL REFERENCES heading ON DELETE RESTRICT ON UPDATE RESTRICT,dictionary_id INTEGER NOT NULL REFERENCES dictionary ON DELETE RESTRICT ON UPDATE RESTRICT)"
   execute_ conn "CREATE TABLE IF NOT EXISTS tag(id INTEGER PRIMARY KEY,name VARCHAR NOT NULL,category VARCHAR NOT NULL,sorting_order INTEGER NOT NULL,notes VARCHAR NOT NULL,popularity INTEGER NOT NULL,dictionary_id INTEGER NOT NULL REFERENCES dictionary ON DELETE RESTRICT ON UPDATE RESTRICT,CONSTRAINT unique_tag_name UNIQUE (name,dictionary_id))"
   execute_ conn "CREATE TABLE IF NOT EXISTS kanji(id INTEGER PRIMARY KEY,kanji VARCHAR NOT NULL,onyomi VARCHAR NOT NULL,kunyomi VARCHAR NOT NULL,tags VARCHAR NOT NULL,meanings VARCHAR NOT NULL,stats BLOB NOT NULL,dictionary_id INTEGER NOT NULL REFERENCES dictionary ON DELETE RESTRICT ON UPDATE RESTRICT,CONSTRAINT unique_kanji UNIQUE (kanji,dictionary_id))"
   execute_ conn "CREATE TABLE IF NOT EXISTS kanji_frequency(id INTEGER PRIMARY KEY,kanji VARCHAR NOT NULL,data VARCHAR NOT NULL,dictionary_id INTEGER NOT NULL REFERENCES dictionary ON DELETE RESTRICT ON UPDATE RESTRICT,CONSTRAINT unique_kanji_frequency UNIQUE (kanji,data,dictionary_id))"
@@ -300,7 +301,7 @@ data TermResult = TermResult
     termResultExpression :: !Text,
     termResultReading :: !(Maybe Text),
     termResultMatchSource :: !Text,
-    termResultGlossary :: !Text,
+    termResultGlossary :: !ByteString,
     termResultDefinitionTags :: ![Text],
     termResultTermTags :: ![Text],
     termResultRules :: ![Text],
@@ -349,7 +350,7 @@ instance ToTextJSON TermResult where
         Util.sformat ("\"reading\": \"{}\", ") (Format.Only reading),
         Util.sformat ("\"matchSource\": \"{}\", ") (Format.Only termResultMatchSource),
         "\"matchType\": \"exact\", ",
-        Util.sformat ("\"definitions\": {}, ") (Format.Only termResultGlossary),
+        Util.sformat ("\"definitions\": {}, ") (Format.Only (decodeUtf8 termResultGlossary)),
         Util.sformat ("\"definitionTags\": {}, ") (Format.Only $ A.encodeToLazyText termResultDefinitionTags),
         Util.sformat ("\"termTags\": {}, ") (Format.Only $ A.encodeToLazyText termResultTermTags),
         Util.sformat ("\"rules\": {}, ") (Format.Only $ A.encodeToLazyText termResultRules),
