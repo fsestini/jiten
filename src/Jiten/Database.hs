@@ -18,11 +18,10 @@ import Data.Int (Int64)
 import qualified Data.Maybe as Maybe
 import Data.Text (Text)
 import qualified Data.Text as T
+import qualified Data.Text.Format as Format
 import qualified Data.Text.Lazy as LT
 import Data.Time.Clock (getCurrentTime)
 import Database.SQLite.Simple (Connection, FromRow (..), Only (Only), Query (..), ToRow (..), execute, execute_, field, lastInsertRowId, query, query_, withTransaction)
-import Formatting (sformat, (%))
-import qualified Formatting
 import qualified Jiten.Util as Util
 import qualified Jiten.Yomichan.Dictionary as Yomichan
 import qualified Jiten.Yomichan.Summary as Yomichan
@@ -345,18 +344,18 @@ instance ToTextJSON TermResult where
   toTextJSON (TermResult {..}) =
     mconcat
       [ "{",
-        sformat ("\"id\": " % Formatting.int % ", ") termResultEntryId,
-        sformat ("\"term\": \"" % Formatting.stext % "\", ") termResultExpression,
-        sformat ("\"reading\": \"" % Formatting.stext % "\", ") reading,
-        sformat ("\"matchSource\": \"" % Formatting.stext % "\", ") termResultMatchSource,
+        Util.sformat ("\"id\": {}, ") (Format.Only termResultEntryId),
+        Util.sformat ("\"term\": \"{}\", ") (Format.Only termResultExpression),
+        Util.sformat ("\"reading\": \"{}\", ") (Format.Only reading),
+        Util.sformat ("\"matchSource\": \"{}\", ") (Format.Only termResultMatchSource),
         "\"matchType\": \"exact\", ",
-        sformat ("\"definitions\": " % Formatting.stext % ", ") termResultGlossary,
-        sformat ("\"definitionTags\": " % Formatting.text % ", ") (A.encodeToLazyText termResultDefinitionTags),
-        sformat ("\"termTags\": " % Formatting.text % ", ") (A.encodeToLazyText termResultTermTags),
-        sformat ("\"rules\": " % Formatting.text % ", ") (A.encodeToLazyText termResultRules),
-        sformat ("\"score\": " % Formatting.int % ", ") termResultScore,
-        sformat ("\"dictionary\": \"" % Formatting.stext % "\", ") termResultDictionary,
-        sformat ("\"index\": " % Formatting.int) termResultIndex,
+        Util.sformat ("\"definitions\": {}, ") (Format.Only termResultGlossary),
+        Util.sformat ("\"definitionTags\": {}, ") (Format.Only $ A.encodeToLazyText termResultDefinitionTags),
+        Util.sformat ("\"termTags\": {}, ") (Format.Only $ A.encodeToLazyText termResultTermTags),
+        Util.sformat ("\"rules\": {}, ") (Format.Only $ A.encodeToLazyText termResultRules),
+        Util.sformat ("\"score\": {}, ") (Format.Only termResultScore),
+        Util.sformat ("\"dictionary\": \"{}\", ") (Format.Only termResultDictionary),
+        Util.sformat ("\"index\": {}") (Format.Only termResultIndex),
         "}"
       ]
     where
@@ -409,11 +408,11 @@ instance ToTextJSON TermMetaResult where
   toTextJSON (TermMetaResult {..}) =
     mconcat
       [ "{",
-        sformat ("\"index\": " % Formatting.int % ", ") termMetaResultIndex,
-        sformat ("\"term\": \"" % Formatting.stext % "\", ") termMetaResultTerm,
-        sformat ("\"mode\": \"" % Formatting.stext % "\", ") termMetaResultMode,
-        sformat ("\"data\": " % Formatting.stext % ", ") termMetaResultData,
-        sformat ("\"dictionary\": \"" % Formatting.stext % "\"") termMetaResultDictionary,
+        Util.sformat ("\"index\": {}, ") (Format.Only termMetaResultIndex),
+        Util.sformat ("\"term\": \"{}\", ") (Format.Only termMetaResultTerm),
+        Util.sformat ("\"mode\": \"{}\", ") (Format.Only termMetaResultMode),
+        Util.sformat ("\"data\": {}, ") (Format.Only termMetaResultData),
+        Util.sformat ("\"dictionary\": \"{}\"") (Format.Only termMetaResultDictionary),
         "}"
       ]
 
