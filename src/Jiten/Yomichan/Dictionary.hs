@@ -233,16 +233,15 @@ parseTerm bs =
 data TermMeta = TermMeta
   { termMetaTerm :: !Text,
     termMetaMode :: !Text,
-    termMetaData :: !Value
+    termMetaData :: !ByteString
   }
   deriving (Show)
 
-instance FromJSON TermMeta where
-  parseJSON v = do
-    l <- parseJSON v
-    case l of
-      [tm, ty, dt] -> TermMeta <$> parseJSON tm <*> parseJSON ty <*> pure dt
-      _other -> fail "invalid TermMeta structure"
+parseTermMeta :: ByteString -> Maybe TermMeta
+parseTermMeta bs =
+  case Parser.unfoldRow bs of
+    [String tm, String ty, dt] -> Just $ TermMeta tm ty (Parser.encode dt)
+    _ -> Nothing
 
 -- ARCHIVES --------------------------------------------------------------------
 
@@ -308,8 +307,11 @@ listTerms d = do
   row <- Parser.unfoldBank bank
   pure $ fromMaybe (error "failed to parse term") (parseTerm row)
 
-streamTermMetas :: Dictionary -> C TermMeta
-streamTermMetas = streamBanks "term_meta_bank"
+listTermMetas :: Dictionary -> [TermMeta]
+listTermMetas d = do
+  bank <- listBanks "term_meta_bank" d
+  row <- Parser.unfoldBank bank
+  pure $ fromMaybe (error "failed to parse term meta") (parseTermMeta row)
 
 streamTags :: Dictionary -> C Tag
 streamTags = streamBanks "tag_bank"

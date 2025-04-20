@@ -220,7 +220,7 @@ insertTermMeta conn dictId termMeta = do
     "INSERT INTO term_meta (term, mode, data, dictionary_id) VALUES (?,?,?,?)"
     ( Yomichan.termMetaTerm termMeta,
       Yomichan.termMetaMode termMeta,
-      LT.toStrict . A.encodeToLazyText $ Yomichan.termMetaData termMeta,
+      Yomichan.termMetaData termMeta,
       dictId
     )
 
@@ -265,7 +265,7 @@ insertDictionary conn dict = do
       dictId <- insertIndex conn index
       let runStream s f = Yomichan.runStream (s dict) (void . f conn dictId)
       forM_ (Yomichan.listTerms dict) (insertTerm conn dictId)
-      runStream Yomichan.streamTermMetas insertTermMeta
+      forM_ (Yomichan.listTermMetas dict) (insertTermMeta conn dictId)
       runStream Yomichan.streamTags insertTag
       runStream Yomichan.streamKanji insertKanji
       runStream Yomichan.streamKanjiMetas insertKanjiMeta
