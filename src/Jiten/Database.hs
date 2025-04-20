@@ -77,7 +77,7 @@ initDatabase conn = do
   execute_ conn "CREATE TABLE IF NOT EXISTS kanji(id INTEGER PRIMARY KEY,kanji VARCHAR NOT NULL,onyomi VARCHAR NOT NULL,kunyomi VARCHAR NOT NULL,tags VARCHAR NOT NULL,meanings VARCHAR NOT NULL,stats BLOB NOT NULL,dictionary_id INTEGER NOT NULL REFERENCES dictionary ON DELETE RESTRICT ON UPDATE RESTRICT,CONSTRAINT unique_kanji UNIQUE (kanji,dictionary_id))"
   execute_ conn "CREATE TABLE IF NOT EXISTS kanji_frequency(id INTEGER PRIMARY KEY,kanji VARCHAR NOT NULL,data VARCHAR NOT NULL,dictionary_id INTEGER NOT NULL REFERENCES dictionary ON DELETE RESTRICT ON UPDATE RESTRICT,CONSTRAINT unique_kanji_frequency UNIQUE (kanji,data,dictionary_id))"
   execute_ conn "CREATE TABLE IF NOT EXISTS media(id INTEGER PRIMARY KEY,path VARCHAR NOT NULL,content BLOB NOT NULL,dictionary_id INTEGER NOT NULL REFERENCES dictionary ON DELETE RESTRICT ON UPDATE RESTRICT,CONSTRAINT unique_path UNIQUE (path,dictionary_id))"
-  execute_ conn "CREATE TABLE IF NOT EXISTS term_meta(id INTEGER PRIMARY KEY,term VARCHAR NOT NULL,mode VARCHAR NOT NULL,data VARCHAR NOT NULL,dictionary_id INTEGER NOT NULL REFERENCES dictionary ON DELETE RESTRICT ON UPDATE RESTRICT,CONSTRAINT unique_term_meta UNIQUE (term,mode,data,dictionary_id))"
+  execute_ conn "CREATE TABLE IF NOT EXISTS term_meta(id INTEGER PRIMARY KEY,term VARCHAR NOT NULL,mode VARCHAR NOT NULL,data BLOB NOT NULL,dictionary_id INTEGER NOT NULL REFERENCES dictionary ON DELETE RESTRICT ON UPDATE RESTRICT,CONSTRAINT unique_term_meta UNIQUE (term,mode,data,dictionary_id))"
   execute_ conn "CREATE INDEX IF NOT EXISTS heading_reading_ix ON heading(reading)"
   execute_ conn "CREATE INDEX IF NOT EXISTS entry_heading_ix ON entry(heading_id)"
   where
@@ -378,7 +378,7 @@ data TermMetaResult = TermMetaResult
   { termMetaResultIndex :: !Int,
     termMetaResultTerm :: !Text,
     termMetaResultMode :: !Text,
-    termMetaResultData :: !Text,
+    termMetaResultData :: !ByteString,
     termMetaResultDictionary :: !Text
   }
   deriving (Show, Eq)
@@ -412,7 +412,7 @@ instance ToTextJSON TermMetaResult where
         Util.sformat ("\"index\": {}, ") (Format.Only termMetaResultIndex),
         Util.sformat ("\"term\": \"{}\", ") (Format.Only termMetaResultTerm),
         Util.sformat ("\"mode\": \"{}\", ") (Format.Only termMetaResultMode),
-        Util.sformat ("\"data\": {}, ") (Format.Only termMetaResultData),
+        Util.sformat ("\"data\": {}, ") (Format.Only (decodeUtf8 termMetaResultData)),
         Util.sformat ("\"dictionary\": \"{}\"") (Format.Only termMetaResultDictionary),
         "}"
       ]
