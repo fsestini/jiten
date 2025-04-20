@@ -80,14 +80,14 @@
         </div>
         <div class="headword-list-details">
             <div data-count="2" class="headword-list-tag-list tag-list">
-                <span data-category="default" data-details="E1" data-headwords="0" data-index="0" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
+                <span data-category="default" data-details="example tag 1" data-headwords="0" data-index="0" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
                     <span class="tag-label">
                         <span class="tag-label-content">
                             E1
                         </span>
                     </span>
                 </span>
-                <span data-category="default" data-details="P" data-headwords="0" data-index="1" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
+                <span data-category="popular" data-details="popular term" data-headwords="0" data-index="1" data-unmatched-headword-count="0" data-matched-headword-count="1" data-total-headword-count="1" class="tag">
                     <span class="tag-label">
                         <span class="tag-label-content">
                             P
@@ -146,14 +146,15 @@ Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         </button>
                         <div class="definition-item-content">
                             <div data-count="2" class="definition-tag-list tag-list">
-                                <span data-category="default" data-details="n" data-index="0" class="tag">
+                                <span data-category="partOfSpeech" data-details="noun" data-index="0" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             n
                                         </span>
                                     </span>
                                 </span>
-                                <span data-category="dictionary" data-details="Test Dictionary" data-index="1" class="tag">
+                                <span data-category="dictionary" data-details="Test Dictionary
+Term Count: 34" data-index="1" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             Test Dictionary

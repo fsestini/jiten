@@ -132,7 +132,8 @@ Dictionary size: 1 terms" class="tag tag-has-body frequency-group-tag">
                         </button>
                         <div class="definition-item-content">
                             <div data-count="1" class="definition-tag-list tag-list">
-                                <span data-category="dictionary" data-details="Test Dictionary" data-index="0" class="tag">
+                                <span data-category="dictionary" data-details="Test Dictionary
+Term Count: 34" data-index="0" class="tag">
                                     <span class="tag-label">
                                         <span class="tag-label-content">
                                             Test Dictionary
