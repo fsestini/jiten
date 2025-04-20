@@ -51,8 +51,10 @@ spec = do
     withYomiCtx f =
       Sql.withConnection ":memory:" $ \conn -> do
         Db.initDatabase conn
-        dict <- Dict.openArchiveFile dictPath
-        Db.insertDictionary conn dict
+        Dict.openArchiveFile dictPath >>= Db.insertDictionary conn
+        dicts <- map snd <$> Db.getDictionaries conn
+        summaries <- Db.getDictionarySummaries conn
         Core.withYomitan conn $ \ctx -> do
-          dicts <- map snd <$> Db.getDictionaries conn
-          Search.setOptions ctx dicts (Just "Test Dictionary") >> f ctx
+          Search.setOptions ctx dicts (Just "Test Dictionary")
+          Search.setDictionaryInfo ctx summaries
+          f ctx
