@@ -25,10 +25,7 @@ spec =
           let res4 = Db.TermResult 6 "打つ" (Just "ぶつ") "term" "[\"butsu definition 3\",\"butsu definition 4\"]" ["vt"] ["P", "E2"] ["v5"] 1 "Test Dictionary" 0
           results `shouldBe` [res1, res2, res3, res4]
         it "returns an empty list when disabling the dictionary" $ \conn -> do
-          results <-
-            Db.findTermsBulk
-              conn
-              (Db.TermQuery ["打つ"] [] "exact")
+          results <- Db.findTermsBulk conn (Db.TermQuery ["打つ"] [] "exact")
           results `shouldBe` []
       describe "termResultToJSON" $ do
         it "renders JSON result correctly" $ \conn -> do
