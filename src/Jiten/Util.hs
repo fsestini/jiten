@@ -1,7 +1,16 @@
-module Jiten.Util (sformat, strFormat, findJust, decodeJSON, postfixes) where
+module Jiten.Util
+  ( sformat,
+    strFormat,
+    findJust,
+    decodeJSON,
+    postfixes,
+    encodeStrict,
+  )
+where
 
-import Data.Aeson (FromJSON)
+import Data.Aeson (FromJSON, ToJSON)
 import qualified Data.Aeson as A
+import qualified Data.Aeson.Text as A
 import Data.Foldable (asum)
 import qualified Data.Maybe as Maybe
 import Data.Text (Text)
@@ -38,3 +47,7 @@ decodeJSON =
 -- @
 postfixes :: Text -> [Text]
 postfixes t = [T.drop n t | n <- [0 .. T.length t]]
+
+-- | Encode to strict 'Text'.
+encodeStrict :: (ToJSON a) => a -> Text
+encodeStrict = LT.toStrict . A.encodeToLazyText
