@@ -1,0 +1,23 @@
+{
+    "counts": {
+        "kanji": {
+            "total": 0
+        },
+        "kanjiMeta": {
+            "total": 0
+        },
+        "media": {
+            "total": 0
+        },
+        "tagMeta": {
+            "total": 15
+        },
+        "termMeta": {
+            "total": 39
+        },
+        "terms": {
+            "total": 34
+        }
+    },
+    "title": "Test Dictionary"
+}

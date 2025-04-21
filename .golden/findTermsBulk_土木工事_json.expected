@@ -1,0 +1,20 @@
+{
+    "definitionTags": [
+        "n"
+    ],
+    "definitions": [
+        "dobokukouji definition"
+    ],
+    "dictionary": "Test Dictionary",
+    "id": 19,
+    "index": 0,
+    "matchSource": "term",
+    "matchType": "exact",
+    "reading": "どぼくこうじ",
+    "rules": [
+        "n"
+    ],
+    "score": 1,
+    "term": "土木工事",
+    "termTags": []
+}

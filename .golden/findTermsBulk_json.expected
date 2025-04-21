@@ -1,0 +1,202 @@
+{
+    "definitionTags": [
+        "n"
+    ],
+    "definitions": [
+        "da definition 1",
+        "da definition 2"
+    ],
+    "dictionary": "Test Dictionary",
+    "id": 1,
+    "index": 0,
+    "matchSource": "term",
+    "matchType": "exact",
+    "reading": "だ",
+    "rules": [
+        "n"
+    ],
+    "score": 1,
+    "term": "打",
+    "termTags": [
+        "E1"
+    ]
+}
+{
+    "definitionTags": [
+        "n",
+        "abbr"
+    ],
+    "definitions": [
+        "daasu definition 1",
+        "daasu definition 2"
+    ],
+    "dictionary": "Test Dictionary",
+    "id": 2,
+    "index": 0,
+    "matchSource": "term",
+    "matchType": "exact",
+    "reading": "ダース",
+    "rules": [
+        "n"
+    ],
+    "score": 1,
+    "term": "打",
+    "termTags": [
+        "E1"
+    ]
+}
+{
+    "definitionTags": [
+        "vt"
+    ],
+    "definitions": [
+        "uchikomu definition 1",
+        "uchikomu definition 2"
+    ],
+    "dictionary": "Test Dictionary",
+    "id": 7,
+    "index": 1,
+    "matchSource": "term",
+    "matchType": "exact",
+    "reading": "うちこむ",
+    "rules": [
+        "v5"
+    ],
+    "score": 10,
+    "term": "打ち込む",
+    "termTags": [
+        "P",
+        "E1"
+    ]
+}
+{
+    "definitionTags": [
+        "vt"
+    ],
+    "definitions": [
+        "uchikomu definition 3",
+        "uchikomu definition 4"
+    ],
+    "dictionary": "Test Dictionary",
+    "id": 8,
+    "index": 1,
+    "matchSource": "term",
+    "matchType": "exact",
+    "reading": "うちこむ",
+    "rules": [
+        "v5"
+    ],
+    "score": 1,
+    "term": "打ち込む",
+    "termTags": [
+        "P",
+        "E2"
+    ]
+}
+{
+    "definitionTags": [
+        "vt"
+    ],
+    "definitions": [
+        "buchikomu definition 1",
+        "buchikomu definition 2"
+    ],
+    "dictionary": "Test Dictionary",
+    "id": 9,
+    "index": 1,
+    "matchSource": "term",
+    "matchType": "exact",
+    "reading": "ぶちこむ",
+    "rules": [
+        "v5"
+    ],
+    "score": 10,
+    "term": "打ち込む",
+    "termTags": [
+        "P",
+        "E1"
+    ]
+}
+{
+    "definitionTags": [
+        "vt"
+    ],
+    "definitions": [
+        "buchikomu definition 3",
+        "buchikomu definition 4"
+    ],
+    "dictionary": "Test Dictionary",
+    "id": 10,
+    "index": 1,
+    "matchSource": "term",
+    "matchType": "exact",
+    "reading": "ぶちこむ",
+    "rules": [
+        "v5"
+    ],
+    "score": 1,
+    "term": "打ち込む",
+    "termTags": [
+        "P",
+        "E2"
+    ]
+}
+{
+    "definitionTags": [
+        "n"
+    ],
+    "definitions": [
+        "otemae definition"
+    ],
+    "dictionary": "Test Dictionary",
+    "id": 15,
+    "index": 2,
+    "matchSource": "term",
+    "matchType": "exact",
+    "reading": "おてまえ",
+    "rules": [
+        "n"
+    ],
+    "score": 1,
+    "term": "お手前",
+    "termTags": []
+}
+{
+    "definitionTags": [
+        "n"
+    ],
+    "definitions": [
+        "dobokukouji definition"
+    ],
+    "dictionary": "Test Dictionary",
+    "id": 19,
+    "index": 3,
+    "matchSource": "term",
+    "matchType": "exact",
+    "reading": "どぼくこうじ",
+    "rules": [
+        "n"
+    ],
+    "score": 1,
+    "term": "土木工事",
+    "termTags": []
+}
+{
+    "definitionTags": [
+        "adj-na",
+        "n"
+    ],
+    "definitions": [
+        "suki definition"
+    ],
+    "dictionary": "Test Dictionary",
+    "id": 20,
+    "index": 4,
+    "matchSource": "term",
+    "matchType": "exact",
+    "reading": "すき",
+    "rules": [],
+    "score": 1,
+    "term": "好き",
+    "termTags": []
+}

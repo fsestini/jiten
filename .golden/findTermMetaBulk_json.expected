@@ -1,0 +1,303 @@
+{
+    "data": "five (5)",
+    "dictionary": "Test Dictionary",
+    "index": 0,
+    "mode": "freq",
+    "term": "打"
+}
+{
+    "data": "four",
+    "dictionary": "Test Dictionary",
+    "index": 0,
+    "mode": "freq",
+    "term": "打"
+}
+{
+    "data": 1,
+    "dictionary": "Test Dictionary",
+    "index": 0,
+    "mode": "freq",
+    "term": "打"
+}
+{
+    "data": {
+        "frequency": "fifteen",
+        "reading": "ダース"
+    },
+    "dictionary": "Test Dictionary",
+    "index": 0,
+    "mode": "freq",
+    "term": "打"
+}
+{
+    "data": {
+        "frequency": "fourteen",
+        "reading": "だ"
+    },
+    "dictionary": "Test Dictionary",
+    "index": 0,
+    "mode": "freq",
+    "term": "打"
+}
+{
+    "data": {
+        "frequency": "twenty (20)",
+        "reading": "だ"
+    },
+    "dictionary": "Test Dictionary",
+    "index": 0,
+    "mode": "freq",
+    "term": "打"
+}
+{
+    "data": {
+        "frequency": "twenty-one (21)",
+        "reading": "ダース"
+    },
+    "dictionary": "Test Dictionary",
+    "index": 0,
+    "mode": "freq",
+    "term": "打"
+}
+{
+    "data": {
+        "frequency": 8,
+        "reading": "だ"
+    },
+    "dictionary": "Test Dictionary",
+    "index": 0,
+    "mode": "freq",
+    "term": "打"
+}
+{
+    "data": {
+        "frequency": 9,
+        "reading": "ダース"
+    },
+    "dictionary": "Test Dictionary",
+    "index": 0,
+    "mode": "freq",
+    "term": "打"
+}
+{
+    "data": {
+        "frequency": {
+            "displayValue": "twenty-seven",
+            "value": 27
+        },
+        "reading": "ダース"
+    },
+    "dictionary": "Test Dictionary",
+    "index": 0,
+    "mode": "freq",
+    "term": "打"
+}
+{
+    "data": {
+        "frequency": {
+            "value": 26
+        },
+        "reading": "だ"
+    },
+    "dictionary": "Test Dictionary",
+    "index": 0,
+    "mode": "freq",
+    "term": "打"
+}
+{
+    "data": 3,
+    "dictionary": "Test Dictionary",
+    "index": 1,
+    "mode": "freq",
+    "term": "打ち込む"
+}
+{
+    "data": {
+        "displayValue": "seven",
+        "value": 7
+    },
+    "dictionary": "Test Dictionary",
+    "index": 1,
+    "mode": "freq",
+    "term": "打ち込む"
+}
+{
+    "data": {
+        "frequency": "eighteen",
+        "reading": "うちこむ"
+    },
+    "dictionary": "Test Dictionary",
+    "index": 1,
+    "mode": "freq",
+    "term": "打ち込む"
+}
+{
+    "data": {
+        "frequency": "nineteen",
+        "reading": "ぶちこむ"
+    },
+    "dictionary": "Test Dictionary",
+    "index": 1,
+    "mode": "freq",
+    "term": "打ち込む"
+}
+{
+    "data": {
+        "frequency": "twenty-five (25)",
+        "reading": "ぶちこむ"
+    },
+    "dictionary": "Test Dictionary",
+    "index": 1,
+    "mode": "freq",
+    "term": "打ち込む"
+}
+{
+    "data": {
+        "frequency": "twenty-four (24)",
+        "reading": "うちこむ"
+    },
+    "dictionary": "Test Dictionary",
+    "index": 1,
+    "mode": "freq",
+    "term": "打ち込む"
+}
+{
+    "data": {
+        "frequency": 12,
+        "reading": "うちこむ"
+    },
+    "dictionary": "Test Dictionary",
+    "index": 1,
+    "mode": "freq",
+    "term": "打ち込む"
+}
+{
+    "data": {
+        "frequency": 13,
+        "reading": "ぶちこむ"
+    },
+    "dictionary": "Test Dictionary",
+    "index": 1,
+    "mode": "freq",
+    "term": "打ち込む"
+}
+{
+    "data": {
+        "frequency": {
+            "displayValue": "thirty-one",
+            "value": 31
+        },
+        "reading": "ぶちこむ"
+    },
+    "dictionary": "Test Dictionary",
+    "index": 1,
+    "mode": "freq",
+    "term": "打ち込む"
+}
+{
+    "data": {
+        "frequency": {
+            "value": 30
+        },
+        "reading": "うちこむ"
+    },
+    "dictionary": "Test Dictionary",
+    "index": 1,
+    "mode": "freq",
+    "term": "打ち込む"
+}
+{
+    "data": {
+        "pitches": [
+            {
+                "position": 0
+            },
+            {
+                "position": 3
+            }
+        ],
+        "reading": "うちこむ"
+    },
+    "dictionary": "Test Dictionary",
+    "index": 1,
+    "mode": "pitch",
+    "term": "打ち込む"
+}
+{
+    "data": {
+        "pitches": [
+            {
+                "position": 0
+            },
+            {
+                "position": 3
+            }
+        ],
+        "reading": "ぶちこむ"
+    },
+    "dictionary": "Test Dictionary",
+    "index": 1,
+    "mode": "pitch",
+    "term": "打ち込む"
+}
+{
+    "data": {
+        "pitches": [
+            {
+                "position": 2,
+                "tags": [
+                    "P1"
+                ]
+            },
+            {
+                "position": 2,
+                "tags": [
+                    "P2"
+                ]
+            },
+            {
+                "position": 0,
+                "tags": [
+                    "P2"
+                ]
+            }
+        ],
+        "reading": "おてまえ"
+    },
+    "dictionary": "Test Dictionary",
+    "index": 2,
+    "mode": "pitch",
+    "term": "お手前"
+}
+{
+    "data": {
+        "pitches": [
+            {
+                "devoice": 3,
+                "position": 4
+            }
+        ],
+        "reading": "どぼくこうじ"
+    },
+    "dictionary": "Test Dictionary",
+    "index": 3,
+    "mode": "pitch",
+    "term": "土木工事"
+}
+{
+    "data": {
+        "reading": "すき",
+        "transcriptions": [
+            {
+                "ipa": "[sɨᵝkʲi]",
+                "tags": [
+                    "東京"
+                ]
+            }
+        ]
+    },
+    "dictionary": "Test Dictionary",
+    "index": 4,
+    "mode": "ipa",
+    "term": "好き"
+}
