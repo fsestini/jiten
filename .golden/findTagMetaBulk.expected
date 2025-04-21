@@ -1,0 +1,120 @@
+{
+    "category": "default",
+    "dictionary": "Test Dictionary",
+    "name": "E1",
+    "notes": "example tag 1",
+    "order": 0,
+    "score": 0
+}
+{
+    "category": "default",
+    "dictionary": "Test Dictionary",
+    "name": "E2",
+    "notes": "example tag 2",
+    "order": 0,
+    "score": 0
+}
+{
+    "category": "popular",
+    "dictionary": "Test Dictionary",
+    "name": "P",
+    "notes": "popular term",
+    "order": 0,
+    "score": 0
+}
+{
+    "category": "partOfSpeech",
+    "dictionary": "Test Dictionary",
+    "name": "n",
+    "notes": "noun",
+    "order": 0,
+    "score": 0
+}
+{
+    "category": "partOfSpeech",
+    "dictionary": "Test Dictionary",
+    "name": "vt",
+    "notes": "transitive verb",
+    "order": 0,
+    "score": 0
+}
+{
+    "category": "default",
+    "dictionary": "Test Dictionary",
+    "name": "abbr",
+    "notes": "abbreviation",
+    "order": 0,
+    "score": 0
+}
+{
+    "category": "default",
+    "dictionary": "Test Dictionary",
+    "name": "K1",
+    "notes": "example kanji tag 1",
+    "order": 0,
+    "score": 0
+}
+{
+    "category": "default",
+    "dictionary": "Test Dictionary",
+    "name": "K2",
+    "notes": "example kanji tag 2",
+    "order": 0,
+    "score": 0
+}
+{
+    "category": "class",
+    "dictionary": "Test Dictionary",
+    "name": "kstat1",
+    "notes": "kanji stat 1",
+    "order": 0,
+    "score": 0
+}
+{
+    "category": "code",
+    "dictionary": "Test Dictionary",
+    "name": "kstat2",
+    "notes": "kanji stat 2",
+    "order": 0,
+    "score": 0
+}
+{
+    "category": "index",
+    "dictionary": "Test Dictionary",
+    "name": "kstat3",
+    "notes": "kanji stat 3",
+    "order": 0,
+    "score": 0
+}
+{
+    "category": "misc",
+    "dictionary": "Test Dictionary",
+    "name": "kstat4",
+    "notes": "kanji stat 4",
+    "order": 0,
+    "score": 0
+}
+{
+    "category": "misc",
+    "dictionary": "Test Dictionary",
+    "name": "kstat5",
+    "notes": "kanji stat 5",
+    "order": 0,
+    "score": 0
+}
+{
+    "category": "default",
+    "dictionary": "Test Dictionary",
+    "name": "P1",
+    "notes": "example pitch tag 1",
+    "order": 0,
+    "score": 0
+}
+{
+    "category": "default",
+    "dictionary": "Test Dictionary",
+    "name": "P2",
+    "notes": "example pitch tag 2",
+    "order": 0,
+    "score": 0
+}

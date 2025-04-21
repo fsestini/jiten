@@ -37,6 +37,13 @@ spec =
             results <- Db.findTermMetaBulk conn (Db.TermMetaQuery qs [dict])
             let pp = unlines . map (TestUtil.pprintJson . Db.toTextJSON)
             pure (TestUtil.mkGolden pp "findTermMetaBulk_json" results)
+      describe "findTagMetaBulk" $ do
+        describe "and toTextJSON" $ do
+          it "render JSON results correctly" $ \conn -> do
+            let qs = map (flip Db.DictionaryAndQueryRequest "Test Dictionary") tags
+            results <- Db.findTagMetaBulk conn qs
+            let pp = unlines . map (TestUtil.pprintJson . Db.toTextJSON)
+            pure (TestUtil.mkGolden pp "findTagMetaBulk" results)
   where
     dict = "Test Dictionary"
     dictPath = "./test/valid-dictionary1.zip" :: FilePath
@@ -46,3 +53,21 @@ spec =
         Db.initDatabase conn
         Yomi.openArchiveFile dictPath >>= Db.insertDictionary conn
         f conn
+
+    tags =
+      [ "E1",
+        "E2",
+        "P",
+        "n",
+        "vt",
+        "abbr",
+        "K1",
+        "K2",
+        "kstat1",
+        "kstat2",
+        "kstat3",
+        "kstat4",
+        "kstat5",
+        "P1",
+        "P2"
+      ]
