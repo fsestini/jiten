@@ -101,6 +101,7 @@ test-suite jiten-test
     other-modules:
         Jiten.DatabaseSpec
       , Jiten.YomichanSpec
+      , Jiten.Yomichan.SearchSpec
       , Jiten.TestUtil
     -- other-extensions:
     type:             exitcode-stdio-1.0
