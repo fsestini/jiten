@@ -31,9 +31,13 @@ spec =
             let pp = unlines . map (TestUtil.pprintJson . Db.toTextJSON)
             pure (TestUtil.mkGolden pp "findTermsBulk_json" results)
       describe "findTermMetaBulk" $ do
+        let qs = ["打", "打ち込む", "お手前", "土木工事", "好き"]
+        it "returns correct results" $ \conn -> do
+          results <- Db.findTermMetaBulk conn (Db.TermMetaQuery qs [dict])
+          let pp = unlines . map show
+          pure (TestUtil.mkGolden pp "findTermMetaBulk_show" results)
         describe "and toTextJSON" $ do
           it "render JSON results correctly" $ \conn -> do
-            let qs = ["打", "打ち込む", "お手前", "土木工事", "好き"]
             results <- Db.findTermMetaBulk conn (Db.TermMetaQuery qs [dict])
             let pp = unlines . map (TestUtil.pprintJson . Db.toTextJSON)
             pure (TestUtil.mkGolden pp "findTermMetaBulk_json" results)
