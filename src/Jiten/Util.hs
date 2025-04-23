@@ -5,12 +5,15 @@ module Jiten.Util
     decodeJSON,
     postfixes,
     encodeStrict,
+    encodeStrictText,
   )
 where
 
 import Data.Aeson (FromJSON, ToJSON)
 import qualified Data.Aeson as A
 import qualified Data.Aeson.Text as A
+import Data.ByteString (ByteString)
+import qualified Data.ByteString.Lazy as LBS
 import Data.Foldable (asum)
 import qualified Data.Maybe as Maybe
 import Data.Text (Text)
@@ -49,5 +52,9 @@ postfixes :: Text -> [Text]
 postfixes t = [T.drop n t | n <- [0 .. T.length t]]
 
 -- | Encode to strict 'Text'.
-encodeStrict :: (ToJSON a) => a -> Text
-encodeStrict = LT.toStrict . A.encodeToLazyText
+encodeStrictText :: (ToJSON a) => a -> Text
+encodeStrictText = LT.toStrict . A.encodeToLazyText
+
+-- | Encode to strict 'ByteString'.
+encodeStrict :: (ToJSON a) => a -> ByteString
+encodeStrict = LBS.toStrict . A.encode

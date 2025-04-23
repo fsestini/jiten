@@ -18,7 +18,7 @@ spec =
       describe "getDictionarySummaries" $ do
         it "returns the correct dictionary summaries" $ \conn -> do
           summaries <- Db.getDictionarySummaries conn
-          let pp = unlines . map (TestUtil.pprintJson . Util.encodeStrict)
+          let pp = unlines . map (TestUtil.pprintJson . Util.encodeStrictText)
           pure (TestUtil.mkGolden pp "getDictionarySummaries" summaries)
       describe "findTermsBulk" $ do
         it "returns an empty list when disabling the dictionary" $ \conn -> do
