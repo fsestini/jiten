@@ -1,3 +1,5 @@
+{-# LANGUAGE RecordWildCards #-}
+
 module Jiten.Yomichan.Dictionary where
 
 import qualified Codec.Archive.Zip as Zip
@@ -20,6 +22,8 @@ import qualified Data.List as List
 import Data.Maybe (isJust)
 import Data.Text (Text)
 import qualified Data.Text as Text
+import qualified Data.Vector as Vector
+import qualified Jiten.Util as Util
 import System.FilePath (takeExtension)
 
 -- DICTIONARY INDEX ------------------------------------------------------------
@@ -238,6 +242,15 @@ instance FromJSON TermMeta where
     case l of
       [tm, ty, dt] -> TermMeta <$> parseJSON tm <*> parseJSON ty <*> pure dt
       _other -> fail "invalid TermMeta structure"
+
+ppTermMeta :: TermMeta -> Text
+ppTermMeta (TermMeta {..}) =
+  Util.encodeStrictText
+    ( A.Array
+        ( Vector.fromList
+            [A.String termMetaTerm, A.String termMetaMode, termMetaData]
+        )
+    )
 
 -- ARCHIVES --------------------------------------------------------------------
 
