@@ -4,6 +4,7 @@
 
 module Jiten.Database where
 
+import Control.Exception (catch, throw)
 import Control.Monad (forM_, void)
 import qualified Control.Monad as Monad
 import Control.Monad.Trans (liftIO)
@@ -21,7 +22,7 @@ import qualified Data.Text as T
 import qualified Data.Text.Format as Format
 import qualified Data.Text.Lazy as LT
 import Data.Time.Clock (getCurrentTime)
-import Database.SQLite.Simple (Connection, FromRow (..), Only (Only), Query (..), ToRow (..), execute, execute_, field, lastInsertRowId, query, query_, withTransaction)
+import Database.SQLite.Simple (Connection, Error (..), FromRow (..), Only (Only), Query (..), SQLError (sqlErrorDetails), ToRow (..), execute, execute_, field, lastInsertRowId, query, query_, sqlError, withTransaction)
 import qualified Jiten.Util as Util
 import qualified Jiten.Yomichan.Dictionary as Yomichan
 import qualified Jiten.Yomichan.Summary as Yomichan
@@ -222,6 +223,16 @@ insertTermMeta conn dictId termMeta = do
       LT.toStrict . A.encodeToLazyText $ Yomichan.termMetaData termMeta,
       dictId
     )
+    `catch` \e ->
+      if sqlError e == ErrorConstraint
+        && T.isPrefixOf "UNIQUE constraint failed" (sqlErrorDetails e)
+        then
+          putStrLn
+            ( Util.strFormat
+                "WARNING: skipping duplicate entry {}"
+                (Format.Only (Yomichan.ppTermMeta termMeta))
+            )
+        else throw e
 
 insertKanji :: Connection -> DictionaryId -> Yomichan.Kanji -> IO ()
 insertKanji conn dictId kanji =
