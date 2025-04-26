@@ -48,6 +48,8 @@ General:
 - [x] Dictionary import
 - [x] CLI search commands
 - [x] Web UI search interface
+- [ ] CI
+- [ ] Deployment
 - [ ] Extensive testing on full-size, comminly used Yomichan dictionaries
 - [ ] CLI progress bars during import, etc.
 - [ ] User profiles
