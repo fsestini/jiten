@@ -22,7 +22,8 @@ Tested with:
 
 - [x] jitendex
 - [ ] JMnedict
-- [ ] BCCWJ_SUW_LUW_combined
+- [x] BCCWJ_SUW_LUW_combined (frequencies)
+- [x] アクセント辞典v2 (pitch accents)
 - [ ] KANJIDIC_english
 
 ## Run
